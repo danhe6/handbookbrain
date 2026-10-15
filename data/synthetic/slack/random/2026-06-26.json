@@ -1,0 +1,92 @@
+[
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Happy Friday everyone! Anyone got fun weekend plans? I\u2019m thinking of finally taking Luna to the dog park if it ever stops raining \ud83d\ude05",
+    "ts": "1782480600.000000",
+    "synthetic": true,
+    "thread_ts": "1782480600.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U16NOAH",
+    "text": "Haha, Luna\u2019s gonna love it! I\u2019m just hoping my cat doesn\u2019t break anything else while I\u2019m out. She knocked over my coffee this morning\u2026 again.",
+    "ts": "1782483146.532236",
+    "synthetic": true,
+    "thread_ts": "1782480600.000000",
+    "parent_user_id": "U13ELENA"
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "@Noah Fischer oh no \ud83d\ude02 cats are chaos agents. At least Luna just eats my socks. Also, did anyone else see that meme with the dog in a raincoat? That\u2019s basically us this week.",
+    "ts": "1782486787.451223",
+    "synthetic": true,
+    "thread_ts": "1782480600.000000",
+    "parent_user_id": "U13ELENA"
+  },
+  {
+    "type": "message",
+    "user": "U16NOAH",
+    "text": "Wait, is it the one where the dog looks like Paddington? Because I sent that to my sister and she thought it was photoshopped lol.",
+    "ts": "1782491653.688270",
+    "synthetic": true,
+    "thread_ts": "1782480600.000000",
+    "parent_user_id": "U13ELENA"
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Jumping in\u2014my weekend plan is to debug whatever is happening with the calendar app. It keeps duplicating my meetings. If anyone has a fix, I\u2019ll trade you a cat meme.",
+    "ts": "1782494230.225459",
+    "synthetic": true,
+    "thread_ts": "1782480600.000000",
+    "parent_user_id": "U13ELENA"
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Happy Friday! Anyone got fun weekend plans? I\u2019m thinking of taking Luna to the park if it ever stops raining \ud83d\udc36\ud83c\udf27\ufe0f",
+    "ts": "1782505800.000000",
+    "synthetic": true,
+    "thread_ts": "1782505800.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Haha, same here. My cat has been staring out the window like she\u2019s plotting something. Might try to teach her to fetch again, wish me luck \ud83d\ude02",
+    "ts": "1782510910.844152",
+    "synthetic": true,
+    "thread_ts": "1782505800.000000",
+    "parent_user_id": "U13ELENA"
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Lol, please record that. Last time you tried she just knocked the ball under the couch and glared at you, right?",
+    "ts": "1782516245.645103",
+    "synthetic": true,
+    "thread_ts": "1782505800.000000",
+    "parent_user_id": "U13ELENA"
+  },
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Yep, she\u2019s a menace. Also, did anyone else see that meme about the bug in the coffee machine? Because that\u2019s literally what happened to me this morning. RIP my caffeine fix.",
+    "ts": "1782517945.179538",
+    "synthetic": true,
+    "thread_ts": "1782505800.000000",
+    "parent_user_id": "U13ELENA"
+  },
+  {
+    "type": "message",
+    "user": "U09GRACE",
+    "text": "Wait, was it the one with the bug wearing a tiny barista hat? \ud83d\ude02 I saw that and thought of our kitchen after the last upgrade\u2026",
+    "ts": "1782523144.693043",
+    "synthetic": true,
+    "thread_ts": "1782505800.000000",
+    "parent_user_id": "U13ELENA"
+  }
+]

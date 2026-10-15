@@ -1,0 +1,35 @@
+[
+  {
+    "type": "message",
+    "user": "U0004",
+    "text": "Quick question\u2014what's the deadline for logging on-call hours? I had an incident last night and want to make sure I report it correctly.",
+    "ts": "1781272800.000000",
+    "synthetic": true,
+    "thread_ts": "1781272800.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U0016",
+    "text": "Hey Linda, you need to log all on-call hours and incidents in the IncidentTracker portal by 10am the next business day. Your supervisor will review it after that. It's all in the On-Call Compensation Policy doc if you need more details!",
+    "ts": "1781279520.000000",
+    "synthetic": true,
+    "thread_ts": "1781272800.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0004",
+    "text": "Perfect, thanks Elena! I'll get it in before 10. Didn't realize there was a hard cutoff.",
+    "ts": "1781280060.000000",
+    "synthetic": true,
+    "thread_ts": "1781272800.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0016",
+    "text": "No problem! Just make sure to do it on time so Marcus (Regional Ops Director) can approve it. Let me know if you have any issues.",
+    "ts": "1781282340.000000",
+    "synthetic": true,
+    "thread_ts": "1781272800.000000"
+  }
+]

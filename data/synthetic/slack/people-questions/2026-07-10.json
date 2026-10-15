@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Hey folks, does anyone know the process for getting a second laptop? I need to test some stuff on Windows and my main machine is Mac. Couldn't find anything in the handbook about this.",
+    "ts": "1783690200.000000",
+    "synthetic": true,
+    "thread_ts": "1783690200.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U03PRIYA",
+    "text": "Hi Chloe! Yeah, it's not in the handbook yet, but the current practice is you can request a second device for cross-OS testing if your manager signs off. You just need to fill out the 'Additional Hardware Request' form (it\u2019s in the IT portal, under Equipment Requests) and attach a quick note from your manager explaining the need.",
+    "ts": "1783690736.952891",
+    "synthetic": true,
+    "thread_ts": "1783690200.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Awesome, thanks Priya! Is there a budget cap or anything I should know before I ask my manager?",
+    "ts": "1783695454.985972",
+    "synthetic": true,
+    "thread_ts": "1783690200.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U03PRIYA",
+    "text": "Good question! For testing purposes, the cap is usually $1200 USD for the second device. IT will suggest a model that fits your needs and budget. Just make sure your manager\u2019s note mentions it\u2019s for cross-platform testing.",
+    "ts": "1783698847.056718",
+    "synthetic": true,
+    "thread_ts": "1783690200.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Perfect, that helps a lot. I\u2019ll ping my manager and get the form started. Thanks again!",
+    "ts": "1783700238.638019",
+    "synthetic": true,
+    "thread_ts": "1783690200.000000",
+    "parent_user_id": "U11CHLOE"
+  }
+]

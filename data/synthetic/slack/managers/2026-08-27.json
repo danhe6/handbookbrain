@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Hey, quick question\u2014does anyone remember how to actually use the 'Talent Assessment > Talent Assessment' page? I keep getting lost in there.",
+    "ts": "1787860800.000000",
+    "synthetic": true,
+    "thread_ts": "1787860800.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Yeah, Sam, that page is super dense. The trick is not to read the whole thing\u2014there\u2019s a nav menu at the top. Just use that to jump to whatever section you need, like if you\u2019re looking for the calibration steps or the FAQ. Each link drops you right where you need to be.",
+    "ts": "1787862106.993897",
+    "synthetic": true,
+    "thread_ts": "1787860800.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Oh, that\u2019s right! I totally forgot about the navigation links. Thanks, Chloe.",
+    "ts": "1787863013.657935",
+    "synthetic": true,
+    "thread_ts": "1787860800.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U09GRACE",
+    "text": "Chloe, you\u2019re a lifesaver. I always end up scrolling forever on that page.",
+    "ts": "1787864536.197385",
+    "synthetic": true,
+    "thread_ts": "1787860800.000000",
+    "parent_user_id": "U14SAM"
+  }
+]

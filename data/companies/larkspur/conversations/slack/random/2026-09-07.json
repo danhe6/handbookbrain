@@ -1,0 +1,43 @@
+[
+  {
+    "type": "message",
+    "user": "U0018",
+    "text": "Anyone have a good lunch spot rec near the office? I\u2019m tired of the same old sandwiches.",
+    "ts": "1788795000.000000",
+    "synthetic": true,
+    "thread_ts": "1788795000.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U0000",
+    "text": "Try Tikka Town on 17th! Their butter chicken is \ud83d\udd25. Also, has anyone seen the warehouse cat today? She was sleeping on the packing peanuts again yesterday \ud83d\ude02",
+    "ts": "1788796680.000000",
+    "synthetic": true,
+    "thread_ts": "1788795000.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0013",
+    "text": "Omg, I saw her this morning! She was chasing a rogue label across the floor. Also, +1 for Tikka Town. If you want something lighter, Green Seed has good salads.",
+    "ts": "1788802560.000000",
+    "synthetic": true,
+    "thread_ts": "1788795000.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0013",
+    "text": "Did anyone catch the Nuggets game last night? That 3-pointer in the last minute was wild. Also, the cat\u2019s name is officially \u2018Boxy\u2019 now, per warehouse consensus.",
+    "ts": "1788805680.000000",
+    "synthetic": true,
+    "thread_ts": "1788795000.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0016",
+    "text": "Boxy is the hero we deserve \ud83d\ude02 Thanks for the lunch tips, y\u2019all! Might try Green Seed today. And yes, Nuggets FTW!",
+    "ts": "1788811560.000000",
+    "synthetic": true,
+    "thread_ts": "1788795000.000000"
+  }
+]

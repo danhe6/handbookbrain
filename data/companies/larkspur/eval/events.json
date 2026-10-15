@@ -1,0 +1,235 @@
+[
+  {
+    "kind": "material",
+    "doc": "on-call-compensation",
+    "heading": "Expectations and Responsibilities",
+    "implemented_on": "2026-09-09T15:00:00",
+    "decided_on": "2026-08-21T15:00:00",
+    "decided_in": "zoom",
+    "new_body": "Employees on-call must:\n- Respond to all alerts from the OpsAlert system within 20 minutes.\n- Be reachable by phone and Slack (LarkspurOps channel) at all times during the shift.\n- Log all incidents and actions in the IncidentTracker portal within 2 hours of resolution.\n- Coordinate with external vendors (e.g., CargoSync, ShipLogic) as needed.\nFailure to meet these expectations may result in forfeiture of on-call pay for the affected shift, subject to review by the Operations Manager (currently: Priya Desai, Savannah office).",
+    "change_summary": "Response time to OpsAlert: 15 minutes -> 20 minutes; Vendor: FleetPulse -> ShipLogic",
+    "question": "If I get an OpsAlert notification, how long do I have to respond?",
+    "old_answer": "15 minutes",
+    "new_answer": "20 minutes",
+    "decided_by": "Fatima Alvi"
+  },
+  {
+    "kind": "material",
+    "doc": "remote-work-stipend",
+    "heading": "Ineligible Expenses",
+    "implemented_on": "2026-07-28T15:00:00",
+    "decided_on": "2026-07-16T15:00:00",
+    "decided_in": "teams",
+    "new_body": "Policy section \"Ineligible Expenses\" in \"Remote Work Stipend Policy\":\n- Rent or mortgage payments\n- Furniture not related to work (e.g., couches, beds)\n- Personal electronics (TVs, gaming consoles)\n- Food and beverage\n- Childcare or pet care\nAny expenses not listed as eligible must be pre-approved by the HR Business Partner (currently: Priya Desai). Submitting ineligible expenses may result in stipend suspension for up to 1 month.",
+    "change_summary": "Approver and suspension duration changed, Daniel Rios -> Priya Desai, 2 months -> 1 month",
+    "question": "Who do I contact for pre-approval of an expense that's not listed as eligible?",
+    "old_answer": "Daniel Rios",
+    "new_answer": "Priya Desai",
+    "decided_by": "Hannah Brooks"
+  },
+  {
+    "kind": "material",
+    "doc": "data-retention-policy",
+    "heading": "3. Deletion Schedules and Automation",
+    "implemented_on": "2026-07-14T15:00:00",
+    "decided_on": "2026-07-07T15:00:00",
+    "decided_in": "zoom_captions",
+    "new_body": "Data deletion is scheduled monthly on the 10th using the DataSweep Pro tool (vendor: ByteHarbor Solutions). Automated scripts flag eligible records for deletion, and a manual review is conducted by the Data Compliance Officer (currently: Marcus Lin). Exceptions require written approval from the IT Director. Physical records are shredded quarterly by SecureShred Inc. (invoice avg: $1,200/quarter).",
+    "change_summary": "Deletion day changed, 15th -> 10th; approver changed, department head -> IT Director",
+    "question": "If I need an exception to the data deletion schedule, who do I contact for approval now?",
+    "old_answer": "The department head.",
+    "new_answer": "The IT Director.",
+    "decided_by": "Samantha Ortiz"
+  },
+  {
+    "kind": "material",
+    "doc": "procurement-approvals",
+    "heading": "Special Categories and Exceptions",
+    "implemented_on": "2026-07-28T15:00:00",
+    "decided_on": "2026-07-08T15:00:00",
+    "decided_in": "email",
+    "new_body": "Special Categories and Exceptions:\n- Fuel purchases from approved vendors (e.g., FuelDirect) are exempt from competitive bid requirements but must be reconciled monthly.\n- Software subscriptions (e.g., FleetOps Tracker) over $2,500/year require IT and Finance joint approval.\n- Any purchase over $50,000 requires Board notification at least 10 days prior to commitment.\n- Sole-source justifications must be documented and signed by the requesting manager and Procurement Lead.",
+    "change_summary": "Vendor for fuel purchases changed, old: PetroMax -> new: FuelDirect; Software subscription threshold changed, old: $3,000/year -> new: $2,500/year",
+    "question": "If I want to buy a software subscription for $2,800/year, do I need joint approval from IT and Finance?",
+    "old_answer": "No, only subscriptions over $3,000/year require joint approval.",
+    "new_answer": "Yes, subscriptions over $2,500/year require joint approval.",
+    "decided_by": "Samantha Ortiz"
+  },
+  {
+    "kind": "material",
+    "doc": "corporate-card-use",
+    "heading": "Transaction Limits and Controls",
+    "implemented_on": "2026-09-04T15:00:00",
+    "decided_on": "2026-08-21T15:00:00",
+    "decided_in": "mbox",
+    "new_body": "Each card has a default single-transaction limit of $2,000. Transactions above this amount require pre-approval from the Finance Director (currently Priya Desai). Monthly spend is capped at $5,000 unless otherwise authorized. Cards are monitored via the SpendGuard tool, which flags:\n- Transactions over $1,000\n- Multiple transactions at the same vendor in 48 hours\n- Weekend spending over $500\nCardholders receive automated alerts for flagged activity. Persistent overages may result in card revocation.",
+    "change_summary": "Single-transaction limit changed: $1,500 -> $2,000; Approver title changed: Finance Manager -> Finance Director; Vendor transaction window changed: 24 hours -> 48 hours",
+    "question": "If I make two purchases at the same vendor within 36 hours, will that trigger a SpendGuard alert?",
+    "old_answer": "Yes, multiple transactions at the same vendor in 24 hours would trigger an alert.",
+    "new_answer": "No, only multiple transactions at the same vendor within 48 hours will trigger an alert.",
+    "decided_by": "Priya Shah"
+  },
+  {
+    "kind": "material",
+    "doc": "pto-policy",
+    "heading": "6. Tracking and Reporting",
+    "implemented_on": "2026-05-31T15:00:00",
+    "decided_on": "2026-05-23T15:00:00",
+    "decided_in": "slack",
+    "new_body": "PTO balances are updated daily in the WorkNest HR portal. Employees can view their current balance, accrual rate, and pending requests at any time. HR will send monthly PTO balance summaries via email. Discrepancies should be reported to hr@larkspurfreight.com within 30 days. Supervisors are responsible for monitoring team PTO usage to ensure adequate coverage.",
+    "change_summary": "Update frequency changed: real time -> daily; PTO summary email frequency: quarterly -> monthly",
+    "question": "How often will I receive PTO balance summary emails from HR?",
+    "old_answer": "Quarterly",
+    "new_answer": "Monthly",
+    "decided_by": "Jasper de Vries"
+  },
+  {
+    "kind": "material",
+    "doc": "travel-expenses",
+    "heading": "6. Exceptions and Special Cases",
+    "implemented_on": "2026-08-28T15:00:00",
+    "decided_on": "2026-08-18T15:00:00",
+    "decided_in": "notes_ai",
+    "new_body": "Requests for exceptions (e.g., higher hotel rates during conferences, additional baggage fees) must be submitted in writing to the Director of Finance before travel. Emergency expenses (e.g., medical, weather-related delays) will be reviewed on a case-by-case basis. Tacoma office employees may claim up to $30/day for winter gear rental (November\u2013March) with supervisor approval. All exceptions must be documented in the expense report.",
+    "change_summary": "Approver changed, Finance Manager -> Director of Finance; winter gear rental amount changed, $25/day -> $30/day",
+    "question": "Who do I need to send my exception request to, and what's the new daily limit for winter gear rental in Tacoma?",
+    "old_answer": "Finance Manager; $25/day",
+    "new_answer": "Director of Finance; $30/day",
+    "decided_by": "Samantha Ortiz"
+  },
+  {
+    "kind": "material",
+    "doc": "driver-safety-manual",
+    "heading": "Vehicle Inspection Protocols",
+    "implemented_on": "2026-06-20T15:00:00",
+    "decided_on": "2026-05-31T15:00:00",
+    "decided_in": "none",
+    "new_body": "Drivers are required to complete a pre-trip inspection checklist before each shift using the FleetCheck app (vendor: FleetOps). The checklist includes brakes, lights, tires, and emergency equipment. Dallas drivers must submit digital inspection logs by 8:00 AM daily. Any critical defect (e.g., brake failure, tire tread < 2/32\u201d) must be reported immediately to Fleet Maintenance (contact: Jorge Salinas). Non-critical issues must be logged within 12 hours.",
+    "change_summary": "vendor changed, RoadLogic -> FleetOps; deadline changed, 7:00 AM -> 8:00 AM",
+    "question": "What time do Dallas drivers need to submit their digital inspection logs now?",
+    "old_answer": "By 7:00 AM daily.",
+    "new_answer": "By 8:00 AM daily.",
+    "decided_by": "Marcus Lee"
+  },
+  {
+    "kind": "cosmetic",
+    "doc": "laptop-equipment-policy",
+    "heading": "4. Device Return Procedures",
+    "implemented_on": "2026-06-01T15:00:00",
+    "new_body": "4. Device Return Procedures\n\n- Upon termination or role change, all equipment must be returned within 5 business days.\n- Remote staff will receive a prepaid FedEx return label for shipping equipment back to the company.\n- Employees at Denver HQ must return equipment in person at the IT desk (Room 2B-14).\n- Late returns will result in a $50 USD per week penalty, which will be deducted from the final paycheck.\n- If equipment is not returned within 30 days, it will be considered lost and you will be charged the full replacement value.\n- The IT team will verify the condition of all returned devices and securely wipe all data using Blancco Drive Eraser.",
+    "change_summary": "no factual change",
+    "question": "Where do Denver HQ employees return their equipment?",
+    "old_answer": "At the IT desk (Room 2B-14).",
+    "new_answer": "At the IT desk (Room 2B-14).",
+    "decided_by": "Benji Morales"
+  },
+  {
+    "kind": "cosmetic",
+    "doc": "parental-leave",
+    "heading": "6. Application Process",
+    "implemented_on": "2026-06-05T15:00:00",
+    "new_body": "To apply for parental leave:\n\n1. Submit a leave request in PeopleNest, including all supporting documents (such as a medical certificate or adoption papers).\n2. Notify both your direct manager and HR at least 30 days before your intended leave start date. For paternity leave, the notice period is 14 days.\n3. HR will review your request, confirm your eligibility, and send a formal approval within 7 business days.\n4. If you are based in an international office, you may need to complete additional statutory forms. Please refer to the HR intranet for specific requirements.",
+    "change_summary": "Improved clarity and formatting: bullet points -> numbered steps, clarified document examples, separated notice periods, made international office note more explicit. No factual change.",
+    "question": "Do I need to notify both my manager and HR, or just one of them, when applying for parental leave?",
+    "old_answer": "You need to notify your direct manager and HR.",
+    "new_answer": "You need to notify both your direct manager and HR.",
+    "decided_by": "Fatima Alvi"
+  },
+  {
+    "kind": "rename",
+    "doc": "code-review-guidelines",
+    "heading": "Common Issues and Escalation",
+    "implemented_on": "2026-06-13T15:00:00",
+    "new_heading": "Frequent Problems and Escalation Procedures",
+    "decided_by": "Hannah Brooks"
+  },
+  {
+    "kind": "remove_doc",
+    "doc": "vendor-onboarding",
+    "implemented_on": "2026-08-07T15:00:00",
+    "decided_by": "Benji Morales"
+  },
+  {
+    "kind": "add_doc",
+    "doc": "ai-tools-acceptable-use",
+    "implemented_on": "2026-07-12T15:00:00",
+    "decided_on": "2026-07-02T15:00:00",
+    "decided_in": "teams",
+    "new_doc": {
+      "id": "ai-tools-acceptable-use",
+      "title": "AI Tools Acceptable Use Policy",
+      "folder": "it-security",
+      "summary": "Which AI assistants employees may use, with what data, and approval steps",
+      "sections": [
+        {
+          "heading": "1. Approved AI Tools and Vendors",
+          "body": "Larkspur Freight currently authorizes the use of the following AI assistants for business operations: CargoGenie (by BluePallet Systems), RouteOptima (by Navisight), and DocuPilot (by QuantaLogic). Use of any other AI tool, including free online chatbots, is strictly prohibited unless explicitly approved by the IT Security Manager. The list of approved tools is reviewed quarterly (next review: 15 July 2024). Any requests for additional tools must be submitted via the IT Service Portal and will be evaluated within 10 business days."
+        },
+        {
+          "heading": "2. Data Classification and Usage Restrictions",
+          "body": "Employees may only input data classified as 'Internal Use' or lower into approved AI tools. Confidential, customer-identifiable, or financial data (e.g., shipment invoices, client contracts, payroll records) must NOT be entered under any circumstances. For example, shipment tracking numbers are permitted, but customer payment details are not. Violations may result in disciplinary action up to and including termination."
+        },
+        {
+          "heading": "3. Regional Office Variations",
+          "body": "- Chicago HQ: All approved tools may be used for logistics planning and document drafting.\n- Rotterdam Office: Only CargoGenie and DocuPilot are permitted; RouteOptima is pending GDPR compliance review (expected by 30 June 2024).\n- Singapore Office: Use of AI tools is limited to non-customer data until local regulatory clearance is obtained (target: Q3 2024).\nEmployees must consult their local IT coordinator for clarifications."
+        },
+        {
+          "heading": "4. Approval and Onboarding Process",
+          "body": "Before accessing any AI assistant, employees must complete the 'AI Security Awareness' training (2 hours, available on Larkspur Academy). Department heads must submit an access request form to the IT Security Manager (currently: Priya Desai) for each user. Approval is typically granted within 5 business days. Access is reviewed annually every March."
+        },
+        {
+          "heading": "5. Monitoring and Auditing",
+          "body": "All interactions with AI tools are logged and subject to monthly audits by the IT Security team. In May 2024, 7% of users were flagged for review due to improper data entry. Employees are required to report any suspected misuse within 24 hours to security@larkspurfreight.com. Failure to comply may result in suspension of AI tool access."
+        },
+        {
+          "heading": "6. Vendor Data Handling and Retention",
+          "body": "Vendors are contractually obligated to retain Larkspur data for no longer than 30 days post-processing. BluePallet Systems and QuantaLogic provide monthly data deletion certificates. Any data breach or retention policy violation must be reported by the vendor within 48 hours. Employees should not attempt to export or download AI-generated data to personal devices."
+        },
+        {
+          "heading": "7. Policy Updates and Employee Responsibilities",
+          "body": "This policy is updated biannually, with the next revision scheduled for 1 December 2024. Employees are responsible for reviewing updates posted in the IT-Security folder on SharePoint. Questions should be directed to the IT Security Manager or local IT coordinators. Non-compliance may result in a written warning after the first offense, and further disciplinary action for repeated violations."
+        }
+      ]
+    },
+    "decided_by": "Rachel Evans"
+  },
+  {
+    "kind": "unimplemented",
+    "doc": "incident-response-plan",
+    "heading": "6. Recovery and Restoration",
+    "decided_in": "zoom",
+    "decided_on": "2026-07-06T15:00:00",
+    "new_body": "Systems may only be restored after written approval from the IT Security Manager. DataGuard backups must be used to restore any lost or corrupted data. For Dallas Terminal, restoration must be completed within 48 hours of containment. All restored systems must pass a vulnerability scan (using Nessus Pro) before being returned to production. Affected users are notified via email and required to reset passwords. Any financial losses over $2,000 USD must be reported to the CFO (James O\u2019Malley) within 24 hours of discovery.",
+    "change_summary": "Approver changed, IT Security Team Lead -> IT Security Manager; Dallas Terminal restoration deadline changed, 36 hours -> 48 hours",
+    "question": "How long do we have to complete restoration for Dallas Terminal after containment?",
+    "old_answer": "36 hours",
+    "new_answer": "48 hours",
+    "decided_by": "Jonas Becker"
+  },
+  {
+    "kind": "unimplemented",
+    "doc": "warehouse-safety-procedures",
+    "heading": "4. Emergency Procedures",
+    "decided_in": "email",
+    "decided_on": "2026-07-10T15:00:00",
+    "new_body": "In case of fire, chemical spill, or medical emergency, activate the nearest alarm (located every 50 meters). Evacuation maps are posted at all exits. Assembly point for the North Office is Lot C; for the South Office, use the loading dock area. Emergency drills are held every 120 days (next scheduled: 2024-07-15). All staff must:\n- Follow instructions from the Emergency Response Team (ERT)\n- Do not re-enter the building until cleared by the ERT Lead (currently: Marcus O\u2019Neill)\n- Report missing persons to the ERT within 5 minutes of assembly\nFailure to participate in drills results in a written warning.",
+    "change_summary": "Alarm spacing changed, old: every 40 meters -> new: every 50 meters. Drill frequency changed, old: every 90 days -> new: every 120 days.",
+    "question": "How often are we supposed to have emergency drills now?",
+    "old_answer": "Every 90 days.",
+    "new_answer": "Every 120 days.",
+    "decided_by": "Jessica Tran"
+  },
+  {
+    "kind": "unimplemented",
+    "doc": "relocation-assistance",
+    "heading": "Office-Specific Provisions",
+    "decided_in": "teams",
+    "decided_on": "2026-07-29T15:00:00",
+    "new_body": "Dallas Office: Employees are eligible for an additional $400 stipend for utility setup costs. Seattle Office: Temporary housing may be extended to 21 days due to local housing market constraints, subject to approval by the Seattle HR Lead. Atlanta Office: Lease termination fees are reimbursed up to $1,500. All offices: Spousal job search assistance is available through CareerConnect Partners upon request.",
+    "change_summary": "Dallas utility stipend amount changed, $500 -> $400; Seattle temporary housing extension changed, 30 days/Office Manager -> 21 days/HR Lead",
+    "question": "Who approves the temporary housing extension in Seattle, and for how many days can it be extended?",
+    "old_answer": "The Seattle Office Manager can approve an extension up to 30 days.",
+    "new_answer": "The Seattle HR Lead can approve an extension up to 21 days.",
+    "decided_by": "Hannah Brooks"
+  }
+]

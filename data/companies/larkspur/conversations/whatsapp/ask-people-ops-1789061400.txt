@@ -1,0 +1,4 @@
+[09/10/26, 5:30:00 PM] Miguel Santos: If I make two purchases at the same vendor within 36 hours, will that trigger a SpendGuard alert?
+[09/10/26, 6:15:00 PM] Hannah Brooks: Yes, multiple transactions at the same vendor in 24 hours would trigger an alert.
+[09/10/26, 7:06:00 PM] Miguel Santos: Got it, thanks Hannah!
+[09/10/26, 7:19:00 PM] Hannah Brooks: No problem, let me know if you have any other questions.

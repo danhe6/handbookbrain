@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Hey all, quick question\u2014does anyone have the details for 'GitLab Singapore Pte Ltd > Medical Insurance'? Got a new hire asking about coverage and how to access specialist care.",
+    "ts": "1787335200.000000",
+    "synthetic": true,
+    "thread_ts": "1787335200.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Yep, I can help! Singapore team members are covered under HSBC Insurance, it\u2019s pretty comprehensive. Hospital, surgical, major medical, maternity, outpatient GP and specialist, plus dental are all included.",
+    "ts": "1787340156.864320",
+    "synthetic": true,
+    "thread_ts": "1787335200.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "For specialist care, first check if the doctor\u2019s in the IHP Panel Clinics Directory (there\u2019s a Google Drive link in the handbook, let me know if you need it). If they\u2019re on the panel, call IHP at +64 6715 9422 before your appointment for cashless. If not, get a memo from the specialist and submit it with your claim through the IHP portal.",
+    "ts": "1787341235.127017",
+    "synthetic": true,
+    "thread_ts": "1787335200.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "You can do most stuff\u2014claims, teleconsults, finding clinics, etc.\u2014through the IHP Portal. There\u2019s a guide in the handbook, slide 49 has info on Letters of Guarantee if you need one for hospital admission.",
+    "ts": "1787344445.667438",
+    "synthetic": true,
+    "thread_ts": "1787335200.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U01MAYA",
+    "text": "Super helpful, thanks Elena! I\u2019ll pass this on to my new joiner too.",
+    "ts": "1787347917.330757",
+    "synthetic": true,
+    "thread_ts": "1787335200.000000",
+    "parent_user_id": "U12BEN"
+  }
+]

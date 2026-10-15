@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U16NOAH",
+    "text": "Hey, quick question\u2014if Legal needs People Ops to help with something like updating contracts for a specific country, is there a set process for how we\u2019re supposed to request that? Or do we just email someone directly?",
+    "ts": "1777579200.000000",
+    "synthetic": true,
+    "thread_ts": "1777579200.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U15YUKI",
+    "text": "Yeah, there\u2019s actually a template we\u2019re supposed to use for that. It\u2019s in the handbook somewhere\u2014I think under the People Group section. Legal should fill it out with all the details (like what\u2019s needed, any deadlines, who\u2019s involved, etc) and then send it to People Ops. It helps make sure nothing gets missed.",
+    "ts": "1777581114.541284",
+    "synthetic": true,
+    "thread_ts": "1777579200.000000",
+    "parent_user_id": "U16NOAH"
+  },
+  {
+    "type": "message",
+    "user": "U16NOAH",
+    "text": "Ah, got it. So not just a quick ping then. Do you know if we need to include stuff like translations or FAQs in the request?",
+    "ts": "1777585393.689186",
+    "synthetic": true,
+    "thread_ts": "1777579200.000000",
+    "parent_user_id": "U16NOAH"
+  },
+  {
+    "type": "message",
+    "user": "U15YUKI",
+    "text": "Yep, if it\u2019s relevant. Like, if there\u2019s a language thing or if team members might have questions, you should mention if you need an FAQ or if People Ops has enough info to answer stuff. Basically, the more detail the better so they can handle it smoothly.",
+    "ts": "1777586924.360847",
+    "synthetic": true,
+    "thread_ts": "1777579200.000000",
+    "parent_user_id": "U16NOAH"
+  },
+  {
+    "type": "message",
+    "user": "U16NOAH",
+    "text": "Makes sense, thanks Yuki! I\u2019ll dig up the template and make sure we include everything.",
+    "ts": "1777587057.905416",
+    "synthetic": true,
+    "thread_ts": "1777579200.000000",
+    "parent_user_id": "U16NOAH"
+  }
+]

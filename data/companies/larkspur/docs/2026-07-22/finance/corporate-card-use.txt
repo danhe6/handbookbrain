@@ -1,0 +1,95 @@
+Corporate Card Usage
+====================
+
+Document owner: Emily Foster
+
+ELIGIBILITY AND CARD ISSUANCE
+
+Corporate cards are available to full-time employees in the Operations, Sales, and Logistics
+departments who have completed at least 90 days of employment. Requests must be submitted
+via the FinTrak portal and approved by the department head (e.g., Carla Jensen for
+Operations, Mark Liu for Sales). Cards are issued by our partner, Northgate Bank, with a
+standard monthly limit of $5,000 USD. Exceptions up to $10,000 require CFO approval. Cards
+are not issued to contractors or part-time staff. For the Rotterdam office, only managers
+are eligible for cards, with a €3,000 monthly cap.
+
+REQUESTING A CORPORATE CARD
+
+To request a card, employees must complete the Corporate Card Request Form in the finance
+folder on SharePoint and attach a signed approval from their supervisor. The form requires:
+
+* Employee ID and department
+
+* Estimated monthly spend
+
+* List of primary vendors (e.g., FleetFuel, CargoMate)
+
+Requests are reviewed within 5 business days. For urgent needs (e.g., last-minute travel),
+email finance@larkspurfreight.com with 'URGENT CARD REQUEST' in the subject. Cards are
+typically delivered within 7-10 business days after approval.
+
+PERMITTED AND PROHIBITED EXPENSES
+
+Corporate cards may be used for:
+
+* Approved travel (flights, hotels, taxis)
+
+* Client meals (max $120 per meal)
+
+* Office supplies from approved vendors (e.g., OfficeNest, SupplyBridge)
+
+* Fuel and tolls for company vehicles
+
+Prohibited uses include:
+
+* Personal expenses
+
+* Cash advances
+
+* Alcohol purchases over $50 per event
+
+* Gift cards
+
+Violations may result in card suspension and disciplinary action. The Dallas office allows
+ride-share apps (e.g., GoCab) up to $200/month, while the Rotterdam office does not.
+
+TRANSACTION LIMITS AND CONTROLS
+
+Each card has a default single-transaction limit of $1,500. Transactions above this amount
+require pre-approval from the Finance Manager (currently Priya Desai). Monthly spend is
+capped at $5,000 unless otherwise authorized. Cards are monitored via the SpendGuard tool,
+which flags:
+
+* Transactions over $1,000
+
+* Multiple transactions at the same vendor in 24 hours
+
+* Weekend spending over $500
+
+Cardholders receive automated alerts for flagged activity. Persistent overages may result in
+card revocation.
+
+EXPENSE RECONCILIATION AND RECEIPTS
+
+All cardholders must reconcile expenses within 7 calendar days of statement close
+(statements close on the 25th of each month). Receipts must be uploaded to the FinTrak
+portal and matched to each transaction. Missing receipts over $50 require a written
+explanation and supervisor sign-off. The finance team (contact: finance@larkspurfreight.com)
+audits 10% of all cardholder statements monthly. Failure to reconcile on time may result in
+a $25 late fee deducted from payroll.
+
+LOST OR STOLEN CARDS
+
+Report lost or stolen cards immediately to Northgate Bank at 1-800-555-0199 and notify
+finance@larkspurfreight.com. Replacement cards are issued within 3 business days.
+Cardholders are liable for any unauthorized charges up to $100 if not reported within 24
+hours. For the Rotterdam office, contact the local finance lead, Jeroen van Dijk, for
+assistance with replacements.
+
+CARD CANCELLATION AND OFFBOARDING
+
+Upon resignation or termination, cards must be surrendered to HR within 2 business days.
+Final expense reports must be submitted within 5 days of departure. Any outstanding balances
+will be deducted from final paychecks. For transfers between offices, cardholders must
+reapply for a new card under the destination office’s rules. Questions about offboarding
+procedures should be directed to HR (hr@larkspurfreight.com).

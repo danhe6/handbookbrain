@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Happy Friday everyone! Anyone got fun weekend plans? I\u2019m thinking about finally taking Max (my dog) to that new park by the river.",
+    "ts": "1785506400.000000",
+    "synthetic": true,
+    "thread_ts": "1785506400.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Omg Sam, do it! I took Luna there last weekend and she went absolutely nuts chasing squirrels \ud83d\ude02 Also, I just saw this meme and it\u2019s basically me after debugging all week: *[posts meme of a cat smashing a keyboard]*",
+    "ts": "1785511087.555860",
+    "synthetic": true,
+    "thread_ts": "1785506400.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "LOL that\u2019s too real. Speaking of bugs, did anyone else\u2019s Slack randomly log them out this morning or was that just me?",
+    "ts": "1785515317.041191",
+    "synthetic": true,
+    "thread_ts": "1785506400.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Nope, happened to me too. I thought it was just my laptop being weird again. Maybe it\u2019s a sign we should all just log off and go play with our pets instead \ud83d\ude05",
+    "ts": "1785520577.664064",
+    "synthetic": true,
+    "thread_ts": "1785506400.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Jumping in to say my cat just walked across my keyboard and sent a half-written email to my manager, so I\u2019m voting yes on the pets-takeover plan \ud83d\ude02",
+    "ts": "1785525505.721580",
+    "synthetic": true,
+    "thread_ts": "1785506400.000000",
+    "parent_user_id": "U14SAM"
+  }
+]

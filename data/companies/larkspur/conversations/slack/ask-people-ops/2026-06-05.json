@@ -1,0 +1,35 @@
+[
+  {
+    "type": "message",
+    "user": "U0013",
+    "text": "How often will I receive PTO balance summary emails from HR?",
+    "ts": "1780678800.000000",
+    "synthetic": true,
+    "thread_ts": "1780678800.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U0015",
+    "text": "Quarterly, you should get those every 3 months.",
+    "ts": "1780679220.000000",
+    "synthetic": true,
+    "thread_ts": "1780678800.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0013",
+    "text": "Thanks Jasper!",
+    "ts": "1780686120.000000",
+    "synthetic": true,
+    "thread_ts": "1780678800.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0015",
+    "text": "No problem, let me know if you need anything else.",
+    "ts": "1780688640.000000",
+    "synthetic": true,
+    "thread_ts": "1780678800.000000"
+  }
+]

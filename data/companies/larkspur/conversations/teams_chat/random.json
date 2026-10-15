@@ -1,0 +1,153 @@
+{
+  "value": [
+    {
+      "id": "1780063200000000",
+      "messageType": "message",
+      "createdDateTime": "2026-05-29T14:00:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Victor Nguyen"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Anyone got lunch recs near the office? I\u2019m tired of the same old sandwiches. Denver peeps, help!</p>"
+      }
+    },
+    {
+      "id": "17800632000000001",
+      "replyToId": "1780063200000000",
+      "messageType": "message",
+      "createdDateTime": "2026-05-29T14:52:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Rachel Evans"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Try Tikka Town on 17th! Their paneer wrap is \ud83d\udd25. Or if you want something lighter, Green Spoon\u2019s salads are solid.</p>"
+      }
+    },
+    {
+      "id": "17800632000000002",
+      "replyToId": "1780063200000000",
+      "messageType": "message",
+      "createdDateTime": "2026-05-29T16:17:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Hannah Brooks"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Seconding Tikka Town. Also, has anyone seen the warehouse cat today? I swear she was sleeping on top of the label printer again \ud83d\ude02</p>"
+      }
+    },
+    {
+      "id": "17800632000000003",
+      "replyToId": "1780063200000000",
+      "messageType": "message",
+      "createdDateTime": "2026-05-29T17:15:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Benji Morales"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Lol, she knocked over my coffee this morning. She\u2019s a menace but I love her. Also, Nuggets game last night?? That 3rd quarter was wild.</p>"
+      }
+    },
+    {
+      "id": "17800632000000004",
+      "replyToId": "1780063200000000",
+      "messageType": "message",
+      "createdDateTime": "2026-05-29T19:06:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Jessica Tran"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>I missed it! Did Jokic go off again? And yes, the cat is now curled up in the shipping bin. She\u2019s living her best life.</p>"
+      }
+    },
+    {
+      "id": "17800632000000005",
+      "replyToId": "1780063200000000",
+      "messageType": "message",
+      "createdDateTime": "2026-05-29T19:25:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Marcus Lee"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Jokic had a triple double, of course. Cat\u2019s got the right idea, honestly. Might join her for a nap after lunch \ud83d\ude05</p>"
+      }
+    },
+    {
+      "id": "1786640400000000",
+      "messageType": "message",
+      "createdDateTime": "2026-08-13T17:00:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Rachel Evans"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Anyone got lunch recs near the office? I\u2019m tired of the same old sandwiches. Thinking something spicy today. \ud83c\udf36\ufe0f</p>"
+      }
+    },
+    {
+      "id": "17866404000000001",
+      "replyToId": "1786640400000000",
+      "messageType": "message",
+      "createdDateTime": "2026-08-13T17:37:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Marcus Lee"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Try Tikka Town on 17th! Their chicken tikka wrap is \ud83d\udd25. Also, did anyone catch the Nuggets game last night? That 3rd quarter was wild.</p>"
+      }
+    },
+    {
+      "id": "17866404000000002",
+      "replyToId": "1786640400000000",
+      "messageType": "message",
+      "createdDateTime": "2026-08-13T18:23:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Marcus Lee"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Tikka Town is legit. Also, has anyone seen the warehouse cat lately? I swear I saw him sleeping on top of the label printer again \ud83d\ude02</p>"
+      }
+    },
+    {
+      "id": "17866404000000003",
+      "replyToId": "1786640400000000",
+      "messageType": "message",
+      "createdDateTime": "2026-08-13T19:29:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Priya Shah"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>lol warehouse cat is living his best life. I saw him chasing a packing peanut this morning. Nuggets game was insane, Jokic is unreal!</p>"
+      }
+    }
+  ],
+  "synthetic": true
+}

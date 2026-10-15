@@ -1,0 +1,29 @@
+[
+  {
+    "type": "message",
+    "user": "U16NOAH",
+    "text": "Hey all, can someone clarify how the 'GitLab Ireland Ltd > Pension Plan' works? I saw something about Aviva and auto-enrolment but not sure what actually happens when you join.",
+    "ts": "1791228600.000000",
+    "synthetic": true,
+    "thread_ts": "1791228600.000000",
+    "reply_count": 2
+  },
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Yeah, sure Noah! So basically, GitLab offers a defined contribution pension through Aviva, and it's managed by NFP Ireland. If you joined after Nov 1, 2025, you get automatically enrolled in the company plan. The idea is to help you save for retirement, and the company matches your contributions up to a certain percent. You should get all the info from NFP once you start, but that's the gist.",
+    "ts": "1791230052.665933",
+    "synthetic": true,
+    "thread_ts": "1791228600.000000",
+    "parent_user_id": "U16NOAH"
+  },
+  {
+    "type": "message",
+    "user": "U16NOAH",
+    "text": "Awesome, thanks Sam! That clears it up for me.",
+    "ts": "1791230784.731989",
+    "synthetic": true,
+    "thread_ts": "1791228600.000000",
+    "parent_user_id": "U16NOAH"
+  }
+]

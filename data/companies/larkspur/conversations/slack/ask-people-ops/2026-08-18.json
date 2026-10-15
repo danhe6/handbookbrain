@@ -1,0 +1,35 @@
+[
+  {
+    "type": "message",
+    "user": "U0013",
+    "text": "Hey team, who do I contact for pre-approval of an expense that's not listed as eligible in the policy doc?",
+    "ts": "1787074200.000000",
+    "synthetic": true,
+    "thread_ts": "1787074200.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U0012",
+    "text": "Hi Miguel, you should reach out to Daniel Rios for that. He handles pre-approvals for anything outside the standard list.",
+    "ts": "1787076480.000000",
+    "synthetic": true,
+    "thread_ts": "1787074200.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0013",
+    "text": "Thanks Rachel! I'll email Daniel now.",
+    "ts": "1787080500.000000",
+    "synthetic": true,
+    "thread_ts": "1787074200.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0012",
+    "text": "No problem, let me know if you need anything else.",
+    "ts": "1787085660.000000",
+    "synthetic": true,
+    "thread_ts": "1787074200.000000"
+  }
+]

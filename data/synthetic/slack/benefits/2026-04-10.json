@@ -1,0 +1,29 @@
+[
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Hey, does anyone know how we\u2019re actually measuring the impact of the People Analytics Office Hours? I need to put something in my quarterly report.",
+    "ts": "1775847600.000000",
+    "synthetic": true,
+    "thread_ts": "1775847600.000000",
+    "reply_count": 2
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Yeah, Sam, it\u2019s in the handbook somewhere but basically we look at a few things\u2014like, if people are sending fewer questions through email or Slack, that\u2019s one. Also, there\u2019s a Tableau dashboard that tracks usage, and I think follow-up project requests from office hours get tagged in the tracker with something like PA-office-hours. Let me know if you need the links.",
+    "ts": "1775850131.832576",
+    "synthetic": true,
+    "thread_ts": "1775847600.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "That helps, thanks Chloe! I\u2019ll check the handbook for the details and grab the dashboard link. If anyone has the tracker handy, drop it here?",
+    "ts": "1775851015.542170",
+    "synthetic": true,
+    "thread_ts": "1775847600.000000",
+    "parent_user_id": "U14SAM"
+  }
+]

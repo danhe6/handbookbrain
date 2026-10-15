@@ -1,0 +1,35 @@
+[
+  {
+    "type": "message",
+    "user": "U0011",
+    "text": "Quick question: I'm heading to Tacoma next week for the client workshop. What's the max hotel rate I can expense per night? And do I need to keep meal receipts?",
+    "ts": "1785265200.000000",
+    "synthetic": true,
+    "thread_ts": "1785265200.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U0013",
+    "text": "Hey Jonas, for Tacoma the hotel cap is $210/night. For meals, you just claim the $55/day per diem\u2014no need to keep receipts for that. All this is in the Travel & Expenses Policy doc if you need more details.",
+    "ts": "1785271380.000000",
+    "synthetic": true,
+    "thread_ts": "1785265200.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0011",
+    "text": "Awesome, thanks Miguel! And just to confirm, I should book the hotel and flights through TripNest, right?",
+    "ts": "1785274800.000000",
+    "synthetic": true,
+    "thread_ts": "1785265200.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0013",
+    "text": "Yep, both hotel and flights should go through TripNest. Let me know if you run into any issues booking or if you need the policy doc link.",
+    "ts": "1785281760.000000",
+    "synthetic": true,
+    "thread_ts": "1785265200.000000"
+  }
+]

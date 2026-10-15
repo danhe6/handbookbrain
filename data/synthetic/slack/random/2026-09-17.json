@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Happy Friday everyone! Anyone got fun weekend plans? I\u2019m thinking about finally taking Max to the dog park if it ever stops raining.",
+    "ts": "1789653600.000000",
+    "synthetic": true,
+    "thread_ts": "1789653600.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Omg Sam, I saw that meme you posted yesterday with the dog in the raincoat \ud83d\ude02 That\u2019s basically my cat right now, except she just stares at the window like she\u2019s plotting something.",
+    "ts": "1789658225.611222",
+    "synthetic": true,
+    "thread_ts": "1789653600.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Haha, yeah, Max just gives me the saddest eyes. Also, did anyone else\u2019s Slack randomly log them out this morning or was that just me?",
+    "ts": "1789658908.740474",
+    "synthetic": true,
+    "thread_ts": "1789653600.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Nope, same here! I thought it was just my laptop being weird again. Had to reset my password for the third time this month \ud83d\ude43",
+    "ts": "1789661042.343966",
+    "synthetic": true,
+    "thread_ts": "1789653600.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U09GRACE",
+    "text": "Jumping in\u2014mine too! Maybe it\u2019s a sign we should all just log off and start the weekend early? \ud83d\ude0f",
+    "ts": "1789663057.648318",
+    "synthetic": true,
+    "thread_ts": "1789653600.000000",
+    "parent_user_id": "U14SAM"
+  }
+]

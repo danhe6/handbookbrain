@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Hey all, quick question about Remote.com > Italy \ud83c\uddee\ud83c\uddf9 \u2014 does anyone know if we still go through Remote for all the benefits stuff? I have a new hire asking about medical coverage and leave policies, and I want to make sure I\u2019m not missing anything.",
+    "ts": "1789131600.000000",
+    "synthetic": true,
+    "thread_ts": "1789131600.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U15YUKI",
+    "text": "Yep, Elena, everything for Italy is still managed by Remote. You can reach them at help@remote.com or just use the Remote.com Italy portal. All the benefits, including healthcare and leave, are handled directly by them.",
+    "ts": "1789136720.480720",
+    "synthetic": true,
+    "thread_ts": "1789131600.000000",
+    "parent_user_id": "U13ELENA"
+  },
+  {
+    "type": "message",
+    "user": "U15YUKI",
+    "text": "For medical, they offer Allianz private insurance\u2014team members can enroll within 30 days of their start date. If they miss that window, they should still reach out to Remote, sometimes they can make exceptions. Dependents can be added for a monthly fee. All the management is through ThanksBen.",
+    "ts": "1789140260.387877",
+    "synthetic": true,
+    "thread_ts": "1789131600.000000",
+    "parent_user_id": "U13ELENA"
+  },
+  {
+    "type": "message",
+    "user": "U15YUKI",
+    "text": "And don\u2019t forget, there\u2019s also the government-subsidized healthcare (Fondo Est or Qu.AS, depending on the role). The company pays most of it, but there\u2019s a small annual fee for the employee. All the guides are linked in the Remote docs if you need more details.",
+    "ts": "1789141193.355414",
+    "synthetic": true,
+    "thread_ts": "1789131600.000000",
+    "parent_user_id": "U13ELENA"
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Perfect, thanks so much Yuki! That\u2019s exactly what I needed.",
+    "ts": "1789146237.763570",
+    "synthetic": true,
+    "thread_ts": "1789131600.000000",
+    "parent_user_id": "U13ELENA"
+  }
+]

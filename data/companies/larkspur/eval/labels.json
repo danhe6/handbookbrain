@@ -1,0 +1,398 @@
+{
+  "synthetic": true,
+  "items": [
+    {
+      "scenario": "decision_implemented",
+      "doc": "operations/on-call-compensation.md",
+      "heading": "Expectations and Responsibilities",
+      "decided_on": "2026-08-21T15:00:00",
+      "implemented_on": "2026-09-09T15:00:00",
+      "decision": "Response time to OpsAlert: 15 minutes -> 20 minutes; Vendor: FleetPulse -> ShipLogic",
+      "decided_by": "Fatima Alvi",
+      "source": "zoom",
+      "cid": "meet:zoom-20260821-on-call-compensation:2026-08-21T00:00:03Z",
+      "format": "meet"
+    },
+    {
+      "scenario": "decision_implemented",
+      "doc": "hr/remote-work-stipend.docx",
+      "heading": "Ineligible Expenses",
+      "decided_on": "2026-07-16T15:00:00",
+      "implemented_on": "2026-07-28T15:00:00",
+      "decision": "Approver and suspension duration changed, Daniel Rios -> Priya Desai, 2 months -> 1 month",
+      "decided_by": "Hannah Brooks",
+      "source": "teams",
+      "cid": "teams:teams-20260716-remote-work-stipend"
+    },
+    {
+      "scenario": "decision_implemented",
+      "doc": "it-security/data-retention-policy.html",
+      "heading": "3. Deletion Schedules and Automation",
+      "decided_on": "2026-07-07T15:00:00",
+      "implemented_on": "2026-07-14T15:00:00",
+      "decision": "Deletion day changed, 15th -> 10th; approver changed, department head -> IT Director",
+      "decided_by": "Samantha Ortiz",
+      "source": "zoom_captions",
+      "cid": "zoom:zoom_captions-20260707-data-retention-polic"
+    },
+    {
+      "scenario": "decision_implemented",
+      "doc": "finance/procurement-approvals.html",
+      "heading": "Special Categories and Exceptions",
+      "decided_on": "2026-07-08T15:00:00",
+      "implemented_on": "2026-07-28T15:00:00",
+      "decision": "Vendor for fuel purchases changed, old: PetroMax -> new: FuelDirect; Software subscription threshold changed, old: $3,000/year -> new: $2,500/year",
+      "decided_by": "Samantha Ortiz",
+      "source": "email",
+      "cid": "email:policy-update-procurement-approval-matrix-special-categories:2026-07-08T19:30:00Z"
+    },
+    {
+      "scenario": "decision_implemented",
+      "doc": "finance/corporate-card-use.txt",
+      "heading": "Transaction Limits and Controls",
+      "decided_on": "2026-08-21T15:00:00",
+      "implemented_on": "2026-09-04T15:00:00",
+      "decision": "Single-transaction limit changed: $1,500 -> $2,000; Approver title changed: Finance Manager -> Finance Director; Vendor transaction window changed: 24 hours -> 48 hours",
+      "decided_by": "Priya Shah",
+      "source": "mbox",
+      "cid": "email:policy-update-corporate-card-usage-transaction-limits-and-co:2026-08-21T15:00:00Z"
+    },
+    {
+      "scenario": "decision_implemented",
+      "doc": "hr/pto-policy.html",
+      "heading": "6. Tracking and Reporting",
+      "decided_on": "2026-05-23T15:00:00",
+      "implemented_on": "2026-05-31T15:00:00",
+      "decision": "Update frequency changed: real time -> daily; PTO summary email frequency: quarterly -> monthly",
+      "decided_by": "Jasper de Vries",
+      "source": "slack",
+      "cid": "slack:people-ops-leads:1779462000.000000"
+    },
+    {
+      "scenario": "decision_implemented",
+      "doc": "finance/travel-expenses.pdf",
+      "heading": "6. Exceptions and Special Cases",
+      "decided_on": "2026-08-18T15:00:00",
+      "implemented_on": "2026-08-28T15:00:00",
+      "decision": "Approver changed, Finance Manager -> Director of Finance; winter gear rental amount changed, $25/day -> $30/day",
+      "decided_by": "Samantha Ortiz",
+      "source": "notes_ai",
+      "planted_error": "Winter gear rental amount should be $30/day, but the notes say $35/day.",
+      "cid": "notes:ai-notes-20260818-travel-expenses"
+    },
+    {
+      "scenario": "decision_implemented",
+      "doc": "operations/driver-safety-manual.html",
+      "heading": "Vehicle Inspection Protocols",
+      "decided_on": "2026-05-31T15:00:00",
+      "implemented_on": "2026-06-20T15:00:00",
+      "decision": "vendor changed, RoadLogic -> FleetOps; deadline changed, 7:00 AM -> 8:00 AM",
+      "decided_by": "Marcus Lee",
+      "source": "none",
+      "cid": null
+    },
+    {
+      "scenario": "decision_implemented",
+      "doc": "it-security/ai-tools-acceptable-use.md",
+      "heading": null,
+      "decided_on": "2026-07-02T15:00:00",
+      "implemented_on": "2026-07-12T15:00:00",
+      "decision": "adopt a NEW 'AI Tools Acceptable Use Policy' (which assistants are allowed, with which data, approvals)",
+      "decided_by": "Rachel Evans",
+      "source": "teams",
+      "cid": "teams:teams-20260702-ai-tools-acceptable-"
+    },
+    {
+      "scenario": "decision_unimplemented",
+      "doc": "it-security/incident-response-plan.docx",
+      "heading": "6. Recovery and Restoration",
+      "decided_on": "2026-07-06T15:00:00",
+      "implemented_on": null,
+      "decision": "Approver changed, IT Security Team Lead -> IT Security Manager; Dallas Terminal restoration deadline changed, 36 hours -> 48 hours",
+      "decided_by": "Jonas Becker",
+      "source": "zoom",
+      "cid": "zoom:zoom-20260706-incident-response-pl"
+    },
+    {
+      "scenario": "decision_unimplemented",
+      "doc": "operations/warehouse-safety-procedures.md",
+      "heading": "4. Emergency Procedures",
+      "decided_on": "2026-07-10T15:00:00",
+      "implemented_on": null,
+      "decision": "Alarm spacing changed, old: every 40 meters -> new: every 50 meters. Drill frequency changed, old: every 90 days -> new: every 120 days.",
+      "decided_by": "Jessica Tran",
+      "source": "email",
+      "cid": "email:update-to-warehouse-safety-procedures-emergency-procedures-p:2026-07-10T14:00:00Z"
+    },
+    {
+      "scenario": "decision_unimplemented",
+      "doc": "hr/relocation-assistance.html",
+      "heading": "Office-Specific Provisions",
+      "decided_on": "2026-07-29T15:00:00",
+      "implemented_on": null,
+      "decision": "Dallas utility stipend amount changed, $500 -> $400; Seattle temporary housing extension changed, 30 days/Office Manager -> 21 days/HR Lead",
+      "decided_by": "Hannah Brooks",
+      "source": "teams",
+      "cid": "teams:teams-20260729-relocation-assistanc"
+    },
+    {
+      "scenario": "conflict",
+      "cid": "teams_chat:ask-people-ops:1789750800000000:2026-09-18T17:00:00Z",
+      "doc": "operations/on-call-compensation.md",
+      "heading": "Expectations and Responsibilities",
+      "old": "15 minutes",
+      "new": "20 minutes",
+      "format": "teams_chat"
+    },
+    {
+      "scenario": "conflict",
+      "cid": "slack:ask-people-ops:1787074200.000000",
+      "doc": "hr/remote-work-stipend.docx",
+      "heading": "Ineligible Expenses",
+      "old": "Daniel Rios",
+      "new": "Priya Desai"
+    },
+    {
+      "scenario": "conflict",
+      "cid": "google_chat:ask-people-ops:1784907000000000:2026-07-24T15:30:00Z",
+      "doc": "it-security/data-retention-policy.html",
+      "heading": "3. Deletion Schedules and Automation",
+      "old": "The department head.",
+      "new": "The IT Director.",
+      "format": "google_chat"
+    },
+    {
+      "scenario": "conflict",
+      "cid": "slack:ask-people-ops:1785508200.000000",
+      "doc": "finance/procurement-approvals.html",
+      "heading": "Special Categories and Exceptions",
+      "old": "No, only subscriptions over $3,000/year require joint approval.",
+      "new": "Yes, subscriptions over $2,500/year require joint approval."
+    },
+    {
+      "scenario": "conflict",
+      "cid": "whatsapp:ask-people-ops-1789061400:2026-09-10T17:30:00Z",
+      "doc": "finance/corporate-card-use.txt",
+      "heading": "Transaction Limits and Controls",
+      "old": "Yes, multiple transactions at the same vendor in 24 hours would trigger an alert.",
+      "new": "No, only multiple transactions at the same vendor within 48 hours will trigger an alert.",
+      "format": "whatsapp"
+    },
+    {
+      "scenario": "conflict",
+      "cid": "slack:ask-people-ops:1780678800.000000",
+      "doc": "hr/pto-policy.html",
+      "heading": "6. Tracking and Reporting",
+      "old": "Quarterly",
+      "new": "Monthly"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "discord:ask-people-ops:2026-05-08T19:30:00Z",
+      "doc": "finance/per-diem-rates.pdf",
+      "heading": "Eligibility and Exceptions",
+      "format": "discord"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "slack:ask-people-ops:1781272800.000000",
+      "doc": "operations/on-call-compensation.md",
+      "heading": "Reporting and Approval Process"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "teams_chat:ask-people-ops:1784647800000000:2026-07-21T15:30:00Z",
+      "doc": "finance/procurement-approvals.html",
+      "heading": "Approval Thresholds \u2013 Dallas Office",
+      "format": "teams_chat"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "slack:ask-people-ops:1787679000.000000",
+      "doc": "it-security/password-mfa-policy.docx",
+      "heading": "Exceptions and Special Cases"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "teams_chat:ask-people-ops:1787333400000000:2026-08-21T17:30:00Z",
+      "doc": "finance/procurement-approvals.html",
+      "heading": "Overview and Purpose",
+      "format": "teams_chat"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "slack:ask-people-ops:1784309400.000000",
+      "doc": "it-security/password-mfa-policy.docx",
+      "heading": "Password Complexity Standards"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "teams_chat:ask-people-ops:1785420000000000:2026-07-30T14:00:00Z",
+      "doc": "operations/vendor-onboarding.md",
+      "heading": "7. Final Onboarding Confirmation",
+      "format": "teams_chat"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "slack:ask-people-ops:1785265200.000000",
+      "doc": "finance/travel-expenses.pdf",
+      "heading": "2. Reimbursable Expenses"
+    },
+    {
+      "scenario": "tribal",
+      "cid": "teams_chat:ask-people-ops:1785524400000000:2026-07-31T19:00:00Z",
+      "topic": "whether pets are allowed in the Rotterdam office",
+      "format": "teams_chat"
+    },
+    {
+      "scenario": "tribal",
+      "cid": "slack:ask-people-ops:1785776400.000000",
+      "topic": "reimbursing a home internet upgrade above the stipend"
+    },
+    {
+      "scenario": "tribal",
+      "cid": "teams_chat:ask-people-ops:1788793200000000:2026-09-07T15:00:00Z",
+      "topic": "taking a sabbatical after 5 years",
+      "format": "teams_chat"
+    },
+    {
+      "scenario": "noise",
+      "cid": "slack:random:1788973200.000000"
+    },
+    {
+      "scenario": "noise",
+      "cid": "teams_chat:random:1780063200000000:2026-05-29T14:00:00Z",
+      "format": "teams_chat"
+    },
+    {
+      "scenario": "noise",
+      "cid": "slack:random:1788795000.000000"
+    },
+    {
+      "scenario": "noise",
+      "cid": "teams_chat:random:1786640400000000:2026-08-13T17:00:00Z",
+      "format": "teams_chat"
+    },
+    {
+      "scenario": "noise",
+      "cid": "slack:random:1781877600.000000"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "jira:PEOPLE-100",
+      "doc": "finance/travel-expenses.pdf",
+      "heading": "4. Documentation Requirements"
+    },
+    {
+      "scenario": "gap",
+      "cid": "jira:PEOPLE-101",
+      "topic": "reimbursing a home internet upgrade above the stipend"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "jira:PEOPLE-102",
+      "doc": "it-security/password-mfa-policy.docx",
+      "heading": "Compliance Monitoring and Enforcement"
+    },
+    {
+      "scenario": "gap",
+      "cid": "jira:PEOPLE-103",
+      "topic": "taking a sabbatical after 5 years"
+    },
+    {
+      "scenario": "gap",
+      "cid": "jira:PEOPLE-104",
+      "topic": "reimbursing a home internet upgrade above the stipend"
+    },
+    {
+      "scenario": "gap",
+      "cid": "jira:PEOPLE-105",
+      "topic": "getting a parking pass at the Denver HQ"
+    },
+    {
+      "scenario": "gap",
+      "cid": "jira:PEOPLE-106",
+      "topic": "using personal phones for warehouse scanning apps"
+    },
+    {
+      "scenario": "gap",
+      "cid": "jira:PEOPLE-107",
+      "topic": "whether pets are allowed in the Rotterdam office"
+    },
+    {
+      "scenario": "gap",
+      "cid": "jira:PEOPLE-108",
+      "topic": "getting a parking pass at the Denver HQ"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "jira:PEOPLE-109",
+      "doc": "finance/procurement-approvals.html",
+      "heading": "Approval Thresholds \u2013 Chicago Office"
+    },
+    {
+      "scenario": "gap",
+      "cid": "jira:PEOPLE-110",
+      "topic": "whether pets are allowed in the Rotterdam office"
+    },
+    {
+      "scenario": "gap",
+      "cid": "jira:PEOPLE-111",
+      "topic": "getting a parking pass at the Denver HQ"
+    },
+    {
+      "scenario": "gap",
+      "cid": "jira:PEOPLE-112",
+      "topic": "using personal phones for warehouse scanning apps"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "jira:PEOPLE-113",
+      "doc": "finance/travel-expenses.pdf",
+      "heading": "3. Approval Workflow"
+    },
+    {
+      "scenario": "gap",
+      "cid": "jira:PEOPLE-114",
+      "topic": "whether pets are allowed in the Rotterdam office"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "jira:PEOPLE-115",
+      "doc": "finance/corporate-card-use.txt",
+      "heading": "Expense Reconciliation and Receipts"
+    },
+    {
+      "scenario": "gap",
+      "cid": "jira:PEOPLE-116",
+      "topic": "reimbursing a home internet upgrade above the stipend"
+    },
+    {
+      "scenario": "gap",
+      "cid": "jira:PEOPLE-117",
+      "topic": "taking a sabbatical after 5 years"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "jira:PEOPLE-118",
+      "doc": "hr/referral-bonus-program.md",
+      "heading": "Contact and Support"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "jira:PEOPLE-119",
+      "doc": "operations/warehouse-safety-procedures.md",
+      "heading": "6. Contractor and Visitor Safety"
+    },
+    {
+      "scenario": "answerable",
+      "cid": "jira:PEOPLE-120",
+      "doc": "hr/parental-leave.txt",
+      "heading": "2. Maternity Leave"
+    },
+    {
+      "scenario": "noise",
+      "cid": "notes:offsite-planning-20260624"
+    }
+  ]
+}

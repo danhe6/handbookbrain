@@ -1,0 +1,29 @@
+[
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Hey all, quick question: are there any specific volunteer projects the company supports, or can we pick anything local? Trying to plan something for next month.",
+    "ts": "1785504600.000000",
+    "synthetic": true,
+    "thread_ts": "1785504600.000000",
+    "reply_count": 2
+  },
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Hey Elena! There are a few projects the team\u2019s been involved with recently\u2014Operation Warm, Fontanus Research Center, National Charity League, and Hack for She come to mind. I think you can also do something local, but those are some examples from the handbook if you want inspo. Check the GiveLab Volunteer Initiatives section for more details!",
+    "ts": "1785507619.879694",
+    "synthetic": true,
+    "thread_ts": "1785504600.000000",
+    "parent_user_id": "U13ELENA"
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Awesome, thanks Sam! I\u2019ll take a look at that section. Operation Warm sounds interesting, actually.",
+    "ts": "1785512637.991871",
+    "synthetic": true,
+    "thread_ts": "1785504600.000000",
+    "parent_user_id": "U13ELENA"
+  }
+]

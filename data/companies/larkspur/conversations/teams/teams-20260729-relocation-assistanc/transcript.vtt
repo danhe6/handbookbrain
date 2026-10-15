@@ -1,0 +1,136 @@
+WEBVTT
+
+00:00:03.000 --> 00:00:08.185
+<v Hannah Brooks>Morning everyone! Hope you all managed to stay cool this week—Dallas was brutal yesterday.</v>
+
+00:00:09.760 --> 00:00:15.685
+<v Jessica Tran>Tell me about it, Hannah. AC at my place barely kept up. How’s everyone else doing?</v>
+
+00:00:16.999 --> 00:00:22.555
+<v Marcus Lee>Seattle’s been rainy as usual, but at least it’s not 100 degrees. Samantha, how’s Atlanta?</v>
+
+00:00:24.274 --> 00:00:29.459
+<v Samantha Ortiz>Pretty humid, but nothing out of the ordinary. Derek, you survived the move, right?</v>
+
+00:00:30.368 --> 00:00:35.553
+<v Derek Patel>Barely! Still unpacking boxes. But hey, at least the movers didn’t break anything major.</v>
+
+00:00:36.658 --> 00:00:47.769
+<v Hannah Brooks>Glad to hear it, Derek. Okay, let’s get started. First, quick status update: onboarding for the August hires is on track. We’ve got all paperwork in from the new drivers.</v>
+
+00:00:48.841 --> 00:00:55.879
+<v Jessica Tran>Second update: The new payroll system with Paywise is live as of Monday. No major issues reported so far.</v>
+
+00:00:56.920 --> 00:01:04.698
+<v Marcus Lee>Great. Now, main agenda: reviewing the Relocation Assistance Policy, specifically the office-specific provisions. We had feedback from Dallas and Seattle teams.</v>
+
+00:01:05.489 --> 00:01:14.748
+<v Samantha Ortiz>Right. For Dallas, finance flagged the $500 utility stipend as higher than what most employees are actually spending. They’re recommending we reduce it to $400.</v>
+
+00:01:15.467 --> 00:01:27.689
+<v Derek Patel>And for Seattle, HR’s suggesting we clarify the temporary housing extension. Instead of 30 days with Office Manager approval, they want to make it 21 days, with approval by the HR Lead instead.</v>
+
+00:01:29.188 --> 00:01:54.003
+<v Jessica Tran>Just to recap, current text says: Dallas Office: Employees are eligible for an additional $500 stipend for utility setup costs. Seattle Office: Temporary housing may be extended to 30 days due to local housing market constraints, subject to approval by the Seattle Office Manager. Atlanta Office: Lease termination fees are reimbursed up to $1,500. All offices: Spousal job search assistance is available through CareerConnect Partners upon request.</v>
+
+00:01:54.578 --> 00:02:03.467
+<v Marcus Lee>So, Dallas would change from $500 to $400, and Seattle would change from 30 days/Office Manager to 21 days/HR Lead. Everyone clear on that?</v>
+
+00:02:05.110 --> 00:02:15.110
+<v Samantha Ortiz>Makes sense to me. The data from finance supports the Dallas change, and Seattle’s HR team says 21 days is more in line with what’s actually needed.</v>
+
+00:02:15.813 --> 00:02:25.073
+<v Derek Patel>I’m a little concerned about the Seattle change. Some folks have had trouble finding housing in under 30 days. Are we sure 21 is enough?</v>
+
+00:02:25.398 --> 00:02:35.768
+<v Jessica Tran>That’s a fair point, Derek. But HR says the average stay has been 17 days, and the extension process was getting bogged down. They want to streamline it.</v>
+
+00:02:36.201 --> 00:02:42.127
+<v Marcus Lee>Plus, the HR Lead will have more visibility into individual cases than the Office Manager did.</v>
+
+00:02:42.818 --> 00:02:47.262
+<v Samantha Ortiz>If someone really needs more than 21 days, can we make exceptions?</v>
+
+00:02:48.474 --> 00:02:58.474
+<v Hannah Brooks>We can always review on a case-by-case basis, but the standard policy will be 21 days with HR Lead approval. If there’s a special circumstance, we’ll escalate.</v>
+
+00:02:59.108 --> 00:03:03.923
+<v Derek Patel>Alright, as long as there’s some flexibility for outliers, I’m okay with it.</v>
+
+00:03:04.620 --> 00:03:14.990
+<v Jessica Tran>So, to confirm: Dallas utility stipend drops to $400, Seattle temp housing extension is now 21 days with HR Lead approval. Atlanta and spousal assistance stay the same.</v>
+
+00:03:15.472 --> 00:03:21.028
+<v Hannah Brooks>Correct. That’s our final decision. I’ll communicate this to the office leads after the meeting.</v>
+
+00:03:21.345 --> 00:03:25.790
+<v Marcus Lee>Who’s taking the action item to update the policy doc on Confluence?</v>
+
+00:03:27.581 --> 00:03:34.618
+<v Samantha Ortiz>I can do it. I’ll update the text and send it to everyone for review by end of day.</v>
+
+00:03:35.545 --> 00:03:40.360
+<v Derek Patel>Thanks, Samantha. Can you also flag the changes in the Slack #people-ops channel?</v>
+
+00:03:42.033 --> 00:03:46.107
+<v Samantha Ortiz>Will do. I’ll post a summary once the doc is updated.</v>
+
+00:03:47.340 --> 00:03:52.154
+<v Jessica Tran>Should we notify payroll about the Dallas change, or is that handled automatically?</v>
+
+00:03:52.519 --> 00:03:57.704
+<v Marcus Lee>I’ll ping payroll just to be safe. Don’t want any confusion for August relocations.</v>
+
+00:03:59.069 --> 00:04:02.772
+<v Hannah Brooks>Good call. Anything else on relocation before we move on?</v>
+
+00:04:04.480 --> 00:04:06.702
+<v Derek Patel>Nope, that covers it for me.</v>
+
+00:04:08.456 --> 00:04:09.956
+<v Jessica Tran>Same here.</v>
+
+00:04:10.648 --> 00:04:12.148
+<v Samantha Ortiz>All set.</v>
+
+00:04:12.720 --> 00:04:19.016
+<v Marcus Lee>Alright, next item—unrelated, but we need to decide on the renewal for our background check vendor, SecureScreen.</v>
+
+00:04:20.715 --> 00:04:26.641
+<v Jessica Tran>Their rates went up 6% for next year. Still cheaper than CheckMate, but not by much.</v>
+
+00:04:27.884 --> 00:04:30.476
+<v Derek Patel>Any issues with SecureScreen’s service this year?</v>
+
+00:04:31.573 --> 00:04:36.388
+<v Samantha Ortiz>No major complaints. Turnaround time is still under 48 hours for most checks.</v>
+
+00:04:36.997 --> 00:04:43.663
+<v Hannah Brooks>Let’s stick with them for now. We can revisit next renewal cycle if the price keeps creeping up.</v>
+
+00:04:44.632 --> 00:04:48.706
+<v Marcus Lee>Agreed. I’ll sign off on the renewal and let procurement know.</v>
+
+00:04:50.014 --> 00:04:51.514
+<v Jessica Tran>Thanks, Marcus.</v>
+
+00:04:52.220 --> 00:04:53.720
+<v Derek Patel>Anything else for today?</v>
+
+00:04:55.225 --> 00:04:56.725
+<v Samantha Ortiz>Nothing from me.</v>
+
+00:04:58.517 --> 00:05:04.073
+<v Hannah Brooks>Alright, thanks everyone. Samantha, let us know when the policy doc is ready for review.</v>
+
+00:05:04.428 --> 00:05:08.132
+<v Samantha Ortiz>Will do. Have a good rest of the week, all!</v>
+
+00:05:08.459 --> 00:05:09.959
+<v Jessica Tran>Bye everyone!</v>
+
+00:05:11.018 --> 00:05:12.518
+<v Marcus Lee>See you next week.</v>
+
+00:05:14.285 --> 00:05:15.785
+<v Derek Patel>Take care!</v>

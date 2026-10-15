@@ -1,0 +1,53 @@
+{
+  "id": "teams-20260701-01",
+  "subject": "Total Rewards weekly sync",
+  "startDateTime": "2026-07-01T10:00:00Z",
+  "endDateTime": "2026-07-01T10:05:11Z",
+  "participants": {
+    "organizer": {
+      "identity": {
+        "user": {
+          "displayName": "Maya Okafor"
+        }
+      }
+    },
+    "attendees": [
+      {
+        "identity": {
+          "user": {
+            "displayName": "Maya Okafor"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Lukas Brenner"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Priya Raman"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Daniel Ferreira"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Tom\u00e1s Rivera"
+          }
+        }
+      }
+    ]
+  },
+  "synthetic": true
+}

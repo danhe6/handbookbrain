@@ -1,0 +1,54 @@
+Operations weekly - Transcript
+Aug 21, 2026
+Attendees
+Fatima Alvi, Rachel Evans, Miguel Santos, Hannah Brooks, Jasper de Vries
+Transcript
+00:00:03
+Fatima Alvi: Morning everyone! Hope you all had a good week. Anyone else get caught in that crazy rain yesterday?
+Rachel Evans: Morning! Yeah, my street was basically a river. Had to wade to my car.
+Miguel Santos: Hey all. I missed the rain, but my dog did not appreciate the thunder last night.
+Hannah Brooks: Hi! I was lucky, just a drizzle here. Jasper, how's the new espresso machine treating you?
+Jasper de Vries: Hey! It's a game changer. I think I've had too much caffeine already today.
+Fatima Alvi: Alright, let's get started. First quick update: The new shipment tracking dashboard is live as of this morning. Thanks to IT for the fast turnaround.
+Rachel Evans: Second update: We hit 97% on-time deliveries last week, up from 94%. Great job, team!
+Miguel Santos: Nice! That’s a solid improvement.
+Fatima Alvi: Main agenda: reviewing the On-Call Compensation Policy, specifically the expectations and responsibilities section.
+00:01:04
+Hannah Brooks: Right, so currently, on-call staff have to respond to OpsAlert within 15 minutes. We've had feedback that this is a bit tight, especially overnight.
+Jasper de Vries: Yeah, I’ve heard from the night shift folks that 15 minutes can be tough if they’re not right by their phone.
+Rachel Evans: I agree. I think bumping it to 20 minutes is reasonable and still keeps us responsive.
+Miguel Santos: I’m okay with 20 minutes, but will that impact our SLA with vendors?
+Fatima Alvi: Good question. Our main vendor for these alerts is FleetPulse, but we’re actually switching to ShipLogic next month. Their SLA is 25 minutes, so we’re still within their window.
+Hannah Brooks: So, to clarify, we’d update the policy to say: 'Respond to all alerts from the OpsAlert system within 20 minutes.' And change the vendor reference from FleetPulse to ShipLogic.
+Jasper de Vries: Should we notify the team about the vendor change separately, or just update the doc?
+00:02:05
+Rachel Evans: I think both. Some folks still have FleetPulse bookmarked.
+Miguel Santos: I’m a little concerned about extending the response time. What if we have a critical incident and 20 minutes is too long?
+Fatima Alvi: That’s a fair point, Miguel. But based on the incident data, most critical alerts are responded to within 10 minutes anyway. The extra buffer is for edge cases, not the norm.
+Hannah Brooks: Plus, ShipLogic’s escalation protocol kicks in at 25 minutes, so we’re covered.
+Jasper de Vries: Alright, I’m convinced. 20 minutes seems reasonable.
+Rachel Evans: Agreed. Let’s make the change.
+Fatima Alvi: Okay, final decision: We are updating the On-Call Compensation Policy. Response time to OpsAlert will be 20 minutes, and the vendor reference will be changed from FleetPulse to ShipLogic.
+Miguel Santos: Sounds good. Who’s taking the action to update the document?
+Hannah Brooks: I can do it. I’ll update the policy in Confluence and send out a summary to the team by end of day.
+00:03:09
+Fatima Alvi: Thanks, Hannah. Please also flag the change in the next Ops newsletter.
+Hannah Brooks: Will do.
+Jasper de Vries: Do we need to update the IncidentTracker portal instructions too?
+Rachel Evans: Good catch. I’ll check if there’s any reference to FleetPulse there and update if needed.
+Fatima Alvi: Perfect. Anything else on this topic?
+Miguel Santos: Nope, that covers it for me.
+Hannah Brooks: All set here.
+Jasper de Vries: Same.
+Rachel Evans: Good here.
+Fatima Alvi: Alright, one last thing before we wrap up: Vendor renewal. Our contract with CleanFleet Services is up for renewal next month. I’ll be reviewing their proposal this week.
+Miguel Santos: Do we have any feedback on their service?
+Rachel Evans: I’ll send you the latest survey results, Fatima. Mostly positive, but a couple of notes on response times.
+Fatima Alvi: Thanks, Rachel. I’ll loop you in if I need more details.
+00:04:12
+Hannah Brooks: Let us know if you need any input from Ops.
+Fatima Alvi: Will do. Thanks everyone! Have a great weekend.
+Jasper de Vries: You too!
+Miguel Santos: Bye all.
+Rachel Evans: See you next week.
+Hannah Brooks: Bye!

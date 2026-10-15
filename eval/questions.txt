@@ -1,0 +1,27 @@
+# Seed questions asked at T0 (2026-04-01). Mix of: topics that later changed in real MRs,
+# topics that did not change (controls), and questions the handbook may not answer (gaps).
+How many days of PTO can I take?
+How much notice do I need to give before taking more than 25 consecutive days off?
+What changed about the pension plan in Ireland?
+What is statutory sick pay in Ireland?
+How is military leave paid in the US?
+What government paid parental leave is available in Australia?
+How does birth leave work in the Netherlands?
+What benefits does GitLab offer in Finland?
+What benefits does GitLab offer in Singapore?
+How do bonus contributions to the pension work in the UK?
+How do bonus and commission contributions work in Canada?
+What are the domestic partner premiums for Remote.com employees?
+How do I nominate someone for a promotion?
+How does relocation to India work?
+Is there a vision reimbursement policy?
+When are meal vouchers issued?
+What is the corporate bonus plan?
+How do I request a leave of absence in the US?
+What is an onboarding buddy supposed to do?
+What happens to my equipment when I leave GitLab?
+How does GitLab handle travel insurance?
+What job grade am I and how are job grades numbered?
+Who should I contact about the Employee Stock Purchase Plan?
+What is the policy on bringing a pet to a GitLab office?
+How many sick days do I get in Germany?

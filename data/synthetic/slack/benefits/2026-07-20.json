@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Hey, quick question\u2014if I want to apply for one of the open roles internally, do I just use the regular jobs page or is there a separate process for team members?",
+    "ts": "1784575800.000000",
+    "synthetic": true,
+    "thread_ts": "1784575800.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Hey Chloe! Yeah, there\u2019s a separate process for internal folks. You\u2019ll want to log into Greenhouse (should be through Okta if you haven\u2019t set it up yet), and then there\u2019s an internal job board you can access. I think the link is in the Helpful Links section too. The handbook has a step-by-step if you get stuck.",
+    "ts": "1784578477.322516",
+    "synthetic": true,
+    "thread_ts": "1784575800.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Awesome, thanks Ben! So just to confirm, after I log in, I look for the internal job board and apply from there?",
+    "ts": "1784580352.605482",
+    "synthetic": true,
+    "thread_ts": "1784575800.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Yep, exactly. Once you\u2019re in, just click on the job you\u2019re interested in and fill out the application form. You\u2019ll need your resume and stuff handy. Let me know if you need the handbook page, I can dig it up.",
+    "ts": "1784584500.573220",
+    "synthetic": true,
+    "thread_ts": "1784575800.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "That makes sense, thanks! I\u2019ll give it a try and ping you if I get lost.",
+    "ts": "1784586612.242306",
+    "synthetic": true,
+    "thread_ts": "1784575800.000000",
+    "parent_user_id": "U11CHLOE"
+  }
+]

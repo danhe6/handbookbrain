@@ -1,0 +1,27 @@
+[
+  {
+    "type": "message",
+    "user": "U0009",
+    "text": "Hey folks, quick q: I upgraded my home internet last month and the bill is $95, which is $20 over the monthly stipend. Can I get reimbursed for the full amount or just the $75? Not sure what the process is if it goes over.",
+    "ts": "1785776400.000000",
+    "synthetic": true,
+    "thread_ts": "1785776400.000000",
+    "reply_count": 2
+  },
+  {
+    "type": "message",
+    "user": "U0003",
+    "text": "Hey Benji, good question. So, if your internet bill goes over the $75 stipend, you can usually get up to $100 reimbursed if you get your manager to approve it first. Just attach the bill and a quick note from your manager to the regular expense form. This isn't written down anywhere yet, but that's what we've been doing.",
+    "ts": "1785778740.000000",
+    "synthetic": true,
+    "thread_ts": "1785776400.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0009",
+    "text": "Awesome, thanks Derek! I'll ping my manager and submit the form with the bill. Appreciate the quick answer.",
+    "ts": "1785781200.000000",
+    "synthetic": true,
+    "thread_ts": "1785776400.000000"
+  }
+]

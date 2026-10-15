@@ -1,0 +1,20 @@
+# Onboarding a company = this file. No code changes.
+name: Larkspur Freight
+graph: larkspur
+sources:                       # several sources; higher authority wins when they disagree
+  - name: wiki
+    label: Confluence wiki (daily export)
+    type: snapshots            # dated export folders <path>/YYYY-MM-DD/..., any format (md/html/pdf/docx/txt/csv)
+    path: data/companies/larkspur/docs
+    kind: live                 # re-synced daily (hb sync)
+    authority: 2
+  - name: drive
+    label: Shared drive
+    type: uploads              # static files dropped into <path>/<upload date>/... (hb upload)
+    path: data/companies/larkspur/drive
+    kind: static
+    authority: 1
+t0: "2026-04-15"
+conversations: data/companies/larkspur/conversations   # zoom/ teams/ slack/ email/ jira/ notes/
+labels: data/companies/larkspur/eval/labels.json        # ground truth, used only by `hb bench`
+questions: data/companies/larkspur/eval/questions.jsonl

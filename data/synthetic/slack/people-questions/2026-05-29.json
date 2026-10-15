@@ -1,0 +1,29 @@
+[
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Hey folks, quick question\u2014if I need to take a sick day for a doctor's appointment, do I just mark it as 'Out Sick' in Workday? Or is there something else I need to do?",
+    "ts": "1780081200.000000",
+    "synthetic": true,
+    "thread_ts": "1780081200.000000",
+    "reply_count": 2
+  },
+  {
+    "type": "message",
+    "user": "U15YUKI",
+    "text": "Yep, just mark it as 'Out Sick' in Workday so it gets tracked properly. That covers both illness and medical appointments. If it\u2019s just a regular sick day or appointment, you don\u2019t need to email anyone unless you\u2019re out for a longer stretch. If you\u2019re out for more than 5 days, there\u2019s a different process\u2014think you have to loop in the Absence Management team (leaves@domain.com) and maybe provide a doctor\u2019s note, depending on the province. It\u2019s all in the handbook under the sick leave section if you want the details!",
+    "ts": "1780085839.748513",
+    "synthetic": true,
+    "thread_ts": "1780081200.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Awesome, thanks Yuki! Just wanted to make sure I wasn\u2019t missing a step. I\u2019ll check the handbook if I end up needing more time.",
+    "ts": "1780088128.641018",
+    "synthetic": true,
+    "thread_ts": "1780081200.000000",
+    "parent_user_id": "U11CHLOE"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Quick question\u2014when we do panel interviews, is it better to do them in person or over video? I\u2019ve seen both but not sure what\u2019s preferred here.",
+    "ts": "1776276000.000000",
+    "synthetic": true,
+    "thread_ts": "1776276000.000000",
+    "reply_count": 2
+  },
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Hey Ben, good question. We usually do panel interviews over video call. I think the idea is it\u2019s less intimidating for candidates than sitting across from a whole group in person. It\u2019s in the handbook somewhere, but yeah, video is the way to go.",
+    "ts": "1776278301.947174",
+    "synthetic": true,
+    "thread_ts": "1776276000.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Ah, that makes sense. Thanks Sam! I\u2019ll set up a Zoom for the next one then.",
+    "ts": "1776279412.382993",
+    "synthetic": true,
+    "thread_ts": "1776276000.000000",
+    "parent_user_id": "U12BEN"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "type": "message",
+    "user": "U0015",
+    "text": "If I want to buy a software subscription for $2,800/year, do I need joint approval from IT and Finance?",
+    "ts": "1785508200.000000",
+    "synthetic": true,
+    "thread_ts": "1785508200.000000",
+    "reply_count": 2
+  },
+  {
+    "type": "message",
+    "user": "U0012",
+    "text": "No, only subscriptions over $3,000/year require joint approval.",
+    "ts": "1785512580.000000",
+    "synthetic": true,
+    "thread_ts": "1785508200.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0015",
+    "text": "Perfect, thanks Rachel!",
+    "ts": "1785515220.000000",
+    "synthetic": true,
+    "thread_ts": "1785508200.000000"
+  }
+]

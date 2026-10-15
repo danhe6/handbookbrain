@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HandbookBrain</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="#/ask" aria-label="HandbookBrain home">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 6h9M6.3 8.2l4.4 7.6M17.7 8.2l-4.4 7.6"/></svg>
+      <span>HandbookBrain</span>
+    </a>
+    <nav aria-label="Main" class="nav">
+      <a href="#/ask" data-nav="ask">Ask</a>
+      <a href="#/updates" data-nav="updates">Updates <span class="count" id="nav-review" hidden></span></a>
+      <a href="#/brain" data-nav="brain">Company brain</a>
+      <a href="#/trust" data-nav="trust">Trust</a>
+    </nav>
+    <div class="grow"></div>
+    <label class="company">
+      <span class="sr">Company</span>
+      <select id="company" aria-label="Company"></select>
+    </label>
+    <a class="pill" id="sync-pill" href="#/brain"><span class="dot"></span><span id="sync-text">…</span></a>
+  </div>
+</header>
+<main id="view" class="wrap" tabindex="-1"></main>
+<div id="drawer" class="drawer" hidden>
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+    <button class="icon-btn close" id="drawer-close" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div id="drawer-body"></div>
+  </div>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

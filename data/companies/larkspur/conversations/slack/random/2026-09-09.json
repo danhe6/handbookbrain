@@ -1,0 +1,35 @@
+[
+  {
+    "type": "message",
+    "user": "U0017",
+    "text": "Anyone got lunch recs near the office? I\u2019m tired of the same old sandwiches. Craving something spicy tbh.",
+    "ts": "1788973200.000000",
+    "synthetic": true,
+    "thread_ts": "1788973200.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U0001",
+    "text": "Try Tikka Town on 17th! Their chicken tikka wrap is \ud83d\udd25. Also, did anyone catch the Nuggets game last night? That 3rd quarter was wild.",
+    "ts": "1788974040.000000",
+    "synthetic": true,
+    "thread_ts": "1788973200.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0007",
+    "text": "Omg yes, Jokic was on another level. Also, has anyone seen the warehouse cat today? I swear she was sleeping on top of the label printer again \ud83d\ude02",
+    "ts": "1788976620.000000",
+    "synthetic": true,
+    "thread_ts": "1788973200.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0008",
+    "text": "Haha, she knocked over my coffee this morning. Cat\u2019s got attitude. And +1 for Tikka Town, but if you want tacos, El Camino\u2019s lunch special is solid too.",
+    "ts": "1788979620.000000",
+    "synthetic": true,
+    "thread_ts": "1788973200.000000"
+  }
+]

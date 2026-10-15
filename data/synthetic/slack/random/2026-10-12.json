@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Happy Friday everyone! Anyone got fun weekend plans? I\u2019m thinking of finally taking Luna to the dog park if it ever stops raining \ud83d\ude05",
+    "ts": "1791828000.000000",
+    "synthetic": true,
+    "thread_ts": "1791828000.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Omg Chloe, I saw the meme you posted yesterday with the dog in the raincoat and I swear it looked just like Luna \ud83d\ude02 I\u2019m just planning to catch up on sleep tbh.",
+    "ts": "1791831812.193540",
+    "synthetic": true,
+    "thread_ts": "1791828000.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Haha yes! She HATES the raincoat but she looks so grumpy in it, I had to share. Also, did anyone else\u2019s Slack just randomly log them out? Or is it just me and my cursed laptop again?",
+    "ts": "1791832048.034617",
+    "synthetic": true,
+    "thread_ts": "1791828000.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U07HANNAH",
+    "text": "Not just you, Chloe! Mine did too, right in the middle of a message. Maybe it\u2019s that bug IT mentioned last week?",
+    "ts": "1791836550.632942",
+    "synthetic": true,
+    "thread_ts": "1791828000.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Same here, I had to reset my password for the third time this month \ud83d\ude43 Anyway, if anyone wants to see a very unimpressed cat in a sweater, let me know, I have pics \ud83d\ude02",
+    "ts": "1791838760.487254",
+    "synthetic": true,
+    "thread_ts": "1791828000.000000",
+    "parent_user_id": "U11CHLOE"
+  }
+]

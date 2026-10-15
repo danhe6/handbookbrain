@@ -1,0 +1,29 @@
+[
+  {
+    "type": "message",
+    "user": "U15YUKI",
+    "text": "Hey folks, quick question: if we're about to kick off a big process change in our team, is there a checklist or something for what we should do first? I remember something about a framework but can't find the link.",
+    "ts": "1781811000.000000",
+    "synthetic": true,
+    "thread_ts": "1781811000.000000",
+    "reply_count": 2
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Hi Yuki! Yeah, there\u2019s a section in the handbook about this\u2014think it\u2019s under Organizational Change Management. Basically, you start by figuring out what phase you\u2019re in, who your main stakeholders are, and what the biggest risks might be. Then you draft a From\u2192To\u2192Because statement and list your top stakeholders, pick an exec sponsor, and decide how you\u2019ll communicate updates.",
+    "ts": "1781814867.653317",
+    "synthetic": true,
+    "thread_ts": "1781811000.000000",
+    "parent_user_id": "U15YUKI"
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "After that, you\u2019re supposed to meet with your sponsor, find some change champions, and set up feedback loops. There\u2019s an 8-phase approach in the doc too, and you\u2019re supposed to keep checking in and adjusting as you go. I\u2019d check the handbook page for the full steps, but that\u2019s the gist!",
+    "ts": "1781816628.414048",
+    "synthetic": true,
+    "thread_ts": "1781811000.000000",
+    "parent_user_id": "U15YUKI"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "uuid": "zoom-20260708-10",
+  "topic": "People Ops policy review",
+  "start_time": "2026-07-08T10:30:00Z",
+  "duration": 5,
+  "host_email": "sofia.lindqvist@example.com",
+  "participants": [
+    {
+      "name": "Sofia Lindqvist",
+      "user_email": "sofia.lindqvist@example.com"
+    },
+    {
+      "name": "Kwame Asante",
+      "user_email": "kwame.asante@example.com"
+    },
+    {
+      "name": "Hannah Weiss",
+      "user_email": "hannah.weiss@example.com"
+    },
+    {
+      "name": "Tom\u00e1s Rivera",
+      "user_email": "tom\u00e1s.rivera@example.com"
+    },
+    {
+      "name": "Grace Liu",
+      "user_email": "grace.liu@example.com"
+    }
+  ],
+  "synthetic": true
+}

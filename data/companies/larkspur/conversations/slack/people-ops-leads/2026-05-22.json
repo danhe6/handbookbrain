@@ -1,0 +1,59 @@
+[
+  {
+    "type": "message",
+    "user": "U0015",
+    "text": "Hey all, quick one: can we change PTO balance updates from real time to daily, and PTO summary emails from quarterly to monthly? Any objections?",
+    "ts": "1779462000.000000",
+    "synthetic": true,
+    "thread_ts": "1779462000.000000",
+    "reply_count": 6
+  },
+  {
+    "type": "message",
+    "user": "U0008",
+    "text": "No objections here, Jasper. Daily updates should be fine, and monthly summaries will help us catch issues sooner.",
+    "ts": "1779464340.000000",
+    "synthetic": true,
+    "thread_ts": "1779462000.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0004",
+    "text": "Agreed, makes sense. Real time was overkill anyway. Monthly emails are better for tracking trends too.",
+    "ts": "1779464520.000000",
+    "synthetic": true,
+    "thread_ts": "1779462000.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0015",
+    "text": "ok decided, I'll update the doc.",
+    "ts": "1779467880.000000",
+    "synthetic": true,
+    "thread_ts": "1779462000.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0008",
+    "text": "Thanks Jasper! Let us know if you need help with the wording.",
+    "ts": "1779472140.000000",
+    "synthetic": true,
+    "thread_ts": "1779462000.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0019",
+    "text": "Appreciate it. Just ping if you want a quick review before publishing.",
+    "ts": "1779475140.000000",
+    "synthetic": true,
+    "thread_ts": "1779462000.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0015",
+    "text": "Will do. Should be a quick edit. I'll push the update to Confluence and notify HR after.",
+    "ts": "1779479640.000000",
+    "synthetic": true,
+    "thread_ts": "1779462000.000000"
+  }
+]

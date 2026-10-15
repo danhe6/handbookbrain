@@ -1,0 +1,31 @@
+{
+  "channel": {
+    "name": "ask-people-ops"
+  },
+  "messages": [
+    {
+      "timestamp": "2026-05-08T19:30:00+00:00",
+      "author": {
+        "name": "priya",
+        "nickname": "Priya Shah"
+      },
+      "content": "Quick question\u2014am I eligible for per diem if I'm a contractor traveling to a client site 60 miles away? Or is that just for full-time folks?"
+    },
+    {
+      "timestamp": "2026-05-08T20:14:00+00:00",
+      "author": {
+        "name": "rachel",
+        "nickname": "Rachel Evans"
+      },
+      "content": "Hey Priya! Contractors are eligible for per diem as long as you're traveling more than 50 miles from your home office. It's in the Per Diem Rates doc if you want the details. Just make sure it's not for remote work or a virtual event."
+    },
+    {
+      "timestamp": "2026-05-08T21:53:00+00:00",
+      "author": {
+        "name": "priya",
+        "nickname": "Priya Shah"
+      },
+      "content": "Awesome, thanks Rachel! I'll check the doc for the specifics. Appreciate it!"
+    }
+  ]
+}

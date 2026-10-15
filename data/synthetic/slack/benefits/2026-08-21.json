@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Hey all, does anyone know the details for U.S. Military Leave? I\u2019m looking at the United States Leave of Absence Policies but not sure what\u2019s current. Mainly wondering about job protection and pay if someone gets called up for reserve duty.",
+    "ts": "1787337000.000000",
+    "synthetic": true,
+    "thread_ts": "1787337000.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Yeah, I can help with that! So, if you\u2019re serving in any branch of the military or uniformed services, your job is protected under USERRA. Basically, you can take a leave of absence for as long as required by law, and GitLab will preserve your job rights while you\u2019re away.",
+    "ts": "1787338815.187591",
+    "synthetic": true,
+    "thread_ts": "1787337000.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "For pay, you get 100% of your salary for the first 25 days of unpaid military leave. If you\u2019re exempt, you won\u2019t see a pay cut for partial week absences either. After that, I think it switches to unpaid, but your job is still protected.",
+    "ts": "1787339487.474982",
+    "synthetic": true,
+    "thread_ts": "1787337000.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "On health insurance, if your leave is less than 31 days, your group health coverage continues like normal. If it\u2019s more than 30 days, you can elect to keep your health coverage under USERRA and COBRA. If you need more details, the Absence Management team in HelpLab can help.",
+    "ts": "1787340456.630204",
+    "synthetic": true,
+    "thread_ts": "1787337000.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Awesome, thanks Ben! That clears it up for me.",
+    "ts": "1787342750.116278",
+    "synthetic": true,
+    "thread_ts": "1787337000.000000",
+    "parent_user_id": "U11CHLOE"
+  }
+]

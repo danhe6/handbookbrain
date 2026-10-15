@@ -1,0 +1,18 @@
+# secrets / local env
+.env
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# large or regenerable data (the GitLab handbook is cloned by setup.sh)
+data/handbook/
+data/falkordb/
+
+# local run output and LLM response cache
+runs/
+.cache/
+
+# synthetic datasets ARE committed (small, fully fictional) so results are reproducible without API spend:
+#   data/synthetic/            meetings/chat/tickets anchored to real GitLab MRs
+#   data/companies/larkspur/   fictional company used for the unseen-data benchmark

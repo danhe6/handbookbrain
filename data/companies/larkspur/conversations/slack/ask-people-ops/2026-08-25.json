@@ -1,0 +1,27 @@
+[
+  {
+    "type": "message",
+    "user": "U0000",
+    "text": "Quick question\u2014do contractors need to follow the same password and MFA rules as full-time staff? We have a temp starting next week who\u2019ll need access to FleetTrack v2.1, which I know is a bit weird with MFA. What\u2019s the process if we need an exception?",
+    "ts": "1787679000.000000",
+    "synthetic": true,
+    "thread_ts": "1787679000.000000",
+    "reply_count": 2
+  },
+  {
+    "type": "message",
+    "user": "U0005",
+    "text": "Hey Jessica, yeah, contractors and temps have to follow the same password and MFA requirements as everyone else. If you need an exception for something like FleetTrack v2.1, you have to submit a request through the ITSM portal. Priya Desai has to approve it after a risk assessment. It\u2019s all in the Password & MFA Requirements doc if you need more details.",
+    "ts": "1787682000.000000",
+    "synthetic": true,
+    "thread_ts": "1787679000.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0000",
+    "text": "Thanks Tom\u00e1s! I\u2019ll check the doc and submit the request in ITSM. Appreciate the quick reply.",
+    "ts": "1787682660.000000",
+    "synthetic": true,
+    "thread_ts": "1787679000.000000"
+  }
+]

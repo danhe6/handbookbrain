@@ -1,0 +1,112 @@
+WEBVTT
+
+00:00:02.000 --> 00:00:10.846
+<v Sofia Lindqvist>Alright, good morning everyone. Thanks for making the time. Let’s do a quick round of updates before we get into the policy stuff.</v>
+
+00:00:11.646 --> 00:00:19.339
+<v Kwame Asante>Morning! Uh, not much from me, just wrapping up the onboarding checklist revamp. Should be ready for review by Friday.</v>
+
+00:00:19.604 --> 00:00:26.527
+<v Hannah Weiss>Hey all. I’m still working through the PTO carryover questions from last week, but otherwise, all good here.</v>
+
+00:00:27.220 --> 00:00:36.451
+<v Tomás Rivera>Hi everyone. Legal’s been quiet, just a couple of contract reviews. I’ll be in and out today, but I’m here for the policy bit.</v>
+
+00:00:36.926 --> 00:00:44.234
+<v Grace Liu>Morning! I’m prepping for the Q3 engagement survey launch. If anyone has last-minute edits, let me know by EOD.</v>
+
+00:00:44.858 --> 00:00:49.474
+<v Sofia Lindqvist>Thanks, Grace. And congrats again on the new puppy, by the way!</v>
+
+00:00:50.663 --> 00:00:55.663
+<v Grace Liu>Haha, thanks! He’s already chewed through one laptop cable, so… wish me luck.</v>
+
+00:00:56.356 --> 00:00:58.664
+<v Kwame Asante>Oh no! Hope IT has spares.</v>
+
+00:00:59.842 --> 00:01:11.380
+<v Sofia Lindqvist>Alright, let’s jump into the main item: the Data Guide to People Data Analysis, specifically the Systems section. We need to review the table and see if anything needs updating.</v>
+
+00:01:12.662 --> 00:01:23.046
+<v Hannah Weiss>Yeah, I noticed the Time Off by Deel description is a bit confusing now that Workday is the SSoT for Absence starting September. Should we clarify that?</v>
+
+00:01:23.574 --> 00:01:33.574
+<v Kwame Asante>Agreed. Also, I think the Greenhouse entry still says it’s the SSOT for all recruiting metrics, but we’ve started moving some of that into Snowflake, right?</v>
+
+00:01:33.881 --> 00:01:41.573
+<v Tomás Rivera>That’s right. From a compliance perspective, we should be clear about where the SSoT actually is for each data type.</v>
+
+00:01:41.798 --> 00:01:51.414
+<v Grace Liu>And, uh, I think the Workday description still has the old date for Absence data. Should we update that to reflect the September 1st switch?</v>
+
+00:01:52.315 --> 00:02:09.622
+<v Sofia Lindqvist>Yes, let’s make sure the date is correct. But the main thing I wanted to discuss is whether we should update the eligibility for who can access Snowflake. Right now, it’s pretty open for People Ops, but we’ve had a few requests from other teams.</v>
+
+00:02:11.122 --> 00:02:20.738
+<v Kwame Asante>Yeah, I’ve gotten a couple of those. Should we tighten it up? Maybe restrict to People Ops and Legal only, unless there’s a business case?</v>
+
+00:02:21.393 --> 00:02:28.316
+<v Hannah Weiss>That makes sense. We’ve had some confusion about who can see what, especially with sensitive data in there.</v>
+
+00:02:29.361 --> 00:02:38.592
+<v Tomás Rivera>From a legal standpoint, I’d recommend limiting access to just People Ops and Legal by default. Anyone else should go through a request process.</v>
+
+00:02:39.807 --> 00:02:46.730
+<v Grace Liu>I like that. It’ll help with audit trails too. Should we document the request process in the handbook?</v>
+
+00:02:47.778 --> 00:03:00.085
+<v Sofia Lindqvist>Yes, let’s do that. So, to recap: we’ll update the Snowflake row to say access is limited to People Ops and Legal, and add a note about the request process for others.</v>
+
+00:03:01.266 --> 00:03:07.804
+<v Kwame Asante>Got it. I’ll take the action to update the handbook page and draft the request process blurb.</v>
+
+00:03:09.239 --> 00:03:15.777
+<v Hannah Weiss>Perfect. And just to confirm, the Workday and Time Off by Deel descriptions get updated too, right?</v>
+
+00:03:16.236 --> 00:03:21.236
+<v Sofia Lindqvist>Yes, please. Let’s make sure all the SSoT dates and descriptions are current.</v>
+
+00:03:21.463 --> 00:03:23.771
+<v Tomás Rivera>Sounds good to me. Thanks, Kwame.</v>
+
+00:03:24.169 --> 00:03:28.015
+<v Grace Liu>Thanks, everyone. That should clear up a lot of confusion.</v>
+
+00:03:28.379 --> 00:03:36.841
+<v Sofia Lindqvist>Alright, moving on—one quick unrelated item. The vendor renewal for our LinkedIn Learning subscription is up next month. Any objections to renewing?</v>
+
+00:03:37.911 --> 00:03:44.065
+<v Kwame Asante>Nope, I think it’s still getting good usage. I can pull the latest stats if needed.</v>
+
+00:03:44.998 --> 00:03:50.382
+<v Hannah Weiss>No objections here. I know a few folks on my team use it regularly.</v>
+
+00:03:50.866 --> 00:03:55.866
+<v Tomás Rivera>Fine by me. Just flag if there are any changes to the terms.</v>
+
+00:03:56.975 --> 00:04:00.437
+<v Grace Liu>All good from my side. Happy to keep it.</v>
+
+00:04:01.634 --> 00:04:07.403
+<v Sofia Lindqvist>Great, I’ll confirm with Procurement. Kwame, can you send me the usage stats by Thursday?</v>
+
+00:04:07.821 --> 00:04:09.321
+<v Kwame Asante>Yep, will do.</v>
+
+00:04:10.310 --> 00:04:14.157
+<v Sofia Lindqvist>Alright, that’s it for today. Any last questions or comments?</v>
+
+00:04:15.329 --> 00:04:17.252
+<v Hannah Weiss>Nope, all good. Thanks everyone.</v>
+
+00:04:17.601 --> 00:04:19.908
+<v Tomás Rivera>Thanks, all. I’ll drop off now.</v>
+
+00:04:21.174 --> 00:04:23.097
+<v Grace Liu>Thanks, have a good week!</v>
+
+00:04:24.551 --> 00:04:26.051
+<v Kwame Asante>Bye everyone!</v>
+
+00:04:26.391 --> 00:04:27.930
+<v Sofia Lindqvist>Thanks, team. Talk soon.</v>

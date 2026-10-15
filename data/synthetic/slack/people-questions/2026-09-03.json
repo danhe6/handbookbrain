@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U15YUKI",
+    "text": "Hey all, quick question\u2014does anyone know if I can get reimbursed for a standing desk that's a bit over the home office equipment limit? The one I need is about $120 over. I couldn't find anything in the handbook about exceptions.",
+    "ts": "1788444000.000000",
+    "synthetic": true,
+    "thread_ts": "1788444000.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U07HANNAH",
+    "text": "Hi Yuki! So, it's not in the handbook yet, but if you have a medical note or ergonomic assessment recommending a specific desk, we can approve up to $150 over the usual limit. You'd just need to send the note and the invoice to me directly, and I'll get it signed off by Facilities. Let me know if you need the template for the request email.",
+    "ts": "1788448323.637496",
+    "synthetic": true,
+    "thread_ts": "1788444000.000000",
+    "parent_user_id": "U15YUKI"
+  },
+  {
+    "type": "message",
+    "user": "U15YUKI",
+    "text": "Oh, that's super helpful, thanks Hannah! I do have a note from my physio. Could you send me that email template?",
+    "ts": "1788449992.619353",
+    "synthetic": true,
+    "thread_ts": "1788444000.000000",
+    "parent_user_id": "U15YUKI"
+  },
+  {
+    "type": "message",
+    "user": "U07HANNAH",
+    "text": "Absolutely, Yuki\u2014I'll DM you the template in a sec. Just attach your physio's note and the desk invoice, and cc me. We usually get approvals back within a week.",
+    "ts": "1788452091.780307",
+    "synthetic": true,
+    "thread_ts": "1788444000.000000",
+    "parent_user_id": "U15YUKI"
+  },
+  {
+    "type": "message",
+    "user": "U15YUKI",
+    "text": "Perfect, thanks so much! Appreciate the quick info.",
+    "ts": "1788452980.388828",
+    "synthetic": true,
+    "thread_ts": "1788444000.000000",
+    "parent_user_id": "U15YUKI"
+  }
+]

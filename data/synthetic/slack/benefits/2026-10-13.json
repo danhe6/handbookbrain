@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Hey, does anyone know if we have any official mentorship programs or something similar for career growth? Trying to figure out what\u2019s available beyond just the usual trainings.",
+    "ts": "1791918000.000000",
+    "synthetic": true,
+    "thread_ts": "1791918000.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Yeah, we do! There\u2019s a mentorship program\u2014pretty sure it\u2019s in the handbook under career development. You can sign up for a mentor or even be one if you want. There\u2019s also stuff like coaching and some workshops, I think?",
+    "ts": "1791923214.273035",
+    "synthetic": true,
+    "thread_ts": "1791918000.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Oh nice, thanks Chloe. Is that the same as the Elevate thing or is that just for managers?",
+    "ts": "1791924000.853340",
+    "synthetic": true,
+    "thread_ts": "1791918000.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Elevate is more for manager training, but the mentorship and coaching are open to everyone. There\u2019s also self-paced learning options\u2014like O\u2019Reilly and Linux Foundation courses. All the links should be on the handbook page if you want to check out the details.",
+    "ts": "1791929217.920296",
+    "synthetic": true,
+    "thread_ts": "1791918000.000000",
+    "parent_user_id": "U12BEN"
+  }
+]

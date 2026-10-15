@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Hey, quick question\u2014does anyone know if there\u2019s a specific onboarding checklist for new support engineers? I remember seeing something about it but can\u2019t find the link now.",
+    "ts": "1787947200.000000",
+    "synthetic": true,
+    "thread_ts": "1787947200.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Yeah, there is! There\u2019s actually a dedicated onboarding issue template for support engineers. I think it\u2019s in the handbook somewhere under onboarding templates.",
+    "ts": "1787947401.035317",
+    "synthetic": true,
+    "thread_ts": "1787947200.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Here\u2019s the link I have: https://gitlab.com/gitlab-com/support/support-training/blob/main/.gitlab/issue_templates/New%20Support%20Team%20Member%20Start%20Here.md. That should walk you through all the steps for new support folks.",
+    "ts": "1787948282.175913",
+    "synthetic": true,
+    "thread_ts": "1787947200.000000",
+    "parent_user_id": "U11CHLOE"
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Perfect, thanks Elena! That\u2019s exactly what I needed \ud83d\ude4f",
+    "ts": "1787953000.702002",
+    "synthetic": true,
+    "thread_ts": "1787947200.000000",
+    "parent_user_id": "U11CHLOE"
+  }
+]

@@ -1,0 +1,648 @@
+{
+  "tickets": [
+    {
+      "id": 4021,
+      "subject": "PTO Policy for First Week After Internal Transfer",
+      "description": "Hi team, I\u2019m moving to a new role in Marketing next week (internal transfer from Sales), and I wanted to check if it\u2019s possible to take a couple of PTO days during my first week in the new position. I couldn\u2019t find anything about this scenario in the handbook\u2014just general PTO rules. Is there a policy or best practice for this? Should I talk to my new manager first, or do I need special approval?",
+      "requester": {
+        "name": "Chloe Martin"
+      },
+      "status": "pending",
+      "created_at": "2026-04-12T21:35:53Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Kwame Asante"
+          },
+          "body": "Hi Chloe, thanks for reaching out! You\u2019re right, I don\u2019t think the handbook covers PTO specifically for the first week after an internal transfer. Let me check with our policy team and get back to you. In the meantime, it\u2019s always a good idea to loop in your new manager, but I\u2019ll confirm the official process for you.",
+          "created_at": "2026-04-13T10:35:53Z"
+        }
+      ]
+    },
+    {
+      "id": 4006,
+      "subject": "Question about bringing my dog to a coworking space",
+      "description": "Hi, I'm planning to work from a coworking space that GitLab reimburses, and I was wondering if it's okay to bring my dog with me. I checked the handbook but couldn't find anything about pets in coworking spaces. Is there a policy on this, or is it up to the coworking space's own rules?",
+      "requester": {
+        "name": "Chloe Martin"
+      },
+      "status": "pending",
+      "created_at": "2026-04-13T10:10:39Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Kwame Asante"
+          },
+          "body": "Hi Chloe, thanks for reaching out! I don't think we have anything specific in the handbook about pets in coworking spaces, but let me double-check with the team and get back to you. In the meantime, it might be worth checking with the coworking space itself to see what their policy is. I'll update you as soon as I have more info.",
+          "created_at": "2026-04-15T07:10:39Z"
+        }
+      ]
+    },
+    {
+      "id": 4002,
+      "subject": "Question about using learning budget for conference travel",
+      "description": "Hi, I'm looking into attending a conference later this year and was wondering if our learning budget can be used to cover travel expenses like flights and hotels, or if it's just for registration fees and courses? I checked the handbook but couldn't find anything specific about travel. Thanks!",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "pending",
+      "created_at": "2026-04-18T17:56:02Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Priya Raman"
+          },
+          "body": "Hi Elena, thanks for reaching out! You're right, the handbook doesn't really spell this out. Let me double-check with the team and get back to you with a clear answer.",
+          "created_at": "2026-04-18T18:56:02Z"
+        }
+      ]
+    },
+    {
+      "id": 4014,
+      "subject": "Sick Leave Policy for Medical Appointments",
+      "description": "Hi team, I have a quick question about using sick leave for doctor's appointments. Am I allowed to use my sick days for medical appointments, or is it just for when I'm actually sick? Also, do I need to let anyone know in advance or just mark it in Workday? Thanks!",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "pending",
+      "created_at": "2026-04-20T11:03:28Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Hannah Weiss"
+          },
+          "body": "Hi Elena, yes, you can use your sick leave for medical appointments as well as if you're unwell or need to care for a sick family member. Just make sure to log the time as 'Out Sick' in Workday so it's tracked properly. If it's going to be more than 5 days, let us know and we can walk you through the next steps. Let me know if you have any other questions!",
+          "created_at": "2026-04-22T03:03:28Z"
+        }
+      ]
+    },
+    {
+      "id": 4023,
+      "subject": "Question about using learning budget for conference travel",
+      "description": "Hi, I'm planning to attend a conference next month and wanted to know if our learning budget can be used to cover travel expenses like flights and hotels. I checked the handbook but couldn't find anything specific about this. Can you clarify?",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "solved",
+      "created_at": "2026-04-20T12:37:43Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Priya Raman"
+          },
+          "body": "Hi Elena, thanks for reaching out! You're right, the handbook doesn't go into detail about travel costs for conferences. Let me check with the team and get back to you with a clear answer.",
+          "created_at": "2026-04-21T12:37:43Z"
+        }
+      ]
+    },
+    {
+      "id": 4009,
+      "subject": "How do I request People Ops support for a legal update?",
+      "description": "Hi team, I need to get People Ops involved to help communicate a new legal requirement to our team in Spain. I remember there\u2019s a process for this, but I\u2019m not sure exactly what info I need to include or if there\u2019s a specific form. Can you remind me what\u2019s needed for the request? Also, is there a template I should use, or do I just email the details?",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "open",
+      "created_at": "2026-04-28T11:17:24Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Priya Raman"
+          },
+          "body": "Hi Elena, thanks for reaching out! There is a template we use for these requests\u2014it's only accessible to Legal and People Ops, but I can send you the link if you need it. The request should cover what you need help with, any deadlines, and all the relevant info (like contact names, translations, links to docs, etc). Let me know if you need help filling it out or if you can\u2019t access the template.",
+          "created_at": "2026-04-29T07:17:24Z"
+        }
+      ]
+    },
+    {
+      "id": 4017,
+      "subject": "Updating my last name in payroll after marriage",
+      "description": "Hi, I recently got married and I need to update my last name in the payroll system. I checked the handbook but couldn't find any info on how to do this. Can you let me know what steps I should take or who I should talk to? Thanks!",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "pending",
+      "created_at": "2026-05-01T08:50:32Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Priya Raman"
+          },
+          "body": "Hi Elena, congratulations! Let me check with our payroll team about the process for updating your name. I\u2019ll get back to you as soon as I have the details.",
+          "created_at": "2026-05-03T02:50:32Z"
+        }
+      ]
+    },
+    {
+      "id": 4004,
+      "subject": "Question about paternity leave process and eligibility",
+      "description": "Hi team, I wanted to check what the process is for taking paternity leave in France. My partner and I are expecting in a couple of months, and I\u2019m not sure how much time off I can take or what steps I need to follow. Also, do I need to do anything special if we\u2019re not married but have a PACS? Thanks!",
+      "requester": {
+        "name": "Ben Adeyemi"
+      },
+      "status": "open",
+      "created_at": "2026-05-16T22:52:26Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Hannah Weiss"
+          },
+          "body": "Hi Ben, congrats to you and your partner! You\u2019re eligible for paternity leave after the birth, and PACS partners are included, so no worries there. You\u2019ll need to submit a parental leave request in Workday at least 30 days before you want your leave to start. I\u2019ll send you the link to the handbook page with more details. Let me know if you have questions about the documentation or the split leave options!",
+          "created_at": "2026-05-18T14:52:26Z"
+        }
+      ]
+    },
+    {
+      "id": 4013,
+      "subject": "Where can I find onboarding steps for new Support Engineers?",
+      "description": "Hi team, I just got assigned to help onboard a new Support Engineer and I want to make sure I\u2019m following the right process. Is there a checklist or template somewhere that outlines what they need to do in their first weeks? I remember seeing something about onboarding issues but can\u2019t find the link. Thanks!",
+      "requester": {
+        "name": "Sam Whitaker"
+      },
+      "status": "solved",
+      "created_at": "2026-05-17T03:29:15Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Priya Raman"
+          },
+          "body": "Hi Sam! Yes, there\u2019s a specific onboarding issue template for new Support Engineers. You can find it in the support-training repo under issue templates\u2014look for 'New Support Team Member Start Here'. That should have all the steps and resources you\u2019ll need. Let me know if you have trouble accessing it!",
+          "created_at": "2026-05-17T12:29:15Z"
+        }
+      ]
+    },
+    {
+      "id": 4003,
+      "subject": "Standing Desk Reimbursement Over Limit",
+      "description": "Hi, I\u2019m looking to get a standing desk for my home office, but the one I want is a bit more expensive than the usual allowance. I checked the handbook and couldn\u2019t find anything about going over the limit\u2014do we ever make exceptions for this? Or is there a process to request approval for a higher amount?",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "pending",
+      "created_at": "2026-05-22T12:32:37Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Priya Raman"
+          },
+          "body": "Hi Elena, thanks for reaching out! You\u2019re right, the handbook doesn\u2019t really mention exceptions for going over the home office limit. Let me check with our finance team and see if there\u2019s any flexibility here. I\u2019ll get back to you as soon as I have an answer.",
+          "created_at": "2026-05-24T05:32:37Z"
+        }
+      ]
+    },
+    {
+      "id": 4000,
+      "subject": "How do we measure the impact of People Analytics Office Hours?",
+      "description": "Hi team, I\u2019m prepping for a presentation and need to explain how we track the effectiveness of the People Analytics Office Hours. Is there a standard way we measure impact? Like, do we look at how many people use the dashboards or something else? Thanks!",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "open",
+      "created_at": "2026-05-22T23:22:44Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Kwame Asante"
+          },
+          "body": "Hi Elena, great question! We actually track a few things: one is whether we see fewer individual support requests coming in via email or Slack. Another is how much the Tableau dashboards are being used\u2014we monitor that on the People Group Dashboard Activity page. And we also look at follow-up project requests that come out of the sessions, which we tag with 'PA-office-hours' in the project tracker. Let me know if you need more detail or links to any of these!",
+          "created_at": "2026-05-24T05:22:44Z"
+        }
+      ]
+    },
+    {
+      "id": 4008,
+      "subject": "Question about bringing my dog to a coworking space",
+      "description": "Hi, I'm planning to work from a coworking space that GitLab reimburses, and I was wondering if it's okay to bring my dog with me. I checked the handbook but couldn't find anything about pets in coworking spaces. Is there a policy on this, or is it up to the coworking space's own rules?",
+      "requester": {
+        "name": "Chloe Martin"
+      },
+      "status": "pending",
+      "created_at": "2026-05-30T09:20:55Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Kwame Asante"
+          },
+          "body": "Hi Chloe, thanks for reaching out! You're right, I don't think we have anything in the handbook about pets in coworking spaces. Let me check with the team and get back to you. In the meantime, it might be worth checking with the coworking space directly about their pet policy too.",
+          "created_at": "2026-05-30T17:20:55Z"
+        }
+      ]
+    },
+    {
+      "id": 4005,
+      "subject": "Question about using learning budget for conference travel",
+      "description": "Hi, I'm planning to attend a conference next month and wanted to check if our learning budget can be used to cover travel expenses like flights and hotels, or if it's just for registration fees and courses? I couldn't find anything specific in the handbook. Thanks!",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "solved",
+      "created_at": "2026-06-12T10:31:04Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Kwame Asante"
+          },
+          "body": "Hi Elena, thanks for reaching out! The handbook doesn't seem to mention travel specifically, so let me double-check with the team and get back to you as soon as I have an answer.",
+          "created_at": "2026-06-14T06:31:04Z"
+        }
+      ]
+    },
+    {
+      "id": 4012,
+      "subject": "Examples of Volunteer Projects Supported by GitLab?",
+      "description": "Hi team, I was reading about the GiveLab Volunteer Initiatives and wanted to get a better idea of what kinds of volunteer projects other team members have participated in recently. Are there any examples or a list somewhere? Just trying to see what types of activities are encouraged or have been done before. Thanks!",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "pending",
+      "created_at": "2026-06-16T09:08:10Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Hannah Weiss"
+          },
+          "body": "Hi Elena! Great question. Some recent projects our team members have been involved with include Operation Warm (helping provide winter coats to kids), the Fontanus Research Center (focused on new educational methods), National Charity League (a mother-daughter volunteer org), and Hack for She, which is a virtual hackathon supporting women's issues. Let me know if you want more details on any of these or info on how to get involved!",
+          "created_at": "2026-06-18T04:08:10Z"
+        }
+      ]
+    },
+    {
+      "id": 4018,
+      "subject": "Request for Additional Laptop for OS Testing",
+      "description": "Hi team, I need to do some cross-platform testing for a project and was wondering if it's possible to get a second laptop with a different operating system. I checked the handbook but couldn't find anything about requesting extra devices for testing purposes. Can you let me know what the process is, or if this is even allowed?",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "pending",
+      "created_at": "2026-06-20T04:58:16Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Priya Raman"
+          },
+          "body": "Hi Elena, thanks for reaching out! I don't think we've had this request before and you're right, it's not in the handbook. Let me check with IT and our procurement team to see what our options are. I'll get back to you as soon as I have more info.",
+          "created_at": "2026-06-20T07:58:16Z"
+        }
+      ]
+    },
+    {
+      "id": 4015,
+      "subject": "PTO Policy for First Week After Internal Transfer",
+      "description": "Hi, I just accepted an internal transfer and will be starting my new role next Monday. I have a family commitment that week and was hoping to take two days of PTO, but I couldn't find anything in the handbook about whether that's allowed right after switching roles. Is it okay to request time off during my first week in the new position, or is there a waiting period? Thanks!",
+      "requester": {
+        "name": "Chloe Martin"
+      },
+      "status": "solved",
+      "created_at": "2026-06-22T08:54:23Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Kwame Asante"
+          },
+          "body": "Hi Chloe, thanks for reaching out! You're right, I don't think the handbook specifically covers PTO right after an internal transfer. Let me check with the HR policy team and your new manager to see what the process is in this situation. I'll get back to you as soon as I have an answer.",
+          "created_at": "2026-06-24T07:54:23Z"
+        }
+      ]
+    },
+    {
+      "id": 4020,
+      "subject": "Standing Desk Reimbursement Over Limit",
+      "description": "Hi, I\u2019m looking to get a standing desk for my home office, but the one I want is a bit more expensive than the usual allowance. I checked the handbook and couldn\u2019t find anything about exceptions or going over the limit. Is there any way to get reimbursed for the full amount, or at least part of it? Thanks!",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "open",
+      "created_at": "2026-06-27T09:30:32Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Kwame Asante"
+          },
+          "body": "Hi Elena, thanks for reaching out! I don\u2019t think we have a policy for going above the home office limit, but let me double-check with the team and get back to you. Will update you as soon as I have more info.",
+          "created_at": "2026-06-28T09:30:32Z"
+        }
+      ]
+    },
+    {
+      "id": 4022,
+      "subject": "PTO Policy for First Week After Internal Transfer",
+      "description": "Hi, I just moved to a new team this week and was wondering if it's possible to take PTO during my first week in the new role? I couldn't find anything about this in the handbook\u2014just general PTO stuff. Is there a rule about this or do I need to wait a certain amount of time before requesting time off after transferring internally?",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "solved",
+      "created_at": "2026-07-17T00:05:49Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Priya Raman"
+          },
+          "body": "Hi Elena, thanks for reaching out! That's a great question. I don't think we've got a specific policy about PTO right after an internal transfer, but let me double-check with the team and get back to you. In the meantime, if you have any urgent dates in mind, could you let me know? That might help us figure out the best approach.",
+          "created_at": "2026-07-17T23:05:49Z"
+        }
+      ]
+    },
+    {
+      "id": 4026,
+      "subject": "Request for Additional Laptop for OS Testing",
+      "description": "Hi team, I need to do some cross-platform testing for a project and was wondering if it's possible to get a second laptop with a different operating system. I checked the handbook but couldn't find anything about requesting extra devices for testing purposes. Can you let me know what the process is, or if this is even allowed?",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "open",
+      "created_at": "2026-07-27T08:34:28Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Priya Raman"
+          },
+          "body": "Hi Elena, thanks for reaching out! I don't think we've had this request before and you're right, it's not in the handbook. Let me check with IT and our procurement team to see what our options are. I'll get back to you as soon as I have more info.",
+          "created_at": "2026-07-27T12:34:28Z"
+        }
+      ]
+    },
+    {
+      "id": 4025,
+      "subject": "Request for Additional Laptop for OS Testing",
+      "description": "Hi, I need to do some cross-platform testing for a project and was wondering if it's possible to get a second laptop with a different operating system. I checked the handbook but couldn't find anything about requesting extra devices for testing purposes. Can you let me know what the process is, or if this is even allowed?",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "solved",
+      "created_at": "2026-08-09T06:05:57Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Priya Raman"
+          },
+          "body": "Hi Elena, thanks for reaching out! I don't think we've had this request before and you're right, it's not in the handbook. Let me check with IT and our procurement team to see what our options are. I'll get back to you as soon as I have more info.",
+          "created_at": "2026-08-10T23:05:57Z"
+        }
+      ]
+    },
+    {
+      "id": 4019,
+      "subject": "Updating Payroll Name After Marriage",
+      "description": "Hi, I recently got married and I need to update my last name in the payroll system so my paychecks match my new legal name. I checked the handbook but couldn't find any steps for this. Can you let me know what I need to do or who to contact?",
+      "requester": {
+        "name": "Chloe Martin"
+      },
+      "status": "open",
+      "created_at": "2026-08-14T15:51:56Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Kwame Asante"
+          },
+          "body": "Congrats, Chloe! Let me check with payroll on the exact process for updating your name. I\u2019ll get back to you as soon as I have the details.",
+          "created_at": "2026-08-15T20:51:56Z"
+        }
+      ]
+    },
+    {
+      "id": 4027,
+      "subject": "Question about bringing my dog to a coworking space",
+      "description": "Hi, I'm planning to work from a coworking space that GitLab reimburses, and I was wondering if it's okay to bring my dog with me. I checked the handbook but couldn't find anything about pets in coworking spaces. Is there a policy on this, or is it up to the coworking space's own rules?",
+      "requester": {
+        "name": "Chloe Martin"
+      },
+      "status": "open",
+      "created_at": "2026-09-02T15:05:43Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Kwame Asante"
+          },
+          "body": "Hi Chloe, thanks for reaching out! You're right, I don't think we have anything in the handbook about pets in coworking spaces. Let me check with the team and get back to you. In the meantime, it might be worth checking with the coworking space directly about their pet policy too.",
+          "created_at": "2026-09-03T00:05:43Z"
+        }
+      ]
+    },
+    {
+      "id": 4010,
+      "subject": "Question about using learning budget for conference travel",
+      "description": "Hi, I'm planning to attend a conference next month and was wondering if our learning budget can be used to cover travel expenses like flights and hotels. I checked the handbook but couldn't find anything specific about this. Can you clarify?",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "solved",
+      "created_at": "2026-09-21T18:41:40Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Priya Raman"
+          },
+          "body": "Hi Elena, thanks for reaching out! You're right, the handbook doesn't go into detail about travel costs for conferences. Let me check with the team and get back to you as soon as I have an answer.",
+          "created_at": "2026-09-22T15:41:40Z"
+        }
+      ]
+    },
+    {
+      "id": 4007,
+      "subject": "Guidance on Starting Change Management for Upcoming Project",
+      "description": "Hi team, I'm about to kick off a transformation project and want to make sure I'm following the right steps for change management. Is there a checklist or a recommended process I should be using to get started? Specifically, I'm not sure how to identify the key stakeholders and what kind of communication plan is expected. Any pointers or resources would be appreciated!",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "open",
+      "created_at": "2026-09-27T21:00:44Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Kwame Asante"
+          },
+          "body": "Hi Elena, great question! For getting started with change management, we recommend first figuring out what stage your project is in, who your main stakeholders are, and what the biggest risks might be. Then, you\u2019ll want to draft a From\u2192To\u2192Because statement, list your top 5 stakeholders, pick an exec sponsor, and decide how you\u2019ll communicate updates. After that, it\u2019s about building support\u2014meeting with your sponsor, finding change champions, and setting up feedback loops. Let me know if you want more details or if you\u2019d like to connect with Learning & Development for a deeper dive!",
+          "created_at": "2026-09-29T15:00:44Z"
+        }
+      ]
+    },
+    {
+      "id": 4001,
+      "subject": "How do I find out about internal job openings?",
+      "description": "Hi team, I wanted to ask what the process is for learning about new roles or growth opportunities within the company. Is there a central place where these are posted, or do I need to talk to my manager first? Just trying to figure out how to explore moving into a different area or taking on new responsibilities. Thanks!",
+      "requester": {
+        "name": "Elena Popescu"
+      },
+      "status": "open",
+      "created_at": "2026-10-02T19:06:01Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Kwame Asante"
+          },
+          "body": "Hi Elena, great question! All internal job openings and career growth opportunities are posted on our internal careers page\u2014you can find the link in the Career Development and Mobility section of the handbook. You\u2019re also encouraged to discuss your interests with your manager, who can help guide you through the process or connect you with relevant teams. Let me know if you need the direct link or have any other questions!",
+          "created_at": "2026-10-04T15:06:01Z"
+        }
+      ]
+    },
+    {
+      "id": 4016,
+      "subject": "Panel interview process clarification",
+      "description": "Hi People Ops, I\u2019m prepping for a panel interview next week and just wanted to double check\u2014are we supposed to do these over video, or is it okay to have the candidate come in person? Also, is there a specific way we should kick things off with the candidate, like intros or explaining the format? Thanks!",
+      "requester": {
+        "name": "Sam Whitaker"
+      },
+      "status": "solved",
+      "created_at": "2026-10-04T13:58:12Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Kwame Asante"
+          },
+          "body": "Hi Sam, great questions! We actually recommend doing panel interviews by video call, since it tends to be less intimidating for candidates and keeps things more conversational. At the start, it\u2019s best to introduce everyone on the panel and give the candidate a quick overview of how the interview will go\u2014timing, what to expect, that sort of thing. Let me know if you need more details or have other questions!",
+          "created_at": "2026-10-06T00:58:12Z"
+        }
+      ]
+    },
+    {
+      "id": 4024,
+      "subject": "How do I apply for an internal job opening?",
+      "description": "Hi People Ops, I saw a couple of roles posted that I\u2019m interested in moving to internally. Can you walk me through how I\u2019m supposed to apply as a current employee? Do I just use the regular jobs page or is there a different process for team members?",
+      "requester": {
+        "name": "Chloe Martin"
+      },
+      "status": "pending",
+      "created_at": "2026-10-08T06:46:03Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Kwame Asante"
+          },
+          "body": "Hi Chloe! Great question. As a current team member, you\u2019ll want to use the internal job board instead of the public jobs page. You can get to it by logging into your Greenhouse account (if you haven\u2019t set that up yet, just click the Greenhouse tile in Okta to activate it). Once you\u2019re in, there\u2019s a link to the internal job board under Helpful Links, or you can go straight to the internal board from your dashboard. From there, just click on the job title you\u2019re interested in and hit Apply. Let me know if you need more details or run into any issues!",
+          "created_at": "2026-10-08T12:46:03Z"
+        }
+      ]
+    },
+    {
+      "id": 4011,
+      "subject": "PTO Policy for First Week After Internal Transfer",
+      "description": "Hi, I just moved into a new role this week after transferring from another department. I have a family commitment coming up and was wondering if it's possible to take PTO during my first week in the new position? I checked the handbook but couldn't find anything about PTO right after an internal transfer. Can you let me know what the policy is, or if I need to get special approval?",
+      "requester": {
+        "name": "Chloe Martin"
+      },
+      "status": "open",
+      "created_at": "2026-10-13T17:31:03Z",
+      "tags": [
+        "people-ops"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Kwame Asante"
+          },
+          "body": "Hi Chloe, thanks for reaching out! You're right, I don't think the handbook specifically covers PTO during the first week after an internal move. Let me check with our policy team and your new manager to see what the process should be. I'll get back to you as soon as I have more info.",
+          "created_at": "2026-10-14T00:31:03Z"
+        }
+      ]
+    }
+  ]
+}

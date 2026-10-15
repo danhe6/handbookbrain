@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Hey all, quick question: does anyone know how the 'Incentives at GitLab > GitLab Ultimate with Duo Enterprise' thing works? I saw something about it in the handbook but wasn't sure if I can get Ultimate on both my work and personal accounts, or how Duo fits in. Anyone done this recently?",
+    "ts": "1787578200.000000",
+    "synthetic": true,
+    "thread_ts": "1787578200.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U15YUKI",
+    "text": "Hey Sam! Yeah, you can totally request Ultimate for both your work and private GitLab.com accounts if you have them separate. Just fill out the form (I think it's linked in the handbook, but shout if you need it). They usually upgrade you within a couple hours. For Duo Enterprise, you can request a single seat Ultimate plan group with Duo as well, but it doesn't apply to groups you own personally\u2014so like, group-level features (like epics) won't show up on your personal groups. Hope that helps!",
+    "ts": "1787578802.205961",
+    "synthetic": true,
+    "thread_ts": "1787578200.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Awesome, thanks Yuki! And yeah, if you could drop the form link that'd be great. Also, is there a way to check if the upgrade went through?",
+    "ts": "1787584001.096581",
+    "synthetic": true,
+    "thread_ts": "1787578200.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U15YUKI",
+    "text": "Sure thing! Here\u2019s the form: https://docs.google.com/forms/d/e/1FAIpQLSddexI8VZTCiyxme1_7QtbQZ6WoIJRlHdaI2Gi6PD8Eti-DLQ/viewform. To check if you\u2019re on Ultimate, log in to GitLab.com, then go to https://gitlab.com/api/v4/namespaces/{yourusername} (swap in your username). If you see '\"plan\": \"ultimate\"' in the response, you\u2019re good. If it\u2019s not showing after 2 hours, ping IT via Compass or email it-help@gitlab.com.",
+    "ts": "1787588534.958062",
+    "synthetic": true,
+    "thread_ts": "1787578200.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U09GRACE",
+    "text": "Thanks for the detailed steps, Yuki! Super helpful, I was wondering about this too.",
+    "ts": "1787591692.009359",
+    "synthetic": true,
+    "thread_ts": "1787578200.000000",
+    "parent_user_id": "U14SAM"
+  }
+]

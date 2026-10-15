@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Hey folks, quick question: does anyone know how much paternity leave we get in France, and if it matters if it\u2019s for a PACS partner? Trying to plan ahead.",
+    "ts": "1777055400.000000",
+    "synthetic": true,
+    "thread_ts": "1777055400.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U16NOAH",
+    "text": "Hey Sam! Yeah, you\u2019re covered if it\u2019s a PACS partner\u2014same as spouse or common-law. The total is 28 days, unless it\u2019s twins or more, then it\u2019s 35. There\u2019s a breakdown of how you have to take it, but basically, you get a chunk right after the birth and then the rest can be split up. It\u2019s all in the handbook if you want the details.",
+    "ts": "1777058810.809635",
+    "synthetic": true,
+    "thread_ts": "1777055400.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Awesome, thanks Noah! Do you know if I need to do anything special to apply?",
+    "ts": "1777061029.521585",
+    "synthetic": true,
+    "thread_ts": "1777055400.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U16NOAH",
+    "text": "Yeah, you need to put in a parental leave request in Workday at least 30 days before you want to start. There\u2019s also some docs you have to send to the leaves email, and you might need to apply for social security benefits too. The handbook page has the steps, but that\u2019s the gist.",
+    "ts": "1777061573.586478",
+    "synthetic": true,
+    "thread_ts": "1777055400.000000",
+    "parent_user_id": "U14SAM"
+  }
+]

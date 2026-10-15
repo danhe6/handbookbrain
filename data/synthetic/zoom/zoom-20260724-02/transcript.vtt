@@ -1,0 +1,161 @@
+WEBVTT
+
+1
+00:00:02.000 --> 00:00:08.538
+Maya Okafor: Alright, it’s 9:01, let’s get started. Happy Friday, everyone! Quick round of updates before we dive in?
+
+2
+00:00:09.734 --> 00:00:18.196
+Lukas Brenner: Morning! Not much from EMEA this week, just prepping for the August open enrollment stuff. Oh, and it’s finally not raining here.
+
+3
+00:00:18.562 --> 00:00:29.332
+Priya Raman: Hi all! Same here, pretty quiet. I did get a couple of questions about the wellness stipend, but nothing urgent. Also, it’s so hot in Chennai, I’m melting.
+
+4
+00:00:30.150 --> 00:00:39.765
+Daniel Ferreira: Hey team. I’m still working through the comp benchmarking refresh, but I should have a draft for you all by next week. Otherwise, all good.
+
+5
+00:00:40.680 --> 00:00:50.680
+Tomás Rivera: Hi everyone. Legal’s all clear on the items we discussed last week. I’ll stay on for the policy bit, but I might have to drop early.
+
+6
+00:00:51.224 --> 00:00:59.686
+Maya Okafor: Thanks, Tomás. And thanks everyone. I’ll just add that I met with IT about the Compass ticket backlog, and they’re making progress.
+
+7
+00:01:01.020 --> 00:01:07.174
+Lukas Brenner: Oh, that’s good to hear. I had a couple of folks ping me about slow responses.
+
+8
+00:01:07.924 --> 00:01:16.385
+Maya Okafor: Yeah, they’re aware. Okay, let’s move to the main agenda item: the handbook update for the GitLab Ultimate with Duo Enterprise incentive.
+
+9
+00:01:16.861 --> 00:01:23.784
+Priya Raman: So, the main change is just clarifying the group-level Ultimate features, right? No change to eligibility or process?
+
+10
+00:01:24.685 --> 00:01:32.377
+Maya Okafor: Correct. We’re just making it clearer that group-level Ultimate features aren’t included for personal accounts, and cleaning up the language.
+
+11
+00:01:33.526 --> 00:01:42.372
+Daniel Ferreira: I read through the draft. It looks good to me, but I did wonder—do we need to mention anything about Duo Enterprise eligibility?
+
+12
+00:01:42.834 --> 00:01:54.372
+Lukas Brenner: Yeah, I was going to ask that too. The current text just sort of trails off after the Duo Enterprise link. Should we specify it’s a single seat group, or…?
+
+13
+00:01:54.978 --> 00:02:02.670
+Tomás Rivera: From a legal perspective, it’s better to be explicit. If we say 'single seat Ultimate plan group,' that covers us.
+
+14
+00:02:04.164 --> 00:02:13.010
+Maya Okafor: Good catch. So, we’ll add a line: 'Team members can request a single seat Ultimate plan group with Duo Enterprise.' Anything else missing?
+
+15
+00:02:14.055 --> 00:02:19.439
+Priya Raman: Do we need to clarify that this doesn’t extend to external collaborators or contractors?
+
+16
+00:02:20.209 --> 00:02:26.747
+Daniel Ferreira: I think that’s already covered in the general eligibility section, but maybe a quick note wouldn’t hurt.
+
+17
+00:02:27.620 --> 00:02:33.389
+Lukas Brenner: I can add a sentence: 'This incentive is only available to active GitLab team members.'
+
+18
+00:02:33.747 --> 00:02:35.285
+Maya Okafor: Perfect. Any other concerns?
+
+19
+00:02:35.777 --> 00:02:38.469
+Tomás Rivera: Nope, that covers it from my side.
+
+20
+00:02:39.109 --> 00:02:40.609
+Priya Raman: All good here.
+
+21
+00:02:41.574 --> 00:02:43.112
+Daniel Ferreira: Looks good to me.
+
+22
+00:02:43.611 --> 00:02:53.996
+Maya Okafor: Alright, decision: we’ll update the handbook page to clarify the group-level Ultimate features, specify the single seat group with Duo Enterprise, and add a note on eligibility.
+
+23
+00:02:54.482 --> 00:03:01.405
+Lukas Brenner: I’ll take the action to update the handbook page. I’ll aim to have it done by August 7th.
+
+24
+00:03:01.698 --> 00:03:06.313
+Maya Okafor: Thanks, Lukas. Please ping me when the MR is ready for review.
+
+25
+00:03:07.333 --> 00:03:08.833
+Lukas Brenner: Will do.
+
+26
+00:03:09.331 --> 00:03:19.331
+Maya Okafor: Okay, last agenda item—quick note on the employee engagement survey. Results are in, and we scored highest on 'manager support,' but lowest on 'clarity of benefits.'
+
+27
+00:03:20.708 --> 00:03:28.016
+Priya Raman: That tracks with the questions I’ve been getting. Maybe we need a refresher session or a new FAQ doc?
+
+28
+00:03:29.333 --> 00:03:35.487
+Daniel Ferreira: I like the FAQ idea. Maybe we can link it from the main benefits page too.
+
+29
+00:03:35.779 --> 00:03:40.779
+Maya Okafor: Let’s do that. Priya, can you draft a short FAQ for APAC-specific questions?
+
+30
+00:03:41.289 --> 00:03:44.750
+Priya Raman: Sure, I can have a draft by next Friday.
+
+31
+00:03:45.820 --> 00:03:48.128
+Maya Okafor: Awesome. Anything else before we wrap?
+
+32
+00:03:48.606 --> 00:03:50.145
+Tomás Rivera: I’m good. Thanks, everyone.
+
+33
+00:03:50.517 --> 00:03:52.017
+Daniel Ferreira: Nothing from me.
+
+34
+00:03:53.433 --> 00:03:54.933
+Lukas Brenner: All set here.
+
+35
+00:03:55.875 --> 00:03:57.375
+Priya Raman: All good, thanks!
+
+36
+00:03:58.190 --> 00:04:00.882
+Maya Okafor: Great. Thanks, everyone. Have a good weekend!
+
+37
+00:04:02.102 --> 00:04:03.602
+Lukas Brenner: You too!
+
+38
+00:04:04.852 --> 00:04:06.352
+Priya Raman: Bye!
+
+39
+00:04:06.799 --> 00:04:08.299
+Daniel Ferreira: Take care.
+
+40
+00:04:08.625 --> 00:04:10.125
+Tomás Rivera: Bye all.

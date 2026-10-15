@@ -1,0 +1,29 @@
+[
+  {
+    "type": "message",
+    "user": "U15YUKI",
+    "text": "Hey folks, quick question about the 'General & Entity Specific Benefits & Information > Travel, Community & Support' section\u2014does anyone know what kind of support we get if something happens during business travel? Like, medical emergencies or lost baggage?",
+    "ts": "1784210400.000000",
+    "synthetic": true,
+    "thread_ts": "1784210400.000000",
+    "reply_count": 2
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Yep! So for business travel, we\u2019re covered by International SOS\u2014basically, 24/7 medical, safety, and security assistance. There\u2019s also travel insurance that covers emergency medical stuff, accidents, and baggage issues, both domestic and international. You just need to download the ISOS app with your GitLab email, and if you need help, hit the 'Need Assistance' button. There\u2019s also a membership card with emergency numbers if you prefer calling. It\u2019s all automatic, so you don\u2019t have to sign up or anything.",
+    "ts": "1784214871.988791",
+    "synthetic": true,
+    "thread_ts": "1784210400.000000",
+    "parent_user_id": "U15YUKI"
+  },
+  {
+    "type": "message",
+    "user": "U15YUKI",
+    "text": "Awesome, thanks Chloe! Super helpful.",
+    "ts": "1784219855.885344",
+    "synthetic": true,
+    "thread_ts": "1784210400.000000",
+    "parent_user_id": "U15YUKI"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "Hey all, can someone clarify the parental leave policy for PTY LTD folks? I\u2019m looking at the Benefits > Parental Leave section but it\u2019s a bit confusing. Mainly wondering about how much leave we get and if it\u2019s paid or unpaid? Thanks!",
+    "ts": "1785506400.000000",
+    "synthetic": true,
+    "thread_ts": "1785506400.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Hi Elena! Sure, happy to help. So for PTY LTD, you get up to 12 months of unpaid parental leave if you\u2019ve been here at least a year. You can actually request another 12 months unpaid on top of that, so potentially 2 years total. \n\nFor pay, there\u2019s the Australian Government Parental Leave Pay scheme\u2014if you\u2019re eligible, you can get up to 22 weeks paid at the national minimum wage. That\u2019s separate from GitLab\u2019s own parental leave, which can sometimes overlap depending on your situation. You can apply for the gov\u2019t pay up to 3 months before your due date. \n\nJust make sure to put your leave dates into Workday under \u2018Parental Leave\u2019 when you\u2019re ready. Hope that helps!",
+    "ts": "1785509162.493095",
+    "synthetic": true,
+    "thread_ts": "1785506400.000000",
+    "parent_user_id": "U13ELENA"
+  },
+  {
+    "type": "message",
+    "user": "U13ELENA",
+    "text": "That\u2019s super clear, thanks Chloe! Appreciate the quick rundown.",
+    "ts": "1785511889.731853",
+    "synthetic": true,
+    "thread_ts": "1785506400.000000",
+    "parent_user_id": "U13ELENA"
+  },
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Thanks Chloe, this is really helpful. I was wondering about this too!",
+    "ts": "1785512434.464831",
+    "synthetic": true,
+    "thread_ts": "1785506400.000000",
+    "parent_user_id": "U13ELENA"
+  }
+]

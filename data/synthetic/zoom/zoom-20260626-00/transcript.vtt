@@ -1,0 +1,161 @@
+WEBVTT
+
+1
+00:00:02.000 --> 00:00:05.462
+Maya Okafor: Alright, it’s 9:02, let’s get started. Happy Friday, everyone!
+
+2
+00:00:05.736 --> 00:00:09.582
+Lukas Brenner: Morning! Or, well, afternoon from Berlin. Hope everyone’s doing well.
+
+3
+00:00:10.541 --> 00:00:15.926
+Priya Raman: Hi all! It’s been a long week here, but I’m good. How’s everyone else?
+
+4
+00:00:16.780 --> 00:00:22.164
+Daniel Ferreira: Hey team. I’m still recovering from that comp review sprint, but otherwise all good.
+
+5
+00:00:23.473 --> 00:00:28.473
+Tomás Rivera: Hi folks. I’m just glad the legal inbox is a little quieter today.
+
+6
+00:00:28.878 --> 00:00:33.493
+Maya Okafor: Same here, Tomás. Anyone have any quick updates before we jump in?
+
+7
+00:00:34.942 --> 00:00:42.250
+Lukas Brenner: Just a heads up, I’ll be OOO next Thursday for a doctor’s appointment, but reachable on Slack if needed.
+
+8
+00:00:42.554 --> 00:00:47.938
+Priya Raman: Oh, and I finally got the APAC benefits survey results—will share those next week.
+
+9
+00:00:48.380 --> 00:00:56.457
+Maya Okafor: Perfect, thanks Priya. Okay, main agenda: the parental leave policy update for Australia. Everyone had a chance to review the draft?
+
+10
+00:00:57.430 --> 00:01:05.507
+Daniel Ferreira: Yep, I read through it. The main change is the increase from 22 to 26 weeks for the government scheme, right?
+
+11
+00:01:06.585 --> 00:01:13.893
+Lukas Brenner: That’s right. The new law kicks in July 2026, so we need to update the handbook to reflect that.
+
+12
+00:01:14.399 --> 00:01:20.552
+Priya Raman: I just want to clarify—does this affect our enhanced GitLab leave, or only the statutory part?
+
+13
+00:01:20.908 --> 00:01:27.062
+Maya Okafor: Good question. It’s only the statutory part, so our enhanced leave stays the same for now.
+
+14
+00:01:28.420 --> 00:01:34.573
+Tomás Rivera: From a legal perspective, as long as we’re clear about the eligibility date—July 1, 2026—we’re covered.
+
+15
+00:01:35.093 --> 00:01:45.863
+Daniel Ferreira: I noticed the draft says 'born or adopted from 1 July 2026.' Should we specify that’s the child’s date of birth or adoption, not the leave start date?
+
+16
+00:01:46.836 --> 00:01:54.912
+Lukas Brenner: Yeah, that’s a good catch. The government guidance is based on the child’s birth or adoption date, not when leave starts.
+
+17
+00:01:55.918 --> 00:02:02.456
+Maya Okafor: Let’s make sure that’s clear in the wording. Lukas, can you tweak that in the handbook update?
+
+18
+00:02:03.201 --> 00:02:08.970
+Lukas Brenner: Absolutely, I’ll add a note to clarify it’s the child’s date, not the leave start.
+
+19
+00:02:09.929 --> 00:02:14.545
+Priya Raman: One more thing—do we need to update the Workday instructions at all?
+
+20
+00:02:15.424 --> 00:02:21.963
+Maya Okafor: No changes there, since the process is the same. Just the eligibility and payment duration are different.
+
+21
+00:02:23.378 --> 00:02:29.147
+Tomás Rivera: And the links to the government sites are still current, so no legal issues there.
+
+22
+00:02:29.612 --> 00:02:33.459
+Daniel Ferreira: Sounds good to me. No other concerns from comp side.
+
+23
+00:02:34.590 --> 00:02:36.513
+Priya Raman: All clear from APAC too.
+
+24
+00:02:37.023 --> 00:02:48.177
+Maya Okafor: Alright, so to recap: we’re updating the policy to reflect 26 weeks’ Parental Leave Pay for children born or adopted from July 1, 2026, and clarifying the eligibility wording.
+
+25
+00:02:48.891 --> 00:02:54.661
+Lukas Brenner: I’ll take the action to update the handbook page and flag the change in #benefits-announcements.
+
+26
+00:02:55.734 --> 00:03:02.657
+Maya Okafor: Thanks, Lukas. Please aim to have that done by July 10th so we’re ahead of the law change.
+
+27
+00:03:03.247 --> 00:03:04.747
+Lukas Brenner: Will do!
+
+28
+00:03:05.358 --> 00:03:08.050
+Tomás Rivera: Great, thanks everyone. That was pretty smooth.
+
+29
+00:03:09.228 --> 00:03:16.535
+Maya Okafor: Okay, last thing—quick note on the vendor renewal for our EAP provider. The contract’s up for renewal in August.
+
+30
+00:03:16.830 --> 00:03:21.060
+Priya Raman: Do we need to do anything, or is that with procurement?
+
+31
+00:03:21.856 --> 00:03:29.933
+Maya Okafor: I’ll handle the renewal paperwork, but if anyone has feedback on the service, please send it to me by next Friday.
+
+32
+00:03:31.431 --> 00:03:36.431
+Daniel Ferreira: I’ll ask the comp team if they’ve heard anything and send you notes.
+
+33
+00:03:37.926 --> 00:03:40.618
+Lukas Brenner: Same here, I’ll check with EMEA folks.
+
+34
+00:03:40.914 --> 00:03:47.067
+Tomás Rivera: No legal blockers from my side, just let me know if you need a contract review.
+
+35
+00:03:47.545 --> 00:03:52.545
+Maya Okafor: Thanks, Tomás. Okay, that’s it from my side. Anything else before we wrap?
+
+36
+00:03:53.089 --> 00:03:56.166
+Priya Raman: All good here. Have a great weekend, everyone!
+
+37
+00:03:57.579 --> 00:03:59.079
+Daniel Ferreira: You too!
+
+38
+00:04:00.425 --> 00:04:03.117
+Lukas Brenner: Enjoy the sun if you have it!
+
+39
+00:04:04.460 --> 00:04:05.960
+Tomás Rivera: Take care, all.
+
+40
+00:04:06.640 --> 00:04:08.948
+Maya Okafor: Thanks, everyone. See you next week!

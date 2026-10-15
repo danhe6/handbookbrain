@@ -1,0 +1,45 @@
+{
+  "id": "teams-20260729-relocation-assistanc",
+  "subject": "People Ops weekly",
+  "startDateTime": "2026-07-29T15:30:00Z",
+  "participants": {
+    "attendees": [
+      {
+        "identity": {
+          "user": {
+            "displayName": "Hannah Brooks"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Jessica Tran"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Marcus Lee"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Samantha Ortiz"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Derek Patel"
+          }
+        }
+      }
+    ]
+  },
+  "synthetic": true
+}

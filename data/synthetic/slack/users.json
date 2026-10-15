@@ -1,0 +1,146 @@
+[
+  {
+    "id": "U01MAYA",
+    "name": "maya",
+    "real_name": "Maya Okafor",
+    "profile": {
+      "title": "Total Rewards Manager",
+      "real_name": "Maya Okafor"
+    }
+  },
+  {
+    "id": "U02LUKAS",
+    "name": "lukas",
+    "real_name": "Lukas Brenner",
+    "profile": {
+      "title": "Benefits Specialist (EMEA)",
+      "real_name": "Lukas Brenner"
+    }
+  },
+  {
+    "id": "U03PRIYA",
+    "name": "priya",
+    "real_name": "Priya Raman",
+    "profile": {
+      "title": "Benefits Specialist (APAC)",
+      "real_name": "Priya Raman"
+    }
+  },
+  {
+    "id": "U04DANF",
+    "name": "daniel",
+    "real_name": "Daniel Ferreira",
+    "profile": {
+      "title": "Compensation Partner",
+      "real_name": "Daniel Ferreira"
+    }
+  },
+  {
+    "id": "U05SOFIA",
+    "name": "sofia",
+    "real_name": "Sofia Lindqvist",
+    "profile": {
+      "title": "Director, People Operations",
+      "real_name": "Sofia Lindqvist"
+    }
+  },
+  {
+    "id": "U06KWAME",
+    "name": "kwame",
+    "real_name": "Kwame Asante",
+    "profile": {
+      "title": "People Operations Specialist",
+      "real_name": "Kwame Asante"
+    }
+  },
+  {
+    "id": "U07HANNAH",
+    "name": "hannah",
+    "real_name": "Hannah Weiss",
+    "profile": {
+      "title": "Absence Management Lead",
+      "real_name": "Hannah Weiss"
+    }
+  },
+  {
+    "id": "U08TOMAS",
+    "name": "tom\u00e1s",
+    "real_name": "Tom\u00e1s Rivera",
+    "profile": {
+      "title": "Employment Counsel",
+      "real_name": "Tom\u00e1s Rivera"
+    }
+  },
+  {
+    "id": "U09GRACE",
+    "name": "grace",
+    "real_name": "Grace Liu",
+    "profile": {
+      "title": "People Business Partner",
+      "real_name": "Grace Liu"
+    }
+  },
+  {
+    "id": "U10ARJUN",
+    "name": "arjun",
+    "real_name": "Arjun Mehta",
+    "profile": {
+      "title": "Talent Acquisition Lead",
+      "real_name": "Arjun Mehta"
+    }
+  },
+  {
+    "id": "U11CHLOE",
+    "name": "chloe",
+    "real_name": "Chloe Martin",
+    "profile": {
+      "title": "Engineering Manager",
+      "real_name": "Chloe Martin"
+    }
+  },
+  {
+    "id": "U12BEN",
+    "name": "ben",
+    "real_name": "Ben Adeyemi",
+    "profile": {
+      "title": "Senior Backend Engineer",
+      "real_name": "Ben Adeyemi"
+    }
+  },
+  {
+    "id": "U13ELENA",
+    "name": "elena",
+    "real_name": "Elena Popescu",
+    "profile": {
+      "title": "Product Designer",
+      "real_name": "Elena Popescu"
+    }
+  },
+  {
+    "id": "U14SAM",
+    "name": "sam",
+    "real_name": "Sam Whitaker",
+    "profile": {
+      "title": "Sales Manager",
+      "real_name": "Sam Whitaker"
+    }
+  },
+  {
+    "id": "U15YUKI",
+    "name": "yuki",
+    "real_name": "Yuki Tanaka",
+    "profile": {
+      "title": "Support Engineer",
+      "real_name": "Yuki Tanaka"
+    }
+  },
+  {
+    "id": "U16NOAH",
+    "name": "noah",
+    "real_name": "Noah Fischer",
+    "profile": {
+      "title": "Finance Analyst",
+      "real_name": "Noah Fischer"
+    }
+  }
+]

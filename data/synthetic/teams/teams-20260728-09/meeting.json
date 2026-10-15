@@ -1,0 +1,53 @@
+{
+  "id": "teams-20260728-09",
+  "subject": "People Ops policy review",
+  "startDateTime": "2026-07-28T10:00:00Z",
+  "endDateTime": "2026-07-28T10:04:27Z",
+  "participants": {
+    "organizer": {
+      "identity": {
+        "user": {
+          "displayName": "Sofia Lindqvist"
+        }
+      }
+    },
+    "attendees": [
+      {
+        "identity": {
+          "user": {
+            "displayName": "Sofia Lindqvist"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Kwame Asante"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Hannah Weiss"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Tom\u00e1s Rivera"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Grace Liu"
+          }
+        }
+      }
+    ]
+  },
+  "synthetic": true
+}

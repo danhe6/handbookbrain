@@ -1,0 +1,927 @@
+{
+  "synthetic": true,
+  "generator_model": "openai/gpt-4.1",
+  "items": [
+    {
+      "id": "slack-benefits-1775847600.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-04-10T15:00:00",
+      "channel": "benefits",
+      "sections": [
+        "content/handbook/people-group/people-ops-tech-analytics/people-analytics/office-hours.md#impact-measurement"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4021",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-04-12T21:35:53.713968",
+      "sections": [],
+      "topic": "taking PTO during the first week of a new role after an internal transfer"
+    },
+    {
+      "id": "ticket-4006",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-04-13T10:10:39.140215",
+      "sections": [],
+      "topic": "bringing a pet to a coworking space paid by GitLab"
+    },
+    {
+      "id": "slack-benefits-1776276000.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-04-15T14:00:00",
+      "channel": "benefits",
+      "sections": [
+        "content/handbook/hiring/interviewing/panel.md#panel-interviews"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4002",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-04-18T17:56:02.513181",
+      "sections": [],
+      "topic": "whether the learning budget covers conference travel"
+    },
+    {
+      "id": "ticket-4014",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-04-20T11:03:28.944101",
+      "sections": [
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/canada-corp-benefits.md#sick-leave"
+      ],
+      "topic": null
+    },
+    {
+      "id": "ticket-4023",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-04-20T12:37:43.185120",
+      "sections": [],
+      "topic": "whether the learning budget covers conference travel"
+    },
+    {
+      "id": "slack-people-questions-1777055400.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-04-24T14:30:00",
+      "channel": "people-questions",
+      "sections": [
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/france-sas.md#paternity-leave"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4009",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-04-28T11:17:24.143761",
+      "sections": [
+        "content/handbook/people-group/_index.md#when-support-from-the-people-operations-team-is-required-by-the-legal-employment"
+      ],
+      "topic": null
+    },
+    {
+      "id": "slack-benefits-1777579200.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-04-30T16:00:00",
+      "channel": "benefits",
+      "sections": [
+        "content/handbook/people-group/_index.md#when-support-from-the-people-operations-team-is-required-by-the-legal-employment"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4017",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-05-01T08:50:32.568912",
+      "sections": [],
+      "topic": "how to change the name shown in payroll after marriage"
+    },
+    {
+      "id": "slack-people-questions-1778873400.000000",
+      "source": "slack",
+      "scenario": "tribal",
+      "date": "2026-05-15T15:30:00",
+      "channel": "people-questions",
+      "sections": [],
+      "mr": null,
+      "topic": "taking PTO during the first week of a new role after an internal transfer"
+    },
+    {
+      "id": "ticket-4004",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-05-16T22:52:26.872727",
+      "sections": [
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/france-sas.md#paternity-leave"
+      ],
+      "topic": null
+    },
+    {
+      "id": "ticket-4013",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-05-17T03:29:15.737091",
+      "sections": [
+        "content/handbook/people-group/general-onboarding/_index.md#supplemental-onboarding-issue-templates"
+      ],
+      "topic": null
+    },
+    {
+      "id": "ticket-4003",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-05-22T12:32:37.863268",
+      "sections": [],
+      "topic": "reimbursement for a standing desk above the home-office limit"
+    },
+    {
+      "id": "ticket-4000",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-05-22T23:22:44.312394",
+      "sections": [
+        "content/handbook/people-group/people-ops-tech-analytics/people-analytics/office-hours.md#impact-measurement"
+      ],
+      "topic": null
+    },
+    {
+      "id": "slack-people-questions-1780081200.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-05-29T15:00:00",
+      "channel": "people-questions",
+      "sections": [
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/canada-corp-benefits.md#sick-leave"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "slack-random-1780084800.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-05-29T16:00:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4008",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-05-30T09:20:55.040965",
+      "sections": [],
+      "topic": "bringing a pet to a coworking space paid by GitLab"
+    },
+    {
+      "id": "ticket-4005",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-06-12T10:31:04.834974",
+      "sections": [],
+      "topic": "whether the learning budget covers conference travel"
+    },
+    {
+      "id": "ticket-4012",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-06-16T09:08:10.937721",
+      "sections": [
+        "content/handbook/people-group/givelab-volunteer-initiatives.md#recent-team-member-participation"
+      ],
+      "topic": null
+    },
+    {
+      "id": "slack-people-questions-1781811000.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-06-18T15:30:00",
+      "channel": "people-questions",
+      "sections": [
+        "content/handbook/people-group/organizational-change-management.md#getting-started-with-change-management"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4018",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-06-20T04:58:16.708410",
+      "sections": [],
+      "topic": "getting a second laptop for testing on another OS"
+    },
+    {
+      "id": "ticket-4015",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-06-22T08:54:23.642614",
+      "sections": [],
+      "topic": "taking PTO during the first week of a new role after an internal transfer"
+    },
+    {
+      "id": "slack-random-1782480600.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-06-26T09:30:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "zoom-20260626-00",
+      "source": "zoom",
+      "scenario": "decision_implemented",
+      "date": "2026-06-26T14:00:00",
+      "title": "Total Rewards weekly sync",
+      "sections": [
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/pty-benefits-australia.md#parental-leave"
+      ],
+      "mr": 20279,
+      "decisions": [
+        {
+          "statement": "We will update the handbook to reflect 26 weeks\u2019 Parental Leave Pay for children born or adopted from July 1, 2026, and clarify the eligibility wording.",
+          "policy": "PTY LTD Benefits > Parental Leave"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Lukas Brenner",
+          "task": "Update the handbook page for PTY LTD Parental Leave to reflect the new 26-week entitlement and clarify eligibility wording.",
+          "due": "2026-07-10"
+        },
+        {
+          "owner": "Maya Okafor",
+          "task": "Collect team feedback on EAP provider and handle renewal paperwork.",
+          "due": "2026-07-03"
+        }
+      ]
+    },
+    {
+      "id": "slack-random-1782505800.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-06-26T16:30:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4020",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-06-27T09:30:32.642746",
+      "sections": [],
+      "topic": "reimbursement for a standing desk above the home-office limit"
+    },
+    {
+      "id": "teams-20260701-01",
+      "source": "teams",
+      "scenario": "decision_implemented",
+      "date": "2026-07-01T10:00:00",
+      "title": "Total Rewards weekly sync",
+      "sections": [
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/_index.md#travel-community-support"
+      ],
+      "mr": 20380,
+      "decisions": [
+        {
+          "statement": "We will update the handbook to clarify that business travel emergency assistance covers both domestic and international business travel for employees only.",
+          "policy": "General & Entity Specific Benefits & Information > Travel, Community & Support > Business Travel Emergency Assistance & Accident Policy"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Lukas Brenner",
+          "task": "Update the handbook page with clarified coverage details for business travel emergency assistance and accident policy.",
+          "due": "2026-07-10"
+        },
+        {
+          "owner": "Lukas Brenner",
+          "task": "Draft a one-pager or FAQ explaining the travel insurance process for employees.",
+          "due": "2026-07-10"
+        }
+      ]
+    },
+    {
+      "id": "zoom-20260708-10",
+      "source": "zoom",
+      "scenario": "decision_unimplemented",
+      "date": "2026-07-08T10:30:00",
+      "title": "People Ops policy review",
+      "sections": [
+        "content/handbook/people-group/general-onboarding/onboarding-buddies.md#how-can-i-become-an-onboarding-buddy"
+      ],
+      "mr": null,
+      "decisions": [
+        {
+          "statement": "Eligibility for becoming an onboarding buddy will change from three months to two months at GitLab.",
+          "policy": "GitLab Onboarding Buddies > How Can I Become An Onboarding Buddy?"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Kwame Asante",
+          "task": "Update the handbook page and onboarding issue template to reflect the new two-month eligibility for onboarding buddies.",
+          "due": "2026-07-10"
+        },
+        {
+          "owner": "Kwame Asante",
+          "task": "Pull key engagement survey stats for Sofia\u2019s summary post.",
+          "due": "2026-07-08"
+        }
+      ]
+    },
+    {
+      "id": "slack-people-questions-1783690200.000000",
+      "source": "slack",
+      "scenario": "tribal",
+      "date": "2026-07-10T09:30:00",
+      "channel": "people-questions",
+      "sections": [],
+      "mr": null,
+      "topic": "getting a second laptop for testing on another OS"
+    },
+    {
+      "id": "slack-people-questions-1784210400.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-07-16T10:00:00",
+      "channel": "people-questions",
+      "sections": [
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/_index.md#travel-community-support"
+      ],
+      "mr": 20380,
+      "topic": null
+    },
+    {
+      "id": "ticket-4022",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-07-17T00:05:49.021525",
+      "sections": [],
+      "topic": "taking PTO during the first week of a new role after an internal transfer"
+    },
+    {
+      "id": "teams-20260717-03",
+      "source": "teams",
+      "scenario": "decision_implemented",
+      "date": "2026-07-17T14:30:00",
+      "title": "Total Rewards weekly sync",
+      "sections": [
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/singapore-pte-ltd.md#medical-insurance",
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/singapore-pte-ltd.md#personal-accident-insurance",
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/singapore-pte-ltd.md#questions"
+      ],
+      "mr": 20541,
+      "decisions": [
+        {
+          "statement": "We approved all three Singapore handbook policy changes as drafted.",
+          "policy": "GitLab Singapore Pte Ltd > Medical Insurance"
+        },
+        {
+          "statement": "We approved all three Singapore handbook policy changes as drafted.",
+          "policy": "GitLab Singapore Pte Ltd > Personal Accident Insurance"
+        },
+        {
+          "statement": "We approved all three Singapore handbook policy changes as drafted.",
+          "policy": "GitLab Singapore Pte Ltd > Questions?"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Lukas Brenner",
+          "task": "Update the Singapore handbook page with the approved policy changes and share for review.",
+          "due": "2026-07-31"
+        },
+        {
+          "owner": "Daniel Ferreira",
+          "task": "Review pulse survey results and draft onboarding improvement suggestions for the team.",
+          "due": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "slack-benefits-1784575800.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-07-20T15:30:00",
+      "channel": "benefits",
+      "sections": [
+        "content/handbook/hiring/candidate-faq/_index.md#how-to-submit-an-application"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "zoom-20260724-02",
+      "source": "zoom",
+      "scenario": "decision_implemented",
+      "date": "2026-07-24T15:00:00",
+      "title": "Total Rewards weekly sync",
+      "sections": [
+        "content/handbook/total-rewards/incentives.md#gitlab-ultimate-with-duo-enterprise"
+      ],
+      "mr": 20538,
+      "decisions": [
+        {
+          "statement": "We will update the handbook to clarify group-level Ultimate features, specify the single seat group with Duo Enterprise, and add a note on eligibility.",
+          "policy": "Incentives at GitLab > GitLab Ultimate with Duo Enterprise"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Lukas Brenner",
+          "task": "Update the handbook page with clarified language on group-level Ultimate features, single seat group with Duo Enterprise, and eligibility note.",
+          "due": "2026-08-07"
+        },
+        {
+          "owner": "Priya Raman",
+          "task": "Draft a short FAQ for APAC-specific benefits questions based on survey feedback.",
+          "due": "2026-07-31"
+        }
+      ]
+    },
+    {
+      "id": "ticket-4026",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-07-27T08:34:28.570461",
+      "sections": [],
+      "topic": "getting a second laptop for testing on another OS"
+    },
+    {
+      "id": "teams-20260728-09",
+      "source": "teams",
+      "scenario": "decision_unimplemented",
+      "date": "2026-07-28T10:00:00",
+      "title": "People Ops policy review",
+      "sections": [
+        "content/handbook/people-group/people-ops-tech-analytics/people-analytics/data-guide.md#systems"
+      ],
+      "mr": null,
+      "decisions": [
+        {
+          "statement": "Access to Snowflake will be limited to People Operations and Legal teams by default, with other teams requiring a formal request process.",
+          "policy": "Data Guide to People Data Analysis > Systems"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Kwame Asante",
+          "task": "Update the handbook page to reflect new Snowflake access rules and clarify SSoT dates and descriptions for Workday and Time Off by Deel.",
+          "due": "2026-07-31"
+        },
+        {
+          "owner": "Kwame Asante",
+          "task": "Send Sofia the latest LinkedIn Learning usage stats.",
+          "due": "2026-07-30"
+        }
+      ]
+    },
+    {
+      "id": "slack-random-1785355200.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-07-29T16:00:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "slack-people-questions-1785357000.000000",
+      "source": "slack",
+      "scenario": "tribal",
+      "date": "2026-07-29T16:30:00",
+      "channel": "people-questions",
+      "sections": [],
+      "mr": null,
+      "topic": "bringing a pet to a coworking space paid by GitLab"
+    },
+    {
+      "id": "slack-benefits-1785504600.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-07-31T09:30:00",
+      "channel": "benefits",
+      "sections": [
+        "content/handbook/people-group/givelab-volunteer-initiatives.md#recent-team-member-participation"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "zoom-20260731-04",
+      "source": "zoom",
+      "scenario": "decision_implemented",
+      "date": "2026-07-31T10:00:00",
+      "title": "People Ops policy review",
+      "sections": [
+        "content/handbook/people-policies/leave-of-absence/us.md#us-military-leave",
+        "content/handbook/people-policies/leave-of-absence/us.md#how-will-my-pay-be-calculated"
+      ],
+      "mr": 20638,
+      "decisions": [
+        {
+          "statement": "We approved the updated US Military Leave policy text, including the 31-day paid period, supplemental pay, and a reference to the internal process for documentation.",
+          "policy": "United States Leave of Absence Policies > U.S Military Leave"
+        },
+        {
+          "statement": "We agreed to update the pay calculation table to reference the US Military Leave policy instead of listing specific days.",
+          "policy": "United States Leave of Absence Policies > How Will My Pay Be Calculated?"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Kwame Asante",
+          "task": "Update the US Military Leave policy and pay calculation table in the handbook, including a reference to the internal process doc for documentation.",
+          "due": "2026-08-14"
+        },
+        {
+          "owner": "Grace Liu",
+          "task": "Send a reminder to managers to encourage higher participation in the next pulse survey.",
+          "due": "2026-08-07"
+        }
+      ]
+    },
+    {
+      "id": "slack-people-questions-1785506400.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-07-31T10:00:00",
+      "channel": "people-questions",
+      "sections": [
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/pty-benefits-australia.md#parental-leave"
+      ],
+      "mr": 20279,
+      "topic": null
+    },
+    {
+      "id": "slack-random-1785506400.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-07-31T10:00:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "teams-20260804-05",
+      "source": "teams",
+      "scenario": "decision_implemented",
+      "date": "2026-08-04T15:00:00",
+      "title": "People Ops policy review",
+      "sections": [
+        "content/handbook/people-group/talent-assessment.md#intro"
+      ],
+      "mr": 20848,
+      "decisions": [
+        {
+          "statement": "We will update the Talent Assessment page with the new review notice, redirect to The Loop, and country-specific note as discussed.",
+          "policy": "Talent Assessment > Talent Assessment"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Kwame Asante",
+          "task": "Update the Talent Assessment handbook page with the new review notice, redirect, and country-specific note.",
+          "due": "2026-08-18"
+        },
+        {
+          "owner": "Kwame Asante",
+          "task": "Draft a short FAQ for the new benefits portal with top five questions.",
+          "due": "2026-08-11"
+        }
+      ]
+    },
+    {
+      "id": "ticket-4025",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-08-09T06:05:57.655877",
+      "sections": [],
+      "topic": "getting a second laptop for testing on another OS"
+    },
+    {
+      "id": "ticket-4019",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-08-14T15:51:56.151618",
+      "sections": [],
+      "topic": "how to change the name shown in payroll after marriage"
+    },
+    {
+      "id": "zoom-20260814-08",
+      "source": "zoom",
+      "scenario": "decision_unimplemented",
+      "date": "2026-08-14T16:30:00",
+      "title": "People Ops policy review",
+      "sections": [
+        "content/handbook/people-policies/_index.md#confidentiality"
+      ],
+      "mr": null,
+      "decisions": [
+        {
+          "statement": "We will update the Confidentiality policy to require all team members and contractors to sign the Confidentiality Agreement before being granted access to any GitLab systems or confidential information.",
+          "policy": "People Policies > Confidentiality"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Kwame Asante",
+          "task": "Update the handbook page for Confidentiality to specify that all team members and contractors must sign the Confidentiality Agreement before being granted access to any GitLab systems or confidential information.",
+          "due": "2026-08-18"
+        },
+        {
+          "owner": "Grace Liu",
+          "task": "Send a one-page summary of engagement survey results to the team.",
+          "due": "2026-08-19"
+        }
+      ]
+    },
+    {
+      "id": "slack-managers-1787335200.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-08-21T14:00:00",
+      "channel": "managers",
+      "sections": [
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/singapore-pte-ltd.md#medical-insurance"
+      ],
+      "mr": 20541,
+      "topic": null
+    },
+    {
+      "id": "slack-benefits-1787337000.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-08-21T14:30:00",
+      "channel": "benefits",
+      "sections": [
+        "content/handbook/people-policies/leave-of-absence/us.md#us-military-leave"
+      ],
+      "mr": 20638,
+      "topic": null
+    },
+    {
+      "id": "zoom-20260821-06",
+      "source": "zoom",
+      "scenario": "decision_implemented",
+      "date": "2026-08-21T15:30:00",
+      "title": "Total Rewards weekly sync",
+      "sections": [
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/remote-com.md#italy",
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/remote-com.md#hungary",
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/remote-com.md#luxembourg"
+      ],
+      "mr": 20954,
+      "decisions": [
+        {
+          "statement": "We are approving the new dependent rates and resource links for Italy, Hungary, and Luxembourg, effective May 1st.",
+          "policy": "Remote.com > Italy Medical Coverage, Hungary Medical Coverage, Luxembourg Medical Coverage"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Lukas Brenner",
+          "task": "Update the handbook pages for Italy, Hungary, and Luxembourg with new dependent rates, resource links, and payroll deduction note for Hungary.",
+          "due": "2026-08-31"
+        },
+        {
+          "owner": "Maya Okafor",
+          "task": "Share the engagement survey summary document with the team.",
+          "due": "2026-08-22"
+        },
+        {
+          "owner": "Maya Okafor",
+          "task": "Send a poll to schedule a follow-up session on survey feedback.",
+          "due": "2026-08-25"
+        }
+      ]
+    },
+    {
+      "id": "slack-benefits-1787578200.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-08-24T09:30:00",
+      "channel": "benefits",
+      "sections": [
+        "content/handbook/total-rewards/incentives.md#gitlab-ultimate-with-duo-enterprise"
+      ],
+      "mr": 20538,
+      "topic": null
+    },
+    {
+      "id": "slack-random-1787599800.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-08-24T15:30:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "slack-managers-1787860800.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-08-27T16:00:00",
+      "channel": "managers",
+      "sections": [
+        "content/handbook/people-group/talent-assessment.md#intro"
+      ],
+      "mr": 20848,
+      "topic": null
+    },
+    {
+      "id": "slack-benefits-1787947200.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-08-28T16:00:00",
+      "channel": "benefits",
+      "sections": [
+        "content/handbook/people-group/general-onboarding/_index.md#supplemental-onboarding-issue-templates"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4027",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-09-02T15:05:43.667140",
+      "sections": [],
+      "topic": "bringing a pet to a coworking space paid by GitLab"
+    },
+    {
+      "id": "slack-people-questions-1788444000.000000",
+      "source": "slack",
+      "scenario": "tribal",
+      "date": "2026-09-03T10:00:00",
+      "channel": "people-questions",
+      "sections": [],
+      "mr": null,
+      "topic": "reimbursement for a standing desk above the home-office limit"
+    },
+    {
+      "id": "slack-managers-1789131600.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-09-11T09:00:00",
+      "channel": "managers",
+      "sections": [
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/remote-com.md#italy"
+      ],
+      "mr": 20954,
+      "topic": null
+    },
+    {
+      "id": "slack-random-1789653600.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-09-17T10:00:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4010",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-09-21T18:41:40.434944",
+      "sections": [],
+      "topic": "whether the learning budget covers conference travel"
+    },
+    {
+      "id": "teams-20260925-07",
+      "source": "teams",
+      "scenario": "decision_implemented",
+      "date": "2026-09-25T16:00:00",
+      "title": "Total Rewards weekly sync",
+      "sections": [
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/gitlab-ireland-ltd.md#pension-plan"
+      ],
+      "mr": 21230,
+      "decisions": [
+        {
+          "statement": "We will update the handbook to reflect a 3-5% employer match, clarify the opt-up process, and link to the FAQ for government scheme details.",
+          "policy": "GitLab Ireland Ltd > Pension Plan"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Lukas Brenner",
+          "task": "Update the handbook page with new pension policy language, clarify opt-up process, and ensure FAQ link is prominent.",
+          "due": "2026-10-09"
+        },
+        {
+          "owner": "Lukas Brenner",
+          "task": "Summarize mental health feedback from benefits survey and research vendor options.",
+          "due": "2026-10-09"
+        }
+      ]
+    },
+    {
+      "id": "ticket-4007",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-09-27T21:00:44.856247",
+      "sections": [
+        "content/handbook/people-group/organizational-change-management.md#getting-started-with-change-management"
+      ],
+      "topic": null
+    },
+    {
+      "id": "ticket-4001",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-10-02T19:06:01.306049",
+      "sections": [
+        "content/handbook/people-group/learning-and-development/career-development/_index.md#career-growth-opportunities"
+      ],
+      "topic": null
+    },
+    {
+      "id": "ticket-4016",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-10-04T13:58:12.412642",
+      "sections": [
+        "content/handbook/hiring/interviewing/panel.md#panel-interviews"
+      ],
+      "topic": null
+    },
+    {
+      "id": "slack-benefits-1791228600.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-10-05T15:30:00",
+      "channel": "benefits",
+      "sections": [
+        "content/handbook/total-rewards/benefits/general-and-entity-benefits/gitlab-ireland-ltd.md#pension-plan"
+      ],
+      "mr": 21230,
+      "topic": null
+    },
+    {
+      "id": "ticket-4024",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-10-08T06:46:03.822499",
+      "sections": [
+        "content/handbook/hiring/candidate-faq/_index.md#how-to-submit-an-application"
+      ],
+      "topic": null
+    },
+    {
+      "id": "slack-random-1791828000.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-10-12T14:00:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "slack-benefits-1791918000.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-10-13T15:00:00",
+      "channel": "benefits",
+      "sections": [
+        "content/handbook/people-group/learning-and-development/career-development/_index.md#career-growth-opportunities"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4011",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-10-13T17:31:03.935508",
+      "sections": [],
+      "topic": "taking PTO during the first week of a new role after an internal transfer"
+    }
+  ]
+}

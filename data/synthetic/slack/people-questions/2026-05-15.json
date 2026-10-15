@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Hey all, quick question\u2014does anyone know if you can take PTO during your first week after an internal transfer? I\u2019m moving to the Ops team next Monday and had already planned a couple days off. Not sure if that\u2019s allowed or if I need to wait.",
+    "ts": "1778873400.000000",
+    "synthetic": true,
+    "thread_ts": "1778873400.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U03PRIYA",
+    "text": "Hi Sam! Good question. So, it\u2019s not in the handbook yet, but our current practice is that you need your new manager\u2019s written approval for PTO during your first two weeks in a new role after an internal transfer. There\u2019s a short form your new manager has to sign off on\u2014just ping them and then send the approval to HR. Let me know if you need the form link!",
+    "ts": "1778877534.751979",
+    "synthetic": true,
+    "thread_ts": "1778873400.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Thanks Priya! That\u2019s super helpful. I\u2019ll reach out to my new manager and get that sorted. If you could DM me the form, that\u2019d be great.",
+    "ts": "1778881371.295558",
+    "synthetic": true,
+    "thread_ts": "1778873400.000000",
+    "parent_user_id": "U14SAM"
+  },
+  {
+    "type": "message",
+    "user": "U03PRIYA",
+    "text": "Will do, Sam! Sending it your way now. Just shout if you have any other questions.",
+    "ts": "1778882021.973787",
+    "synthetic": true,
+    "thread_ts": "1778873400.000000",
+    "parent_user_id": "U14SAM"
+  }
+]

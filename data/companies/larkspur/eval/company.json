@@ -1,0 +1,1058 @@
+{
+  "people": [
+    {
+      "name": "Jessica Tran",
+      "email": "jessica.tran@larkspur.example",
+      "title": "Director of People Operations",
+      "team": "People Ops"
+    },
+    {
+      "name": "Marcus Lee",
+      "email": "marcus.lee@larkspur.example",
+      "title": "People Ops Generalist",
+      "team": "People Ops"
+    },
+    {
+      "name": "Samantha Ortiz",
+      "email": "samantha.ortiz@larkspur.example",
+      "title": "Recruiter",
+      "team": "People Ops"
+    },
+    {
+      "name": "Derek Patel",
+      "email": "derek.patel@larkspur.example",
+      "title": "HR Coordinator",
+      "team": "People Ops"
+    },
+    {
+      "name": "Linda Chen",
+      "email": "linda.chen@larkspur.example",
+      "title": "Finance Manager",
+      "team": "Finance"
+    },
+    {
+      "name": "Tom\u00e1s Rivera",
+      "email": "tomas.rivera@larkspur.example",
+      "title": "Senior Accountant",
+      "team": "Finance"
+    },
+    {
+      "name": "Emily Foster",
+      "email": "emily.foster@larkspur.example",
+      "title": "Payroll Specialist",
+      "team": "Finance"
+    },
+    {
+      "name": "Victor Nguyen",
+      "email": "victor.nguyen@larkspur.example",
+      "title": "Accounts Payable Clerk",
+      "team": "Finance"
+    },
+    {
+      "name": "Priya Shah",
+      "email": "priya.shah@larkspur.example",
+      "title": "IT & Security Lead",
+      "team": "IT & Security"
+    },
+    {
+      "name": "Benji Morales",
+      "email": "benji.morales@larkspur.example",
+      "title": "Systems Administrator",
+      "team": "IT & Security"
+    },
+    {
+      "name": "Ava Kim",
+      "email": "ava.kim@larkspur.example",
+      "title": "Security Analyst",
+      "team": "IT & Security"
+    },
+    {
+      "name": "Jonas Becker",
+      "email": "jonas.becker@larkspur.example",
+      "title": "IT Support Specialist",
+      "team": "IT & Security"
+    },
+    {
+      "name": "Rachel Evans",
+      "email": "rachel.evans@larkspur.example",
+      "title": "Director of Operations",
+      "team": "Operations"
+    },
+    {
+      "name": "Miguel Santos",
+      "email": "miguel.santos@larkspur.example",
+      "title": "Logistics Coordinator",
+      "team": "Operations"
+    },
+    {
+      "name": "Hannah Brooks",
+      "email": "hannah.brooks@larkspur.example",
+      "title": "Warehouse Manager",
+      "team": "Operations"
+    },
+    {
+      "name": "Jasper de Vries",
+      "email": "jasper.devries@larkspur.example",
+      "title": "Fleet Supervisor",
+      "team": "Operations"
+    },
+    {
+      "name": "Elena Popov",
+      "email": "elena.popov@larkspur.example",
+      "title": "General Counsel",
+      "team": "Legal"
+    },
+    {
+      "name": "David O\u2019Connor",
+      "email": "david.oconnor@larkspur.example",
+      "title": "Legal Operations Specialist",
+      "team": "Legal"
+    },
+    {
+      "name": "Fatima Alvi",
+      "email": "fatima.alvi@larkspur.example",
+      "title": "Compliance Manager",
+      "team": "Legal"
+    },
+    {
+      "name": "Lucas Meyer",
+      "email": "lucas.meyer@larkspur.example",
+      "title": "Paralegal",
+      "team": "Legal"
+    }
+  ],
+  "docs": [
+    {
+      "id": "pto-policy",
+      "title": "Paid Time Off (PTO) Policy",
+      "folder": "hr",
+      "owner_name": "Jessica Tran",
+      "summary": "Defines accrual rates, carryover, and request process for PTO.",
+      "format": "html",
+      "owner_style": "meta",
+      "sections": [
+        {
+          "heading": "1. Eligibility and Scope",
+          "body": "All full-time employees at Larkspur Freight are eligible for Paid Time Off (PTO) benefits beginning on their first day of employment. Part-time employees working at least 20 hours per week accrue PTO at 50% of the full-time rate. Temporary and contract staff are not eligible for PTO. PTO policies apply to all U.S. offices (Dallas HQ, Seattle, and Atlanta), with some local variations outlined below. Employees must be classified as active and not on unpaid leave to accrue PTO."
+        },
+        {
+          "heading": "2. PTO Accrual Rates",
+          "body": "PTO accrues on a bi-weekly basis and is reflected in the WorkNest HR portal. Accrual rates by office:\n- Dallas HQ: 15 days/year (0.577 days per pay period)\n- Seattle: 18 days/year (0.692 days per pay period)\n- Atlanta: 12 days/year (0.462 days per pay period)\nEmployees with 5+ years of service receive an additional 3 days/year. Accrual is capped at 1.5x the annual rate (e.g., Dallas max: 22.5 days)."
+        },
+        {
+          "heading": "3. PTO Carryover and Forfeiture",
+          "body": "Unused PTO may be carried over into the next calendar year, subject to office-specific limits:\n- Dallas HQ: Up to 7 days\n- Seattle: Up to 10 days\n- Atlanta: Up to 5 days\nAny PTO above these limits as of January 31st will be forfeited. No cash payout for unused PTO except upon separation, per Section 7."
+        },
+        {
+          "heading": "4. PTO Request Process",
+          "body": "All PTO requests must be submitted via the WorkNest HR portal at least 10 business days in advance for planned absences. For unplanned absences (e.g., illness), notify your direct supervisor and log the absence in WorkNest within 24 hours. PTO requests are reviewed and approved by the employee\u2019s department manager. Approval is subject to business needs and staffing levels. Employees are encouraged to coordinate with their teams to minimize disruption."
+        },
+        {
+          "heading": "5. Blackout Dates and Peak Periods",
+          "body": "Certain periods are designated as blackout dates due to high operational demand (e.g., December 10\u201331, June 1\u201315 for Dallas and Atlanta). PTO during these times requires VP-level approval. Seattle office does not have blackout dates but may restrict PTO during the annual Port Summit (first week of May)."
+        },
+        {
+          "heading": "6. Tracking and Reporting",
+          "body": "PTO balances are updated in real time in the WorkNest HR portal. Employees can view their current balance, accrual rate, and pending requests at any time. HR will send quarterly PTO balance summaries via email. Discrepancies should be reported to hr@larkspurfreight.com within 30 days. Supervisors are responsible for monitoring team PTO usage to ensure adequate coverage."
+        },
+        {
+          "heading": "7. PTO Payout Upon Separation",
+          "body": "Upon voluntary or involuntary separation, accrued but unused PTO will be paid out in the final paycheck, up to the annual accrual cap for the employee\u2019s office. For example, a Dallas employee may receive payout for up to 22.5 days. Employees terminated for gross misconduct forfeit all unused PTO. Final PTO payout is processed through our payroll vendor, PayBridge Solutions."
+        }
+      ]
+    },
+    {
+      "id": "parental-leave",
+      "title": "Parental Leave Guidelines",
+      "folder": "hr",
+      "owner_name": "Marcus Lee",
+      "summary": "Outlines eligibility and duration for maternity, paternity, and adoption leave.",
+      "format": "txt",
+      "owner_style": "inline",
+      "sections": [
+        {
+          "heading": "1. Eligibility Criteria",
+          "body": "All full-time employees of Larkspur Freight who have completed at least 9 months of continuous service are eligible for parental leave. Part-time employees working a minimum of 24 hours per week may be eligible for pro-rated leave. Contractors and temporary staff are not eligible. Eligibility is verified through the HRIS system (PeopleNest). For international offices:\n- UK office: Employees must have worked at least 26 weeks by the 15th week before the expected due date.\n- US office: Employees must meet the federal FMLA requirements in addition to Larkspur\u2019s policy."
+        },
+        {
+          "heading": "2. Maternity Leave",
+          "body": "Maternity leave at Larkspur Freight is 16 weeks of paid leave at 100% base salary for eligible employees. Leave can begin up to 4 weeks before the expected due date. In the UK office, statutory maternity pay is provided after 16 weeks, up to 39 weeks total, at \u00a3172.48 per week or 90% of average weekly earnings (whichever is lower). In the US office, maternity leave is capped at 12 weeks paid, with an optional 4 weeks unpaid extension. All maternity leave requests must be submitted via the HR portal (PeopleNest) at least 30 days in advance."
+        },
+        {
+          "heading": "3. Paternity Leave",
+          "body": "Eligible employees are entitled to 4 weeks of paid paternity leave at 100% base salary. Leave must be taken within 8 weeks of the child\u2019s birth or adoption placement. In the UK office, statutory paternity pay is \u00a3172.48 per week for up to 2 weeks, with Larkspur topping up to full salary for the remaining 2 weeks. In the US office, paternity leave is 4 weeks paid, with no statutory minimum. All paternity leave requests require manager approval and must be logged in PeopleNest at least 14 days before the intended start date."
+        },
+        {
+          "heading": "4. Adoption Leave",
+          "body": "Adoption leave mirrors maternity leave: 16 weeks paid at 100% base salary for primary caregivers, and 4 weeks paid for secondary caregivers. Employees must provide official adoption placement documentation. In the UK, statutory adoption pay applies after 16 weeks, up to 39 weeks total. In the US, adoption leave is 12 weeks paid, with an optional 4 weeks unpaid. All adoption leave requests must be submitted through PeopleNest and approved by the HR Manager (currently: Dana Kessler)."
+        },
+        {
+          "heading": "5. Pay and Benefits During Leave",
+          "body": "During paid parental leave, employees continue to accrue annual leave and retain all health and dental benefits through our provider, BluePeak Health. Pension contributions (UK) and 401(k) contributions (US) continue as normal. Bonuses and commissions are not paid during leave periods. Payroll is processed via PayBridge, and any discrepancies should be reported to payroll@larkspurfreight.com within 10 business days."
+        },
+        {
+          "heading": "6. Application Process",
+          "body": "To apply for parental leave:\n- Submit a leave request in PeopleNest with supporting documents (e.g., medical certificate, adoption papers).\n- Notify your direct manager and HR at least 30 days before the intended leave start date (14 days for paternity leave).\n- HR will confirm eligibility and send a formal approval within 7 business days.\n- For international offices, additional statutory forms may be required (see HR intranet for details)."
+        },
+        {
+          "heading": "7. Return to Work and Flexible Arrangements",
+          "body": "Employees returning from parental leave are entitled to return to their previous role or a suitable alternative. Requests for flexible working (e.g., part-time, remote) should be submitted via the FlexiWork tool at least 3 weeks before the planned return date. Approval is at the discretion of the department head (US: Mark Feldman, UK: Priya Choudhury). HR will conduct a return-to-work meeting within the first week back to discuss any support needs."
+        }
+      ]
+    },
+    {
+      "id": "remote-work-stipend",
+      "title": "Remote Work Stipend Policy",
+      "folder": "hr",
+      "owner_name": "Samantha Ortiz",
+      "summary": "Details monthly stipend for remote employees and eligible expenses.",
+      "format": "docx",
+      "owner_style": "author",
+      "sections": [
+        {
+          "heading": "Overview",
+          "body": "Larkspur Freight provides a monthly remote work stipend to eligible employees to support productivity and comfort while working outside company offices. The stipend is intended to offset costs such as internet, office supplies, and ergonomic equipment. This policy applies to all full-time remote employees, with specific rules for each office location. The stipend is processed through the HR portal (LarkTrack) and paid out on the last Friday of each month. Employees must submit eligible expense documentation by the 20th of each month for reimbursement."
+        },
+        {
+          "heading": "Stipend Amounts by Office",
+          "body": "- Chicago HQ: $120 USD/month\n- Dallas Branch: $100 USD/month\n- Vancouver Office: $140 CAD/month\n- Remote-only employees (not attached to an office): $110 USD/month\nAmounts are reviewed annually in January. Employees who split time between offices will receive the higher stipend for that month. Temporary increases may be approved by the HR Director (currently: Marissa Chen) for special circumstances."
+        },
+        {
+          "heading": "Eligible Expenses",
+          "body": "The stipend covers the following categories:\n- Home internet service (up to 60% of monthly bill)\n- Office supplies (paper, pens, printer ink, etc.)\n- Ergonomic equipment (desk chairs, monitor stands, footrests)\n- Software subscriptions (e.g., Zoom Pro, DocuSign, up to $20/month)\n- Phone service (if used for work, up to $30/month)\nReceipts must be uploaded to LarkTrack. Purchases from approved vendors (e.g., OfficeNest, ErgoDirect, TechHive) are preferred but not required."
+        },
+        {
+          "heading": "Ineligible Expenses",
+          "body": "- Rent or mortgage payments\n- Furniture not related to work (e.g., couches, beds)\n- Personal electronics (TVs, gaming consoles)\n- Food and beverage\n- Childcare or pet care\nAny expenses not listed as eligible must be pre-approved by the HR Business Partner (currently: Daniel Rios). Submitting ineligible expenses may result in stipend suspension for up to 2 months."
+        },
+        {
+          "heading": "Submission and Approval Process",
+          "body": "Employees must submit expense claims via LarkTrack by the 20th of each month. Claims require:\n- Itemized receipts\n- Brief description of business use\n- Vendor name\nSupervisors (see LarkTrack directory) review submissions within 5 business days. Final approval is by the HR Business Partner. Late submissions are processed the following month. Questions should be directed to hr@larkspurfreight.com."
+        },
+        {
+          "heading": "Tax Implications",
+          "body": "Stipends are considered taxable income in the US and Canada. Larkspur Freight will include stipend amounts on annual W-2 or T4 forms. Employees are responsible for any additional tax liability. For questions, contact Payroll Manager (currently: Priya Nand) or consult the annual tax FAQ on the HR SharePoint."
+        },
+        {
+          "heading": "Policy Review and Exceptions",
+          "body": "This policy is reviewed every 12 months by the HR Policy Committee. Employees may request exceptions for unique work needs (e.g., specialized equipment) by submitting a written request to the HR Director. All exceptions are logged in the LarkTrack system. Feedback on the policy can be submitted anonymously via the quarterly HR survey."
+        }
+      ]
+    },
+    {
+      "id": "holiday-calendar",
+      "title": "2024 Holiday Calendar",
+      "folder": "hr",
+      "owner_name": null,
+      "summary": "Lists company-observed holidays for all locations.",
+      "format": "pdf",
+      "owner_style": "none",
+      "sections": [
+        {
+          "heading": "Overview of 2024 Company Holidays",
+          "body": "Larkspur Freight will observe a total of 11 paid holidays in 2024 across all U.S. locations, with some regional variations for our Canadian and Mexico City offices. All full-time employees are eligible for paid holidays, while part-time staff receive pro-rated holiday pay based on their average weekly hours (minimum 20 hours/week). Temporary and contract workers are not eligible. The official holiday calendar is managed in Workwise HR Portal and will be updated by January 5, 2024. Please refer to the portal for the most current list and to request floating holidays."
+        },
+        {
+          "heading": "U.S. Office Holiday Schedule",
+          "body": "- New Year\u2019s Day: January 1 (Monday)\n- Memorial Day: May 27 (Monday)\n- Independence Day: July 4 (Thursday)\n- Labor Day: September 2 (Monday)\n- Thanksgiving: November 28-29 (Thursday & Friday)\n- Christmas Eve: December 24 (Tuesday, half-day)\n- Christmas Day: December 25 (Wednesday)\n- Floating Holiday: 1 per employee, must be used by December 31, 2024\nRequests for floating holidays must be submitted via Workwise at least 10 business days in advance and approved by your direct supervisor."
+        },
+        {
+          "heading": "Canada Office Holiday Schedule",
+          "body": "The Toronto and Vancouver offices observe 10 statutory holidays, including:\n- Family Day: February 19 (Monday)\n- Victoria Day: May 20 (Monday)\n- Canada Day: July 1 (Monday)\n- Civic Holiday: August 5 (Monday)\n- Thanksgiving: October 14 (Monday)\n- Boxing Day: December 26 (Thursday)\nEmployees may substitute up to 2 holidays per year for religious or cultural observances. Submit substitution requests to HR Manager (Sophie Tran) by March 15, 2024. Holiday pay is calculated at 8 hours/day for full-time staff."
+        },
+        {
+          "heading": "Mexico City Office Holiday Schedule",
+          "body": "Our Mexico City team observes 9 national holidays, including:\n- Constitution Day: February 5 (Monday)\n- Benito Ju\u00e1rez\u2019s Birthday: March 18 (Monday)\n- Independence Day: September 16 (Monday)\n- Revolution Day: November 18 (Monday)\nEmployees receive 1 additional floating holiday, which must be scheduled with at least 7 days\u2019 notice via the TiempoPro system. Overtime worked on holidays is compensated at 200% of base salary, as per Mexican labor law."
+        },
+        {
+          "heading": "Holiday Pay and Scheduling Rules",
+          "body": "Holiday pay is based on your regular daily rate. If you are required to work on a company holiday, you will receive time-and-a-half (1.5x) pay, except in Mexico City where the rate is double. All holiday work must be pre-approved by your department manager. Payroll adjustments for holiday work are processed through PayBridge and reflected in the next pay cycle. Unused floating holidays do not roll over and are not paid out at year-end."
+        },
+        {
+          "heading": "Vendor Support and Holiday Tracking",
+          "body": "All holiday requests and approvals are managed through Workwise (U.S. & Canada) and TiempoPro (Mexico). For technical issues, contact our IT vendor, BluePeak Solutions, at support@bluepeaksol.com. HR will audit holiday balances quarterly; discrepancies must be reported within 30 days. For questions about eligibility or scheduling, reach out to your local HR representative or email hr@larkspurfreight.com."
+        }
+      ]
+    },
+    {
+      "id": "travel-expenses",
+      "title": "Travel & Expenses Policy",
+      "folder": "finance",
+      "owner_name": "Linda Chen",
+      "summary": "Specifies reimbursable travel expenses, approval workflow, and documentation.",
+      "format": "pdf",
+      "owner_style": "author",
+      "sections": [
+        {
+          "heading": "1. Purpose and Scope",
+          "body": "This policy outlines the procedures and rules for claiming travel and related business expenses at Larkspur Freight. It applies to all full-time and part-time employees traveling for company business, including drivers, sales staff, and management. Contractors and temporary staff are not eligible for reimbursement unless specified in their contract. The policy covers domestic and international travel originating from our main offices in Houston, Tacoma, and Charlotte. Note: Each office may have additional local guidelines\u2014see Section 7."
+        },
+        {
+          "heading": "2. Reimbursable Expenses",
+          "body": "Eligible expenses include:\n- Airfare (economy class only, booked via TripNest)\n- Hotel accommodation up to $180/night (Houston & Charlotte) or $210/night (Tacoma)\n- Meals: $55/day per diem (no receipts needed for per diem claims)\n- Ground transportation (taxi, rideshare, or rental car from FleetEase)\n- Parking and tolls\n- Internet charges for business use (max $15/day)\nNon-reimbursable: alcohol, personal entertainment, family travel, and upgrades. All expenses must be reasonable and directly related to company business."
+        },
+        {
+          "heading": "3. Approval Workflow",
+          "body": "All travel must be pre-approved by the employee\u2019s direct supervisor using the LarkTrack portal. For trips exceeding $2,000 or international travel, approval from the Finance Manager (currently: Dana Kim) is also required. Expense reports must be submitted within 7 days of trip completion. Late submissions may result in delayed or denied reimbursement. Supervisors have 3 business days to review and approve or reject claims."
+        },
+        {
+          "heading": "4. Documentation Requirements",
+          "body": "Employees must submit itemized receipts for all expenses over $25, except for per diem meals. Receipts must be uploaded to the LarkTrack portal in PDF or JPEG format. Credit card statements are not accepted as proof. For hotel stays, the folio showing nightly rates and taxes is required. Missing documentation may result in partial reimbursement or rejection of the claim. Expense reports must include a brief business purpose for each trip."
+        },
+        {
+          "heading": "5. Advances and Corporate Cards",
+          "body": "Travel advances are available for trips longer than 5 days and must be requested at least 10 business days in advance. Advances are capped at 80% of estimated expenses. Employees issued a Larkspur Corporate Card (via Bank of Westfield) must reconcile charges within 5 days of statement receipt. Personal expenses charged to the corporate card must be repaid within 14 days. Misuse of the card may result in revocation and disciplinary action."
+        },
+        {
+          "heading": "6. Exceptions and Special Cases",
+          "body": "Requests for exceptions (e.g., higher hotel rates during conferences, additional baggage fees) must be submitted in writing to the Finance Manager before travel. Emergency expenses (e.g., medical, weather-related delays) will be reviewed on a case-by-case basis. Tacoma office employees may claim up to $25/day for winter gear rental (November\u2013March) with supervisor approval. All exceptions must be documented in the expense report."
+        },
+        {
+          "heading": "7. Office-Specific Guidelines",
+          "body": "Houston: Employees must use MetroCab for airport transfers (company account #HST-4421). Charlotte: Parking at CLT airport is reimbursed up to $12/day. Tacoma: Employees traveling to Alaska routes may claim an additional $40/day hardship allowance. Local finance contacts: Houston \u2013 Mark Feldman, Charlotte \u2013 Priya Desai, Tacoma \u2013 Luis Ortega. Refer to the LarkTrack portal for updates to local rules."
+        }
+      ]
+    },
+    {
+      "id": "per-diem-rates",
+      "title": "Per Diem Rates",
+      "folder": "finance",
+      "owner_name": "Tom\u00e1s Rivera",
+      "summary": "Lists daily meal and lodging allowances by region.",
+      "format": "pdf",
+      "owner_style": "author",
+      "sections": [
+        {
+          "heading": "Overview of Per Diem Policy",
+          "body": "Larkspur Freight provides per diem allowances to cover meals and lodging for employees traveling on company business. Rates vary by region and are reviewed annually by the Finance Department. All per diem claims must be submitted via the LedgerEase portal within 10 business days of trip completion. Receipts are not required for standard per diem, but any expenses exceeding the daily cap must be pre-approved by a regional manager. The current policy is effective as of March 1, 2024."
+        },
+        {
+          "heading": "Midwest Region Rates",
+          "body": "For employees based in or traveling to the Midwest (including Chicago, St. Louis, and Des Moines offices):\n- Lodging: $120 USD per night\n- Meals: $55 USD per day\n- Incidentals: $10 USD per day\nMeal per diem is reduced by 40% on travel days shorter than 6 hours. Midwest rates are valid for up to 14 consecutive days; longer stays require VP approval. Approved vendors for direct billing include StayRight Hotels and MealMate."
+        },
+        {
+          "heading": "West Coast Region Rates",
+          "body": "West Coast offices (Seattle, Portland, San Francisco) have higher per diem rates due to local costs:\n- Lodging: $165 USD per night\n- Meals: $70 USD per day\n- Incidentals: $15 USD per day\nEmployees must use the TripTrack app to log daily expenses. For trips exceeding 7 days, a 5% reduction applies to lodging per diem from day 8 onward. Only bookings through PacificStay and UrbanBite are eligible for direct billing."
+        },
+        {
+          "heading": "Southern Region Rates",
+          "body": "Southern region (Dallas, Atlanta, New Orleans):\n- Lodging: $105 USD per night\n- Meals: $48 USD per day\n- Incidentals: $8 USD per day\nMeal per diem is not provided if meals are included in conference fees or vendor packages. All claims must be approved by the Southern Regional Finance Lead (currently: Carla Mendez). Use the PerDiemPro tool for submission."
+        },
+        {
+          "heading": "International Travel Allowances",
+          "body": "For international assignments, per diem rates are set according to the Larkspur Freight International Table (see Finance SharePoint). Example rates:\n- Canada: Lodging $140 CAD/night, Meals $65 CAD/day\n- Mexico: Lodging $90 USD/night, Meals $40 USD/day\nCurrency conversion is handled by the ConvertaPay system at the daily rate. International per diem is capped at 21 days unless extended by the CFO."
+        },
+        {
+          "heading": "Eligibility and Exceptions",
+          "body": "Per diem is available to full-time and contract employees traveling more than 50 miles from their home office. Exceptions (e.g., for part-time staff or extended stays) require written approval from the Director of Finance. Per diem is not provided for remote work or virtual conferences. Any disputes or appeals must be submitted to the Per Diem Review Committee within 30 days of expense denial."
+        },
+        {
+          "heading": "Deadlines and Submission Process",
+          "body": "All per diem requests must be submitted within 10 business days post-travel via the designated regional tool (LedgerEase, TripTrack, or PerDiemPro). Late submissions are subject to a 15% reduction unless a waiver is granted by the Finance Department. Employees should retain travel itineraries for audit purposes for at least 18 months. Questions can be directed to per-diem@larkspurfreight.com."
+        }
+      ]
+    },
+    {
+      "id": "corporate-card-use",
+      "title": "Corporate Card Usage",
+      "folder": "finance",
+      "owner_name": "Emily Foster",
+      "summary": "Rules for requesting, using, and reconciling company credit cards.",
+      "format": "txt",
+      "owner_style": "inline",
+      "sections": [
+        {
+          "heading": "Eligibility and Card Issuance",
+          "body": "Corporate cards are available to full-time employees in the Operations, Sales, and Logistics departments who have completed at least 90 days of employment. Requests must be submitted via the FinTrak portal and approved by the department head (e.g., Carla Jensen for Operations, Mark Liu for Sales). Cards are issued by our partner, Northgate Bank, with a standard monthly limit of $5,000 USD. Exceptions up to $10,000 require CFO approval. Cards are not issued to contractors or part-time staff. For the Rotterdam office, only managers are eligible for cards, with a \u20ac3,000 monthly cap."
+        },
+        {
+          "heading": "Requesting a Corporate Card",
+          "body": "To request a card, employees must complete the Corporate Card Request Form in the finance folder on SharePoint and attach a signed approval from their supervisor. The form requires: \n- Employee ID and department\n- Estimated monthly spend\n- List of primary vendors (e.g., FleetFuel, CargoMate)\nRequests are reviewed within 5 business days. For urgent needs (e.g., last-minute travel), email finance@larkspurfreight.com with 'URGENT CARD REQUEST' in the subject. Cards are typically delivered within 7-10 business days after approval."
+        },
+        {
+          "heading": "Permitted and Prohibited Expenses",
+          "body": "Corporate cards may be used for:\n- Approved travel (flights, hotels, taxis)\n- Client meals (max $120 per meal)\n- Office supplies from approved vendors (e.g., OfficeNest, SupplyBridge)\n- Fuel and tolls for company vehicles\nProhibited uses include:\n- Personal expenses\n- Cash advances\n- Alcohol purchases over $50 per event\n- Gift cards\nViolations may result in card suspension and disciplinary action. The Dallas office allows ride-share apps (e.g., GoCab) up to $200/month, while the Rotterdam office does not."
+        },
+        {
+          "heading": "Transaction Limits and Controls",
+          "body": "Each card has a default single-transaction limit of $1,500. Transactions above this amount require pre-approval from the Finance Manager (currently Priya Desai). Monthly spend is capped at $5,000 unless otherwise authorized. Cards are monitored via the SpendGuard tool, which flags:\n- Transactions over $1,000\n- Multiple transactions at the same vendor in 24 hours\n- Weekend spending over $500\nCardholders receive automated alerts for flagged activity. Persistent overages may result in card revocation."
+        },
+        {
+          "heading": "Expense Reconciliation and Receipts",
+          "body": "All cardholders must reconcile expenses within 7 calendar days of statement close (statements close on the 25th of each month). Receipts must be uploaded to the FinTrak portal and matched to each transaction. Missing receipts over $50 require a written explanation and supervisor sign-off. The finance team (contact: finance@larkspurfreight.com) audits 10% of all cardholder statements monthly. Failure to reconcile on time may result in a $25 late fee deducted from payroll."
+        },
+        {
+          "heading": "Lost or Stolen Cards",
+          "body": "Report lost or stolen cards immediately to Northgate Bank at 1-800-555-0199 and notify finance@larkspurfreight.com. Replacement cards are issued within 3 business days. Cardholders are liable for any unauthorized charges up to $100 if not reported within 24 hours. For the Rotterdam office, contact the local finance lead, Jeroen van Dijk, for assistance with replacements."
+        },
+        {
+          "heading": "Card Cancellation and Offboarding",
+          "body": "Upon resignation or termination, cards must be surrendered to HR within 2 business days. Final expense reports must be submitted within 5 days of departure. Any outstanding balances will be deducted from final paychecks. For transfers between offices, cardholders must reapply for a new card under the destination office\u2019s rules. Questions about offboarding procedures should be directed to HR (hr@larkspurfreight.com)."
+        }
+      ]
+    },
+    {
+      "id": "procurement-approvals",
+      "title": "Procurement Approval Matrix",
+      "folder": "finance",
+      "owner_name": "Victor Nguyen",
+      "summary": "Approval levels and documentation required for vendor purchases.",
+      "format": "html",
+      "owner_style": "none",
+      "sections": [
+        {
+          "heading": "Overview and Purpose",
+          "body": "The Procurement Approval Matrix outlines the required approval levels and documentation for all vendor purchases at Larkspur Freight. This policy ensures compliance, cost control, and transparency across all offices. The matrix applies to all departments, including Operations, IT, and Fleet Management. Purchases from vendors such as Northline Tires, CargoPro Solutions, and FleetGuard Systems must follow the outlined procedures. All employees are responsible for adhering to these guidelines, and non-compliance may result in delayed payments or disciplinary action."
+        },
+        {
+          "heading": "Approval Thresholds \u2013 Chicago Office",
+          "body": "- Purchases up to $2,500: Department Manager approval required. \n- $2,501\u2013$10,000: Regional Director approval required. \n- Above $10,000: CFO (currently Linda Tran) approval required. \n- Emergency purchases (e.g., breakdowns) up to $5,000 may be pre-approved by Fleet Supervisor (notify within 24 hours). \n- All approvals must be documented in the ProcureTrack system within 2 business days."
+        },
+        {
+          "heading": "Approval Thresholds \u2013 Dallas Office",
+          "body": "- Purchases up to $1,500: Team Lead approval required. \n- $1,501\u2013$7,500: Operations Manager approval required. \n- Above $7,500: Regional VP (currently Marcus Bell) approval required. \n- All IT-related purchases, regardless of amount, require IT Manager sign-off. \n- Documentation must be uploaded to the Dallas ShareDocs folder within 3 business days."
+        },
+        {
+          "heading": "Required Documentation",
+          "body": "- Vendor quote or invoice (must include vendor name, e.g., CargoPro Solutions, and itemized costs)\n- Purchase requisition form (Form PR-2024)\n- Three competitive bids for purchases above $5,000 (exceptions: sole-source vendors like FleetGuard Systems)\n- Approval email or digital signature from the designated approver\n- For recurring contracts, attach previous year\u2019s spend summary\n- All documents must be retained for 7 years per company policy"
+        },
+        {
+          "heading": "Vendor Eligibility and Onboarding",
+          "body": "All vendors must be approved by the Procurement Team before any purchase. New vendors (e.g., SwiftParts Inc.) require:\n- Completed Vendor Registration Form (VRF-11)\n- W-9 or equivalent tax documentation\n- Proof of insurance (minimum $1M liability)\n- Reference check (minimum 2 business references)\n- Onboarding process typically takes 5\u201310 business days. Exceptions for urgent needs must be approved by the CFO."
+        },
+        {
+          "heading": "Special Categories and Exceptions",
+          "body": "- Fuel purchases from approved vendors (e.g., PetroMax) are exempt from competitive bid requirements but must be reconciled monthly.\n- Software subscriptions (e.g., FleetOps Tracker) over $3,000/year require IT and Finance joint approval.\n- Any purchase over $50,000 requires Board notification at least 10 days prior to commitment.\n- Sole-source justifications must be documented and signed by the requesting manager and Procurement Lead."
+        },
+        {
+          "heading": "Review and Audit",
+          "body": "The Procurement Team will conduct quarterly audits of all purchases above $5,000. Any discrepancies or missing documentation will be reported to the Finance Director (currently Priya Nair) within 7 days of discovery. Offices must respond to audit queries within 3 business days. The matrix will be reviewed annually, with updates communicated via company-wide email and posted in the Finance folder."
+        }
+      ]
+    },
+    {
+      "id": "laptop-equipment-policy",
+      "title": "Laptop & Equipment Policy",
+      "folder": "it-security",
+      "owner_name": "Priya Shah",
+      "summary": "Covers device issuance, replacement, and return procedures.",
+      "format": "docx",
+      "owner_style": "none",
+      "sections": [
+        {
+          "heading": "1. Device Issuance Eligibility",
+          "body": "All full-time employees at Larkspur Freight are eligible for company-issued laptops and related equipment. Contractors and part-time staff may request devices with manager approval. Devices are issued based on role requirements:\n- Operations and Logistics: Dell Latitude 5430 (via TechBridge Solutions)\n- Sales and Admin: HP EliteBook 840 G8 (via ByteSource)\n- Remote staff: Devices shipped within 7 business days of onboarding\n- Onsite staff (Denver HQ): Devices available for pickup within 3 business days\nRequests must be submitted through the IT Equipment Portal and approved by the department head."
+        },
+        {
+          "heading": "2. Standard Equipment Package",
+          "body": "Each eligible employee receives a standard equipment package:\n- 1 laptop (model per role, see above)\n- 1 docking station (Dell WD19 or HP G5)\n- 2 monitors (24\u201d ViewSonic VA2456)\n- 1 wireless mouse and keyboard (Logitech MK545)\n- 1 headset (Jabra Evolve 40)\nAdditional accessories (e.g., external drives, webcams) require justification and approval from IT Manager (currently: Priya Desai). All equipment is asset-tagged and tracked in AssetTrack Pro."
+        },
+        {
+          "heading": "3. Replacement & Upgrade Policy",
+          "body": "Laptops are eligible for replacement every 36 months or if repair costs exceed $400 USD. Damaged or lost equipment must be reported within 24 hours via the IT Helpdesk (ticketing through ServiceNest). Replacement fees:\n- Accidental damage: Employee pays 20% of replacement cost (max $250 USD)\n- Lost/stolen: Employee pays 50% of replacement cost (max $600 USD)\n- Normal wear: No charge\nUpgrade requests (e.g., RAM, SSD) require supervisor and IT Manager approval."
+        },
+        {
+          "heading": "4. Device Return Procedures",
+          "body": "Upon termination or role change, all equipment must be returned within 5 business days. For remote staff, a prepaid FedEx return label is provided. For Denver HQ, returns are processed at the IT desk (Room 2B-14). Late returns incur a $50 USD/week penalty, deducted from final paycheck. Unreturned equipment after 30 days is considered lost and charged at full replacement value. IT will verify device condition and wipe all data using Blancco Drive Eraser."
+        },
+        {
+          "heading": "5. Security & Compliance Requirements",
+          "body": "All devices must have Larkspur SecureGuard (endpoint protection) and BitLocker encryption enabled. Employees are required to:\n- Change passwords every 90 days\n- Report suspicious activity within 2 hours\n- Not install unauthorized software (see Approved Apps List in IT Security folder)\nQuarterly audits are conducted by the IT Security Lead (currently: Marcus Lin). Non-compliance may result in device lockout or disciplinary action."
+        },
+        {
+          "heading": "6. Office-Specific Guidelines",
+          "body": "Denver HQ: Onsite support available Mon-Fri, 8am-6pm. Loaner devices available for up to 3 days.\nDallas Branch: Device requests processed weekly (Wednesdays). No onsite support; remote troubleshooting only.\nRemote Employees: Must complete virtual onboarding with IT within 2 days of device receipt. Shipping delays over 5 days must be reported to logistics@larkspurfreight.com.\nAll offices: Emergency replacements (e.g., device failure) processed within 24 hours if reported before 3pm local time."
+        },
+        {
+          "heading": "7. Vendor & Inventory Management",
+          "body": "Larkspur Freight sources equipment from TechBridge Solutions (primary) and ByteSource (secondary). Inventory is tracked in AssetTrack Pro, with monthly reconciliations. Bulk orders over $10,000 USD require CFO (currently: Daniel Kim) approval. All vendor invoices must be submitted to ap@larkspurfreight.com within 7 days of receipt. Discrepancies in inventory must be reported to the IT Asset Coordinator (currently: Leah Tran) within 48 hours."
+        }
+      ]
+    },
+    {
+      "id": "password-mfa-policy",
+      "title": "Password & MFA Requirements",
+      "folder": "it-security",
+      "owner_name": "Ava Kim",
+      "summary": "Minimum password standards and mandatory multi-factor authentication.",
+      "format": "docx",
+      "owner_style": "inline",
+      "sections": [
+        {
+          "heading": "Overview",
+          "body": "This document outlines the minimum password standards and mandatory multi-factor authentication (MFA) requirements for all Larkspur Freight employees. These policies apply to all company-managed systems, including email, logistics platforms, and HR portals. The IT Security team, led by Priya Desai (Director, IT Security), is responsible for policy enforcement. All employees must comply by July 15, 2024. Non-compliance will result in account suspension until requirements are met."
+        },
+        {
+          "heading": "Password Complexity Standards",
+          "body": "All user passwords must meet the following criteria:\n- Minimum length: 14 characters\n- At least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character\n- No use of previous 6 passwords\n- Passwords must not contain the user's name or username\n- Passwords expire every 90 days (Dallas and Atlanta offices) or every 120 days (Seattle office)\nPassword resets can be requested via the HelpDeskPro portal. Violations will be flagged by the SentinelGuard monitoring tool."
+        },
+        {
+          "heading": "Multi-Factor Authentication (MFA) Requirements",
+          "body": "MFA is mandatory for all employees accessing Larkspur Freight systems, regardless of location or role. The approved MFA vendors are SecureStep (primary) and AuthyPro (backup for mobile users). MFA enrollment must be completed within 3 business days of account creation. Exceptions require written approval from the IT Security Director. Temporary MFA bypasses (max 24 hours) are only granted for system outages and must be logged in the ITSM system."
+        },
+        {
+          "heading": "Vendor-Specific MFA Implementation",
+          "body": "The following systems require MFA via specific vendors:\n- Email (Outlook365): SecureStep\n- Freight Management System (CargoFlow): SecureStep\n- HR Portal (PeopleFirst): AuthyPro\n- VPN Access: SecureStep\nSeattle office employees may use AuthyPro for all systems due to regional compliance requirements. MFA tokens cost $3.50 USD per user per month, billed to department budgets."
+        },
+        {
+          "heading": "Password Change and Recovery Procedures",
+          "body": "Employees must change their passwords immediately if a compromise is suspected. Self-service password reset is available via HelpDeskPro, requiring both MFA and a secondary email verification. For locked accounts, contact the IT Help Desk (ext. 4422) during business hours (8am\u20136pm CST). After three failed login attempts, accounts are locked for 30 minutes. All password changes are logged in the SentinelGuard system for audit purposes."
+        },
+        {
+          "heading": "Compliance Monitoring and Enforcement",
+          "body": "Compliance is monitored weekly using SentinelGuard and quarterly audits by the IT Security team. As of May 2024, 97% of employees are compliant with MFA requirements. Non-compliant users will receive two email reminders (48 hours apart) before account suspension. Department heads are notified of persistent non-compliance. Annual compliance reports are submitted to the COO, Marcus Lin."
+        },
+        {
+          "heading": "Exceptions and Special Cases",
+          "body": "Contractors and temporary staff must adhere to the same password and MFA standards as full-time employees. Exceptions for legacy systems (e.g., FleetTrack v2.1) require a risk assessment and written approval from Priya Desai. All exception requests must be submitted via the ITSM portal and are reviewed within 5 business days. Exceptions are valid for a maximum of 60 days and must be re-evaluated thereafter."
+        }
+      ]
+    },
+    {
+      "id": "incident-response-plan",
+      "title": "Incident Response Plan",
+      "folder": "it-security",
+      "owner_name": "Benji Morales",
+      "summary": "Step-by-step process for reporting and managing security incidents.",
+      "format": "docx",
+      "owner_style": "author",
+      "sections": [
+        {
+          "heading": "1. Purpose and Scope",
+          "body": "This Incident Response Plan outlines the procedures for identifying, reporting, and managing IT security incidents at Larkspur Freight. The plan applies to all employees, contractors, and third-party vendors with access to company systems, including those in the Chicago HQ, Dallas Terminal, and Vancouver Office. All incidents involving data loss, unauthorized access, or service disruption must be reported within 30 minutes of discovery. The plan covers incidents affecting our core systems (e.g., FleetOps, CargoTrack, and the Larkspur Portal) and any third-party integrations, such as with SecureSync (our MFA provider) and DataGuard (our cloud backup vendor)."
+        },
+        {
+          "heading": "2. Incident Identification and Reporting",
+          "body": "Employees must report suspected security incidents immediately via the IT Security Portal or by calling the 24/7 hotline at ext. 4411. For the Dallas Terminal, incidents can also be reported directly to the on-site IT coordinator, Maria Chen. Required information includes:\n- Date/time of incident\n- Systems/users affected\n- Description of suspicious activity\n- Any actions already taken\nAll reports are logged in the Incident Tracker (powered by SentinelOne) and assigned a unique case ID. Failure to report within 30 minutes may result in a written warning (per HR Policy 4.2)."
+        },
+        {
+          "heading": "3. Initial Assessment and Triage",
+          "body": "The IT Security Team, led by Raj Patel (CISO), will review new incident reports within 2 business hours. Incidents are classified as Low, Medium, or High severity based on:\n- Number of users affected (e.g., >50 users = High)\n- Data sensitivity (e.g., customer PII = High)\n- Financial impact (e.g., >$5,000 USD loss = High)\nFor High severity incidents, the team must notify the Executive Committee and legal counsel (via the SecureSync channel) within 1 hour. Medium and Low severity incidents are reviewed weekly in the Friday IT Security Standup."
+        },
+        {
+          "heading": "4. Containment and Eradication",
+          "body": "Upon classification, the IT Security Team will initiate containment steps. For malware outbreaks, affected endpoints are isolated using SentinelOne within 15 minutes. For unauthorized access, user accounts are disabled in Okta and passwords reset. The Vancouver Office requires all endpoints to be reimaged by the local IT vendor, NorthStar Tech, within 24 hours. All containment actions must be documented in the Incident Tracker, including:\n- Timestamp of action\n- Personnel involved\n- Systems isolated or restored\nEradication steps (e.g., malware removal, patch deployment) must be completed within 48 hours for High severity incidents."
+        },
+        {
+          "heading": "5. Notification and Communication",
+          "body": "For incidents involving customer data or regulatory impact, the Compliance Officer (Sandra Liu) must be notified within 2 hours. External notifications (e.g., to customers, regulators, or law enforcement) require approval from the CISO and Legal. The Chicago HQ follows Illinois Breach Notification Law, requiring customer notification within 5 business days if >500 records are affected. All communications must use the approved incident templates stored in the IT-Security SharePoint folder. Only designated spokespeople (Raj Patel or Sandra Liu) may communicate externally."
+        },
+        {
+          "heading": "6. Recovery and Restoration",
+          "body": "Systems may only be restored after written approval from the IT Security Team Lead. DataGuard backups must be used to restore any lost or corrupted data. For Dallas Terminal, restoration must be completed within 36 hours of containment. All restored systems must pass a vulnerability scan (using Nessus Pro) before being returned to production. Affected users are notified via email and required to reset passwords. Any financial losses over $2,000 USD must be reported to the CFO (James O\u2019Malley) within 24 hours of discovery."
+        },
+        {
+          "heading": "7. Post-Incident Review and Documentation",
+          "body": "Within 7 days of incident closure, the IT Security Team will conduct a post-incident review. The review includes:\n- Timeline of events\n- Root cause analysis\n- Lessons learned\n- Recommendations for process improvement\nAll documentation is stored in the Incident Tracker and reviewed quarterly by the Audit Committee. For incidents involving third-party vendors (e.g., NorthStar Tech, DataGuard), a joint review is required. Any policy changes must be approved by the CISO and communicated to all staff within 10 business days."
+        }
+      ]
+    },
+    {
+      "id": "data-retention-policy",
+      "title": "Data Retention Policy",
+      "folder": "it-security",
+      "owner_name": null,
+      "summary": "Retention periods and deletion schedules for company data.",
+      "format": "html",
+      "owner_style": "none",
+      "sections": [
+        {
+          "heading": "1. Purpose and Scope",
+          "body": "This Data Retention Policy outlines the retention periods, deletion schedules, and responsibilities for managing company data at Larkspur Freight. The policy applies to all digital and physical records generated or received by Larkspur Freight employees, contractors, and third-party vendors, including but not limited to shipment logs, customer contracts, HR files, and financial records. The policy covers all offices: Chicago HQ, Dallas Branch, and Seattle Logistics Center. Compliance is mandatory for all staff, and non-compliance may result in disciplinary action or termination of vendor contracts."
+        },
+        {
+          "heading": "2. Retention Periods by Data Type",
+          "body": "- Shipment records: 5 years from date of delivery (Chicago HQ), 4 years (Dallas Branch), 6 years (Seattle Logistics Center)\n- Customer contracts: 7 years after contract end date\n- Employee HR files: 6 years after termination\n- Financial records: 8 years from fiscal year end\n- Email correspondence: 2 years (all offices)\n- CCTV footage: 30 days (HQ), 14 days (Dallas), 60 days (Seattle)\nRetention periods are reviewed annually by the IT Security Manager (currently: Priya Desai)."
+        },
+        {
+          "heading": "3. Deletion Schedules and Automation",
+          "body": "Data deletion is scheduled monthly on the 15th using the DataSweep Pro tool (vendor: ByteHarbor Solutions). Automated scripts flag eligible records for deletion, and a manual review is conducted by the Data Compliance Officer (currently: Marcus Lin). Exceptions require written approval from the department head. Physical records are shredded quarterly by SecureShred Inc. (invoice avg: $1,200/quarter)."
+        },
+        {
+          "heading": "4. Backup and Archival Procedures",
+          "body": "Backups are retained for 90 days on encrypted cloud storage (vendor: CloudNest). After 90 days, backups are purged unless flagged for legal hold. Archived data (older than 5 years) is stored on LTO-9 tapes in the Chicago HQ vault, with an annual storage cost of $3,800. Only IT Security and Legal teams have access to archives. Restoration requests must be approved by the CIO (currently: Elena Voss)."
+        },
+        {
+          "heading": "5. Legal and Regulatory Compliance",
+          "body": "Retention schedules comply with FMCSA, IRS, and state-specific regulations. For example, Texas DOT requires shipment logs to be kept for a minimum of 4 years. Legal holds override standard retention periods; Legal Counsel (currently: David Kim) must notify IT within 2 business days of a hold. Non-compliance fines can reach up to $50,000 per incident."
+        },
+        {
+          "heading": "6. Data Subject Requests and Exceptions",
+          "body": "Data subjects (employees, customers) may request deletion or access to their data under the Larkspur Privacy Policy. Requests are processed within 30 days. Exceptions to retention periods (e.g., ongoing litigation, audits) must be documented in the Data Exception Log (SharePoint: IT-Security/Exceptions). Only 3% of records are currently under exception status. All exceptions expire after 18 months unless renewed by Legal."
+        },
+        {
+          "heading": "7. Policy Review and Updates",
+          "body": "This policy is reviewed every 12 months by the IT Security Committee. Last review: 2023-11-10. Next scheduled review: 2024-11-15. Updates require approval from the CIO and Legal Counsel. All employees are notified of changes via company-wide email and must acknowledge receipt within 7 days. Questions should be directed to it-security@larkspurfreight.com."
+        }
+      ]
+    },
+    {
+      "id": "on-call-compensation",
+      "title": "On-Call Compensation Policy",
+      "folder": "operations",
+      "owner_name": "Rachel Evans",
+      "summary": "Defines pay structure and expectations for on-call shifts.",
+      "format": "md",
+      "owner_style": "frontmatter",
+      "sections": [
+        {
+          "heading": "Purpose and Scope",
+          "body": "This policy outlines the compensation structure and expectations for folder operations staff assigned to on-call shifts at Larkspur Freight. The policy applies to all full-time and part-time folder operations employees in the Dallas, Tacoma, and Savannah offices. On-call shifts are defined as any period outside of standard business hours (6:00 PM to 6:00 AM local time, weekends, and public holidays) during which employees are required to be available to respond to operational incidents, system alerts, or urgent vendor requests (e.g., from CargoSync or FleetPulse)."
+        },
+        {
+          "heading": "Eligibility and Assignment",
+          "body": "Eligibility for on-call compensation is limited to folder operations associates and supervisors who have completed at least 90 days of service. On-call assignments are scheduled monthly by the Operations Scheduling Coordinator (currently: Jamie Tran, Dallas office) using the ShiftMaster tool. Employees may not be assigned more than 8 on-call shifts per month, and must have at least 24 hours off between on-call periods. Requests for exemption due to medical or personal reasons must be submitted to HR (hr@larkspurfreight.com) at least 10 business days in advance."
+        },
+        {
+          "heading": "Compensation Structure",
+          "body": "On-call compensation is structured as follows:\n- Standby Pay: $45 USD per on-call shift (12 hours), regardless of whether the employee is called in.\n- Call-In Pay: If called in, employees receive an additional $30 USD per hour, with a minimum of 1 hour per incident.\n- For holidays (as defined in the Larkspur Freight Holiday Calendar), standby pay increases to $65 USD per shift.\n- Tacoma office employees receive a 10% premium on all on-call pay due to regional cost-of-living adjustments.\n- All payments are processed via the PayFlex system and included in the next regular payroll cycle."
+        },
+        {
+          "heading": "Expectations and Responsibilities",
+          "body": "Employees on-call must:\n- Respond to all alerts from the OpsAlert system within 15 minutes.\n- Be reachable by phone and Slack (LarkspurOps channel) at all times during the shift.\n- Log all incidents and actions in the IncidentTracker portal within 2 hours of resolution.\n- Coordinate with external vendors (e.g., CargoSync, FleetPulse) as needed.\nFailure to meet these expectations may result in forfeiture of on-call pay for the affected shift, subject to review by the Operations Manager (currently: Priya Desai, Savannah office)."
+        },
+        {
+          "heading": "Reporting and Approval Process",
+          "body": "All on-call hours and incidents must be reported in the IncidentTracker portal by 10:00 AM the following business day. Supervisors are responsible for reviewing and approving entries within 48 hours. Discrepancies or disputes regarding hours or pay must be submitted to payroll@larkspurfreight.com within 5 business days of the pay date. The final approver for all on-call compensation is the Regional Operations Director (currently: Marcus Bell, Dallas office)."
+        },
+        {
+          "heading": "Exceptions and Special Cases",
+          "body": "Employees who swap on-call shifts must notify the Scheduling Coordinator and update the ShiftMaster tool at least 48 hours in advance. Emergency swaps (less than 48 hours) require approval from the Operations Manager. In cases of system-wide outages (as declared by IT via the StatusBoard tool), all on-call staff will receive double call-in pay for the duration of the outage. Any exceptions to this policy must be documented and approved by the Regional Operations Director."
+        },
+        {
+          "heading": "Review and Policy Updates",
+          "body": "This policy is reviewed annually each March by the HR and Operations teams. Updates are communicated via email and posted in the LarkspurOps Slack channel. Employees are responsible for reviewing policy changes. Questions regarding this policy should be directed to HR (contact: Melissa Yoon, HR Manager, Savannah office). The next scheduled review is March 2025."
+        }
+      ]
+    },
+    {
+      "id": "driver-safety-manual",
+      "title": "Driver Safety Manual",
+      "folder": "operations",
+      "owner_name": "Jasper de Vries",
+      "summary": "Safety protocols and training requirements for all company drivers.",
+      "format": "html",
+      "owner_style": "meta",
+      "sections": [
+        {
+          "heading": "Introduction & Scope",
+          "body": "This Driver Safety Manual applies to all Larkspur Freight drivers operating out of the Dallas, Memphis, and Spokane terminals. All drivers, including part-time and contract, must comply with the protocols outlined herein. The manual covers vehicle operation, incident reporting, PPE requirements, and annual training. Non-compliance may result in suspension of driving privileges for up to 14 days. Questions should be directed to the Safety Compliance Officer (currently: Marsha Lin, Dallas office)."
+        },
+        {
+          "heading": "Mandatory Safety Training",
+          "body": "All new drivers must complete the Larkspur Safety Fundamentals course within 10 business days of hire. Annual refresher training is required every 12 months, tracked via the SafeFleet Portal (vendor: BluePine Systems). Training completion is verified by the Terminal Safety Lead. Drivers who miss the deadline will be removed from the active schedule until training is complete. Memphis office requires an additional 2-hour hazardous materials module for all drivers handling Class 3 cargo."
+        },
+        {
+          "heading": "Personal Protective Equipment (PPE)",
+          "body": "- High-visibility vests (ANSI/ISEA 107-2020 compliant) are mandatory at all loading docks.\n- Steel-toe boots must be worn during all loading/unloading activities.\n- Spokane terminal issues PPE kits every 6 months (cost: $85/kit, vendor: NorthStar Supply).\n- Damaged or lost PPE must be reported within 24 hours to the Terminal Admin for replacement approval.\n- Failure to wear PPE may result in a $50 payroll deduction per incident."
+        },
+        {
+          "heading": "Vehicle Inspection Protocols",
+          "body": "Drivers are required to complete a pre-trip inspection checklist before each shift using the FleetCheck app (vendor: RoadLogic). The checklist includes brakes, lights, tires, and emergency equipment. Dallas drivers must submit digital inspection logs by 7:00 AM daily. Any critical defect (e.g., brake failure, tire tread < 2/32\u201d) must be reported immediately to Fleet Maintenance (contact: Jorge Salinas). Non-critical issues must be logged within 12 hours."
+        },
+        {
+          "heading": "Incident Reporting & Response",
+          "body": "All accidents, regardless of severity, must be reported within 1 hour to the Safety Hotline (1-800-555-0199) and logged in the SafeFleet Portal. Memphis office requires submission of a written incident summary within 24 hours. Drug and alcohol testing is mandatory within 2 hours post-incident (testing partner: MedSure Diagnostics). Failure to comply may result in disciplinary action up to termination."
+        },
+        {
+          "heading": "Fatigue Management & Hours of Service",
+          "body": "Drivers must adhere to FMCSA Hours of Service regulations: maximum 11 hours driving after 10 consecutive hours off duty. Larkspur Freight policy prohibits more than 60 hours on duty in any 7-day period. Electronic logs are maintained via LogMaster Pro (vendor: FleetSoft). Spokane terminal enforces a mandatory 30-minute break after 6 hours of driving. Violations are reviewed weekly by the Compliance Manager (currently: T. R. McNeil)."
+        },
+        {
+          "heading": "Eligibility & Medical Requirements",
+          "body": "- All drivers must maintain a valid CDL and current DOT medical certificate.\n- Annual vision screening is required (cost: $45, reimbursed upon submission of receipt).\n- Drivers with more than 2 moving violations in 12 months are subject to review by the Driver Review Board.\n- Dallas office requires random drug screening for 15% of drivers each quarter (selection by SecureTest Labs)."
+        }
+      ]
+    },
+    {
+      "id": "warehouse-safety-procedures",
+      "title": "Warehouse Safety Procedures",
+      "folder": "operations",
+      "owner_name": "Hannah Brooks",
+      "summary": "Daily safety checks, PPE requirements, and emergency procedures.",
+      "format": "md",
+      "owner_style": "none",
+      "sections": [
+        {
+          "heading": "1. Daily Safety Checks",
+          "body": "All warehouse staff at Larkspur Freight must complete daily safety checks before starting their shift. The checklist (Form WF-12) is available at the main entrance and must be submitted to the shift supervisor by 7:15 AM. Key items include:\n- Inspecting forklift brakes and lights (report issues to FleetOps within 2 hours)\n- Checking fire extinguishers (minimum pressure: 120 psi)\n- Ensuring all exits are clear (no obstructions within 1.5 meters)\n- Verifying spill kits (at least 2 per 500 sq. meters)\nFailure to submit the checklist results in a $25 deduction from the monthly safety bonus. The checklist is reviewed weekly by the Safety Coordinator, currently Jamie Lin."
+        },
+        {
+          "heading": "2. Personal Protective Equipment (PPE) Requirements",
+          "body": "PPE is mandatory in all warehouse zones. Standard issue includes:\n- High-visibility vests (vendor: SafeVest Solutions, model SV-300)\n- Steel-toe boots (minimum ASTM F2413-18 compliant)\n- Gloves (cut-resistant, Level 3 or higher)\n- Hard hats (required in loading bays only)\nPPE must be replaced every 180 days or sooner if damaged. Replacement requests are submitted via the Larkspur Portal and approved by the Warehouse Manager (currently: Priya Desai). Non-compliance is tracked; 3 violations in 30 days result in a 1-day suspension."
+        },
+        {
+          "heading": "3. Forklift Operation Protocols",
+          "body": "Only certified operators may use forklifts. Certification is valid for 2 years and must be renewed through the Larkspur Training Center (fee: $120, reimbursed upon completion). Forklifts are equipped with FleetGuard telematics (vendor: TechFleet Inc.), which logs speed and usage. Operators must:\n- Perform a pre-use inspection (log in FleetGuard app)\n- Never exceed 8 km/h inside the warehouse\n- Park only in designated zones (marked with yellow tape)\nAny incident involving a forklift must be reported within 30 minutes to the Shift Lead and logged in the Safety Tracker."
+        },
+        {
+          "heading": "4. Emergency Procedures",
+          "body": "In case of fire, chemical spill, or medical emergency, activate the nearest alarm (located every 40 meters). Evacuation maps are posted at all exits. Assembly point for the North Office is Lot C; for the South Office, use the loading dock area. Emergency drills are held every 90 days (next scheduled: 2024-07-15). All staff must:\n- Follow instructions from the Emergency Response Team (ERT)\n- Do not re-enter the building until cleared by the ERT Lead (currently: Marcus O\u2019Neill)\n- Report missing persons to the ERT within 5 minutes of assembly\nFailure to participate in drills results in a written warning."
+        },
+        {
+          "heading": "5. Incident Reporting and Investigation",
+          "body": "All accidents, near-misses, or unsafe conditions must be reported within 1 hour using the Incident Report Form (IRF-7) on the Larkspur Intranet. The Safety Officer (currently: Elena Varga) reviews all reports within 2 business days. For incidents resulting in injury or property damage over $500, an investigation team is assigned within 24 hours. Findings are shared in the monthly safety meeting. Repeat incidents in the same area trigger a 10% increase in random safety audits for the next 60 days."
+        },
+        {
+          "heading": "6. Contractor and Visitor Safety",
+          "body": "All contractors and visitors must sign in at reception and complete a 10-minute safety orientation video (provided by SecureEntry Media). Temporary PPE kits are available for a $15 deposit. Contractors working more than 3 consecutive days must provide proof of safety training (OSHA 10 or equivalent). Visitors are escorted at all times by a Larkspur employee. Any safety violation by a contractor results in immediate removal from site and a $200 penalty billed to the vendor."
+        },
+        {
+          "heading": "7. Hazardous Materials Handling",
+          "body": "Hazardous materials (HAZMAT) are stored in Zone D, accessible only to staff with HAZMAT Level 2 certification. Inventory is tracked using ChemSafe Pro (vendor: BlueGrid Systems). Weekly audits are conducted every Friday by the Compliance Team. Spills must be contained within 5 minutes and reported immediately. Only approved absorbents (SpillMaster 500) may be used. Disposal of hazardous waste is scheduled every 14 days with EcoTrans Disposal (cost: $350 per pickup)."
+        }
+      ]
+    },
+    {
+      "id": "vendor-onboarding",
+      "title": "Vendor Onboarding Checklist",
+      "folder": "operations",
+      "owner_name": "Miguel Santos",
+      "summary": "Steps and documentation needed to onboard new vendors.",
+      "format": "md",
+      "owner_style": "frontmatter",
+      "sections": [
+        {
+          "heading": "1. Initial Vendor Eligibility Screening",
+          "body": "All new vendors must pass the eligibility screening before proceeding. The Operations team uses the VendoCheck tool to verify:\n- Minimum 2 years in business (exceptions require Ops Director approval)\n- Valid USD bank account (no international wires for folder ops)\n- No outstanding compliance flags in the last 18 months\n- For vendors in the Midwest office, a minimum annual revenue of $250,000 is required (verified via tax docs)\nScreening is completed within 3 business days. Results are reviewed by the Vendor Relations Manager (currently: Dana Kim)."
+        },
+        {
+          "heading": "2. Documentation Collection",
+          "body": "Vendors must submit the following documents via the Larkspur Portal:\n- W-9 form (signed, dated within last 90 days)\n- Certificate of Insurance (COI) with at least $1M liability coverage\n- Folder Operations Service Agreement (template: FOSA-2024)\n- For vendors using FleetSync, a copy of their DOT safety rating\nAll documents are reviewed by the Compliance Analyst (currently: Marcus Lee) within 2 business days."
+        },
+        {
+          "heading": "3. Contract Review & Approval",
+          "body": "Contracts are routed through DocuSign for e-signature. The following approvals are required:\n- Operations Supervisor (East: Priya Nair, West: Tom Hensley)\n- Legal review for contracts over $50,000/year (handled by LegalOps)\n- Finance sign-off for payment terms exceeding Net 45\nAverage contract review time: 4 business days. Vendors are notified via email (from onboarding@larkspurfreight.com) once approved."
+        },
+        {
+          "heading": "4. System Setup & Access",
+          "body": "Once approved, vendors are set up in the following systems:\n- Larkspur TMS (Transport Management System)\n- FolderOps Dashboard (access provisioned within 24 hours)\n- Payment portal (PayBridge)\nVendors receive login credentials and a setup guide. For the Dallas office, two-factor authentication is mandatory. IT Support (contact: ithelp@larkspurfreight.com) handles any access issues."
+        },
+        {
+          "heading": "5. Training & Orientation",
+          "body": "All new vendors must complete the Folder Operations Orientation (1.5 hours, virtual via Zoom). Topics include:\n- Folder handling protocols\n- Safety and compliance (with reference to Larkspur SOP-FO-2024)\n- Use of the FolderOps Dashboard\nCompletion is required within 7 days of system access. Certificates are issued by the Training Coordinator (currently: Luis Ortega)."
+        },
+        {
+          "heading": "6. First Job Assignment & Performance Review",
+          "body": "After orientation, vendors receive their first job assignment via the FolderOps Dashboard. Performance is reviewed after the first 3 completed jobs:\n- On-time delivery rate (target: 98%)\n- Compliance with folder handling SOPs\n- Communication responsiveness (reply within 2 hours during business days)\nVendors not meeting standards are given a 14-day improvement period. Ongoing reviews are conducted quarterly."
+        },
+        {
+          "heading": "7. Final Onboarding Confirmation",
+          "body": "Once all steps are complete, the Vendor Relations Manager sends a final onboarding confirmation email. Vendors are added to the Approved Vendor List (AVL) and can participate in folder operations tenders. For the Chicago office, AVL updates are published every Friday by 5pm CST. Any discrepancies should be reported to vendoradmin@larkspurfreight.com within 48 hours."
+        }
+      ]
+    },
+    {
+      "id": "code-review-guidelines",
+      "title": "Code Review Guidelines",
+      "folder": "engineering",
+      "owner_name": null,
+      "summary": "Standards and process for peer code review before merging.",
+      "format": "md",
+      "owner_style": "none",
+      "sections": [
+        {
+          "heading": "Purpose and Scope",
+          "body": "All code changes in the Larkspur Freight engineering folder must undergo peer review before merging into the main branch. This applies to all repositories managed under the Larkspur GitHub Enterprise account, including those integrated with our primary logistics platform (vendor: RailSyncPro). The guidelines herein are mandatory for the Chicago and Rotterdam offices, while the Singapore office follows a modified process (see Section 7). The goal is to ensure code quality, maintainability, and compliance with our security standards, as outlined in the 2023 Engineering Handbook (Doc #ENG-2023-14)."
+        },
+        {
+          "heading": "Eligibility and Reviewer Assignment",
+          "body": "Only engineers with at least 90 days tenure at Larkspur Freight are eligible to approve code reviews. Reviewers must not be the original author of the code. For critical modules (e.g., shipment tracking, invoicing), at least two reviewers are required, one of whom must be a Senior Engineer or above. Use the CodeFlow360 tool to assign reviewers automatically based on module ownership. Exceptions require written approval from the Engineering Manager (currently: Priya Desai, Chicago office)."
+        },
+        {
+          "heading": "Review Process and Deadlines",
+          "body": "- All pull requests must be submitted via GitHub Enterprise and tagged with the appropriate JIRA ticket number.\n- Reviewers have 2 business days to complete their review for standard changes, and 4 business days for critical modules.\n- If no review is completed within the deadline, the request is escalated to the Lead Developer (Rotterdam: Jeroen van Dijk; Chicago: Marcus Lee).\n- Emergency hotfixes (defined as issues impacting >10% of shipments or >$5,000 in daily revenue) may bypass standard review with CTO approval."
+        },
+        {
+          "heading": "Code Quality Standards",
+          "body": "All code must adhere to the Larkspur Freight Style Guide v2.1. Key requirements include:\n- 100% passing unit tests (minimum 85% code coverage, as measured by CoverSure)\n- No hardcoded credentials or API keys (use Vaultify integration)\n- All SQL queries must use parameterized statements\n- Documentation updates required for any public API changes\n- For Python code, enforce PEP8 compliance using Black formatter (configured in pre-commit hooks)\nViolations must be documented in the review comments and resolved before merging."
+        },
+        {
+          "heading": "Merge Approval and Documentation",
+          "body": "A pull request may only be merged after all assigned reviewers have approved and all required checks (CI/CD pipeline via BuildMatrix) have passed. Merge commits must reference the JIRA ticket and include a summary of changes (minimum 30 words). For changes affecting external vendors (e.g., FleetOpsConnect), notify the Integration Team via Slack channel #integration-alerts within 1 hour of merging. All merged pull requests are archived in the CodeReviewLog (SharePoint folder: /Engineering/CodeReviews/2024)."
+        },
+        {
+          "heading": "Common Issues and Escalation",
+          "body": "Frequent issues include missing test coverage (noted in 17% of reviews Q1 2024), inconsistent variable naming, and outdated documentation. If a reviewer identifies a security vulnerability, they must tag the Security Team (@sec-team) in the review. Unresolved disputes after 3 business days are escalated to the Director of Engineering (current: Elena Markovic). For repeated non-compliance (3+ incidents in a quarter), the engineer will be required to attend a mandatory code quality workshop (next session: July 15, 2024)."
+        },
+        {
+          "heading": "Regional Variations (Singapore Office)",
+          "body": "The Singapore office follows a 1-reviewer policy for non-critical modules due to team size (currently 6 engineers). Reviews must be completed within 3 business days. All other standards remain consistent with global guidelines. For vendor-specific integrations (e.g., PortLinkAsia), a local subject matter expert must be consulted before merging. Any deviations from these rules require approval from the Singapore Engineering Lead (current: Wei-Lin Tan)."
+        }
+      ]
+    },
+    {
+      "id": "release-process",
+      "title": "Release Process",
+      "folder": "engineering",
+      "owner_name": null,
+      "summary": "Checklist and sign-offs required for production releases.",
+      "format": "md",
+      "owner_style": "none",
+      "sections": [
+        {
+          "heading": "1. Pre-Release Code Review",
+          "body": "All code changes for the folder engineering module must undergo peer review before merging to the main branch. At least two engineers from the originating office (either St. Louis or Vancouver) must approve the pull request. Use CodeHarbor for all code reviews. For critical patches (severity 1 or 2), a senior engineer (level 4 or above) must be one of the reviewers. \n- Minimum review time: 24 hours\n- All review comments must be resolved before proceeding\n- Attach CodeHarbor review summary to the release ticket"
+        },
+        {
+          "heading": "2. Automated Testing and QA",
+          "body": "After code review, the release candidate must pass the full suite of automated tests in TestNest. The minimum pass rate is 98% for unit tests and 95% for integration tests. QA team in the Dallas office is responsible for manual regression testing. \n- Manual test cycle: 2 business days\n- All critical and high-priority bugs must be resolved before sign-off\n- Attach TestNest report and QA checklist to the release ticket"
+        },
+        {
+          "heading": "3. Staging Deployment",
+          "body": "Deploy the release candidate to the staging environment using DeployMate. Only DevOps engineers with Level 2 clearance or higher can perform deployments. Notify the product owner (currently Jamie Lin) and the support lead (currently Priya Desai) upon successful deployment. \n- Staging environment must mirror production (AWS us-east-2, 4 vCPUs, 16GB RAM)\n- Run smoke tests within 4 hours of deployment\n- Log all deployment steps in the DeployMate activity feed"
+        },
+        {
+          "heading": "4. Business Sign-Off",
+          "body": "Business sign-off is required from the product owner and the regional manager of the deploying office. For St. Louis, this is currently Mark Hensley; for Vancouver, it is Sara Choi. Sign-off must be recorded in the ReleaseTracker system. \n- Attach release notes (including Jira ticket references and vendor impact)\n- Confirm that all customer-facing documentation is updated\n- Deadline for sign-off: 2 business days before scheduled production release"
+        },
+        {
+          "heading": "5. Vendor Notification",
+          "body": "If the release impacts external integrations (e.g., with CargoSync or FleetBridge), notify the vendor at least 3 business days in advance. Use the VendorNotify portal for official communication. \n- Include release summary, expected downtime (if any), and rollback plan\n- For releases with financial impact over $10,000 USD, copy the finance team (finance@larkspurfreight.com)\n- Track vendor acknowledgments in the ReleaseTracker"
+        },
+        {
+          "heading": "6. Production Release and Post-Release Monitoring",
+          "body": "Production releases are scheduled for Wednesdays at 10:00 UTC, unless otherwise approved by the CTO (currently Elena Voss). Deployments must be performed by a certified DevOps engineer and witnessed by a QA lead. \n- Monitor system health via PulseWatch for 48 hours post-release\n- Any incidents must be logged in the IncidentHub within 30 minutes\n- Prepare a post-release report within 3 business days, including metrics on error rates and user feedback"
+        },
+        {
+          "heading": "7. Exception Handling",
+          "body": "If any checklist item cannot be completed, an Exception Request must be filed in ReleaseTracker and approved by both the CTO and the head of QA (currently Miguel Alvarez). Exceptions are only granted for critical business needs and must include a mitigation plan. \n- Exception approval turnaround: 1 business day\n- No more than 2 exceptions per quarter per office\n- All exceptions are reviewed in the quarterly compliance audit"
+        }
+      ]
+    },
+    {
+      "id": "learning-budget-policy",
+      "title": "Learning & Development Budget Policy",
+      "folder": "engineering",
+      "owner_name": "Jessica Tran",
+      "summary": "Annual budget and approval process for employee training.",
+      "format": "pdf",
+      "owner_style": "none",
+      "sections": [
+        {
+          "heading": "Overview",
+          "body": "The Learning & Development (L&D) Budget Policy for the Engineering folder at Larkspur Freight outlines the annual allocation, approval process, and usage guidelines for employee training. The policy applies to all full-time engineering staff across our Chicago, Dallas, and Portland offices. The goal is to ensure continuous skill development and alignment with company objectives. The annual L&D budget for engineering is set at $48,000 for FY2024, with individual allocations and office-specific rules detailed below."
+        },
+        {
+          "heading": "Eligibility and Coverage",
+          "body": "All full-time engineers (including DevOps, QA, and Data Engineering) who have completed at least 90 days of employment are eligible. Contractors and interns are not covered. Covered expenses include:\n- Online courses (e.g., CodeSpring, SkillForge)\n- Certification exams (e.g., AWS, Azure)\n- Conference attendance (registration, travel, and lodging)\n- Technical books and subscriptions (up to $300/year per employee)\n\nEmployees may request up to $2,000 per calendar year, subject to manager approval."
+        },
+        {
+          "heading": "Budget Allocation by Office",
+          "body": "The $48,000 annual budget is distributed as follows:\n- Chicago: $22,000 (HQ, 44 FTEs)\n- Dallas: $16,000 (32 FTEs)\n- Portland: $10,000 (20 FTEs)\n\nUnused funds do not roll over. Each office's Engineering Manager is responsible for tracking local spend and reporting monthly to the Director of Engineering."
+        },
+        {
+          "heading": "Approval Process",
+          "body": "Employees must submit a Learning Request Form via the Larkspur HR Portal at least 15 business days before the training start date. The direct manager reviews and either approves or denies within 5 business days. For requests over $1,500, Director of Engineering (currently Priya Nand) approval is also required. All requests must include:\n- Vendor name (e.g., SkillForge, DevSummit)\n- Itemized costs\n- Justification for training\n\nReceipts must be uploaded within 10 days of completion for reimbursement."
+        },
+        {
+          "heading": "Preferred Vendors and Tools",
+          "body": "Larkspur Freight has negotiated discounts with the following vendors:\n- CodeSpring (15% off all courses)\n- SkillForge (10% off group workshops)\n- DevSummit (conference partner)\n\nEmployees are encouraged to use these vendors when possible. Requests for non-preferred vendors require an additional justification and may be subject to longer approval times."
+        },
+        {
+          "heading": "Reporting and Compliance",
+          "body": "Engineering Managers must submit a quarterly L&D spend report to finance@larkspurfreight.com by the 10th of the following month. Reports should include:\n- Employee name\n- Training type and vendor\n- Amount spent\n- Completion status\n\nFinance will audit 10% of claims annually. Non-compliance (e.g., missing receipts, unapproved vendors) may result in loss of L&D privileges for the following year."
+        },
+        {
+          "heading": "Exceptions and Special Cases",
+          "body": "Requests exceeding the $2,000 annual cap or for international travel require VP of Engineering (currently Marcus Lee) approval. Exceptions are considered on a case-by-case basis and must be submitted at least 30 days in advance. Emergency training (e.g., compliance updates) may be fast-tracked with Director approval. For questions, contact lnd@larkspurfreight.com."
+        }
+      ]
+    },
+    {
+      "id": "referral-bonus-program",
+      "title": "Employee Referral Bonus Program",
+      "folder": "hr",
+      "owner_name": "Derek Patel",
+      "summary": "Eligibility and payout details for successful employee referrals.",
+      "format": "md",
+      "owner_style": "inline",
+      "sections": [
+        {
+          "heading": "Program Overview",
+          "body": "The Larkspur Freight Employee Referral Bonus Program is designed to reward current employees for referring qualified candidates who are successfully hired. The program is managed by the HR team using the TalentBridge platform. All full-time and part-time employees (excluding HR and executive leadership) are eligible to participate. The program aims to attract top talent while recognizing the valuable networks of our staff."
+        },
+        {
+          "heading": "Eligibility Criteria",
+          "body": "To be eligible for a referral bonus:\n- The referring employee must be actively employed at the time of referral and payout.\n- The referred candidate must not have applied to Larkspur Freight in the past 12 months.\n- Only external candidates are eligible (no current or former employees).\n- HR team members, directors, and above are not eligible for bonuses.\n- For the Dallas office, only referrals for operations and logistics roles qualify."
+        },
+        {
+          "heading": "Referral Submission Process",
+          "body": "Referrals must be submitted via the TalentBridge portal. The submission must include:\n- Candidate\u2019s full name, contact info, and resume\n- Position applied for\n- Relationship to the referring employee\nSubmissions are timestamped and tracked by the HRIS system (PeoplePulse). Referrals must be submitted before the candidate\u2019s first interview. Late submissions will not be considered."
+        },
+        {
+          "heading": "Bonus Amounts and Payout Schedule",
+          "body": "The standard referral bonus is $1,500 (USD) for successful hires in the Chicago and Atlanta offices. For the Dallas office, the bonus is $1,000 (USD) due to local market rates. Payouts are processed in two installments:\n- 50% after the new hire completes 60 days of employment\n- 50% after the new hire completes 180 days of employment\nBonuses are paid via payroll and subject to standard tax withholdings."
+        },
+        {
+          "heading": "Approval and Exceptions",
+          "body": "All referral bonuses must be approved by the HR Manager (currently: Dana Kim for Chicago/Atlanta, Marcus Lee for Dallas). Exceptions to eligibility or payout rules require written approval from the Director of People Operations. Disputes are reviewed monthly by the HR Compliance Committee. Appeals must be submitted within 30 days of bonus denial."
+        },
+        {
+          "heading": "Program Limitations and Exclusions",
+          "body": "Employees may refer up to 5 candidates per calendar year. Bonuses are not paid for temporary, contract, or intern positions. If two employees refer the same candidate, the first submission (as recorded in TalentBridge) will be honored. Larkspur Freight reserves the right to modify or terminate the program at any time with 14 days\u2019 notice."
+        },
+        {
+          "heading": "Contact and Support",
+          "body": "For questions about the referral program, contact hr@larkspurfreight.com or submit a ticket via the PeoplePulse Helpdesk. Program details and FAQs are available in the HR folder on SharePoint. For technical issues with TalentBridge, reach out to IT support (ithelp@larkspurfreight.com)."
+        }
+      ]
+    },
+    {
+      "id": "relocation-assistance",
+      "title": "Relocation Assistance Policy",
+      "folder": "hr",
+      "owner_name": "Marcus Lee",
+      "summary": "Covered expenses and process for employee relocations.",
+      "format": "html",
+      "owner_style": "meta",
+      "sections": [
+        {
+          "heading": "Eligibility Criteria",
+          "body": "Relocation assistance is available to full-time employees of Larkspur Freight who are required to move at least 50 miles from their current residence for a new or existing role. Eligibility is determined by the HR Business Partner and must be approved by the employee\u2019s department head. Contractors, interns, and part-time staff are not eligible. Employees relocating to the Dallas or Seattle offices must have a minimum tenure of 6 months, while those moving to the Atlanta office require only 3 months. All requests must be submitted via the MoveEase portal within 10 business days of receiving the relocation offer."
+        },
+        {
+          "heading": "Covered Expenses",
+          "body": "The following expenses are covered under the relocation policy, up to a maximum of $7,500 per move:\n- Transportation of household goods (via SwiftHaul or BlueBox Movers)\n- Temporary housing for up to 21 days (booked through StayBridge Corporate)\n- One-way airfare for employee and immediate family (economy class)\n- Lease termination fees up to $1,200\n- Storage costs for up to 30 days\n- Mileage reimbursement at $0.58/mile for personal vehicle moves\nReceipts must be submitted within 30 days of incurring the expense. Any costs exceeding the cap are the employee\u2019s responsibility."
+        },
+        {
+          "heading": "Non-Covered Expenses",
+          "body": "The following items are not reimbursable under this policy:\n- Meals during travel\n- Pet relocation fees\n- Vehicle shipping (except for company-leased vehicles)\n- Home purchase closing costs\n- Furniture purchases\n- Cleaning services\nEmployees are encouraged to review the full list of exclusions on the HR SharePoint (folder: hr/relocation). Exceptions may be considered on a case-by-case basis with written approval from the HR Director."
+        },
+        {
+          "heading": "Relocation Process",
+          "body": "To initiate relocation, employees must:\n1. Submit a Relocation Request Form via MoveEase within 10 business days of offer.\n2. Schedule a consultation with the assigned Relocation Coordinator (currently: Dana Kim for Dallas, Marcus Lee for Seattle, and Priya Patel for Atlanta).\n3. Obtain at least two quotes from approved vendors (see vendor list on SharePoint).\n4. Submit all required documentation and receipts through the MoveEase portal.\nThe average processing time for reimbursement is 14 business days after submission of complete documentation."
+        },
+        {
+          "heading": "Tax Implications",
+          "body": "Relocation reimbursements are considered taxable income under IRS guidelines. Larkspur Freight will gross up relocation payments by 22% to offset estimated tax liability. Employees will receive a summary of taxable benefits on their year-end pay statement. For questions regarding tax treatment, contact payroll@larkspurfreight.com or consult with your personal tax advisor."
+        },
+        {
+          "heading": "Office-Specific Provisions",
+          "body": "Dallas Office: Employees are eligible for an additional $500 stipend for utility setup costs. Seattle Office: Temporary housing may be extended to 30 days due to local housing market constraints, subject to approval by the Seattle Office Manager. Atlanta Office: Lease termination fees are reimbursed up to $1,500. All offices: Spousal job search assistance is available through CareerConnect Partners upon request."
+        },
+        {
+          "heading": "Contacts and Support",
+          "body": "For questions or support, contact your Relocation Coordinator or email hr@larkspurfreight.com. The HR team is available Monday\u2013Friday, 8:00am\u20135:00pm CST. For urgent issues outside business hours, call the HR hotline at 1-800-555-0199. All forms and policy documents are available in the HR folder on SharePoint."
+        }
+      ]
+    },
+    {
+      "id": "per-diem-rates",
+      "title": "Per Diem Rates",
+      "folder": "finance",
+      "format": "csv",
+      "owner_name": null,
+      "owner_style": "none",
+      "table": {
+        "header": [
+          "City",
+          "Country",
+          "Lodging cap (USD)",
+          "Meals per day (USD)",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "Chicago",
+            "US",
+            210,
+            65,
+            "High season rates apply May-Sept"
+          ],
+          [
+            "Dallas",
+            "US",
+            185,
+            60,
+            "Includes breakfast at hotel"
+          ],
+          [
+            "Seattle",
+            "US",
+            225,
+            70,
+            "Lodging cap increased for 2024"
+          ],
+          [
+            "Atlanta",
+            "US",
+            170,
+            58,
+            ""
+          ],
+          [
+            "Los Angeles",
+            "US",
+            240,
+            75,
+            "Cap excludes parking fees"
+          ],
+          [
+            "New York",
+            "US",
+            275,
+            80,
+            "Book 2 weeks in advance"
+          ],
+          [
+            "Rotterdam",
+            "Netherlands",
+            195,
+            62,
+            "Exchange rate as of Jan 2024"
+          ],
+          [
+            "Amsterdam",
+            "Netherlands",
+            210,
+            68,
+            "Meals cap includes VAT"
+          ],
+          [
+            "Manila",
+            "Philippines",
+            110,
+            35,
+            "Hotel wifi reimbursed separately"
+          ],
+          [
+            "Cebu City",
+            "Philippines",
+            95,
+            30,
+            ""
+          ],
+          [
+            "Frankfurt",
+            "Germany",
+            180,
+            60,
+            "Breakfast usually included"
+          ],
+          [
+            "Munich",
+            "Germany",
+            200,
+            65,
+            "Oktoberfest rates not covered"
+          ],
+          [
+            "Mexico City",
+            "Mexico",
+            120,
+            40,
+            "Use preferred vendor: Hotel Reforma"
+          ],
+          [
+            "Singapore",
+            "Singapore",
+            250,
+            85,
+            "Meals cap includes GST"
+          ]
+        ]
+      }
+    }
+  ]
+}

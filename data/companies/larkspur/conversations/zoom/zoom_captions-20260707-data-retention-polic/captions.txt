@@ -1,0 +1,92 @@
+[Samantha Ortiz] 15:30:03
+Morning everyone! Hope you all had a good long weekend. Anyone do anything fun?
+[Jessica Tran] 15:30:08
+Hey! I went hiking up at Pine Ridge. Got sunburned but worth it. How about you, Marcus?
+[Marcus Lee] 15:30:16
+Just caught up on sleep, honestly. Derek, did you finish that home brewing kit yet?
+[Derek Patel] 15:30:22
+Haha, not yet. Still waiting on the hops shipment. Should be here Friday.
+[Samantha Ortiz] 15:30:28
+Alright, let's get started. First quick update: onboarding for the new dispatch coordinator is on track. HR has all the paperwork, and IT will set up her laptop by Thursday.
+[Jessica Tran] 15:30:40
+Second update: The Q2 engagement survey closes tomorrow. We're at 78% participation, so please remind your teams to fill it out.
+[Samantha Ortiz] 15:30:49
+Main agenda: Data Retention Policy, specifically section 3 on Deletion Schedules and Automation. We need to review and possibly update the deletion day and the approval process for exceptions.
+[Marcus Lee] 15:31:01
+Current policy says deletion is on the 15th of each month, flagged by DataSweep Pro, with manual review by Marcus Lin. Exceptions need department head approval. Physical records shredded quarterly by SecureShred Inc.
+[Derek Patel] 15:31:13
+IT's been asking if we can move the deletion day to the 10th. It would help with our backup cycles and reduce overlap with payroll processing.
+[Jessica Tran] 15:31:25
+Makes sense. Also, should we change the exception approver? Department heads are getting swamped with requests.
+[Samantha Ortiz] 15:31:31
+Proposal: Move deletion day to the 10th, and make the IT Director the approver for exceptions instead of department heads. Thoughts?
+[Marcus Lee] 15:31:41
+I like it. The 10th works better for IT, and the IT Director is closer to the process anyway.
+[Derek Patel] 15:31:48
+Agreed. I can coordinate with IT to make sure the scripts are updated for the new schedule.
+[Jessica Tran] 15:31:55
+Wait, are we sure the IT Director will have enough bandwidth to review all exceptions? That could be a lot during audit season.
+[Samantha Ortiz] 15:32:05
+Good point, Jessica. But based on last quarter, we only had three exceptions. IT Director should be able to handle that, and it streamlines the process.
+[Marcus Lee] 15:32:16
+Yeah, it's not a huge volume. Plus, IT already reviews the flagged records.
+[Derek Patel] 15:32:21
+I can check with Priya (IT Director) to confirm she's okay with this, but I don't foresee issues.
+[Jessica Tran] 15:32:29
+Alright, if Priya's on board, I'm good with it.
+[Samantha Ortiz] 15:32:34
+Let's make it official: Deletion day moves to the 10th, and IT Director is the new exception approver. Marcus, can you update the policy doc?
+[Marcus Lee] 15:32:44
+Yep, I'll revise the document and send it out for review by end of day tomorrow.
+[Derek Patel] 15:32:51
+Do we need to notify ByteHarbor Solutions about the schedule change for DataSweep Pro?
+[Jessica Tran] 15:32:58
+Probably a good idea. I can draft an email to our contact there, just in case they need to adjust anything on their end.
+[Samantha Ortiz] 15:33:08
+Thanks, Jessica. And Marcus, please make sure the new approver is listed as Priya Shah, IT Director.
+[Marcus Lee] 15:33:16
+Will do. I'll also update the exception process to reflect the change.
+[Derek Patel] 15:33:21
+Should we notify SecureShred Inc. about any changes?
+[Jessica Tran] 15:33:26
+No change to physical record shredding, so I think we're good there.
+[Samantha Ortiz] 15:33:32
+Agreed. Let's keep that as is.
+[Marcus Lee] 15:33:35
+Just to confirm, the rest of the policy stays the same?
+[Samantha Ortiz] 15:33:39
+Yes, only the deletion day and exception approver are changing.
+[Derek Patel] 15:33:44
+I'll update the IT calendar to reflect the new deletion schedule.
+[Jessica Tran] 15:33:50
+And I'll send the email to ByteHarbor after this meeting.
+[Marcus Lee] 15:33:55
+I'll circulate the draft policy update for feedback before we finalize.
+[Samantha Ortiz] 15:34:00
+Perfect. Thanks, everyone. Let's move to the last item: vendor renewal for our wellness platform.
+[Jessica Tran] 15:34:07
+Oh, right. ThriveWell's contract is up at the end of July. They sent over a renewal proposal—$8,500 for the year, same as last year.
+[Derek Patel] 15:34:17
+Any feedback from employees on ThriveWell?
+[Marcus Lee] 15:34:19
+Mostly positive. A few requests for more virtual fitness classes, but overall people seem happy.
+[Samantha Ortiz] 15:34:26
+Let's plan to renew, but I'll ask them about adding more virtual options. Jessica, can you handle the paperwork?
+[Jessica Tran] 15:34:34
+Yep, I'll take care of it and loop in Finance for the PO.
+[Derek Patel] 15:34:39
+Anything else for today?
+[Marcus Lee] 15:34:42
+Nothing from me.
+[Jessica Tran] 15:34:44
+All good here.
+[Samantha Ortiz] 15:34:47
+Alright, thanks everyone. Have a great week!
+[Derek Patel] 15:34:51
+You too!
+[Marcus Lee] 15:34:54
+See you all next week.
+[Jessica Tran] 15:34:56
+Bye!
+[Samantha Ortiz] 15:34:58
+Meeting adjourned.

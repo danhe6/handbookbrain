@@ -1,0 +1,43 @@
+[
+  {
+    "type": "message",
+    "user": "U0011",
+    "text": "Anyone have a good lunch spot rec near the office? I\u2019m tired of the same old sandwiches from Deli Depot.",
+    "ts": "1781877600.000000",
+    "synthetic": true,
+    "thread_ts": "1781877600.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U0001",
+    "text": "Try Tacos El Camino on 17th! Their carnitas are \ud83d\udd25. Also, did anyone catch the Nuggets game last night? That 3rd quarter was wild.",
+    "ts": "1781878740.000000",
+    "synthetic": true,
+    "thread_ts": "1781877600.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0016",
+    "text": "Seconding Tacos El Camino. Also, has anyone seen the warehouse cat today? I swear she was sleeping on top of the label printer again \ud83d\ude02",
+    "ts": "1781884140.000000",
+    "synthetic": true,
+    "thread_ts": "1781877600.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0006",
+    "text": "Warehouse cat is a legend. She knocked over my coffee this morning but looked so proud of herself lol. And yes, Nuggets game was insane!",
+    "ts": "1781888340.000000",
+    "synthetic": true,
+    "thread_ts": "1781877600.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0008",
+    "text": "Haha, I need to meet this cat. Thanks for the lunch tips! Maybe we should do a team lunch at El Camino next week?",
+    "ts": "1781889180.000000",
+    "synthetic": true,
+    "thread_ts": "1781877600.000000"
+  }
+]

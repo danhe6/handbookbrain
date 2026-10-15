@@ -1,0 +1,121 @@
+WEBVTT
+
+1
+00:00:03.000 --> 00:00:07.815
+Jonas Becker: Morning everyone! Hope you all had a good weekend. Anyone do anything fun?
+
+2
+00:00:08.261 --> 00:00:13.076
+Ava Kim: Hey! I went hiking at Cedar Ridge, got totally sunburned but worth it.
+
+3
+00:00:14.055 --> 00:00:19.240
+Priya Shah: Morning! I mostly just caught up on sleep, honestly. Needed it after last week.
+
+4
+00:00:19.581 --> 00:00:24.767
+Benji Morales: Hi all. I tried that new taco place near the office—Taco Forge. Highly recommend.
+
+5
+00:00:26.408 --> 00:00:33.445
+Jonas Becker: Nice, Benji! Okay, quick status updates: First, the firewall upgrade at the Houston terminal finished Saturday. No downtime reported.
+
+6
+00:00:33.840 --> 00:00:40.506
+Priya Shah: Second, the phishing simulation results are in—click rate dropped to 7%, down from 12% last quarter. Good progress.
+
+7
+00:00:41.295 --> 00:00:48.332
+Jonas Becker: Great. Main agenda: reviewing the Incident Response Plan, specifically section 6, Recovery and Restoration. There are two proposed changes.
+
+8
+00:00:50.092 --> 00:00:57.129
+Ava Kim: Right, the first is changing the approver for system restoration from IT Security Team Lead to IT Security Manager.
+
+9
+00:00:58.338 --> 00:01:05.005
+Benji Morales: And the second is extending the Dallas Terminal restoration deadline from 36 hours to 48 hours after containment.
+
+10
+00:01:05.604 --> 00:01:13.382
+Priya Shah: I think the approver change makes sense. The manager role has more oversight now, and it aligns with our org chart.
+
+11
+00:01:14.098 --> 00:01:21.505
+Ava Kim: Agreed. The Team Lead is often out in the field, so it’s more practical for the Manager to handle approvals.
+
+12
+00:01:22.567 --> 00:01:31.456
+Benji Morales: I’m not sure about extending the Dallas deadline. 36 hours is tight, but 48 feels like we’re lowering the bar. Can we justify it?
+
+13
+00:01:32.967 --> 00:01:42.967
+Jonas Becker: Benji, we looked at the last two incidents—both took over 40 hours due to backup transfer times. 48 is more realistic, especially with the current DataGuard setup.
+
+14
+00:01:44.029 --> 00:01:52.177
+Priya Shah: Plus, the new SLA with DataGuard is 24 hours for backup availability, so 48 gives us a buffer for validation and scanning.
+
+15
+00:01:52.848 --> 00:01:58.774
+Benji Morales: Alright, I see the logic. As long as we’re not getting complacent, I’m okay with it.
+
+16
+00:01:59.859 --> 00:02:11.341
+Jonas Becker: Thanks, Benji. To confirm: we’re updating the policy so that restoration requires written approval from the IT Security Manager, and Dallas Terminal restoration must be completed within 48 hours of containment.
+
+17
+00:02:12.955 --> 00:02:21.103
+Ava Kim: I’ll take the action item to update the Incident Response Plan and circulate the draft for review by end of day tomorrow.
+
+18
+00:02:22.794 --> 00:02:27.980
+Priya Shah: Thanks, Ava. I’ll double-check the wording for the DataGuard and Nessus Pro requirements too.
+
+19
+00:02:29.664 --> 00:02:37.071
+Benji Morales: Can you also make sure the notification process for affected users is still clear? We had some confusion last time.
+
+20
+00:02:38.710 --> 00:02:42.044
+Ava Kim: Will do, Benji. I’ll highlight that section for feedback.
+
+21
+00:02:42.648 --> 00:02:45.610
+Jonas Becker: Great. Any other comments on the policy change?
+
+22
+00:02:46.582 --> 00:02:48.434
+Priya Shah: Nope, sounds good to me.
+
+23
+00:02:49.359 --> 00:02:50.859
+Benji Morales: All good here.
+
+24
+00:02:51.747 --> 00:02:53.247
+Ava Kim: No further comments.
+
+25
+00:02:54.021 --> 00:03:01.799
+Jonas Becker: Alright, decision is final: Approver is now IT Security Manager, Dallas Terminal deadline is 48 hours. Ava will update the doc.
+
+26
+00:03:03.106 --> 00:03:11.624
+Priya Shah: One unrelated thing—our contract with SecureNet for endpoint protection is up for renewal next month. Do we want to discuss that next week?
+
+27
+00:03:12.567 --> 00:03:17.752
+Jonas Becker: Let’s put it on next week’s agenda. I’ll ask Procurement for the renewal quote.
+
+28
+00:03:18.371 --> 00:03:22.445
+Benji Morales: Sounds good. I’ll pull the last year’s incident logs for reference.
+
+29
+00:03:23.199 --> 00:03:28.384
+Ava Kim: I’ll check with SecureNet if there are any new features in their latest release.
+
+30
+00:03:28.868 --> 00:03:30.720
+Jonas Becker: Perfect. Thanks, everyone. Meeting adjourned!

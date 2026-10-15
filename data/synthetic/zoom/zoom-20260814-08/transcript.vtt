@@ -1,0 +1,205 @@
+WEBVTT
+
+1
+00:00:02.000 --> 00:00:05.462
+Sofia Lindqvist: Alright, it’s 10:01, let’s get started. Happy Friday, everyone!
+
+2
+00:00:06.067 --> 00:00:09.913
+Kwame Asante: Morning! Hope everyone’s got coffee, I definitely needed mine today.
+
+3
+00:00:10.994 --> 00:00:14.840
+Hannah Weiss: Hi all! I’m running on tea, but same energy, Kwame.
+
+4
+00:00:16.286 --> 00:00:20.516
+Tomás Rivera: Good morning. I’m still catching up on emails, but I’m here.
+
+5
+00:00:21.232 --> 00:00:26.617
+Grace Liu: Hey everyone! Sorry, I was just finishing up a call with the EMEA team.
+
+6
+00:00:27.746 --> 00:00:33.131
+Sofia Lindqvist: No worries, Grace. Quick round of updates before we dive in—anything urgent from anyone?
+
+7
+00:00:33.430 --> 00:00:38.430
+Kwame Asante: Nothing urgent, just prepping for onboarding next week. We’ve got three new hires.
+
+8
+00:00:39.527 --> 00:00:44.143
+Hannah Weiss: Absence requests are up a bit, probably summer holidays. Otherwise, all good.
+
+9
+00:00:45.158 --> 00:00:48.620
+Tomás Rivera: Legal’s quiet, just reviewing some vendor contracts. Nothing major.
+
+10
+00:00:48.952 --> 00:00:53.183
+Grace Liu: I’m working on the engagement survey follow-up, but that’s for later.
+
+11
+00:00:54.387 --> 00:00:59.003
+Sofia Lindqvist: Great, thanks all. Let’s move to the main agenda: Confidentiality policy review.
+
+12
+00:01:00.308 --> 00:01:08.000
+Kwame Asante: Yeah, so, we’ve had a couple questions from new hires about when exactly they need to sign the confidentiality agreement.
+
+13
+00:01:08.981 --> 00:01:14.750
+Hannah Weiss: Right, and I noticed the policy just says 'upon commencement,' but doesn’t specify a deadline.
+
+14
+00:01:15.107 --> 00:01:23.953
+Tomás Rivera: From a legal standpoint, it’s best if it’s signed before access to any sensitive info. But sometimes IT grants access on day one.
+
+15
+00:01:25.432 --> 00:01:31.586
+Grace Liu: I’ve seen a few cases where folks started before their paperwork was fully processed, especially contractors.
+
+16
+00:01:32.804 --> 00:01:38.958
+Sofia Lindqvist: So, should we clarify the timing? Like, require the agreement to be signed before system access?
+
+17
+00:01:39.609 --> 00:01:46.147
+Kwame Asante: That makes sense. Maybe we say, 'must be signed prior to receiving any company credentials or access'?
+
+18
+00:01:46.904 --> 00:01:53.058
+Hannah Weiss: Yeah, and maybe add a specific timeframe? Like, within 48 hours of receiving the offer letter?
+
+19
+00:01:53.740 --> 00:02:01.817
+Tomás Rivera: I’d lean toward 'before access' as the hard requirement. The 48 hours is good, but access is the key legal point.
+
+20
+00:02:02.675 --> 00:02:09.598
+Grace Liu: Agreed. We can work with IT to make sure access is only granted after the agreement is signed.
+
+21
+00:02:10.241 --> 00:02:20.241
+Sofia Lindqvist: Okay, so update the policy to say: 'All team members must sign the Confidentiality Agreement before being granted access to any GitLab systems or confidential information.'
+
+22
+00:02:21.546 --> 00:02:26.930
+Kwame Asante: Got it. I’ll update the handbook page and flag it for IT and onboarding.
+
+23
+00:02:28.199 --> 00:02:33.199
+Hannah Weiss: Should we mention contractors specifically? Sometimes they’re a bit of a gray area.
+
+24
+00:02:33.537 --> 00:02:38.152
+Tomás Rivera: Good point. Maybe just say 'team members and contractors' to be explicit.
+
+25
+00:02:39.601 --> 00:02:43.063
+Grace Liu: Yeah, let’s add that. We’ve had confusion there before.
+
+26
+00:02:44.089 --> 00:02:54.858
+Sofia Lindqvist: Alright, so the new text will read: 'All team members and contractors must sign the Confidentiality Agreement before being granted access to any GitLab systems or confidential information.'
+
+27
+00:02:56.135 --> 00:02:59.597
+Kwame Asante: Perfect. I’ll make sure that’s clear in the update.
+
+28
+00:03:00.716 --> 00:03:04.563
+Hannah Weiss: Thanks, Kwame. That should help clear up the onboarding questions.
+
+29
+00:03:05.329 --> 00:03:08.406
+Tomás Rivera: And from legal, that covers us. Thanks, everyone.
+
+30
+00:03:09.560 --> 00:03:14.560
+Grace Liu: Great, thanks all. Should we do a quick check-in on the unrelated item?
+
+31
+00:03:16.015 --> 00:03:17.553
+Sofia Lindqvist: Yes, Grace, go ahead.
+
+32
+00:03:18.104 --> 00:03:24.258
+Grace Liu: So, the engagement survey results are in. Participation was 87%, which is up from last quarter.
+
+33
+00:03:25.509 --> 00:03:27.432
+Kwame Asante: Nice! That’s a big jump.
+
+34
+00:03:28.331 --> 00:03:31.793
+Hannah Weiss: That’s awesome. Any big themes we should know about?
+
+35
+00:03:32.621 --> 00:03:39.545
+Grace Liu: Mostly positive, but a few comments about communication during onboarding. I’ll pull together a summary for next week.
+
+36
+00:03:40.311 --> 00:03:44.157
+Sofia Lindqvist: Thanks, Grace. Can you send us a one-pager by Wednesday?
+
+37
+00:03:45.307 --> 00:03:46.807
+Grace Liu: Yep, will do.
+
+38
+00:03:47.356 --> 00:03:51.202
+Tomás Rivera: Looking forward to seeing that. Always good to get feedback.
+
+39
+00:03:52.510 --> 00:03:56.356
+Kwame Asante: Let me know if you need any onboarding data, Grace.
+
+40
+00:03:57.636 --> 00:04:00.713
+Grace Liu: Thanks, Kwame, I might ping you for that.
+
+41
+00:04:01.025 --> 00:04:05.256
+Sofia Lindqvist: Alright, I think that covers everything. Any last questions or comments?
+
+42
+00:04:06.602 --> 00:04:08.141
+Hannah Weiss: Nope, all good here.
+
+43
+00:04:08.658 --> 00:04:10.158
+Tomás Rivera: Nothing from me.
+
+44
+00:04:10.962 --> 00:04:15.193
+Kwame Asante: I’m good. I’ll get started on the policy update after this.
+
+45
+00:04:16.186 --> 00:04:18.878
+Grace Liu: All set. Have a great weekend, everyone!
+
+46
+00:04:19.571 --> 00:04:21.494
+Sofia Lindqvist: Thanks, all. Enjoy your Friday!
+
+47
+00:04:21.731 --> 00:04:23.231
+Kwame Asante: Bye!
+
+48
+00:04:24.538 --> 00:04:26.038
+Hannah Weiss: Bye, everyone.
+
+49
+00:04:26.474 --> 00:04:27.974
+Tomás Rivera: Take care.
+
+50
+00:04:28.450 --> 00:04:29.950
+Grace Liu: Bye!
+
+51
+00:04:31.187 --> 00:04:33.495
+Sofia Lindqvist: Meeting adjourned. See you next week.

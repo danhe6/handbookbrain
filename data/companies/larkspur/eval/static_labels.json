@@ -1,0 +1,98 @@
+{
+ "synthetic": true,
+ "items": [
+  {
+   "scenario": "source_conflict",
+   "doc": "operations/on-call-compensation.md",
+   "heading": "Expectations and Responsibilities",
+   "expected_on": "2026-09-09T15:00:00",
+   "why": "Response time to OpsAlert: 15 minutes -> 20 minutes; Vendor: FleetPulse -> ShipLogic"
+  },
+  {
+   "scenario": "source_conflict",
+   "doc": "hr/remote-work-stipend.docx",
+   "heading": "Ineligible Expenses",
+   "expected_on": "2026-07-28T15:00:00",
+   "why": "Approver and suspension duration changed, Daniel Rios -> Priya Desai, 2 months -> 1 month"
+  },
+  {
+   "scenario": "source_conflict",
+   "doc": "it-security/data-retention-policy.html",
+   "heading": "3. Deletion Schedules and Automation",
+   "expected_on": "2026-07-14T15:00:00",
+   "why": "Deletion day changed, 15th -> 10th; approver changed, department head -> IT Director"
+  },
+  {
+   "scenario": "source_conflict",
+   "doc": "finance/procurement-approvals.html",
+   "heading": "Special Categories and Exceptions",
+   "expected_on": "2026-07-28T15:00:00",
+   "why": "Vendor for fuel purchases changed, old: PetroMax -> new: FuelDirect; Software subscription threshold changed, old: $3,000/year -> new: $2,500/year"
+  },
+  {
+   "scenario": "source_conflict",
+   "doc": "finance/corporate-card-use.txt",
+   "heading": "Transaction Limits and Controls",
+   "expected_on": "2026-09-04T15:00:00",
+   "why": "Single-transaction limit changed: $1,500 -> $2,000; Approver title changed: Finance Manager -> Finance Director; Vendor transaction window changed: 24 hours -> 48 hours"
+  },
+  {
+   "scenario": "source_conflict",
+   "doc": "hr/pto-policy.html",
+   "heading": "6. Tracking and Reporting",
+   "expected_on": "2026-05-31T15:00:00",
+   "why": "Update frequency changed: real time -> daily; PTO summary email frequency: quarterly -> monthly"
+  },
+  {
+   "scenario": "source_conflict",
+   "doc": "finance/travel-expenses.pdf",
+   "heading": "6. Exceptions and Special Cases",
+   "expected_on": "2026-08-28T15:00:00",
+   "why": "Approver changed, Finance Manager -> Director of Finance; winter gear rental amount changed, $25/day -> $30/day"
+  },
+  {
+   "scenario": "source_conflict",
+   "doc": "operations/driver-safety-manual.html",
+   "heading": "Vehicle Inspection Protocols",
+   "expected_on": "2026-06-20T15:00:00",
+   "why": "vendor changed, RoadLogic -> FleetOps; deadline changed, 7:00 AM -> 8:00 AM"
+  },
+  {
+   "scenario": "source_consistent",
+   "doc": "hr/pto-policy.html",
+   "heading": "2. PTO Accrual Rates"
+  },
+  {
+   "scenario": "source_consistent",
+   "doc": "hr/pto-policy.html",
+   "heading": "3. PTO Carryover and Forfeiture"
+  },
+  {
+   "scenario": "source_consistent",
+   "doc": "hr/relocation-assistance.html",
+   "heading": "Non-Covered Expenses"
+  },
+  {
+   "scenario": "source_conflict",
+   "doc": "hr/relocation-assistance.html",
+   "heading": "Covered Expenses",
+   "expected_on": "2026-04-15T00:00:00",
+   "why": "stale already when exported"
+  },
+  {
+   "scenario": "source_consistent",
+   "doc": "it-security/incident-response-plan.docx",
+   "heading": "6. Recovery and Restoration"
+  },
+  {
+   "scenario": "source_consistent",
+   "doc": "operations/warehouse-safety-procedures.md",
+   "heading": "4. Emergency Procedures"
+  },
+  {
+   "scenario": "source_consistent",
+   "doc": "hr/relocation-assistance.html",
+   "heading": "Office-Specific Provisions"
+  }
+ ]
+}

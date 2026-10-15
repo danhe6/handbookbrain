@@ -1,0 +1,359 @@
+{
+  "value": [
+    {
+      "id": "1789750800000000",
+      "messageType": "message",
+      "createdDateTime": "2026-09-18T17:00:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Jasper de Vries"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>If I get an OpsAlert notification, how long do I have to respond?</p>"
+      }
+    },
+    {
+      "id": "17897508000000001",
+      "replyToId": "1789750800000000",
+      "messageType": "message",
+      "createdDateTime": "2026-09-18T17:03:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Hannah Brooks"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>15 minutes, Jasper.</p>"
+      }
+    },
+    {
+      "id": "17897508000000002",
+      "replyToId": "1789750800000000",
+      "messageType": "message",
+      "createdDateTime": "2026-09-18T17:39:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Jasper de Vries"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Thanks Hannah!</p>"
+      }
+    },
+    {
+      "id": "17897508000000003",
+      "replyToId": "1789750800000000",
+      "messageType": "message",
+      "createdDateTime": "2026-09-18T18:28:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Hannah Brooks"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>No problem :)</p>"
+      }
+    },
+    {
+      "id": "1784647800000000",
+      "messageType": "message",
+      "createdDateTime": "2026-07-21T15:30:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Derek Patel"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Hey folks, quick q: for a new office printer for Dallas, do I just need my team lead to sign off if it's under $2k, or is there another step? Want to make sure I follow the right process.</p>"
+      }
+    },
+    {
+      "id": "17846478000000001",
+      "replyToId": "1784647800000000",
+      "messageType": "message",
+      "createdDateTime": "2026-07-21T15:39:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Jonas Becker"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Hey Derek, for anything between $1,501 and $7,500 you\u2019ll need Ops Manager approval, not just your team lead. Also, since it\u2019s IT-related, IT Manager has to sign off too, no matter the amount. All the details are in the Procurement Approval Matrix doc (Dallas Office section). Don\u2019t forget to upload docs to the Dallas ShareDocs folder within 3 days!</p>"
+      }
+    },
+    {
+      "id": "17846478000000002",
+      "replyToId": "1784647800000000",
+      "messageType": "message",
+      "createdDateTime": "2026-07-21T17:28:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Derek Patel"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Got it, thanks Jonas! Missed the IT part. I\u2019ll loop in both Ops and IT and get the docs uploaded after. Appreciate the quick help.</p>"
+      }
+    },
+    {
+      "id": "1787333400000000",
+      "messageType": "message",
+      "createdDateTime": "2026-08-21T17:30:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Benji Morales"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Quick question\u2014do I need to get approval before placing an order with FleetGuard Systems for replacement sensors? Or can I just submit the invoice after the fact? Want to make sure I\u2019m following the right process.</p>"
+      }
+    },
+    {
+      "id": "17873334000000001",
+      "replyToId": "1787333400000000",
+      "messageType": "message",
+      "createdDateTime": "2026-08-21T18:04:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Linda Chen"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Hey Benji, you\u2019ll need to get the purchase approved first before you order anything from FleetGuard or any other vendor. It\u2019s all in the Procurement Approval Matrix doc\u2014covers all departments and vendors. Let me know if you need the link.</p>"
+      }
+    },
+    {
+      "id": "17873334000000002",
+      "replyToId": "1787333400000000",
+      "messageType": "message",
+      "createdDateTime": "2026-08-21T18:41:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Benji Morales"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Thanks Linda! I\u2019ll check the doc. Didn\u2019t want to hold up the order but I\u2019ll get the sign-off first.</p>"
+      }
+    },
+    {
+      "id": "17873334000000003",
+      "replyToId": "1787333400000000",
+      "messageType": "message",
+      "createdDateTime": "2026-08-21T19:39:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Linda Chen"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>No problem! Better safe than sorry\u2014non-compliance can delay payments. Ping me if you have trouble finding the matrix.</p>"
+      }
+    },
+    {
+      "id": "1785420000000000",
+      "messageType": "message",
+      "createdDateTime": "2026-07-30T14:00:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Jessica Tran"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Quick question\u2014once a new vendor finishes onboarding, how do we know when they're officially approved and can start bidding on folder ops tenders? Is there a list somewhere or do we get an email?</p>"
+      }
+    },
+    {
+      "id": "17854200000000001",
+      "replyToId": "1785420000000000",
+      "messageType": "message",
+      "createdDateTime": "2026-07-30T14:43:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Benji Morales"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Hey Jessica, once all the onboarding steps are done, Vendor Relations sends a confirmation email. Then the vendor gets added to the Approved Vendor List. For Chicago, the AVL gets updated every Friday by 5pm CST. If you spot any issues, you can email vendoradmin@larkspurfreight.com within 48 hours. It's all in the Vendor Onboarding Checklist doc btw.</p>"
+      }
+    },
+    {
+      "id": "17854200000000002",
+      "replyToId": "1785420000000000",
+      "messageType": "message",
+      "createdDateTime": "2026-07-30T15:10:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Jessica Tran"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Perfect, thanks Benji! I\u2019ll check the doc for the details. Just wanted to make sure I wasn\u2019t missing a step.</p>"
+      }
+    },
+    {
+      "id": "17854200000000003",
+      "replyToId": "1785420000000000",
+      "messageType": "message",
+      "createdDateTime": "2026-07-30T16:51:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Benji Morales"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>No problem! Let me know if you need the link to the checklist or anything else.</p>"
+      }
+    },
+    {
+      "id": "1785524400000000",
+      "messageType": "message",
+      "createdDateTime": "2026-07-31T19:00:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Samantha Ortiz"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Hi all, quick question: are pets allowed in the Rotterdam office? Thinking about bringing my dog in next week.</p>"
+      }
+    },
+    {
+      "id": "17855244000000001",
+      "replyToId": "1785524400000000",
+      "messageType": "message",
+      "createdDateTime": "2026-07-31T19:54:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Jessica Tran"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Hey Samantha! So, technically we don't have an official pet policy for Rotterdam yet, but the unwritten rule is max 2 pets per day in the office. You just need to DM Marieke for a heads up and she\u2019ll let you know if it\u2019s ok. This isn't written down anywhere yet.</p>"
+      }
+    },
+    {
+      "id": "17855244000000002",
+      "replyToId": "1785524400000000",
+      "messageType": "message",
+      "createdDateTime": "2026-07-31T21:20:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Samantha Ortiz"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Thanks Jessica! Is there a list somewhere to see if someone else is already bringing a pet that day?</p>"
+      }
+    },
+    {
+      "id": "17855244000000003",
+      "replyToId": "1785524400000000",
+      "messageType": "message",
+      "createdDateTime": "2026-07-31T21:53:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Jessica Tran"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Not really, we just ping Marieke and she keeps track in her calendar. If you message her the day before, she\u2019ll confirm if there\u2019s space.</p>"
+      }
+    },
+    {
+      "id": "17855244000000004",
+      "replyToId": "1785524400000000",
+      "messageType": "message",
+      "createdDateTime": "2026-07-31T22:34:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Samantha Ortiz"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Got it, will do. Thanks for the info!</p>"
+      }
+    },
+    {
+      "id": "1788793200000000",
+      "messageType": "message",
+      "createdDateTime": "2026-09-07T15:00:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Jasper de Vries"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Hi team, quick question: I\u2019ve been here 5 years next month and was wondering if there\u2019s a process for taking a sabbatical? Couldn\u2019t find anything in the handbook.</p>"
+      }
+    },
+    {
+      "id": "17887932000000001",
+      "replyToId": "1788793200000000",
+      "messageType": "message",
+      "createdDateTime": "2026-09-07T16:37:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Derek Patel"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Hey Jasper! Good question. So, we don\u2019t have an official policy yet, but the unwritten practice is that folks can request up to 8 weeks unpaid after 5 years. You just need to fill out the extended leave form (ask HR for it) and get your manager\u2019s sign-off. This isn\u2019t written down anywhere yet, but that\u2019s what we\u2019ve done for others.</p>"
+      }
+    },
+    {
+      "id": "17887932000000002",
+      "replyToId": "1788793200000000",
+      "messageType": "message",
+      "createdDateTime": "2026-09-07T18:14:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Jasper de Vries"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>Thanks Derek, that\u2019s super helpful. I\u2019ll ping HR for the form and talk to Priya about coverage. Appreciate it!</p>"
+      }
+    },
+    {
+      "id": "17887932000000003",
+      "replyToId": "1788793200000000",
+      "messageType": "message",
+      "createdDateTime": "2026-09-07T19:40:00.000Z",
+      "from": {
+        "user": {
+          "displayName": "Derek Patel"
+        }
+      },
+      "body": {
+        "contentType": "html",
+        "content": "<p>No problem! Let me know if you run into any issues or if you want me to loop in HR. Enjoy planning your time off!</p>"
+      }
+    }
+  ],
+  "synthetic": true
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "type": "message",
+    "user": "U0003",
+    "text": "Hey people ops, quick q: what are the actual password rules again? I need to reset mine and can't remember if it's 12 or 14 chars, and do I need a special character?",
+    "ts": "1784309400.000000",
+    "synthetic": true,
+    "thread_ts": "1784309400.000000",
+    "reply_count": 2
+  },
+  {
+    "type": "message",
+    "user": "U0010",
+    "text": "Hi Derek! It's 14 characters minimum, and you need at least one uppercase, one lowercase, a number, and a special character. Also, can't reuse your last 6 passwords. It's all in the Password & MFA Requirements doc if you need more details.",
+    "ts": "1784311740.000000",
+    "synthetic": true,
+    "thread_ts": "1784309400.000000"
+  },
+  {
+    "type": "message",
+    "user": "U0003",
+    "text": "Perfect, thanks Ava! I'll check the doc if I get stuck. Appreciate it.",
+    "ts": "1784316780.000000",
+    "synthetic": true,
+    "thread_ts": "1784309400.000000"
+  }
+]

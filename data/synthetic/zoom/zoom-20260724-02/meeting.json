@@ -1,0 +1,30 @@
+{
+  "uuid": "zoom-20260724-02",
+  "topic": "Total Rewards weekly sync",
+  "start_time": "2026-07-24T15:00:00Z",
+  "duration": 5,
+  "host_email": "maya.okafor@example.com",
+  "participants": [
+    {
+      "name": "Maya Okafor",
+      "user_email": "maya.okafor@example.com"
+    },
+    {
+      "name": "Lukas Brenner",
+      "user_email": "lukas.brenner@example.com"
+    },
+    {
+      "name": "Priya Raman",
+      "user_email": "priya.raman@example.com"
+    },
+    {
+      "name": "Daniel Ferreira",
+      "user_email": "daniel.ferreira@example.com"
+    },
+    {
+      "name": "Tom\u00e1s Rivera",
+      "user_email": "tom\u00e1s.rivera@example.com"
+    }
+  ],
+  "synthetic": true
+}

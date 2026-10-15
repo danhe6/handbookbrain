@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Hey all, quick question\u2014does anyone know if it's okay to bring a dog to a coworking space if GitLab is covering the cost? I know some spaces allow pets but wasn't sure if there's a policy on our end.",
+    "ts": "1785357000.000000",
+    "synthetic": true,
+    "thread_ts": "1785357000.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U09GRACE",
+    "text": "Hi Ben! Good question. So, it's not in the handbook yet, but our current practice is that you can bring a pet to a coworking space if the space itself allows it. Just a heads up, you need to email your manager for approval first and cc People Ops. We just want to make sure it won't disrupt others or violate any agreements with the space. Let me know if you need a template for the request!",
+    "ts": "1785361726.182332",
+    "synthetic": true,
+    "thread_ts": "1785357000.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Thanks Grace, that's super helpful! I'll check with the space and then loop in my manager and People Ops. Appreciate it.",
+    "ts": "1785362035.729579",
+    "synthetic": true,
+    "thread_ts": "1785357000.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U01MAYA",
+    "text": "Jumping in\u2014Ben, I did this last month and it was pretty smooth. Just make sure to mention the pet policy from the coworking space in your email, it sped things up for me.",
+    "ts": "1785362516.991124",
+    "synthetic": true,
+    "thread_ts": "1785357000.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U09GRACE",
+    "text": "Great tip, Maya! Ben, feel free to ping me directly if you run into any issues or need help wording the request.",
+    "ts": "1785365969.521293",
+    "synthetic": true,
+    "thread_ts": "1785357000.000000",
+    "parent_user_id": "U12BEN"
+  }
+]

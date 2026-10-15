@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Happy Friday everyone! Anyone got fun weekend plans? I\u2019m thinking of finally taking Milo to the dog park if it stops raining.",
+    "ts": "1787599800.000000",
+    "synthetic": true,
+    "thread_ts": "1787599800.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Omg Ben, please post pics if you do! I\u2019m just planning to sleep in and maybe try that new bakery. Also, did you all see the meme I dropped in #memes? The one with the cat and the spreadsheet \ud83d\ude02",
+    "ts": "1787601076.343966",
+    "synthetic": true,
+    "thread_ts": "1787599800.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Haha yes, that cat is basically me trying to fix the bug in the onboarding form yesterday. Just staring at the screen like 'what do you want from me?'",
+    "ts": "1787602200.240869",
+    "synthetic": true,
+    "thread_ts": "1787599800.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Wait, was that the bug where the submit button just... vanished? I thought I was losing it for a sec.",
+    "ts": "1787603643.550373",
+    "synthetic": true,
+    "thread_ts": "1787599800.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U14SAM",
+    "text": "Yep, that\u2019s the one! Glad it wasn\u2019t just me. Anyway, hope everyone\u2019s pets and forms behave this weekend \ud83d\ude05",
+    "ts": "1787607752.998642",
+    "synthetic": true,
+    "thread_ts": "1787599800.000000",
+    "parent_user_id": "U12BEN"
+  }
+]

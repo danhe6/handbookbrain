@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Happy Friday everyone! Anyone got fun weekend plans? I\u2019m thinking of finally taking Milo to the dog park if it ever stops raining.",
+    "ts": "1780084800.000000",
+    "synthetic": true,
+    "thread_ts": "1780084800.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U16NOAH",
+    "text": "Haha, Milo\u2019s gonna love that. I\u2019m just hoping my cat doesn\u2019t break anything else\u2014she knocked my coffee over *again* this morning. Also, did anyone else see that meme about cats being liquid? Too real \ud83d\ude02",
+    "ts": "1780088514.914897",
+    "synthetic": true,
+    "thread_ts": "1780084800.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U12BEN",
+    "text": "Lol, I saw that! The one where the cat fits in the glass bowl? That\u2019s basically Milo with laundry baskets, except he\u2019s 60 lbs and it never ends well.",
+    "ts": "1780089357.109276",
+    "synthetic": true,
+    "thread_ts": "1780084800.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U11CHLOE",
+    "text": "Wait, is this the meme? https://imgur.com/a/catliquid I sent it to my sister and she thought it was a bug report from our app at first \ud83d\ude02",
+    "ts": "1780089990.134825",
+    "synthetic": true,
+    "thread_ts": "1780084800.000000",
+    "parent_user_id": "U12BEN"
+  },
+  {
+    "type": "message",
+    "user": "U16NOAH",
+    "text": "Honestly, wouldn\u2019t be surprised if our app started returning cats instead of error messages at this point. Happy weekend, y\u2019all!",
+    "ts": "1780093423.113634",
+    "synthetic": true,
+    "thread_ts": "1780084800.000000",
+    "parent_user_id": "U12BEN"
+  }
+]
