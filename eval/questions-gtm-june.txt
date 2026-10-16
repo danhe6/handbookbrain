@@ -1,0 +1,3 @@
+# Asked on 2026-06-01, after Marketing Ops introduced trial threshold scoring (MR !19600) and before it changed.
+At how many points does a trial user MQL under Marketo trial threshold scoring?
+What signals does the trial threshold scoring model use, and how many points is each worth?

@@ -1,0 +1,918 @@
+{
+  "synthetic": true,
+  "generator_model": "openai/gpt-4.1",
+  "items": [
+    {
+      "id": "slack-random-1775048400.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-04-01T09:00:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4021",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-04-12T21:35:53.713968",
+      "sections": [],
+      "topic": "which dashboard is the source of truth for pipeline coverage in the forecast call"
+    },
+    {
+      "id": "ticket-4006",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-04-13T10:10:39.140215",
+      "sections": [],
+      "topic": "whether partner-sourced deals count toward SDR quota"
+    },
+    {
+      "id": "slack-random-1776283200.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-04-15T16:00:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4015",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-04-20T11:03:28.944101",
+      "sections": [],
+      "topic": "whether trial sign-ups from the same company domain are merged into one lead in Salesforce"
+    },
+    {
+      "id": "ticket-4019",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-04-20T12:37:43.185120",
+      "sections": [],
+      "topic": "which dashboard is the source of truth for pipeline coverage in the forecast call"
+    },
+    {
+      "id": "ticket-4002",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-04-28T11:17:24.143761",
+      "sections": [],
+      "topic": "how to request a new picklist value on the Opportunity object"
+    },
+    {
+      "id": "ticket-4014",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-05-01T08:50:32.568912",
+      "sections": [],
+      "topic": "whether partner-sourced deals count toward SDR quota"
+    },
+    {
+      "id": "slack-sales-ops-help-1777642200.000000",
+      "source": "slack",
+      "scenario": "tribal",
+      "date": "2026-05-01T09:30:00",
+      "channel": "sales-ops-help",
+      "sections": [],
+      "mr": null,
+      "topic": "whether trial sign-ups from the same company domain are merged into one lead in Salesforce"
+    },
+    {
+      "id": "slack-sales-ops-help-1778013000.000000",
+      "source": "slack",
+      "scenario": "tribal",
+      "date": "2026-05-05T16:30:00",
+      "channel": "sales-ops-help",
+      "sections": [],
+      "mr": null,
+      "topic": "which dashboard is the source of truth for pipeline coverage in the forecast call"
+    },
+    {
+      "id": "zoom-20260508-00",
+      "source": "zoom",
+      "scenario": "decision_implemented",
+      "date": "2026-05-08T09:30:00",
+      "title": "Marketing Ops weekly",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/marketo/_index.md#trial-threshold-scoring",
+        "content/handbook/marketing/marketing-operations/marketo/_index.md#scoring-models",
+        "content/handbook/marketing/marketing-operations/marketo/_index.md#score-decay"
+      ],
+      "mr": 19600,
+      "decisions": [
+        {
+          "statement": "We will add a new documented section for trial threshold scoring, including the 90-day repeat trial rule.",
+          "policy": "Marketo > Trial Threshold Scoring"
+        },
+        {
+          "statement": "We are formalizing the 100-point lead scoring model and exclusions as described.",
+          "policy": "Marketo > Scoring Models"
+        },
+        {
+          "statement": "We are clarifying that score decay applies even when scores are frozen for partner status.",
+          "policy": "Marketo > Score Decay"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Diego Santos",
+          "task": "Update the handbook page with new trial threshold scoring, scoring model, and score decay sections, including the 90-day repeat trial rule and fixing table links.",
+          "due": "2026-05-22"
+        },
+        {
+          "owner": "Rachel Kim",
+          "task": "Send vendor satisfaction survey summary to the team and collect feedback.",
+          "due": "2026-05-15"
+        }
+      ]
+    },
+    {
+      "id": "slack-deal-desk-1778526000.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-05-11T15:00:00",
+      "channel": "deal-desk",
+      "sections": [
+        "content/handbook/sales/field-operations/customer-success-operations/gainsight/gainsight-gtm.md#syncing-data-from-zendesk-to-gainsight"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "slack-sales-ops-help-1778594400.000000",
+      "source": "slack",
+      "scenario": "tribal",
+      "date": "2026-05-12T10:00:00",
+      "channel": "sales-ops-help",
+      "sections": [],
+      "mr": null,
+      "topic": "who approves a discount above 40% on a multi-year public-sector renewal"
+    },
+    {
+      "id": "slack-random-1778877000.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-05-15T16:30:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4001",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-05-17T03:29:15.737091",
+      "sections": [],
+      "topic": "whether trial sign-ups from the same company domain are merged into one lead in Salesforce"
+    },
+    {
+      "id": "teams-20260522-01",
+      "source": "teams",
+      "scenario": "decision_implemented",
+      "date": "2026-05-22T09:30:00",
+      "title": "Channel Ops sync",
+      "sections": [
+        "content/handbook/sales/field-operations/channel-operations/_index.md#partner-sourced-deal-registration-resale-opportunities",
+        "content/handbook/sales/field-operations/channel-operations/_index.md#partner-sourced-deal-registration-referral-opportunities",
+        "content/handbook/sales/field-operations/channel-operations/_index.md#ecosystem-sales-manager-for-review-and-action"
+      ],
+      "mr": 15742,
+      "decisions": [
+        {
+          "statement": "We are approving the new process language for both resale and referral deal registrations, and adding the ESM review section as drafted, with minor edits.",
+          "policy": "Ecosystem Operations > Partner Sourced Deal Registration: Resale Opportunities, Referral Opportunities, and Ecosystem Sales Manager for review and action"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Nadia Petrova",
+          "task": "Update the handbook page with the new process language and notification clarifications.",
+          "due": "2026-06-05"
+        },
+        {
+          "owner": "Ken Watanabe",
+          "task": "Schedule a 30-minute walkthrough training for ESMs on the new process.",
+          "due": "2026-05-29"
+        }
+      ]
+    },
+    {
+      "id": "ticket-4022",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-05-25T11:49:47.330584",
+      "sections": [
+        "content/handbook/sales/field-operations/requesting-internal-support/_index.md#salesforce-workflow"
+      ],
+      "topic": null
+    },
+    {
+      "id": "zoom-20260527-02",
+      "source": "zoom",
+      "scenario": "decision_implemented",
+      "date": "2026-05-27T09:00:00",
+      "title": "Marketing Ops weekly",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/marketo/_index.md#behavior-scoring"
+      ],
+      "mr": 19939,
+      "decisions": [
+        {
+          "statement": "We will update the handbook page to clarify that behavior scoring is applied every time for all listed behaviors, as long as the Person Score is under 300.",
+          "policy": "handbook/marketing/marketing-operations/campaigns-and-programs > Behavior Scoring"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Diego Santos",
+          "task": "Update the handbook page to clarify behavior scoring flow limits for all behaviors.",
+          "due": "2026-06-10"
+        },
+        {
+          "owner": "Diego Santos",
+          "task": "Add Leadspace support responsiveness to the vendor review checklist for Q3.",
+          "due": "2026-06-03"
+        }
+      ]
+    },
+    {
+      "id": "slack-random-1779996600.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-05-28T15:30:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "slack-deal-desk-1780059600.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-05-29T09:00:00",
+      "channel": "deal-desk",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/accelevents.md#accelevents-navigation"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4003",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-05-30T09:20:55.040965",
+      "sections": [],
+      "topic": "whether an opportunity close date can be moved back into last quarter after the books close"
+    },
+    {
+      "id": "teams-20260603-03",
+      "source": "teams",
+      "scenario": "decision_implemented",
+      "date": "2026-06-03T09:30:00",
+      "title": "Channel Ops sync",
+      "sections": [
+        "content/handbook/sales/field-operations/channel-operations/_index.md#default-logic",
+        "content/handbook/sales/field-operations/channel-operations/_index.md#definitions",
+        "content/handbook/sales/field-operations/channel-operations/_index.md#use-cases"
+      ],
+      "mr": 20005,
+      "decisions": [
+        {
+          "statement": "We will update the Default Logic, Definitions, and Use Cases sections to clarify Initial Source for renewals and add the new table.",
+          "policy": "Ecosystem Operations > Default Logic, Definitions, Use Cases"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Nadia Petrova",
+          "task": "Update the handbook page with the new Default Logic, Definitions, and Use Cases text, including the renewal logic and edge case note.",
+          "due": "2026-06-17"
+        },
+        {
+          "owner": "Julia Costa",
+          "task": "Pull last quarter\u2019s support ticket data for vendor SLA review and send to Ken.",
+          "due": "2026-06-09"
+        }
+      ]
+    },
+    {
+      "id": "slack-mktg-ops-1780603200.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-06-04T16:00:00",
+      "channel": "mktg-ops",
+      "sections": [
+        "content/handbook/sales/field-operations/channel-operations/_index.md#partner-sourced-deal-registration-resale-opportunities"
+      ],
+      "mr": 15742,
+      "topic": null
+    },
+    {
+      "id": "slack-deal-desk-1781269200.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-06-12T09:00:00",
+      "channel": "deal-desk",
+      "sections": [
+        "content/handbook/sales/field-operations/channel-operations/_index.md#default-logic"
+      ],
+      "mr": 20005,
+      "topic": null
+    },
+    {
+      "id": "slack-mktg-ops-1781290800.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-06-12T15:00:00",
+      "channel": "mktg-ops",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/marketo/_index.md#trial-threshold-scoring"
+      ],
+      "mr": 19600,
+      "topic": null
+    },
+    {
+      "id": "zoom-20260612-04",
+      "source": "zoom",
+      "scenario": "decision_implemented",
+      "date": "2026-06-12T16:00:00",
+      "title": "Channel Ops sync",
+      "sections": [
+        "content/handbook/sales/field-operations/channel-operations/partner-faq.md#puchase-orders-pos"
+      ],
+      "mr": 20248,
+      "decisions": [
+        {
+          "statement": "We will update the Partner FAQ to state that auto-renewal is not enforced on partner-transacted deals, and GitLab will confirm with the partner before suspending service if there is no renewal or notification.",
+          "policy": "Partner FAQ - Selling with GitLab > Auto-renewal on partner deals"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Nadia Petrova",
+          "task": "Update the Partner FAQ page with the new auto-renewal policy and add clarification about confirming with the partner before suspending service.",
+          "due": "2026-06-26"
+        },
+        {
+          "owner": "Ken Watanabe",
+          "task": "Send out a poll for lunch-and-learn topics based on the engagement survey feedback.",
+          "due": "2026-06-15"
+        }
+      ]
+    },
+    {
+      "id": "ticket-4010",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-06-16T09:08:10.937721",
+      "sections": [],
+      "topic": "which dashboard is the source of truth for pipeline coverage in the forecast call"
+    },
+    {
+      "id": "ticket-4016",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-06-20T04:58:16.708410",
+      "sections": [],
+      "topic": "who approves a discount above 40% on a multi-year public-sector renewal"
+    },
+    {
+      "id": "ticket-4013",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-06-22T08:54:23.642614",
+      "sections": [],
+      "topic": "who approves a discount above 40% on a multi-year public-sector renewal"
+    },
+    {
+      "id": "slack-random-1782498600.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-06-26T14:30:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "slack-sales-ops-help-1782502200.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-06-26T15:30:00",
+      "channel": "sales-ops-help",
+      "sections": [
+        "content/handbook/sales/field-operations/sales-systems/gtm-technical-documentation/_index.md#csm-team-stamping"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "slack-mktg-ops-1782505800.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-06-26T16:30:00",
+      "channel": "mktg-ops",
+      "sections": [
+        "content/handbook/sales/field-operations/field-enablement/gtm-enablement.md#for-reference-in-order-to-launch-the-npi-process-the-npi-dri-must-communicate"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4012",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-06-27T09:30:32.642746",
+      "sections": [
+        "content/handbook/sales/field-operations/channel-operations/sales-faq.md#partner-discounts-and-incentives"
+      ],
+      "topic": null
+    },
+    {
+      "id": "slack-sales-ops-help-1782914400.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-07-01T10:00:00",
+      "channel": "sales-ops-help",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/marketo/_index.md#behavior-scoring"
+      ],
+      "mr": 19939,
+      "topic": null
+    },
+    {
+      "id": "slack-deal-desk-1783344600.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-07-06T09:30:00",
+      "channel": "deal-desk",
+      "sections": [
+        "content/handbook/sales/field-operations/channel-operations/partner-faq.md#puchase-orders-pos"
+      ],
+      "mr": 20248,
+      "topic": null
+    },
+    {
+      "id": "teams-20260707-05",
+      "source": "teams",
+      "scenario": "decision_implemented",
+      "date": "2026-07-07T15:00:00",
+      "title": "Marketing Ops weekly",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/_index.md#labeling",
+        "content/handbook/marketing/marketing-operations/_index.md#labeling-part-2"
+      ],
+      "mr": 20450,
+      "decisions": [
+        {
+          "statement": "We will add the 'MktgOps::08: Completed' label to indicate when Marketing Operations has finished their part of an issue.",
+          "policy": "Marketing Operations > Labeling (part 2)"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Diego Santos",
+          "task": "Update the handbook page to include the new 'MktgOps::08: Completed' label and example screenshot.",
+          "due": "2026-07-21"
+        },
+        {
+          "owner": "Rachel Kim",
+          "task": "Follow up with Goldcast rep about support issues flagged in the vendor survey.",
+          "due": "2026-07-14"
+        }
+      ]
+    },
+    {
+      "id": "teams-20260710-09",
+      "source": "teams",
+      "scenario": "decision_unimplemented",
+      "date": "2026-07-10T09:00:00",
+      "title": "Marketing Ops weekly",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/marketing-technology-tiering-system.md#tier-specific-expectations"
+      ],
+      "mr": null,
+      "decisions": [
+        {
+          "statement": "Renewal discussions for Tier 2 tools will now start six months before contract expiration, instead of four.",
+          "policy": "Marketing Technology Tiering System > Tier-Specific Expectations"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Diego Santos",
+          "task": "Update the handbook page to reflect the new six-month renewal timing for Tier 2 tools and announce the change in #marketing-ops.",
+          "due": "2026-07-14"
+        },
+        {
+          "owner": "Diego Santos",
+          "task": "Draft a project spotlight for the nurture campaign for next month\u2019s all-hands meeting.",
+          "due": "2026-07-17"
+        }
+      ]
+    },
+    {
+      "id": "ticket-4023",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-07-16T04:02:56.224506",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/brilliant.md#marketplace"
+      ],
+      "topic": null
+    },
+    {
+      "id": "ticket-4020",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-07-17T00:05:49.021525",
+      "sections": [],
+      "topic": "whether partner-sourced deals count toward SDR quota"
+    },
+    {
+      "id": "zoom-20260717-06",
+      "source": "zoom",
+      "scenario": "decision_implemented",
+      "date": "2026-07-17T10:00:00",
+      "title": "Marketing Ops weekly",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/marketo/_index.md#trial-threshold-scoring"
+      ],
+      "mr": 20534,
+      "decisions": [
+        {
+          "statement": "The MQL threshold for trial users will be increased from 25 to 31 points in the Marketo trial scoring process.",
+          "policy": "Marketo > Trial Threshold Scoring"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Diego Santos",
+          "task": "Update the handbook page to reflect the new 31-point MQL threshold and add a note about reporting follow-up.",
+          "due": "2026-07-31"
+        },
+        {
+          "owner": "Diego Santos",
+          "task": "Draft and send a ticket to Marketo CSM regarding support response times, sharing the draft in Slack first.",
+          "due": "2026-07-24"
+        }
+      ]
+    },
+    {
+      "id": "slack-random-1784899800.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-07-24T09:30:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4000",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-07-25T05:48:32.590727",
+      "sections": [
+        "content/handbook/sales/field-operations/field-enablement/gtm-enablement.md#for-reference-in-order-to-launch-the-npi-process-the-npi-dri-must-communicate"
+      ],
+      "topic": null
+    },
+    {
+      "id": "ticket-4024",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-07-27T08:34:28.570461",
+      "sections": [],
+      "topic": "whether trial sign-ups from the same company domain are merged into one lead in Salesforce"
+    },
+    {
+      "id": "zoom-20260728-08",
+      "source": "zoom",
+      "scenario": "decision_unimplemented",
+      "date": "2026-07-28T09:00:00",
+      "title": "Marketing Ops weekly",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/learning.md#intro"
+      ],
+      "mr": null,
+      "decisions": [
+        {
+          "statement": "The learning resources handbook page will be updated monthly instead of quarterly, starting in August.",
+          "policy": "Learning Marketing Operations > Learning Marketing Operations"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Diego Santos",
+          "task": "Update the handbook page to reflect monthly updates to the learning resources and clarify ownership.",
+          "due": "2026-07-30"
+        },
+        {
+          "owner": "Amara Nwosu",
+          "task": "Draft a sample Slack message for the monthly learning resources update reminder.",
+          "due": "2026-07-28"
+        },
+        {
+          "owner": "Nadia Petrova",
+          "task": "Pull the last six months of webinar platform usage stats and send to Rachel.",
+          "due": "2026-07-29"
+        }
+      ]
+    },
+    {
+      "id": "slack-deal-desk-1785331800.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-07-29T09:30:00",
+      "channel": "deal-desk",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/youtube/index.md#channels"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "zoom-20260730-10",
+      "source": "zoom",
+      "scenario": "decision_unimplemented",
+      "date": "2026-07-30T09:30:00",
+      "title": "Marketing Ops weekly",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/goldcast/index.md#best-practices-recommendations"
+      ],
+      "mr": null,
+      "decisions": [
+        {
+          "statement": "Speakers must now be backstage at least 15 minutes before session start time for Goldcast events.",
+          "policy": "Goldcast > Pre-Event Preparation"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Diego Santos",
+          "task": "Update the Goldcast handbook page to require 15-minute backstage arrival and add rationale.",
+          "due": "2026-07-31"
+        },
+        {
+          "owner": "Omar Haddad",
+          "task": "Send calendar hold and RSVP link for September 19th team offsite.",
+          "due": "2026-07-31"
+        },
+        {
+          "owner": "Nadia Petrova",
+          "task": "Update sales enablement documentation with new Goldcast backstage timing.",
+          "due": "2026-08-02"
+        }
+      ]
+    },
+    {
+      "id": "slack-mktg-ops-1785528000.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-07-31T16:00:00",
+      "channel": "mktg-ops",
+      "sections": [
+        "content/handbook/sales/field-operations/requesting-internal-support/_index.md#salesforce-workflow"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "slack-sales-ops-help-1786131000.000000",
+      "source": "slack",
+      "scenario": "tribal",
+      "date": "2026-08-07T15:30:00",
+      "channel": "sales-ops-help",
+      "sections": [],
+      "mr": null,
+      "topic": "whether an opportunity close date can be moved back into last quarter after the books close"
+    },
+    {
+      "id": "ticket-4025",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-08-08T22:01:42.881869",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/youtube/index.md#channels"
+      ],
+      "topic": null
+    },
+    {
+      "id": "ticket-4009",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-08-09T06:05:57.655877",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/email-management/operational-email-sends.md#issue-templates"
+      ],
+      "topic": null
+    },
+    {
+      "id": "slack-mktg-ops-1786566600.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-08-12T16:30:00",
+      "channel": "mktg-ops",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/_index.md#labeling"
+      ],
+      "mr": 20450,
+      "topic": null
+    },
+    {
+      "id": "ticket-4007",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-08-14T15:51:56.151618",
+      "sections": [
+        "content/handbook/sales/field-operations/sales-systems/gtm-technical-documentation/_index.md#csm-team-stamping"
+      ],
+      "topic": null
+    },
+    {
+      "id": "slack-random-1786995000.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-08-17T15:30:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "slack-random-1786996800.000000",
+      "source": "slack",
+      "scenario": "noise",
+      "date": "2026-08-17T16:00:00",
+      "channel": "random",
+      "sections": [],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "slack-mktg-ops-1787144400.000000",
+      "source": "slack",
+      "scenario": "conflict",
+      "date": "2026-08-19T09:00:00",
+      "channel": "mktg-ops",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/marketo/_index.md#trial-threshold-scoring"
+      ],
+      "mr": 20534,
+      "topic": null
+    },
+    {
+      "id": "slack-deal-desk-1787598000.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-08-24T15:00:00",
+      "channel": "deal-desk",
+      "sections": [
+        "content/handbook/sales/field-operations/channel-operations/sales-faq.md#partner-discounts-and-incentives"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4018",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-08-31T04:29:07.263476",
+      "sections": [
+        "content/handbook/sales/field-operations/customer-success-operations/gainsight/gainsight-gtm.md#syncing-data-from-zendesk-to-gainsight"
+      ],
+      "topic": null
+    },
+    {
+      "id": "ticket-4005",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-09-02T15:05:43.667140",
+      "sections": [
+        "content/handbook/sales/field-operations/customer-success-operations/cs-ops-programs/cs-content-guide.md#content-creation-review-process"
+      ],
+      "topic": null
+    },
+    {
+      "id": "ticket-4026",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-09-02T15:57:39.698824",
+      "sections": [],
+      "topic": "whether an opportunity close date can be moved back into last quarter after the books close"
+    },
+    {
+      "id": "ticket-4027",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-09-11T02:01:27.776235",
+      "sections": [],
+      "topic": "who approves a discount above 40% on a multi-year public-sector renewal"
+    },
+    {
+      "id": "slack-deal-desk-1789675200.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-09-17T16:00:00",
+      "channel": "deal-desk",
+      "sections": [
+        "content/handbook/sales/field-operations/customer-success-operations/cs-ops-programs/cs-content-guide.md#content-creation-review-process"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4004",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-09-27T21:00:44.856247",
+      "sections": [],
+      "topic": "how to request a new picklist value on the Opportunity object"
+    },
+    {
+      "id": "teams-20260930-07",
+      "source": "teams",
+      "scenario": "decision_implemented",
+      "date": "2026-09-30T10:00:00",
+      "title": "Deal Desk & Sales Ops sync",
+      "sections": [
+        "content/handbook/sales/field-operations/sales-operations/deal-desk.md#contract-reset"
+      ],
+      "mr": 21365,
+      "decisions": [
+        {
+          "statement": "We will update the handbook to clarify the purchaser rule and make the Billing Account instructions more obvious.",
+          "policy": "Deal Desk Handbook > Contract Reset"
+        }
+      ],
+      "action_items": [
+        {
+          "owner": "Lena Hoffmann",
+          "task": "Draft and update the handbook page with clarified purchaser rule and improved Billing Account instructions.",
+          "due": "2026-10-14"
+        },
+        {
+          "owner": "All team leads",
+          "task": "Remind their teams to complete the HR engagement survey.",
+          "due": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "id": "slack-sales-ops-help-1790969400.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-10-02T15:30:00",
+      "channel": "sales-ops-help",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/email-management/operational-email-sends.md#issue-templates"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4011",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-10-04T13:58:12.412642",
+      "sections": [],
+      "topic": "whether an opportunity close date can be moved back into last quarter after the books close"
+    },
+    {
+      "id": "ticket-4017",
+      "source": "ticket",
+      "scenario": "answerable",
+      "date": "2026-10-08T06:46:03.822499",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/accelevents.md#accelevents-navigation"
+      ],
+      "topic": null
+    },
+    {
+      "id": "slack-sales-ops-help-1791811800.000000",
+      "source": "slack",
+      "scenario": "answerable",
+      "date": "2026-10-12T09:30:00",
+      "channel": "sales-ops-help",
+      "sections": [
+        "content/handbook/marketing/marketing-operations/brilliant.md#marketplace"
+      ],
+      "mr": null,
+      "topic": null
+    },
+    {
+      "id": "ticket-4008",
+      "source": "ticket",
+      "scenario": "gap",
+      "date": "2026-10-13T17:31:03.935508",
+      "sections": [],
+      "topic": "whether trial sign-ups from the same company domain are merged into one lead in Salesforce"
+    }
+  ]
+}

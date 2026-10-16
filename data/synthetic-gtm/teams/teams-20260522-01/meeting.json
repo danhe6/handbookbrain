@@ -1,0 +1,46 @@
+{
+  "id": "teams-20260522-01",
+  "subject": "Channel Ops sync",
+  "startDateTime": "2026-05-22T09:30:00Z",
+  "endDateTime": "2026-05-22T09:34:53Z",
+  "participants": {
+    "organizer": {
+      "identity": {
+        "user": {
+          "displayName": "Ken Watanabe"
+        }
+      }
+    },
+    "attendees": [
+      {
+        "identity": {
+          "user": {
+            "displayName": "Ken Watanabe"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Nadia Petrova"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Ethan Brooks"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Julia Costa"
+          }
+        }
+      }
+    ]
+  },
+  "synthetic": true
+}

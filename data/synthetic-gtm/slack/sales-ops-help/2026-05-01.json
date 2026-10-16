@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Hey team, quick question\u2014if we get multiple trial sign-ups from the same company domain, do those get merged into a single lead in Salesforce or do we keep them separate? Couldn't find anything clear in the handbook.",
+    "ts": "1777642200.000000",
+    "synthetic": true,
+    "thread_ts": "1777642200.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U03AMARA",
+    "text": "Hey Jake! Good question. So, right now, if we see more than 3 trial sign-ups from the same company domain within a 2-week window, we merge them into one lead and add the extra contacts as related people. This isn't in the handbook yet\u2014it's just something we started doing after the last routing review. If you need to keep them separate for any reason, just flag it to me or Diego and we can override.",
+    "ts": "1777644947.683093",
+    "synthetic": true,
+    "thread_ts": "1777642200.000000",
+    "parent_user_id": "U12JAKE"
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Ah, got it. Thanks Amara! That makes sense. I'll ping you if I run into any weird cases.",
+    "ts": "1777648146.752743",
+    "synthetic": true,
+    "thread_ts": "1777642200.000000",
+    "parent_user_id": "U12JAKE"
+  },
+  {
+    "type": "message",
+    "user": "U03AMARA",
+    "text": "Sounds good! And if you see anything that feels off with the merges, just drop a note here or DM me. We're still tweaking the process.",
+    "ts": "1777649492.707729",
+    "synthetic": true,
+    "thread_ts": "1777642200.000000",
+    "parent_user_id": "U12JAKE"
+  }
+]

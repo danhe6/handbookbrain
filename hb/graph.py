@@ -76,6 +76,8 @@ def ensure_schema():
         except Exception as e:  # index already exists
             if "already" not in str(e).lower():
                 raise
+    from .entities import ensure_schema as ents
+    ents()
 
 
 # ---------- commits / decisions ----------

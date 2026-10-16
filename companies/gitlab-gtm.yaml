@@ -1,0 +1,25 @@
+# GitLab go-to-market operations: lead scoring, deal desk, sales systems, channel ops, marketing analytics.
+# Same public GitLab handbook repo as `gitlab`, different business domain. Onboarding = this file.
+name: GitLab GTM Ops
+graph: gitlab-gtm
+docs:
+  type: git
+  path: data/handbook
+  scope:
+    - content/handbook/marketing/marketing-operations/
+    - content/handbook/sales/field-operations/
+    - content/handbook/enterprise-data/marketing-analytics/
+  codeowners: [.gitlab/CODEOWNERS, CODEOWNERS, docs/CODEOWNERS]
+  cite_strip: content/handbook/
+  doc_base_url: https://handbook.gitlab.com
+  mr_url: https://gitlab.com/gitlab-com/content-sites/handbook/-/merge_requests/
+  commit_url: https://gitlab.com/gitlab-com/content-sites/handbook/-/commit/
+t0: "2026-04-01"
+conversations: data/synthetic-gtm          # synthetic meetings / Slack / tickets anchored to real MRs (hb synth)
+labels: data/synthetic-gtm/labels.json
+synth_profile: gtm
+demo_questions:
+  - Why did the Marketo trial score threshold change, and who decided it?
+  - Which systems, fields and dashboards does lead scoring touch, and who owns them?
+  - What do I need to check at the Deal Desk before a contract-reset cancellation?
+  - What changed in channel partner auto-renewals, and what does it affect?

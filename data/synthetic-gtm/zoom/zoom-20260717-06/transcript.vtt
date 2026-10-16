@@ -1,0 +1,177 @@
+WEBVTT
+
+1
+00:00:02.000 --> 00:00:06.615
+Rachel Kim: Alright, it’s 10:02, let’s get started. Hope everyone’s Friday is going okay?
+
+2
+00:00:07.062 --> 00:00:13.216
+Diego Santos: Yeah, all good here. Just, uh, trying to keep my inbox under control before the weekend.
+
+3
+00:00:13.474 --> 00:00:19.628
+Amara Nwosu: Same, Diego. I’m still catching up from that Salesforce sync issue on Wednesday, but otherwise good.
+
+4
+00:00:20.395 --> 00:00:25.395
+Omar Haddad: Morning, all. I’m running on my third coffee, so I’m ready for anything.
+
+5
+00:00:26.271 --> 00:00:32.424
+Nadia Petrova: Hi everyone! I’m just glad the Q3 pipeline review is behind us. That was a marathon.
+
+6
+00:00:33.673 --> 00:00:40.981
+Rachel Kim: Yeah, Nadia, you did a great job wrangling all those numbers. Okay, quick status—anything urgent before we jump in?
+
+7
+00:00:42.074 --> 00:00:45.535
+Diego Santos: Nothing urgent from me. Marketo’s behaving, knock on wood.
+
+8
+00:00:46.957 --> 00:00:51.957
+Amara Nwosu: No blockers here. Just prepping for the next round of lead scoring QA.
+
+9
+00:00:53.116 --> 00:01:04.654
+Rachel Kim: Alright, let’s move to the main agenda. So, we need to finalize the update to the Marketo trial threshold scoring. Everyone had a chance to look at the doc, right?
+
+10
+00:01:05.110 --> 00:01:12.418
+Omar Haddad: Yep, I read through it. The main change is bumping the MQL threshold from 25 to 31 points, correct?
+
+11
+00:01:13.179 --> 00:01:19.332
+Diego Santos: That’s right. Everything else in the scoring table stays the same, just the threshold goes up.
+
+12
+00:01:20.766 --> 00:01:28.074
+Nadia Petrova: Can someone remind me why we’re increasing it? I remember the discussion but want to make sure I’m clear.
+
+13
+00:01:29.471 --> 00:01:40.240
+Rachel Kim: Sure, Nadia. Basically, we saw too many trial users MQLing too early, especially with the new Duo features. Raising the threshold should help filter for more qualified leads.
+
+14
+00:01:41.250 --> 00:01:49.327
+Amara Nwosu: Yeah, and the data from last month showed a spike in MQLs that didn’t convert. So, this should help with quality.
+
+15
+00:01:50.389 --> 00:01:55.389
+Omar Haddad: I just want to flag—will this impact our MQL volume targets for Q3?
+
+16
+00:01:55.751 --> 00:02:04.982
+Rachel Kim: Good question. Omar, I think we’ll see a dip at first, but the expectation is higher conversion rates. We’ll monitor and adjust if needed.
+
+17
+00:02:06.352 --> 00:02:12.121
+Diego Santos: I can pull a report after two weeks to see how the numbers look post-change.
+
+18
+00:02:12.981 --> 00:02:19.135
+Nadia Petrova: Sounds good to me. As long as Sales is looped in, I don’t see any issues.
+
+19
+00:02:20.201 --> 00:02:28.278
+Amara Nwosu: I do have one concern—do we need to update any of the nurture streams, or is this just the scoring logic?
+
+20
+00:02:28.902 --> 00:02:36.595
+Diego Santos: Just the scoring logic for now. Nurture streams trigger off MQL status, so they’ll pick up the new threshold automatically.
+
+21
+00:02:37.701 --> 00:02:40.778
+Rachel Kim: Thanks, Diego. Amara, does that answer your question?
+
+22
+00:02:41.699 --> 00:02:43.237
+Amara Nwosu: Yep, that’s clear. Thanks.
+
+23
+00:02:43.687 --> 00:02:48.302
+Omar Haddad: And the scoring runs still twice a day, right? No change there.
+
+24
+00:02:49.366 --> 00:02:53.213
+Diego Santos: Correct, still 8am and 2pm in each region’s earliest timezone.
+
+25
+00:02:53.905 --> 00:03:03.136
+Rachel Kim: Alright, so to recap: we’re updating the MQL threshold for trial users from 25 to 31 points. Everything else stays the same. Any objections?
+
+26
+00:03:04.309 --> 00:03:05.847
+Nadia Petrova: Nope, all good here.
+
+27
+00:03:06.273 --> 00:03:07.773
+Omar Haddad: No objections.
+
+28
+00:03:08.713 --> 00:03:10.252
+Amara Nwosu: I’m good with it.
+
+29
+00:03:10.980 --> 00:03:17.903
+Rachel Kim: Great. Diego, can you update the handbook page and note the change? Let’s target two weeks from today.
+
+30
+00:03:19.187 --> 00:03:24.956
+Diego Santos: Yep, I’ll take care of it. I’ll also add a note about the reporting follow-up.
+
+31
+00:03:25.551 --> 00:03:28.628
+Rachel Kim: Perfect. I’ll ping Sales Enablement so they’re aware.
+
+32
+00:03:29.101 --> 00:03:38.716
+Rachel Kim: Okay, last thing—quick heads up: we got the results from the vendor satisfaction survey. Not urgent, but we scored lowest on Marketo support response times.
+
+33
+00:03:39.938 --> 00:03:46.861
+Diego Santos: Yeah, I saw that. I can draft a ticket for our CSM to discuss at the next check-in.
+
+34
+00:03:47.850 --> 00:03:52.465
+Nadia Petrova: That’d be great, Diego. It’s been a pain getting timely answers lately.
+
+35
+00:03:53.084 --> 00:03:56.545
+Omar Haddad: Agreed. Anything we can do to escalate would help.
+
+36
+00:03:57.320 --> 00:04:01.551
+Rachel Kim: Thanks, Diego. Let’s aim to send that ticket by next Friday.
+
+37
+00:04:02.629 --> 00:04:07.244
+Diego Santos: Will do. I’ll share the draft in Slack before I send it.
+
+38
+00:04:08.109 --> 00:04:10.417
+Rachel Kim: Awesome. Anything else before we wrap?
+
+39
+00:04:11.648 --> 00:04:13.571
+Amara Nwosu: Nope, that’s it from me.
+
+40
+00:04:15.019 --> 00:04:16.519
+Omar Haddad: All good here.
+
+41
+00:04:17.676 --> 00:04:19.214
+Nadia Petrova: I’m good, thanks everyone.
+
+42
+00:04:20.271 --> 00:04:22.579
+Rachel Kim: Alright, have a great weekend, everyone!
+
+43
+00:04:23.148 --> 00:04:24.648
+Diego Santos: You too!
+
+44
+00:04:25.711 --> 00:04:27.211
+Amara Nwosu: Bye all!

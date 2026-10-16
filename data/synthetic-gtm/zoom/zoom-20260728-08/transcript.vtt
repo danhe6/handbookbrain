@@ -1,0 +1,181 @@
+WEBVTT
+
+1
+00:00:02.000 --> 00:00:06.615
+Rachel Kim: Alright, it’s 10:02, let’s get started. Hope everyone’s doing okay this week?
+
+2
+00:00:07.976 --> 00:00:14.130
+Diego Santos: Yeah, doing good, Rachel. Just got back from a long weekend, so catching up on emails.
+
+3
+00:00:14.435 --> 00:00:19.820
+Amara Nwosu: Same here, Diego. I feel like my inbox doubled overnight, but nothing too urgent.
+
+4
+00:00:20.216 --> 00:00:26.754
+Omar Haddad: I’m jealous of your long weekend, Diego. I spent mine wrangling spreadsheets for the Q3 pipeline review.
+
+5
+00:00:27.452 --> 00:00:35.144
+Nadia Petrova: I hear you, Omar. I was on PTO last week, so I’m still getting back into the swing of things.
+
+6
+00:00:35.543 --> 00:00:47.081
+Rachel Kim: Glad everyone’s back. Quick status from my side: I met with Product Marketing yesterday, and they’re asking for more campaign analytics support, so heads up that might come our way.
+
+7
+00:00:47.560 --> 00:00:51.021
+Diego Santos: Noted, Rachel. I’ll keep some bandwidth open for that.
+
+8
+00:00:51.760 --> 00:00:58.684
+Amara Nwosu: Thanks for the heads up. I’ll check if any of my routing rules need tweaks for new campaigns.
+
+9
+00:00:59.314 --> 00:01:06.237
+Rachel Kim: Awesome. Okay, let’s move to the main agenda item: the handbook policy on continuous learning for Marketing Ops.
+
+10
+00:01:07.042 --> 00:01:17.427
+Diego Santos: Yeah, so right now, the handbook says we update the learning resources page quarterly. But honestly, I think we’re finding new stuff way more often than that.
+
+11
+00:01:17.708 --> 00:01:25.785
+Amara Nwosu: Agreed. I’ve seen a lot of new Marketo features and best practices pop up monthly, and waiting three months feels slow.
+
+12
+00:01:27.068 --> 00:01:33.606
+Omar Haddad: From the analytics side, there’s always new dashboards or reporting tricks. Monthly updates would keep things fresher.
+
+13
+00:01:34.312 --> 00:01:42.389
+Nadia Petrova: Sales Ops is in the same boat. We’re updating our playbooks more often, so aligning the learning resources cadence would help.
+
+14
+00:01:43.590 --> 00:01:50.513
+Rachel Kim: So, are we all in favor of moving from quarterly to monthly updates for the learning resources page?
+
+15
+00:01:51.943 --> 00:01:58.482
+Diego Santos: Makes sense to me. I can own the process for the first couple months if that helps.
+
+16
+00:01:58.707 --> 00:02:04.861
+Amara Nwosu: I’m in. And maybe we can add a quick Slack reminder each month when it’s updated?
+
+17
+00:02:06.206 --> 00:02:09.667
+Omar Haddad: Yeah, I like that. Keeps everyone in the loop.
+
+18
+00:02:10.616 --> 00:02:15.231
+Nadia Petrova: Agreed. Monthly is better, and the Slack ping is a good idea.
+
+19
+00:02:16.051 --> 00:02:22.589
+Rachel Kim: Great, let’s make it official: we’ll update the learning resources page monthly instead of quarterly, starting August.
+
+20
+00:02:24.015 --> 00:02:29.400
+Diego Santos: Got it. I’ll update the handbook page and set a recurring reminder for myself.
+
+21
+00:02:29.988 --> 00:02:35.757
+Rachel Kim: Thanks, Diego. And Amara, can you draft a sample Slack message for the monthly reminder?
+
+22
+00:02:36.464 --> 00:02:40.310
+Amara Nwosu: Sure thing, I’ll send it over by end of day.
+
+23
+00:02:41.669 --> 00:02:46.285
+Rachel Kim: Perfect. Okay, last agenda item: the vendor renewal for our webinar platform.
+
+24
+00:02:47.571 --> 00:02:54.494
+Omar Haddad: Oh, right. I saw the renewal notice come through. Are we sticking with the same plan or upgrading?
+
+25
+00:02:55.394 --> 00:03:01.932
+Nadia Petrova: I think we’re fine with the current plan, unless anyone’s had issues with attendee limits or integrations?
+
+26
+00:03:03.087 --> 00:03:07.703
+Diego Santos: No issues from my side. The integrations with Marketo have been stable.
+
+27
+00:03:08.943 --> 00:03:12.404
+Amara Nwosu: Same here. No complaints from the field teams either.
+
+28
+00:03:13.771 --> 00:03:21.079
+Rachel Kim: Alright, I’ll confirm with Finance that we’re renewing as-is. Nadia, can you double-check the usage stats just in case?
+
+29
+00:03:21.914 --> 00:03:28.068
+Nadia Petrova: Yep, I’ll pull the last six months of usage and send it to you by tomorrow.
+
+30
+00:03:28.622 --> 00:03:31.699
+Rachel Kim: Thanks, Nadia. Anything else before we wrap up?
+
+31
+00:03:32.531 --> 00:03:42.915
+Diego Santos: Just a quick one—do we want to add a note to the handbook about who owns the monthly update, or just keep it in the team calendar?
+
+32
+00:03:43.621 --> 00:03:49.775
+Rachel Kim: Let’s add it to the handbook for clarity, but also keep the calendar invite. Good call.
+
+33
+00:03:50.844 --> 00:03:54.690
+Diego Santos: Will do. I’ll make sure it’s clear in the update.
+
+34
+00:03:55.928 --> 00:04:00.159
+Amara Nwosu: And I’ll include the Slack reminder template in the doc too.
+
+35
+00:04:01.300 --> 00:04:02.839
+Omar Haddad: Sounds good. Thanks, everyone.
+
+36
+00:04:04.131 --> 00:04:05.670
+Nadia Petrova: Thanks all, talk soon.
+
+37
+00:04:07.065 --> 00:04:10.911
+Rachel Kim: Alright, thanks everyone. Have a good rest of your week!
+
+38
+00:04:12.386 --> 00:04:13.886
+Diego Santos: Bye!
+
+39
+00:04:14.781 --> 00:04:16.281
+Amara Nwosu: Bye, all.
+
+40
+00:04:17.660 --> 00:04:19.160
+Omar Haddad: Take care.
+
+41
+00:04:20.129 --> 00:04:21.629
+Nadia Petrova: Bye!
+
+42
+00:04:22.691 --> 00:04:25.768
+Rachel Kim: Meeting adjourned, I’ll send out the notes shortly.
+
+43
+00:04:26.077 --> 00:04:29.923
+Diego Santos: I’ll get started on the handbook update right after this.
+
+44
+00:04:30.680 --> 00:04:33.757
+Amara Nwosu: And I’ll ping you the Slack draft, Rachel.
+
+45
+00:04:35.084 --> 00:04:36.584
+Rachel Kim: Perfect, thanks team.

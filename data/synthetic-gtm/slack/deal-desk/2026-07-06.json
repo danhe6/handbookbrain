@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Hey, does anyone know where to find the Partner FAQ for Selling with GitLab, specifically the bit about Purchase Orders? I\u2019m trying to clarify what\u2019s actually required for order acceptance and booking.",
+    "ts": "1783344600.000000",
+    "synthetic": true,
+    "thread_ts": "1783344600.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Yeah, Tom, for PO requirements there\u2019s an Order Requirements Checklist in the Sales Order Processing handbook. It\u2019s got all the details for booking an opportunity. I usually just check that doc to make sure everything\u2019s covered.",
+    "ts": "1783346052.665933",
+    "synthetic": true,
+    "thread_ts": "1783344600.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Thanks, Mei! And if a partner wants to submit a signed GitLab quote instead of a PO, is that okay?",
+    "ts": "1783346784.731989",
+    "synthetic": true,
+    "thread_ts": "1783344600.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Yep, a signed GitLab quote or order form is fine instead of a PO, as long as it has the signature, full name, title, and date. Just double check it meets the booking requirements in the handbook.",
+    "ts": "1783350983.785038",
+    "synthetic": true,
+    "thread_ts": "1783344600.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U01RACHEL",
+    "text": "Super helpful, Mei, thanks for jumping in! I always forget where that checklist lives.",
+    "ts": "1783355670.512922",
+    "synthetic": true,
+    "thread_ts": "1783344600.000000",
+    "parent_user_id": "U14TOM"
+  }
+]

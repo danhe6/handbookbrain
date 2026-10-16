@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Hey, quick question\u2014how exactly are Zendesk tickets getting into Gainsight? I\u2019m trying to troubleshoot why some tickets aren\u2019t showing up for a few accounts.",
+    "ts": "1778526000.000000",
+    "synthetic": true,
+    "thread_ts": "1778526000.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Hey Mei, so Zendesk syncs directly into Gainsight using the Connectors (not Connectors 2.0, that\u2019s a different thing). There\u2019s a bit in the handbook about this, but basically, sometimes the sync can get disrupted because of how Zendesk, Gainsight, and Salesforce talk to each other.",
+    "ts": "1778527359.586884",
+    "synthetic": true,
+    "thread_ts": "1778526000.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "One thing to check: Zendesk doesn\u2019t send the Org ID over to Salesforce automatically. We did a one-time upload of those IDs into Salesforce, and then Gainsight pulls them in via Connectors 2.0. If the Org ID is missing, tickets might not match up with the right account in Gainsight.",
+    "ts": "1778531093.216637",
+    "synthetic": true,
+    "thread_ts": "1778526000.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Ah, that makes sense. So if an account\u2019s missing the Zendesk Org ID in Salesforce, the tickets won\u2019t show up in Gainsight for that company?",
+    "ts": "1778532730.577778",
+    "synthetic": true,
+    "thread_ts": "1778526000.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Exactly. If you\u2019re seeing gaps, try re-importing the Zendesk Org IDs into Salesforce for those accounts. That usually fixes it. There\u2019s an open issue about this too, but for now, that\u2019s the workaround.",
+    "ts": "1778534051.705340",
+    "synthetic": true,
+    "thread_ts": "1778526000.000000",
+    "parent_user_id": "U15MEI"
+  }
+]

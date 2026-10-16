@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Hey, quick question\u2014where do I find the details on partner discounts and incentives? Got a reseller asking about rebates and I can't remember where the doc is.",
+    "ts": "1787598000.000000",
+    "synthetic": true,
+    "thread_ts": "1787598000.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Hi Mei! All that info should be in the Internal Incentive Guide. It covers partner discounts, incentives, rebates, the whole thing. I think the link is in the handbook under the sales section if you need it.",
+    "ts": "1787602639.748513",
+    "synthetic": true,
+    "thread_ts": "1787598000.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Awesome, thanks Sara! I\u2019ll dig it up in the handbook. Just wanted to make sure I wasn\u2019t missing a new doc or something.",
+    "ts": "1787604928.641018",
+    "synthetic": true,
+    "thread_ts": "1787598000.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "No worries! It\u2019s the same guide we\u2019ve been using, just updated now and then. Let me know if you can\u2019t find the link and I\u2019ll DM it to you.",
+    "ts": "1787606728.612026",
+    "synthetic": true,
+    "thread_ts": "1787598000.000000",
+    "parent_user_id": "U15MEI"
+  }
+]

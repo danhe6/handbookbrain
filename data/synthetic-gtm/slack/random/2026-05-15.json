@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Happy Friday! Anyone got fun weekend plans? I\u2019m thinking about finally taking Mochi to the dog park if it stops raining \ud83d\udc36\ud83c\udf27\ufe0f",
+    "ts": "1778877000.000000",
+    "synthetic": true,
+    "thread_ts": "1778877000.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Haha, I saw that meme you posted yesterday Mei, the one with the cat in the banana suit? My kid made me watch it like 10 times \ud83d\ude02",
+    "ts": "1778879532.093091",
+    "synthetic": true,
+    "thread_ts": "1778877000.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Lol, Mochi would never forgive me if I tried that. She barely tolerates her raincoat. Also, Tom, did you see the bug in the calendar app? It keeps duplicating my reminders.",
+    "ts": "1778881247.295511",
+    "synthetic": true,
+    "thread_ts": "1778877000.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Yeah, I noticed that too! Thought I was just losing it for a sec. I\u2019ll file a ticket if no one else has. Also, rain or shine, Mochi deserves the park!",
+    "ts": "1778886643.987937",
+    "synthetic": true,
+    "thread_ts": "1778877000.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U01RACHEL",
+    "text": "Wait, is that why my phone buzzed 8 times for the same meeting? \ud83d\ude02 Glad it\u2019s not just me. Also, Mei, pics of Mochi at the park or it didn\u2019t happen!",
+    "ts": "1778891269.599159",
+    "synthetic": true,
+    "thread_ts": "1778877000.000000",
+    "parent_user_id": "U15MEI"
+  }
+]

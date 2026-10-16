@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Hey, quick question\u2014if we want to send out a new onboarding email series for customers, do we need to get it reviewed outside our team? Or can we just adapt the stuff from the last campaign and send it out?",
+    "ts": "1789675200.000000",
+    "synthetic": true,
+    "thread_ts": "1789675200.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Yeah, Mei, we do need to get it reviewed. Even if you\u2019re adapting stuff from the last campaign, it still has to go through the content review process. There\u2019s a whole thing in the handbook about this\u2014something like, any new or adapted content needs to be checked for accuracy and style, not just by us.",
+    "ts": "1789680244.408156",
+    "synthetic": true,
+    "thread_ts": "1789675200.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Ah, got it. Do you know how long that usually takes? We\u2019re hoping to get this out before the end of the month.",
+    "ts": "1789681905.437194",
+    "synthetic": true,
+    "thread_ts": "1789675200.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "It\u2019s usually about 10 working days, give or take. They call it a milestone in the policy. So I\u2019d plan for at least two weeks for the full review, just to be safe.",
+    "ts": "1789685750.010600",
+    "synthetic": true,
+    "thread_ts": "1789675200.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Okay, thanks Jake! I\u2019ll factor that into the timeline. I\u2019ll check the handbook page for the steps too.",
+    "ts": "1789688063.799611",
+    "synthetic": true,
+    "thread_ts": "1789675200.000000",
+    "parent_user_id": "U15MEI"
+  }
+]

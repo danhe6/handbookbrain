@@ -1,0 +1,133 @@
+WEBVTT
+
+00:00:02.000 --> 00:00:06.615
+<v Ken Watanabe>Alright, it’s 10:02, let’s get started. Hope everyone’s Friday is going okay?</v>
+
+00:00:07.501 --> 00:00:12.501
+<v Nadia Petrova>Morning! Yeah, not bad. I just got my coffee so I’m functional now.</v>
+
+00:00:13.490 --> 00:00:20.413
+<v Ethan Brooks>Hey all. I’m here, just wrapping up a call with legal, so if I sound distracted, that’s why.</v>
+
+00:00:21.867 --> 00:00:28.021
+<v Julia Costa>Hi everyone! I’m good, just trying to get through month-end billing. It’s a lot this cycle.</v>
+
+00:00:29.428 --> 00:00:35.197
+<v Ken Watanabe>Yeah, I bet. Julia, let us know if you need any help with the backlog.</v>
+
+00:00:36.379 --> 00:00:42.533
+<v Julia Costa>Thanks, Ken. I might ping you later if I get stuck on the partner credits thing.</v>
+
+00:00:43.630 --> 00:00:52.861
+<v Nadia Petrova>Oh, and quick update from Sales Ops: we’re seeing more partner-sourced deals this quarter, so these process changes are coming at a good time.</v>
+
+00:00:53.987 --> 00:01:01.295
+<v Ethan Brooks>That’s great to hear. Deal Desk is seeing more volume too, so anything that streamlines the review is welcome.</v>
+
+00:01:02.014 --> 00:01:10.091
+<v Ken Watanabe>Awesome. Okay, let’s jump into the main agenda. We need to finalize the updates to the partner sourced deal registration process.</v>
+
+00:01:11.164 --> 00:01:22.318
+<v Nadia Petrova>Right, so we’re aligning both resale and referral flows to use `Status = New` instead of `DR-Status = Submitted`, and clarifying the steps for Ecosystem Ops and ESM review.</v>
+
+00:01:23.003 --> 00:01:31.465
+<v Julia Costa>I read through the draft. The new steps for linking customer accounts and contacts make sense to me. It’s clearer than before.</v>
+
+00:01:32.834 --> 00:01:42.065
+<v Ethan Brooks>Same here. I like that we’re specifying when the registration is actually ready for ESM or RD review. That was always a gray area.</v>
+
+00:01:42.852 --> 00:01:48.237
+<v Ken Watanabe>Yeah, that’s been a pain point. The new language should help avoid premature reviews.</v>
+
+00:01:48.759 --> 00:01:59.144
+<v Nadia Petrova>One thing—on the referral flow, do we want to require an opportunity to be linked, or is it okay to leave it blank for ESM to handle?</v>
+
+00:01:59.427 --> 00:02:07.504
+<v Ethan Brooks>I’d say leave it flexible. Sometimes the partner doesn’t have enough info, and it’s easier for ESM to link it later.</v>
+
+00:02:07.731 --> 00:02:13.116
+<v Julia Costa>Agreed. For billing, we sometimes don’t get the opportunity details until after approval anyway.</v>
+
+00:02:14.036 --> 00:02:20.959
+<v Ken Watanabe>Okay, so we’ll keep it optional for referral. That’s in the draft already, so no change needed there.</v>
+
+00:02:21.924 --> 00:02:28.078
+<v Nadia Petrova>Perfect. Another thing—should we add a note about the notification emails for ESM and RD approvals?</v>
+
+00:02:28.287 --> 00:02:33.672
+<v Ethan Brooks>Yeah, I think that’s helpful. People still get confused about when they’ll get pinged.</v>
+
+00:02:34.792 --> 00:02:40.561
+<v Ken Watanabe>Good call. Nadia, can you add a line about the email notifications in both sections?</v>
+
+00:02:40.838 --> 00:02:47.376
+<v Nadia Petrova>Yep, I’ll do that. I’ll just copy the language from the resale section to the referral one.</v>
+
+00:02:47.664 --> 00:02:59.587
+<v Julia Costa>Quick question—on the new ESM review section, do we want to specify what happens if the registration is denied? Like, does it go back to the partner or just close out?</v>
+
+00:02:59.828 --> 00:03:03.289
+<v Ken Watanabe>Good catch. Ethan, do you know what’s standard there?</v>
+
+00:03:03.919 --> 00:03:11.996
+<v Ethan Brooks>If it’s denied, it should go back to the partner with comments. That’s how we’ve been handling it in Deal Desk.</v>
+
+00:03:12.864 --> 00:03:18.633
+<v Nadia Petrova>Okay, I’ll add a bullet about denied registrations being returned to the partner with comments.</v>
+
+00:03:19.195 --> 00:03:23.426
+<v Ken Watanabe>Great. Any other concerns or edits before we lock this in?</v>
+
+00:03:24.257 --> 00:03:26.180
+<v Julia Costa>Nope, looks good to me.</v>
+
+00:03:27.081 --> 00:03:28.581
+<v Ethan Brooks>All good here.</v>
+
+00:03:29.721 --> 00:03:34.337
+<v Nadia Petrova>I’m good too. I’ll make those tweaks and update the handbook page.</v>
+
+00:03:35.684 --> 00:03:46.069
+<v Ken Watanabe>Alright, decision is: we’re approving the new process language for both resale and referral deal registrations, and adding the ESM review section as drafted, with Nadia’s edits.</v>
+
+00:03:47.018 --> 00:03:50.479
+<v Julia Costa>Nice. That should make onboarding new folks way easier.</v>
+
+00:03:50.995 --> 00:03:53.303
+<v Ethan Brooks>Agreed. Thanks for driving this, Ken.</v>
+
+00:03:54.118 --> 00:04:00.271
+<v Ken Watanabe>Thanks, everyone. Nadia, can you aim to update the handbook page in the next two weeks?</v>
+
+00:04:01.001 --> 00:04:04.078
+<v Nadia Petrova>Yep, I’ll have it done by June 5th.</v>
+
+00:04:04.400 --> 00:04:14.785
+<v Ken Watanabe>Awesome. Last thing—quick unrelated item. We got the results from the partner satisfaction survey. Overall positive, but a few comments about slow responses on deal reg approvals.</v>
+
+00:04:15.841 --> 00:04:19.303
+<v Julia Costa>Not surprised. That’s been a theme for a while.</v>
+
+00:04:19.964 --> 00:04:25.733
+<v Ethan Brooks>Do we want to set up a quick training for ESMs on the new process?</v>
+
+00:04:26.467 --> 00:04:33.006
+<v Ken Watanabe>Yeah, good idea. I’ll schedule a 30-minute walkthrough next week. I’ll send out an invite after this.</v>
+
+00:04:34.329 --> 00:04:38.559
+<v Nadia Petrova>Let me know if you want me to join for Q&A.</v>
+
+00:04:38.830 --> 00:04:41.907
+<v Ken Watanabe>Will do, thanks. Anything else before we wrap?</v>
+
+00:04:42.956 --> 00:04:46.033
+<v Julia Costa>Nope, I’m good. Have a great weekend, everyone!</v>
+
+00:04:47.073 --> 00:04:48.573
+<v Ethan Brooks>You too!</v>
+
+00:04:48.852 --> 00:04:50.352
+<v Nadia Petrova>Bye all!</v>
+
+00:04:51.499 --> 00:04:53.037
+<v Ken Watanabe>Thanks, everyone. Talk soon.</v>

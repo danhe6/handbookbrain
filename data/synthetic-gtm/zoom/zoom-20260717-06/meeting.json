@@ -1,0 +1,30 @@
+{
+  "uuid": "zoom-20260717-06",
+  "topic": "Marketing Ops weekly",
+  "start_time": "2026-07-17T10:00:00Z",
+  "duration": 5,
+  "host_email": "rachel.kim@example.com",
+  "participants": [
+    {
+      "name": "Rachel Kim",
+      "user_email": "rachel.kim@example.com"
+    },
+    {
+      "name": "Diego Santos",
+      "user_email": "diego.santos@example.com"
+    },
+    {
+      "name": "Amara Nwosu",
+      "user_email": "amara.nwosu@example.com"
+    },
+    {
+      "name": "Omar Haddad",
+      "user_email": "omar.haddad@example.com"
+    },
+    {
+      "name": "Nadia Petrova",
+      "user_email": "nadia.petrova@example.com"
+    }
+  ],
+  "synthetic": true
+}

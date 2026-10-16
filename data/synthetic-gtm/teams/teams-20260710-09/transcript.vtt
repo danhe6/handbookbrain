@@ -1,0 +1,136 @@
+WEBVTT
+
+00:00:02.000 --> 00:00:07.385
+<v Rachel Kim>Alright, happy Friday everyone. Let’s get started—quick round of updates before we dive in.</v>
+
+00:00:07.923 --> 00:00:14.846
+<v Diego Santos>Morning! Marketo sync issues from last week are resolved. Also, the nurture campaign is live as of yesterday.</v>
+
+00:00:15.471 --> 00:00:23.548
+<v Amara Nwosu>Hey all. Lead scoring model tweaks are in QA, should be ready for review by Monday. No blockers on my end.</v>
+
+00:00:24.339 --> 00:00:32.032
+<v Omar Haddad>Revenue dashboards are up to date. I’m still waiting on a couple of data points from Sales, but nothing urgent.</v>
+
+00:00:32.671 --> 00:00:39.209
+<v Nadia Petrova>Hi everyone. Sales team is wrapping up Q2 pipeline reviews. I’ll share the summary doc next week.</v>
+
+00:00:40.553 --> 00:00:46.706
+<v Rachel Kim>Thanks, Nadia. Anyone have weekend plans? I’m hoping to get outside if it ever stops raining.</v>
+
+00:00:47.268 --> 00:00:52.268
+<v Diego Santos>Supposed to clear up Sunday, fingers crossed. I might actually see the sun.</v>
+
+00:00:53.705 --> 00:00:56.397
+<v Amara Nwosu>I’m just catching up on sleep, honestly.</v>
+
+00:00:57.145 --> 00:01:02.530
+<v Rachel Kim>Alright, let’s jump to the main agenda item: the Marketing Technology Tiering System policy.</v>
+
+00:01:03.815 --> 00:01:13.815
+<v Rachel Kim>We’ve had a couple of requests to revisit the renewal timing for Tier 2 tools. Four months isn’t always enough, especially with legal reviews dragging out.</v>
+
+00:01:14.626 --> 00:01:21.934
+<v Diego Santos>Yeah, last quarter we almost missed the renewal window for Drift. Legal took forever, and we had to scramble.</v>
+
+00:01:23.108 --> 00:01:30.031
+<v Amara Nwosu>I’ve noticed the same with some of the analytics tools. Four months is tight if there’s any hiccup.</v>
+
+00:01:30.299 --> 00:01:37.222
+<v Omar Haddad>From the analytics side, we’re seeing more vendor back-and-forth too. Six months would give us more breathing room.</v>
+
+00:01:38.659 --> 00:01:47.505
+<v Nadia Petrova>Sales ops is in favor of more lead time. We get pulled in for contract reviews at the last minute, which isn’t ideal.</v>
+
+00:01:47.997 --> 00:01:56.458
+<v Rachel Kim>So, proposal: we change the renewal timing for Tier 2 tools from four months to six months, to match Tier 1. Thoughts?</v>
+
+00:01:56.748 --> 00:02:00.978
+<v Diego Santos>Makes sense to me. It’ll help us avoid last-minute fire drills.</v>
+
+00:02:02.423 --> 00:02:05.500
+<v Amara Nwosu>Agreed. It’s more realistic with our current process.</v>
+
+00:02:05.752 --> 00:02:07.252
+<v Omar Haddad>No objections here.</v>
+
+00:02:07.492 --> 00:02:12.877
+<v Nadia Petrova>I’m good with that. It’ll help us coordinate better with legal and finance too.</v>
+
+00:02:13.399 --> 00:02:20.706
+<v Rachel Kim>Alright, let’s make it official: renewal discussions for Tier 2 tools will now start six months before contract expiration.</v>
+
+00:02:21.997 --> 00:02:27.766
+<v Rachel Kim>Diego, can you update the handbook page and flag the change in the #marketing-ops channel?</v>
+
+00:02:28.774 --> 00:02:35.313
+<v Diego Santos>Yep, I’ll take care of it. I’ll update the table and add a note about the change.</v>
+
+00:02:35.823 --> 00:02:40.823
+<v Rachel Kim>Thanks, Diego. Let’s aim to have that done by end of day Tuesday.</v>
+
+00:02:41.638 --> 00:02:43.138
+<v Diego Santos>Will do.</v>
+
+00:02:43.487 --> 00:02:47.718
+<v Rachel Kim>Great. Any other thoughts on the tiering policy while we’re here?</v>
+
+00:02:49.150 --> 00:02:52.611
+<v Amara Nwosu>Not from me. The rest looks fine for now.</v>
+
+00:02:53.416 --> 00:02:54.916
+<v Omar Haddad>Nope, all good.</v>
+
+00:02:55.449 --> 00:02:56.949
+<v Nadia Petrova>Same here.</v>
+
+00:02:57.629 --> 00:03:02.629
+<v Rachel Kim>Alright, moving on—quick note on the team engagement survey. Results came in yesterday.</v>
+
+00:03:03.616 --> 00:03:08.616
+<v Rachel Kim>Overall, scores are up, but there’s feedback about wanting more cross-team project visibility.</v>
+
+00:03:10.069 --> 00:03:15.838
+<v Diego Santos>Yeah, I saw that. Maybe we could do a monthly project spotlight in the all-hands?</v>
+
+00:03:16.972 --> 00:03:21.972
+<v Amara Nwosu>I like that idea. Even just a quick slide or two would help.</v>
+
+00:03:23.183 --> 00:03:27.414
+<v Omar Haddad>Agreed. Sometimes I have no idea what’s happening outside my bubble.</v>
+
+00:03:27.827 --> 00:03:36.673
+<v Rachel Kim>Okay, I’ll add a project spotlight to the agenda for next month’s all-hands. Diego, can you help me pull together the first one?</v>
+
+00:03:37.278 --> 00:03:43.816
+<v Diego Santos>Sure thing. I’ll draft something for the nurture campaign and share it with you by next Friday.</v>
+
+00:03:44.768 --> 00:03:47.461
+<v Rachel Kim>Perfect, thanks. Anything else before we wrap?</v>
+
+00:03:48.868 --> 00:03:50.368
+<v Nadia Petrova>Nothing from me.</v>
+
+00:03:51.317 --> 00:03:52.817
+<v Omar Haddad>All set here.</v>
+
+00:03:54.197 --> 00:03:55.697
+<v Amara Nwosu>I’m good.</v>
+
+00:03:56.385 --> 00:03:59.077
+<v Rachel Kim>Alright, thanks everyone. Have a great weekend!</v>
+
+00:04:00.501 --> 00:04:02.001
+<v Diego Santos>You too!</v>
+
+00:04:02.459 --> 00:04:03.959
+<v Amara Nwosu>Bye all.</v>
+
+00:04:04.929 --> 00:04:06.467
+<v Omar Haddad>See you next week.</v>
+
+00:04:07.747 --> 00:04:09.247
+<v Nadia Petrova>Bye!</v>
+
+00:04:09.763 --> 00:04:11.263
+<v Rachel Kim>Meeting adjourned.</v>

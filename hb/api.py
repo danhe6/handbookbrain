@@ -128,6 +128,74 @@ def _answer_vids(aid: str) -> list[str]:
     return [x["v"] for x in rows("MATCH (:Answer {id:$id})-[:CITES]->(s:Section) RETURN s.vid AS v", {"id": aid})]
 
 
+# ---------------------------------------------------------------- graph views
+
+DEMO_Q = {
+    "gitlab": ["Why did the Ireland pension employer contribution change, and who decided it?",
+               "How many weeks of parental leave do employees in Australia get now?",
+               "Who owns the paid time off page, and when did it last change?"],
+    "larkspur": ["Who do I contact for pre-approval of an expense that's not listed as eligible?",
+                 "Why did the OpsAlert response time for on-call change, and who decided it?",
+                 "What's the maximum relocation reimbursement per move?"],
+}
+
+
+@app.get("/api/story/{aid}")
+def story(aid: str):
+    from .story import answer_story
+    r = answer_story(aid)
+    if r.get("error"):
+        raise HTTPException(404, r["error"])
+    return r
+
+
+@app.get("/api/answers")
+def answers(limit: int = 30):
+    return {"answers": rows(
+        """
+        MATCH (a:Answer)-[:ANSWERS]->(qn:Question) WHERE a.status IN ['fresh', 'stale']
+        OPTIONAL MATCH (a)-[:CITES]->(s:Section)
+        WITH a, qn, count(s) AS cites
+        OPTIONAL MATCH (a)-[r:INVALIDATED_BY|REVALIDATED_BY]->()
+        RETURN a.id AS id, qn.text AS question, a.status AS status, a.created AS created, a.answerable AS answerable,
+               cites, count(r) AS checks
+        ORDER BY checks DESC, created DESC LIMIT $n
+        """, {"n": limit}),
+        "suggested": config.CFG.get("demo_questions") or DEMO_Q.get(config.COMPANY, [])}
+
+
+@app.get("/api/graph/explore")
+def graph_explore(limit: int = 220):
+    from .story import explore
+    return explore(limit)
+
+
+@app.get("/api/graph/page")
+def graph_page(path: str):
+    from .story import page_graph
+    return page_graph(path)
+
+
+@app.get("/api/graph/schema")
+def graph_schema():
+    from .story import schema
+    return schema()
+
+
+@app.get("/api/config")
+def cfg():
+    from .llm import CACHE, NET
+    raw = (config.ROOT / "companies" / f"{config.COMPANY}.yaml")
+    return {"company": config.COMPANY, "name": config.COMPANY_NAME, "yaml": raw.read_text() if raw.exists() else None,
+            "sources": config.SOURCES or [config.DOCS], "t0": config.T0, "graph": config.GRAPH,
+            "models": {"agent": config.MODEL, "critic": config.CRITIC_MODEL, "embeddings": config.EMBED_MODEL,
+                       "conflict_judge": os.getenv("HB_CONFLICT_MODEL", config.MODEL)},
+            "cost_controls": {"llm_cache": CACHE is not None, "retries": NET["num_retries"],
+                              "tool_result_chars": int(os.getenv("HB_TOOL_CHARS", "9000")),
+                              "answer_sample": os.getenv("HB_ANSWER_SAMPLE", "1")},
+            "conversations_dir": str(config.CONV_DIR.relative_to(config.ROOT)) if config.CONV_DIR.exists() else None}
+
+
 # ---------------------------------------------------------------- updates / review
 
 @app.get("/api/updates")
@@ -140,7 +208,7 @@ def updates(limit: int = 40):
         OPTIONAL MATCH (d:Decision)-[:IMPLEMENTED_BY]->(c)
         OPTIONAL MATCH (d)-[:DECIDED_IN]->(cv:Conversation)
         RETURN c.sha AS sha, c.ts AS ts, c.title AS title, c.url AS url, m.iid AS mr, m.url AS mr_url,
-               p.source AS source, p.source_kind AS kind,
+               p.source AS source, p.source_kind AS kind, p.dept AS dept,
                collect(DISTINCT {page:p.title, path:p.path, heading:s.heading, kind:ch.kind, cite:s.cite})[..8] AS sections,
                collect(DISTINCT {statement:d.statement, where:cv.title, src:cv.source, at:d.decided_at})[..3] AS decisions
         ORDER BY ts DESC LIMIT $n
@@ -196,6 +264,45 @@ def review():
     undocumented = unimplemented(now, 21)
     return {"stale_answers": stale, "decided_not_documented": undocumented, "chat_vs_docs": chat,
             "source_conflicts": open_conflicts(), "gaps": gaps}
+
+
+class Draft(BaseModel):
+    decision_id: str
+
+
+class Decide(BaseModel):
+    status: str
+    by: str = ""
+
+
+@app.get("/api/proposals")
+def proposals():
+    from .proposals import listing
+    return {"proposals": listing()}
+
+
+@app.post("/api/proposals/draft")
+def proposal_draft(d: Draft):
+    from .proposals import draft
+    r = draft(d.decision_id)
+    if r.get("error"):
+        raise HTTPException(400, r["error"])
+    return r
+
+
+@app.post("/api/proposals/{pid}")
+def proposal_decide(pid: str, d: Decide):
+    from .proposals import decide
+    r = decide(pid, d.status, d.by)
+    if isinstance(r, dict) and r.get("error"):
+        raise HTTPException(400, r["error"])
+    return r
+
+
+@app.get("/api/impact/{sha}")
+def impact(sha: str):
+    from .entities import impact_of_change
+    return impact_of_change(sha)
 
 
 @app.post("/api/refresh")

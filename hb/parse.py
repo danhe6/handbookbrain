@@ -65,6 +65,47 @@ def norm_url(u: str) -> str:
     return u.split("?")[0].rstrip("/") + "/"
 
 
+H4_RE = re.compile(r"^####\s+(.+?)\s*(\{#([\w-]+)\})?\s*$")
+
+
+def _split_long(chunks):
+    """Long sections are split instead of truncated (a rule buried after a big table must stay findable):
+    first at h4 sub-headings, then at paragraph boundaries."""
+    out = []
+    for anchor, heading, level, lines in chunks:
+        if len("\n".join(lines)) <= MAX_SECTION_CHARS:
+            out.append((anchor, heading, level, lines))
+            continue
+        parts, cur = [], (anchor, heading, level, [])
+        in_code = False
+        for line in lines:
+            if line.strip().startswith("```"):
+                in_code = not in_code
+            m = None if in_code else H4_RE.match(line)
+            if m:
+                parts.append(cur)
+                h = m.group(1).strip()
+                cur = (m.group(3) or slug(h), h, 4, [])
+            else:
+                cur[3].append(line)
+        parts.append(cur)
+        for a, h, lv, ls in parts:
+            text = "\n".join(ls)
+            if len(text) <= MAX_SECTION_CHARS:
+                out.append((a, h, lv, ls))
+                continue
+            buf, size, n = [], 0, 1        # then at line boundaries (markdown paragraphs and table rows are lines)
+            for line in ls:
+                if buf and size + len(line) + 1 > MAX_SECTION_CHARS and "".join(buf).strip():
+                    out.append((a if n == 1 else f"{a}-part-{n}", h if n == 1 else f"{h} (part {n})", lv, buf))
+                    buf, size, n = [], 0, n + 1
+                buf.append(line)
+                size += len(line) + 1
+            if "".join(buf).strip():
+                out.append((a if n == 1 else f"{a}-part-{n}", h if n == 1 else f"{h} (part {n})", lv, buf))
+    return out
+
+
 def parse_page(path: str, raw: str) -> Page:
     fm, body = {}, raw
     if raw.startswith("---"):
@@ -100,6 +141,7 @@ def parse_page(path: str, raw: str) -> Page:
         else:
             chunks[-1][3].append(line)
 
+    chunks = _split_long(chunks)
     seen: dict[str, int] = {}
     for order, (anchor, heading, level, lines) in enumerate(chunks):
         text = "\n".join(lines).strip()

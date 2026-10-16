@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Hey, quick question\u2014what\u2019s the process for getting internal support logged in Salesforce? I need to loop in the analytics team on an opp but I\u2019m not sure where to start.",
+    "ts": "1785528000.000000",
+    "synthetic": true,
+    "thread_ts": "1785528000.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Hey Sara! You do that right from the account or opp page. There\u2019s a \u2018Request Support\u2019 button\u2014should be up top. Click that, pick the team you need (analytics in this case), and then fill out the form that pops up.",
+    "ts": "1785532718.526089",
+    "synthetic": true,
+    "thread_ts": "1785528000.000000",
+    "parent_user_id": "U13SARA"
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Make sure you pick the right request type and fill in all the required fields (the ones with the red stars). You can also upload docs if you have anything relevant. Then just hit submit.",
+    "ts": "1785537959.897962",
+    "synthetic": true,
+    "thread_ts": "1785528000.000000",
+    "parent_user_id": "U13SARA"
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "You\u2019ll get a notification with your case number after. If you need to change anything before submitting, there\u2019s a \u2018Previous\u2019 button to go back. It\u2019s all in the handbook under the Salesforce workflow section if you want the step-by-step.",
+    "ts": "1785538474.991113",
+    "synthetic": true,
+    "thread_ts": "1785528000.000000",
+    "parent_user_id": "U13SARA"
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Awesome, thanks Tom! That clears it up. I\u2019ll give it a try now.",
+    "ts": "1785542721.444651",
+    "synthetic": true,
+    "thread_ts": "1785528000.000000",
+    "parent_user_id": "U13SARA"
+  }
+]

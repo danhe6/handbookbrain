@@ -1,0 +1,22 @@
+[
+  {
+    "id": "C000",
+    "name": "sales-ops-help"
+  },
+  {
+    "id": "C001",
+    "name": "deal-desk"
+  },
+  {
+    "id": "C002",
+    "name": "mktg-ops"
+  },
+  {
+    "id": "C003",
+    "name": "revenue-analytics"
+  },
+  {
+    "id": "C004",
+    "name": "random"
+  }
+]

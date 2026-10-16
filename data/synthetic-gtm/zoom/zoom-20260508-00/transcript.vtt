@@ -1,0 +1,217 @@
+WEBVTT
+
+1
+00:00:02.000 --> 00:00:05.462
+Rachel Kim: Alright, it’s 9:01, let’s get started. Happy Friday, everyone!
+
+2
+00:00:05.783 --> 00:00:10.398
+Diego Santos: Morning! Hope everyone’s got coffee. I’m running on my second cup already.
+
+3
+00:00:11.836 --> 00:00:15.682
+Amara Nwosu: Hi all! I’m jealous, Diego. I just have tea today.
+
+4
+00:00:16.187 --> 00:00:19.649
+Omar Haddad: Hey folks. I’m still waking up, but I’m here.
+
+5
+00:00:20.252 --> 00:00:26.406
+Nadia Petrova: Good morning! I’m in the office today, so if you hear background noise, sorry in advance.
+
+6
+00:00:27.655 --> 00:00:32.270
+Rachel Kim: No worries, Nadia. Quick round of updates—anything urgent before we dive in?
+
+7
+00:00:32.662 --> 00:00:37.277
+Diego Santos: Nothing urgent from me. Marketo sync ran fine last night, no errors.
+
+8
+00:00:37.537 --> 00:00:43.691
+Amara Nwosu: I’m still working on the lead routing tweaks, but should have something to show next week.
+
+9
+00:00:45.170 --> 00:00:50.939
+Omar Haddad: Revenue numbers are looking steady, no big swings. I’ll send the dashboard link after this.
+
+10
+00:00:51.934 --> 00:00:58.473
+Nadia Petrova: Sales team is asking about the new scoring rules, so I’m glad we’re talking about this today.
+
+11
+00:00:59.672 --> 00:01:05.056
+Rachel Kim: Perfect segue, Nadia. Let’s jump into the main agenda: updating our Marketo scoring documentation.
+
+12
+00:01:05.848 --> 00:01:14.694
+Diego Santos: Yeah, so, we don’t actually have a documented section for trial threshold scoring yet. I drafted something based on what we’ve been doing.
+
+13
+00:01:16.046 --> 00:01:25.662
+Amara Nwosu: I saw your draft, Diego. Looks good, but I had a question about the timing—does it really fire at 8 and 2 in every region?
+
+14
+00:01:26.610 --> 00:01:35.841
+Diego Santos: Yep, that’s how it’s set up. It’s based on the earliest timezone in each region, so APAC gets it first, then EMEA, then AMER.
+
+15
+00:01:36.975 --> 00:01:42.744
+Omar Haddad: Just to clarify, if someone hits 25 points at 8am, they MQL right then, right?
+
+16
+00:01:43.443 --> 00:01:47.289
+Diego Santos: Exactly. And then they’re excluded from further scoring after that.
+
+17
+00:01:48.009 --> 00:01:53.394
+Nadia Petrova: What about the Days Since Trial Counter? Is that still ending at 40 days?
+
+18
+00:01:53.785 --> 00:01:58.016
+Diego Santos: Yeah, after 40 days, the trial scoring stops for that user.
+
+19
+00:01:59.110 --> 00:02:06.033
+Rachel Kim: Okay, and the characteristics—6sense grade, profile, email domain, features used, job title—those are all in the table, right?
+
+20
+00:02:07.394 --> 00:02:12.009
+Diego Santos: Yep, I listed them out. I can add more detail if needed.
+
+21
+00:02:13.328 --> 00:02:21.020
+Amara Nwosu: I think it’s clear. My only concern is, do we need to mention how we handle users with multiple trials?
+
+22
+00:02:22.371 --> 00:02:29.294
+Rachel Kim: Good catch. Diego, do we reset the counter if someone starts a new trial with the same email?
+
+23
+00:02:30.506 --> 00:02:37.814
+Diego Santos: We do, but only if it’s been more than 90 days since their last trial ended. Otherwise, they’re excluded.
+
+24
+00:02:38.298 --> 00:02:40.990
+Omar Haddad: Should we add that to the doc?
+
+25
+00:02:42.236 --> 00:02:46.851
+Rachel Kim: Yes, let’s add a note about the 90-day rule for repeat trials.
+
+26
+00:02:47.956 --> 00:02:49.879
+Diego Santos: Got it, I’ll include that.
+
+27
+00:02:50.683 --> 00:02:52.991
+Nadia Petrova: Thanks. That’ll help with sales questions.
+
+28
+00:02:53.915 --> 00:03:00.454
+Rachel Kim: Alright, moving on to the main scoring model. Diego, you want to walk us through the changes?
+
+29
+00:03:01.846 --> 00:03:09.923
+Diego Santos: Sure. So, we’re formalizing the 100-point system, with Person Score = Behavior + Demographic. MQL at 100, Behavior can’t be zero.
+
+30
+00:03:10.281 --> 00:03:14.896
+Amara Nwosu: And the nightly reset for negative scores is still in place, right?
+
+31
+00:03:15.270 --> 00:03:16.770
+Diego Santos: Yep, that’s unchanged.
+
+32
+00:03:17.574 --> 00:03:22.574
+Omar Haddad: I like that we’re recording the scores at MQL now. Makes reporting easier.
+
+33
+00:03:23.464 --> 00:03:28.849
+Nadia Petrova: Just confirming, exclusions are still the same? GitLab emails, competitors, disqualified, students, partners, etc.
+
+34
+00:03:29.775 --> 00:03:33.622
+Diego Santos: Correct. I listed all those out in the new section.
+
+35
+00:03:34.234 --> 00:03:36.926
+Rachel Kim: Any concerns or objections to this wording?
+
+36
+00:03:38.108 --> 00:03:40.031
+Amara Nwosu: Nope, looks good to me.
+
+37
+00:03:40.807 --> 00:03:42.307
+Omar Haddad: All good here.
+
+38
+00:03:43.566 --> 00:03:45.066
+Nadia Petrova: Fine by me.
+
+39
+00:03:46.426 --> 00:03:49.503
+Rachel Kim: Great. Last one—score decay. Diego, anything new there?
+
+40
+00:03:50.258 --> 00:03:58.334
+Diego Santos: No changes, just clarifying that decay applies even if the score is frozen for partner status. I copied the tables over.
+
+41
+00:03:59.713 --> 00:04:05.483
+Amara Nwosu: I noticed a typo in the demographic decay table—can you double-check the links before publishing?
+
+42
+00:04:06.262 --> 00:04:07.801
+Diego Santos: Will do, thanks Amara.
+
+43
+00:04:08.208 --> 00:04:18.977
+Rachel Kim: Alright, so to summarize: we’re approving the new trial threshold scoring section, updating the main scoring model doc, and clarifying score decay. Diego will update the handbook page.
+
+44
+00:04:20.297 --> 00:04:24.912
+Diego Santos: Yep, I’ll get drafts up and share for review by the 22nd.
+
+45
+00:04:25.697 --> 00:04:33.390
+Rachel Kim: Perfect. Last thing—quick note, we got the results from the vendor satisfaction survey. I’ll send the summary after this call.
+
+46
+00:04:34.567 --> 00:04:38.028
+Omar Haddad: Do we need to do anything with those results?
+
+47
+00:04:39.320 --> 00:04:45.474
+Rachel Kim: Just a quick review, and if you have feedback, send it to me by next Friday.
+
+48
+00:04:46.035 --> 00:04:47.535
+Nadia Petrova: Will do.
+
+49
+00:04:48.746 --> 00:04:50.246
+Amara Nwosu: Sounds good.
+
+50
+00:04:51.076 --> 00:04:55.306
+Rachel Kim: Alright, that’s it for today. Thanks everyone, have a great weekend!
+
+51
+00:04:55.817 --> 00:04:57.317
+Diego Santos: Thanks all, bye!
+
+52
+00:04:58.089 --> 00:04:59.589
+Omar Haddad: Bye!
+
+53
+00:05:00.717 --> 00:05:02.217
+Nadia Petrova: Bye everyone!
+
+54
+00:05:02.722 --> 00:05:04.222
+Amara Nwosu: Bye!

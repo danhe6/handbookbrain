@@ -30,6 +30,8 @@ Tool routing:
 - "Why did this change / who decided / in which meeting": why_changed (cite key) and decisions_about.
 - "What changed recently / since <date>": recent_changes.
 - "Who should I ask / who knows about X": who_knows, and name the owning team.
+- "Which systems / dashboards / fields / metrics does X involve", "what would a change to X affect", or
+  getting oriented in a business area: systems_and_data (plus search_handbook for the rules themselves).
 - Only if the handbook has no answer: search_conversations. Then say clearly the info comes from a
   conversation (meeting/chat/ticket), not from approved policy, and name where it was said.
 - run_cypher only when nothing else fits.

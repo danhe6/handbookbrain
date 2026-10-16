@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Hey team, quick question\u2014does anyone remember how the Marketo > Trial Threshold Scoring works? I can't find the section in the handbook.",
+    "ts": "1781290800.000000",
+    "synthetic": true,
+    "thread_ts": "1781290800.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Yeah, Sara, I can help. So basically, the old rule was that once a lead hit 50 points from engagement activities\u2014like email clicks, webinar signups, that kind of stuff\u2014they\u2019d get flagged as a trial-ready lead. Then it would trigger the trial nurture flow. I think that\u2019s still how it works?",
+    "ts": "1781291130.464940",
+    "synthetic": true,
+    "thread_ts": "1781290800.000000",
+    "parent_user_id": "U13SARA"
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Ah, got it. So 50 points is the magic number. Thanks, Tom!",
+    "ts": "1781293531.576287",
+    "synthetic": true,
+    "thread_ts": "1781290800.000000",
+    "parent_user_id": "U13SARA"
+  },
+  {
+    "type": "message",
+    "user": "U01RACHEL",
+    "text": "Thanks Tom, that\u2019s what I remembered too. I\u2019ll update the doc with that for now.",
+    "ts": "1781295353.434247",
+    "synthetic": true,
+    "thread_ts": "1781290800.000000",
+    "parent_user_id": "U13SARA"
+  }
+]

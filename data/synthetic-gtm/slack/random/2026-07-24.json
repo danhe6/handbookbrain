@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Happy Friday! Anyone got fun weekend plans? I\u2019m thinking about finally taking Luna to the dog park if it stops raining.",
+    "ts": "1784899800.000000",
+    "synthetic": true,
+    "thread_ts": "1784899800.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Omg Luis, I saw that meme you posted yesterday with the dog in the raincoat \ud83d\ude02 Luna needs one of those! I\u2019m just planning to binge some shows and maybe try that new bakery.",
+    "ts": "1784901851.727762",
+    "synthetic": true,
+    "thread_ts": "1784899800.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Haha, I\u2019ll DM you the link, it\u2019s so good. Also, heads up, I think there\u2019s a bug in the time-off request form? It kept looping me back to the start page. Anyone else?",
+    "ts": "1784904621.204107",
+    "synthetic": true,
+    "thread_ts": "1784899800.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Yeah, I got stuck in that loop too. I just emailed HR instead. Hope they fix it soon, I need my beach day!",
+    "ts": "1784906180.148519",
+    "synthetic": true,
+    "thread_ts": "1784899800.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Classic. Guess we\u2019re all just going to have to stay at work forever \ud83d\ude02",
+    "ts": "1784907168.943059",
+    "synthetic": true,
+    "thread_ts": "1784899800.000000",
+    "parent_user_id": "U16LUIS"
+  }
+]

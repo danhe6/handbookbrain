@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Hey folks, quick question: does anyone have the details on how the Marketo > Trial Threshold Scoring works? I\u2019m trying to figure out when a trial user actually gets MQL\u2019d.",
+    "ts": "1787144400.000000",
+    "synthetic": true,
+    "thread_ts": "1787144400.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Yeah, I can help with that. So, in addition to the regular lead scoring, we have a separate scoring model just for trials. Basically, the system checks twice a day (8am and 2pm) in each region, and if a trial user hits 25 points, they get MQL\u2019d and then stop getting scored further. The points come from stuff like 6sense grade (A is +15, B is +7, etc.), 6sense profile strength, if their email isn\u2019t public, how many Duo features they use, and if their job title is management. Also, it only scores for the first 40 days of the trial. There\u2019s a doc with more details but that\u2019s the gist.",
+    "ts": "1787146275.282966",
+    "synthetic": true,
+    "thread_ts": "1787144400.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Awesome, thanks Jake! That clears it up for me.",
+    "ts": "1787150423.250704",
+    "synthetic": true,
+    "thread_ts": "1787144400.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U01RACHEL",
+    "text": "Thanks Jake, super helpful summary. I always forget the exact point breakdown.",
+    "ts": "1787152534.919790",
+    "synthetic": true,
+    "thread_ts": "1787144400.000000",
+    "parent_user_id": "U16LUIS"
+  }
+]

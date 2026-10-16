@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Hey, quick question\u2014does anyone remember the rules for labeling in Marketing Operations? I\u2019m trying to tag a new issue and not sure which ones to use. Is there a doc or something?",
+    "ts": "1786566600.000000",
+    "synthetic": true,
+    "thread_ts": "1786566600.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Yeah, Mei, I can help. So, we use labels for three things: to categorize the tool or area, show priority, and mark the stage. For categories, you\u2019ve got stuff like Marketo, Bizible, 6sense, etc. If it\u2019s a bug, use MktgOps - bug. If it\u2019s just FYI, there\u2019s MktgOps - FYI. There\u2019s also labels for list imports, changelog, and support stuff. Priority and stage are separate labels, but for categories, just pick the one that fits best.",
+    "ts": "1786569033.252982",
+    "synthetic": true,
+    "thread_ts": "1786566600.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Awesome, thanks Jake! That helps a lot. I\u2019ll go with MktgOps - List Import for this one since it\u2019s an event list.",
+    "ts": "1786572840.013136",
+    "synthetic": true,
+    "thread_ts": "1786566600.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U01RACHEL",
+    "text": "Thanks Jake, super clear rundown. I always forget which ones are for bugs vs. support.",
+    "ts": "1786573601.142856",
+    "synthetic": true,
+    "thread_ts": "1786566600.000000",
+    "parent_user_id": "U15MEI"
+  }
+]

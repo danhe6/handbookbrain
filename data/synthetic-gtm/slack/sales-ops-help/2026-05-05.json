@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Hey team, quick one\u2014when we're on the forecast call, which dashboard are we supposed to use as the source of truth for pipeline coverage? I know there\u2019s a few floating around.",
+    "ts": "1778013000.000000",
+    "synthetic": true,
+    "thread_ts": "1778013000.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U08OMAR",
+    "text": "Hey Jake, good question. For the forecast call specifically, we always use the 'RevOps Master Pipeline' dashboard in Tableau. I know it\u2019s not in the handbook yet, but that\u2019s the one leadership wants us referencing. The Salesforce view is just for day-to-day, but for the call, it\u2019s always the Tableau one.",
+    "ts": "1778014276.343966",
+    "synthetic": true,
+    "thread_ts": "1778013000.000000",
+    "parent_user_id": "U12JAKE"
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Ah, got it. Thanks Omar! I was looking at the Salesforce one last week, so that explains the numbers not matching up. Appreciate it.",
+    "ts": "1778015400.240869",
+    "synthetic": true,
+    "thread_ts": "1778013000.000000",
+    "parent_user_id": "U12JAKE"
+  },
+  {
+    "type": "message",
+    "user": "U08OMAR",
+    "text": "No problem! Yeah, the Tableau dashboard pulls in the latest adjustments and manual overrides, so it\u2019s the most up-to-date for those calls. If you need access or can\u2019t find it, just ping me.",
+    "ts": "1778016843.550373",
+    "synthetic": true,
+    "thread_ts": "1778013000.000000",
+    "parent_user_id": "U12JAKE"
+  },
+  {
+    "type": "message",
+    "user": "U01RACHEL",
+    "text": "Thanks for clarifying, Omar. I think a few of us have been using the wrong one. Maybe we should add that to the onboarding doc?",
+    "ts": "1778020952.998642",
+    "synthetic": true,
+    "thread_ts": "1778013000.000000",
+    "parent_user_id": "U12JAKE"
+  }
+]

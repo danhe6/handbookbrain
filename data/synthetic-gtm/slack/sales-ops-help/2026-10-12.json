@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Hey, quick question\u2014if I want to send a custom cake to a client through Reachdesk, do I need to build a whole campaign first or is there a way to just pick something and send it?",
+    "ts": "1791811800.000000",
+    "synthetic": true,
+    "thread_ts": "1791811800.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Hey Mei, you don\u2019t have to build a campaign just to browse. You can check out all the available cakes and other stuff either in the marketplace directly or in the campaign builder without actually setting anything up. There\u2019s a link in the handbook somewhere, but you can also just poke around in the marketplace tab.",
+    "ts": "1791813413.389832",
+    "synthetic": true,
+    "thread_ts": "1791811800.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Awesome, thanks Jake! And I can customize the cake, right? Like add a message or logo?",
+    "ts": "1791815109.764719",
+    "synthetic": true,
+    "thread_ts": "1791811800.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Yep, you can personalize most of the items\u2014cakes, flowers, whatever. Just look for the customization options when you\u2019re picking it out. If you need the full list, there\u2019s an Airtable linked from the doc too.",
+    "ts": "1791818328.795893",
+    "synthetic": true,
+    "thread_ts": "1791811800.000000",
+    "parent_user_id": "U15MEI"
+  }
+]

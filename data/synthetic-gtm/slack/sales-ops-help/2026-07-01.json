@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Hey team, quick question\u2014does anyone remember how Marketo behavior scoring works? Specifically, like, what triggers the points and how often someone can get scored?",
+    "ts": "1782914400.000000",
+    "synthetic": true,
+    "thread_ts": "1782914400.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Yeah, Tom, I can help. So behavior scoring is all about what actions the person takes\u2014like attending events, downloading stuff, that kind of thing. Each action has a set number of points, and you can get scored every time you do the thing (like, every time you attend a conference or download content). But once the Person Score goes over 300, the behavior scoring gets nulled out. For campaigns, you only get points if there\u2019s a 'success'\u2014I think the details are on the programs page in the handbook, under progression statuses.",
+    "ts": "1782916261.363344",
+    "synthetic": true,
+    "thread_ts": "1782914400.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Oh, and for example, attending a webcast is +40 points, attending online stuff is +20, conference booth visits are +20, and content syndication downloads are +10. There\u2019s a table somewhere in the handbook if you need the full list.",
+    "ts": "1782920043.960343",
+    "synthetic": true,
+    "thread_ts": "1782914400.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Super helpful, Sara, thanks! That clears it up for me too.",
+    "ts": "1782921685.750303",
+    "synthetic": true,
+    "thread_ts": "1782914400.000000",
+    "parent_user_id": "U14TOM"
+  }
+]

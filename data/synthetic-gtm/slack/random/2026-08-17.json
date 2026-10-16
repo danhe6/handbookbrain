@@ -1,0 +1,92 @@
+[
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Happy Friday everyone! Anyone got fun weekend plans? I\u2019m thinking about finally taking Luna to the dog park if it doesn\u2019t rain again.",
+    "ts": "1786995000.000000",
+    "synthetic": true,
+    "thread_ts": "1786995000.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Happy Friday! Anyone got fun weekend plans? I\u2019m thinking about finally taking Luna to the dog park if it doesn\u2019t rain again.",
+    "ts": "1786996800.000000",
+    "synthetic": true,
+    "thread_ts": "1786996800.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Omg Luis, please post pics if you do! I\u2019m just hoping my cat doesn\u2019t knock over another plant. She\u2019s on a rampage lately \ud83d\ude02",
+    "ts": "1786998645.076984",
+    "synthetic": true,
+    "thread_ts": "1786996800.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Haha, Luna\u2019s gonna love that. I\u2019m just hoping my cat doesn\u2019t break anything else while I\u2019m out. She knocked over my coffee this morning\u2026 again.",
+    "ts": "1786999283.863356",
+    "synthetic": true,
+    "thread_ts": "1786995000.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Lol, classic cat. Oh, speaking of chaos, did anyone else see that meme I posted yesterday? The one with the dog in the burning room? That\u2019s basically my inbox right now \ud83d\ude02",
+    "ts": "1786999580.028081",
+    "synthetic": true,
+    "thread_ts": "1786995000.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "@Mei Chen haha will do! Luna vs. your cat would be a wild showdown. Also, did anyone else see that meme Rachel posted in #memes? The one with the bug in the code and the cat? Too real.",
+    "ts": "1787000958.933317",
+    "synthetic": true,
+    "thread_ts": "1786996800.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Yeah, that meme is my life. Also, did anyone else\u2019s Slack randomly log them out this morning? Or was that just me?",
+    "ts": "1787001626.495391",
+    "synthetic": true,
+    "thread_ts": "1786995000.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "YES, I laughed way too hard. Also, speaking of bugs, did anyone else\u2019s Slack randomly log them out this morning or just me?",
+    "ts": "1787002139.129833",
+    "synthetic": true,
+    "thread_ts": "1786996800.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U01RACHEL",
+    "text": "Not just you, Tom! I had to reset my password twice. IT said it\u2019s a known bug, they\u2019re working on it. Meanwhile, enjoy the weekend chaos everyone!",
+    "ts": "1787002440.349729",
+    "synthetic": true,
+    "thread_ts": "1786995000.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Mei, same here! Thought it was just my laptop being weird. Maybe Slack\u2019s got a bug infestation too \ud83d\ude05",
+    "ts": "1787006411.917475",
+    "synthetic": true,
+    "thread_ts": "1786996800.000000",
+    "parent_user_id": "U16LUIS"
+  }
+]

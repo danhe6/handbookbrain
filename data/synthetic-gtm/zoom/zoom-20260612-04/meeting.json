@@ -1,0 +1,26 @@
+{
+  "uuid": "zoom-20260612-04",
+  "topic": "Channel Ops sync",
+  "start_time": "2026-06-12T16:00:00Z",
+  "duration": 5,
+  "host_email": "ken.watanabe@example.com",
+  "participants": [
+    {
+      "name": "Ken Watanabe",
+      "user_email": "ken.watanabe@example.com"
+    },
+    {
+      "name": "Nadia Petrova",
+      "user_email": "nadia.petrova@example.com"
+    },
+    {
+      "name": "Ethan Brooks",
+      "user_email": "ethan.brooks@example.com"
+    },
+    {
+      "name": "Julia Costa",
+      "user_email": "julia.costa@example.com"
+    }
+  ],
+  "synthetic": true
+}

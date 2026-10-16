@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Happy Friday! Anyone got fun weekend plans? I\u2019m thinking about finally taking Max to the dog park if it ever stops raining.",
+    "ts": "1782498600.000000",
+    "synthetic": true,
+    "thread_ts": "1782498600.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Omg Tom, I saw that meme you posted yesterday with the dog in the raincoat \ud83d\ude02 That\u2019s basically my cat right now, except she just stares at the window like she\u2019s judging the weather.",
+    "ts": "1782499488.608521",
+    "synthetic": true,
+    "thread_ts": "1782498600.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Haha, yeah, Max just gives me that look like, 'you expect me to pee in THIS?' Also, did anyone else\u2019s Slack just randomly log them out? Or is it just me?",
+    "ts": "1782502413.166681",
+    "synthetic": true,
+    "thread_ts": "1782498600.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U01RACHEL",
+    "text": "Nope, same here. I thought it was just my laptop being weird again. Maybe it\u2019s that bug from last week?",
+    "ts": "1782505521.266848",
+    "synthetic": true,
+    "thread_ts": "1782498600.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Ugh, I hope not. I don\u2019t want to have to reset my status again. Anyway, if anyone wants to see a cat in a raincoat, let me know, I have pics \ud83d\ude02",
+    "ts": "1782509825.769670",
+    "synthetic": true,
+    "thread_ts": "1782498600.000000",
+    "parent_user_id": "U14TOM"
+  }
+]

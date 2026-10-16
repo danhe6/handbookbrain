@@ -3,8 +3,8 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-# Departments we ingest (keeps LLM cost + graph size sane). Edit hb/config.py to change.
-SPARSE_DIRS="content/handbook/people-group content/handbook/total-rewards content/handbook/hiring content/handbook/people-policies .gitlab"
+# Areas we ingest (keeps LLM cost + graph size sane). Scope per company lives in companies/<name>.yaml.
+SPARSE_DIRS="content/handbook/people-group content/handbook/total-rewards content/handbook/hiring content/handbook/people-policies content/handbook/marketing/marketing-operations content/handbook/sales/field-operations content/handbook/enterprise-data/marketing-analytics .gitlab"
 
 echo "==> 1/4 Clone GitLab handbook (markdown only, images skipped)"
 if [ ! -d data/handbook/.git ]; then
@@ -48,12 +48,11 @@ echo "    base interpreter: $("$PY" --version) ($PY)"
 echo "==> 4/4 .env"
 if [ ! -f .env ]; then
   cp .env.example .env
-  echo "    Created .env  ->  put your ANTHROPIC_API_KEY in it"
+  echo "    Created .env  ->  put your OPENAI_API_KEY (and optionally ANTHROPIC_API_KEY) in it"
 fi
 
 echo
 echo "Done. Next:"
 echo "  source .venv/bin/activate"
-echo "  python -m hb doctor        # checks git, FalkorDB, API key"
-echo "  python -m hb init          # builds the graph at T0"
-echo "  python -m hb ask \"How many days of PTO can I take?\""
+echo "  python -m hb --company gitlab-gtm doctor      # checks git, FalkorDB, API key"
+echo "  see README.md -> Quickstart for the full build + replay + UI"

@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Hey team, quick question\u2014can we move an opp close date back into last quarter after the books are closed? Got a weird situation with one of my deals.",
+    "ts": "1786131000.000000",
+    "synthetic": true,
+    "thread_ts": "1786131000.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U07NADIA",
+    "text": "Hi Sara, good question. So, technically, once the books are closed, we don\u2019t move close dates back into the previous quarter. The only exception is if the deal was signed before quarter end and we have written proof (like a signed contract with a timestamp). In that case, you need to fill out the 'Retroactive Close Date Request' form and send it to me for approval. It\u2019s not in the handbook yet, but that\u2019s what we\u2019ve been doing for the last couple of quarters.",
+    "ts": "1786136361.413990",
+    "synthetic": true,
+    "thread_ts": "1786131000.000000",
+    "parent_user_id": "U13SARA"
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Ah, got it. Thanks Nadia! I do have the signed contract dated 3/29. Where can I find that form?",
+    "ts": "1786138040.232371",
+    "synthetic": true,
+    "thread_ts": "1786131000.000000",
+    "parent_user_id": "U13SARA"
+  },
+  {
+    "type": "message",
+    "user": "U07NADIA",
+    "text": "I\u2019ll DM you the link, it\u2019s in the Ops shared drive under 'Quarter Close Exceptions'. Just attach the contract and I\u2019ll review it today.",
+    "ts": "1786143323.779250",
+    "synthetic": true,
+    "thread_ts": "1786131000.000000",
+    "parent_user_id": "U13SARA"
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Perfect, thanks so much! Will send it over in a bit.",
+    "ts": "1786146919.232678",
+    "synthetic": true,
+    "thread_ts": "1786131000.000000",
+    "parent_user_id": "U13SARA"
+  }
+]

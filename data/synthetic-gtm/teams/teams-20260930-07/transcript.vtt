@@ -1,0 +1,154 @@
+WEBVTT
+
+00:00:02.000 --> 00:00:08.923
+<v Ethan Brooks>Alright, it’s 10:01, let’s get started. Thanks for joining, everyone. Quick round of updates before we dive in?</v>
+
+00:00:09.706 --> 00:00:23.167
+<v Lena Hoffmann>Sure, I’ll go first. Not much new, just wrapping up a couple of escalations from last week. Oh, and I finally got access to the new quoting sandbox, so I’ll poke around there later today.</v>
+
+00:00:23.390 --> 00:00:34.928
+<v Nadia Petrova>Nice, Lena. On my end, we’re still seeing a bit of lag with the renewal pipeline, but nothing major. I’ll be working with Victor on some reporting tweaks this week.</v>
+
+00:00:35.511 --> 00:00:43.972
+<v Victor Huang>Yeah, I saw your email, Nadia. I’ll get you those dashboards by Friday. Otherwise, just the usual Salesforce admin stuff for me.</v>
+
+00:00:44.698 --> 00:00:55.467
+<v Julia Costa>Billing’s been quiet, which is good. I did get a couple of questions about contract resets from the AR team, so I’m glad we’re talking about that today.</v>
+
+00:00:55.983 --> 00:00:59.445
+<v Ethan Brooks>Great, thanks all. Anything else before we move on?</v>
+
+00:01:00.508 --> 00:01:02.047
+<v Lena Hoffmann>Nope, all good here.</v>
+
+00:01:02.726 --> 00:01:04.226
+<v Nadia Petrova>Let’s go ahead.</v>
+
+00:01:05.146 --> 00:01:16.684
+<v Ethan Brooks>Alright, main agenda: the contract reset process. We’ve had a few edge cases come up, so let’s review the current handbook text and see if we need to clarify anything.</v>
+
+00:01:17.331 --> 00:01:22.331
+<v Victor Huang>I have the page open if anyone wants me to share my screen.</v>
+
+00:01:23.827 --> 00:01:25.750
+<v Ethan Brooks>That’d be great, Victor, thanks.</v>
+
+00:01:26.665 --> 00:01:32.819
+<v Victor Huang>Okay, sharing now. So, here’s the section under ‘Contract Reset’—this is what’s currently in the handbook.</v>
+
+00:01:33.477 --> 00:01:40.784
+<v Lena Hoffmann>Yeah, this is the part that’s been tripping people up, especially the bit about who can request the reset.</v>
+
+00:01:41.574 --> 00:01:53.113
+<v Julia Costa>Right, I had a case where the customer’s procurement team tried to request it, but they weren’t the original purchaser. I wasn’t sure if I should reject it or escalate.</v>
+
+00:01:53.711 --> 00:02:02.557
+<v Nadia Petrova>I’ve seen that too. Sometimes the contact changes mid-term, but the account is the same. It’s not super clear what we do then.</v>
+
+00:02:03.057 --> 00:02:15.749
+<v Ethan Brooks>Good point. The intent is that only the original purchasing party can request, but maybe we need to clarify what happens if the contact changes but the company is the same legal entity.</v>
+
+00:02:16.887 --> 00:02:28.810
+<v Lena Hoffmann>Should we add a note about that? Like, if the company is the same but the contact changes, it’s okay as long as we have written confirmation from the original party?</v>
+
+00:02:29.420 --> 00:02:36.728
+<v Victor Huang>That makes sense. Otherwise, we get stuck in these weird loops where no one can actually request the reset.</v>
+
+00:02:37.894 --> 00:02:42.125
+<v Julia Costa>Yeah, and it slows down billing too. I like Lena’s suggestion.</v>
+
+00:02:43.561 --> 00:02:53.945
+<v Nadia Petrova>Agreed. Maybe just a sentence in the policy, something like, 'If the original purchaser is no longer available, written confirmation from the company’s authorized representative is required.'</v>
+
+00:02:55.042 --> 00:02:58.889
+<v Ethan Brooks>Perfect. Let’s add that. Anything else in the steps themselves?</v>
+
+00:02:59.338 --> 00:03:08.568
+<v Victor Huang>I noticed the instructions for the Billing Account selection are a little confusing. People sometimes click 'New Billing Account' when they don’t need to.</v>
+
+00:03:09.729 --> 00:03:18.575
+<v Lena Hoffmann>Yeah, I’ve had to fix a few of those. Maybe we can bold the part about using the existing Billing Account if possible?</v>
+
+00:03:19.134 --> 00:03:24.519
+<v Julia Costa>Or add a warning, like, 'Only create a new Billing Account if absolutely necessary.'</v>
+
+00:03:25.485 --> 00:03:30.485
+<v Nadia Petrova>That would help. I think people just rush through and miss that detail.</v>
+
+00:03:31.674 --> 00:03:37.827
+<v Ethan Brooks>Okay, so: clarify the purchaser rule, and make the Billing Account instructions more obvious. Anything else?</v>
+
+00:03:38.803 --> 00:03:40.726
+<v Victor Huang>Nope, that covers my concerns.</v>
+
+00:03:42.201 --> 00:03:43.701
+<v Lena Hoffmann>Same here.</v>
+
+00:03:44.983 --> 00:03:46.522
+<v Julia Costa>All good from me.</v>
+
+00:03:47.107 --> 00:03:48.607
+<v Nadia Petrova>Yep, I’m good.</v>
+
+00:03:49.276 --> 00:04:01.584
+<v Ethan Brooks>Alright, decision: we’ll update the handbook to clarify that if the original purchaser is unavailable, written confirmation from an authorized company rep is required. And we’ll make the Billing Account instructions clearer.</v>
+
+00:04:02.177 --> 00:04:11.023
+<v Lena Hoffmann>I can take the action to update the handbook page. I’ll draft the changes and share for review by, let’s say, October 14th?</v>
+
+00:04:12.143 --> 00:04:13.682
+<v Ethan Brooks>Thanks, Lena. Appreciate it.</v>
+
+00:04:14.046 --> 00:04:15.546
+<v Victor Huang>Thanks, Lena.</v>
+
+00:04:15.806 --> 00:04:17.306
+<v Julia Costa>Thank you!</v>
+
+00:04:17.576 --> 00:04:19.076
+<v Nadia Petrova>Thanks, Lena.</v>
+
+00:04:19.656 --> 00:04:34.272
+<v Ethan Brooks>Alright, last thing—quick note on the team survey results. HR sent out the engagement survey last week, and our team’s response rate was only 62%. They’re asking us to remind folks to fill it out if they haven’t.</v>
+
+00:04:35.699 --> 00:04:39.545
+<v Lena Hoffmann>Oh, I totally forgot about that. I’ll do it today.</v>
+
+00:04:40.574 --> 00:04:44.805
+<v Victor Huang>Same, I’ll nudge the rest of the Sales Systems folks too.</v>
+
+00:04:45.984 --> 00:04:49.445
+<v Julia Costa>I think I did mine, but I’ll double check.</v>
+
+00:04:49.779 --> 00:04:52.855
+<v Nadia Petrova>I’ll ping my team in Slack after this.</v>
+
+00:04:53.071 --> 00:05:01.533
+<v Ethan Brooks>Awesome, thanks everyone. Let’s try to get that up to at least 80% by end of week. Anything else before we wrap?</v>
+
+00:05:02.103 --> 00:05:04.026
+<v Lena Hoffmann>Nope, that’s it for me.</v>
+
+00:05:04.848 --> 00:05:06.348
+<v Victor Huang>All good here.</v>
+
+00:05:06.991 --> 00:05:08.491
+<v Julia Costa>Nothing else.</v>
+
+00:05:09.946 --> 00:05:11.446
+<v Nadia Petrova>I’m good.</v>
+
+00:05:11.974 --> 00:05:18.897
+<v Ethan Brooks>Alright, thanks all. Lena, let us know when the draft’s ready. Have a good rest of your Wednesday!</v>
+
+00:05:20.218 --> 00:05:21.756
+<v Lena Hoffmann>Will do. Bye everyone!</v>
+
+00:05:22.104 --> 00:05:23.604
+<v Victor Huang>Bye!</v>
+
+00:05:23.889 --> 00:05:25.389
+<v Julia Costa>Bye!</v>
+
+00:05:26.229 --> 00:05:27.729
+<v Nadia Petrova>Bye!</v>

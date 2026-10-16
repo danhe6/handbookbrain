@@ -1,0 +1,648 @@
+{
+  "tickets": [
+    {
+      "id": 4021,
+      "subject": "Clarification on Pipeline Coverage Dashboard for Forecast Calls",
+      "description": "Hey team, quick question \u2013 for our forecast calls, which dashboard should we be using as the main source of truth for pipeline coverage? I couldn't find anything specific in the handbook about this. There are a couple of dashboards with similar data and I want to make sure I'm referencing the right one. Thanks!",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "pending",
+      "created_at": "2026-04-12T21:35:53Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Victor Huang"
+          },
+          "body": "Hi Sara, good question. I think there\u2019s been some confusion about this lately. Let me double-check with the analytics team and get back to you with a definitive answer.",
+          "created_at": "2026-04-13T10:35:53Z"
+        }
+      ]
+    },
+    {
+      "id": 4006,
+      "subject": "Clarification on SDR Quota and Partner-Sourced Deals",
+      "description": "Hey team, quick question\u2014do deals that come in through our partners count toward SDR quota? I couldn't find anything about this in the handbook or the quota doc. Just want to make sure before I log a few of these. Thanks!",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "pending",
+      "created_at": "2026-04-13T10:10:39Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Sara, good question! I don't think we've spelled this out anywhere. Let me double-check with the quota team and get back to you as soon as I have an answer.",
+          "created_at": "2026-04-15T07:10:39Z"
+        }
+      ]
+    },
+    {
+      "id": 4015,
+      "subject": "Question about merging trial sign-ups from same company domain",
+      "description": "Hi team, I noticed we had a few trial sign-ups from different people at the same company (same email domain). Does Salesforce automatically merge these into a single lead, or do they stay separate? I couldn't find anything about this in the handbook. Thanks!",
+      "requester": {
+        "name": "Mei Chen"
+      },
+      "status": "pending",
+      "created_at": "2026-04-20T11:03:28Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hey Mei, good question! I don't think the handbook covers this either. Let me double-check with the Salesforce admin and get back to you.",
+          "created_at": "2026-04-22T03:03:28Z"
+        }
+      ]
+    },
+    {
+      "id": 4019,
+      "subject": "Clarification on Pipeline Coverage Dashboard for Forecast Calls",
+      "description": "Hey team, quick question \u2013 for our forecast calls, which dashboard should we be using as the main source of truth for pipeline coverage? I couldn't find anything specific in the handbook about this. There are a couple of dashboards with similar data and I want to make sure I'm referencing the right one. Thanks!",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "solved",
+      "created_at": "2026-04-20T12:37:43Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Victor Huang"
+          },
+          "body": "Hi Sara, good question. I think there\u2019s been some confusion about this lately. Let me double-check with the analytics team and get back to you with a definitive answer.",
+          "created_at": "2026-04-21T12:37:43Z"
+        }
+      ]
+    },
+    {
+      "id": 4002,
+      "subject": "Adding a new value to Opportunity picklist",
+      "description": "Hi team, I need to add a new option to one of the picklists on the Opportunity object in Salesforce, but I couldn't find any steps for this in the handbook. Can someone let me know what the process is for requesting a new picklist value? Thanks!",
+      "requester": {
+        "name": "Mei Chen"
+      },
+      "status": "open",
+      "created_at": "2026-04-28T11:17:24Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Mei, thanks for reaching out! I don't think we've documented this process in the handbook yet. Let me check with the Salesforce admin team and get back to you with the right steps.",
+          "created_at": "2026-04-29T07:17:24Z"
+        }
+      ]
+    },
+    {
+      "id": 4014,
+      "subject": "Clarification on SDR Quota and Partner-Sourced Deals",
+      "description": "Hey team, quick question\u2014do deals that come in through our partners count toward SDR quota? I couldn't find anything about this in the handbook or the quota doc. Just want to make sure before I log a few of these. Thanks!",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "pending",
+      "created_at": "2026-05-01T08:50:32Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Sara, good question! I don't think we've spelled this out anywhere. Let me double-check with the quota team and get back to you as soon as I have an answer.",
+          "created_at": "2026-05-03T02:50:32Z"
+        }
+      ]
+    },
+    {
+      "id": 4001,
+      "subject": "Question about merging trial sign-ups from same company domain",
+      "description": "Hi team, I noticed we had a few trial sign-ups from different people at the same company (same email domain). Does Salesforce automatically merge these into a single lead, or do they stay separate? I couldn't find anything about this in the handbook. Thanks!",
+      "requester": {
+        "name": "Mei Chen"
+      },
+      "status": "solved",
+      "created_at": "2026-05-17T03:29:15Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hey Mei, good question! I don't think the handbook covers this either. Let me double-check with the Salesforce admin and get back to you.",
+          "created_at": "2026-05-17T12:29:15Z"
+        }
+      ]
+    },
+    {
+      "id": 4022,
+      "subject": "How do I ask for help from another team in Salesforce?",
+      "description": "Hi, I need to get some support from the pricing team for one of my opps, but I'm not sure what the right way is to submit a request in Salesforce. Is there a specific form or button I should use? Also, do I need to attach any docs or just fill out the info? Thanks!",
+      "requester": {
+        "name": "Jake Miller"
+      },
+      "status": "open",
+      "created_at": "2026-05-25T11:49:47Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Jake, you can submit a support request directly from the account or opportunity page in Salesforce. There should be a 'Request Support' button\u2014just follow the prompts and pick the team you need. You\u2019ll see required fields marked, and you can upload docs if you have them. Let me know if you don\u2019t see the button or need more help!",
+          "created_at": "2026-05-25T20:49:47Z"
+        }
+      ]
+    },
+    {
+      "id": 4003,
+      "subject": "Question about Adjusting Opportunity Close Date After Quarter End",
+      "description": "Hi team, I have an opp that was supposed to close last quarter, but it actually closed a few days into this quarter. Is it possible to move the close date back into last quarter even though the books are already closed? I couldn't find anything about this in the handbook. Thanks!",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "pending",
+      "created_at": "2026-05-30T09:20:55Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Sara, good question. I don't think we've run into this before and I don't see anything in our docs either. Let me check with Finance and get back to you.",
+          "created_at": "2026-05-30T17:20:55Z"
+        }
+      ]
+    },
+    {
+      "id": 4010,
+      "subject": "Clarification on Pipeline Coverage Dashboard for Forecast Calls",
+      "description": "Hey team, quick question \u2013 for our forecast calls, which dashboard should we be using as the main source of truth for pipeline coverage? I couldn't find anything specific in the handbook about this. There are a couple of dashboards with similar data and I want to make sure I'm referencing the right one. Thanks!",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "pending",
+      "created_at": "2026-06-16T09:08:10Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Victor Huang"
+          },
+          "body": "Hi Sara, good question. I think there\u2019s been some confusion about this lately. Let me double-check with the analytics team and get back to you with a definitive answer.",
+          "created_at": "2026-06-18T04:08:10Z"
+        }
+      ]
+    },
+    {
+      "id": 4016,
+      "subject": "Approval process for >40% discount on multi-year public sector renewal?",
+      "description": "Hi team, I have a renewal coming up for a public sector client and the deal is multi-year. The discount they're asking for is over 40%. I checked the handbook and couldn't find anything about who needs to sign off on this. Can someone clarify who should approve this level of discount? Thanks!",
+      "requester": {
+        "name": "Mei Chen"
+      },
+      "status": "pending",
+      "created_at": "2026-06-20T04:58:16Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Mei, thanks for flagging this. You're right, the handbook doesn't specify for public sector renewals at that discount level. Let me check with Finance and Legal and get back to you as soon as I have an answer.",
+          "created_at": "2026-06-20T07:58:16Z"
+        }
+      ]
+    },
+    {
+      "id": 4013,
+      "subject": "Approval process for >40% discount on multi-year public sector renewal?",
+      "description": "Hi team, I have a renewal coming up for a public sector client and the deal is multi-year. The discount they're asking for is over 40%. I checked the handbook and couldn't find anything about who needs to sign off on this. Can someone clarify who should approve this level of discount? Thanks!",
+      "requester": {
+        "name": "Mei Chen"
+      },
+      "status": "solved",
+      "created_at": "2026-06-22T08:54:23Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Mei, thanks for flagging this. You're right, the handbook doesn't specify for public sector renewals at that discount level. Let me check with Finance and Legal and get back to you as soon as I have an answer.",
+          "created_at": "2026-06-24T07:54:23Z"
+        }
+      ]
+    },
+    {
+      "id": 4012,
+      "subject": "Clarification on Partner Discounts and Incentives",
+      "description": "Hi team, I\u2019m working on a deal with a reseller and I need to confirm what kind of discounts or incentives we can offer them. Is there a central place where all the info on partner discounts, rebates, etc. is listed? Also, do we have different discount levels for distributors vs. MSPs? Thanks!",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "open",
+      "created_at": "2026-06-27T09:30:32Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Sara, you can find all the details on partner discounts, incentives, and rebate programs in the Internal Incentive Guide\u2014there\u2019s a link to it on the Sales FAQ page. That doc should have everything you need for resellers, distributors, and MSPs. Let me know if you can\u2019t access it or need help finding a specific section!",
+          "created_at": "2026-06-28T09:30:32Z"
+        }
+      ]
+    },
+    {
+      "id": 4023,
+      "subject": "Question about Sending Food Gifts via Reachdesk",
+      "description": "Hi team, I wanted to check if it's possible to send things like chocolates or flowers directly to clients using Reachdesk, or if there are any restrictions on what we can pick from the marketplace? Also, is there a way to see all the available options without starting a campaign? Thanks!",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "open",
+      "created_at": "2026-07-16T04:02:56Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Sara, yes, you can send items like confectionary, flowers, cakes, and other perishables through Reachdesk as long as they're from the approved providers in the marketplace. You can browse all the available options either through the link in the doc or directly in the campaign build section\u2014no need to actually launch a campaign to view them. Let me know if you need help finding the list!",
+          "created_at": "2026-07-16T12:02:56Z"
+        }
+      ]
+    },
+    {
+      "id": 4020,
+      "subject": "Clarification on SDR Quota and Partner-Sourced Deals",
+      "description": "Hey team, quick question\u2014do deals that come in through our partners count toward SDR quota? I couldn't find anything about this in the handbook or the quota doc. Just want to make sure before I log a few of these. Thanks!",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "solved",
+      "created_at": "2026-07-17T00:05:49Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Sara, good question! I don't think we've spelled this out anywhere. Let me double-check with the quota team and get back to you as soon as I have an answer.",
+          "created_at": "2026-07-17T23:05:49Z"
+        }
+      ]
+    },
+    {
+      "id": 4000,
+      "subject": "Clarification on Info Needed to Start NPI Process",
+      "description": "Hi team, I\u2019m prepping to kick off a new product intro and want to make sure I\u2019m not missing anything before I reach out to the GTM folks. Is there a checklist or specific info I need to provide when I communicate the launch? I remember something about needing to explain what we\u2019re launching and who it\u2019s for, but not sure if there\u2019s more to it. Do I need to include financials or timing details at this stage? Thanks!",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "open",
+      "created_at": "2026-07-25T05:48:32Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Sara, great question! There\u2019s actually a section in the GTM Enablement motion policy that outlines what you need to cover when you start the NPI process. You\u2019ll want to include what the launch is (features, services, etc.), why we\u2019re launching (the value prop and any financial justification you have), who the target market is, and any timing considerations. Also, make sure the product is far enough along and that GTM teams have bandwidth. Let me know if you need the link to the doc!",
+          "created_at": "2026-07-26T03:48:32Z"
+        }
+      ]
+    },
+    {
+      "id": 4024,
+      "subject": "Question about merging trial sign-ups from same company domain",
+      "description": "Hi team, I noticed we had a few trial sign-ups from different people at the same company (same email domain). Does Salesforce automatically merge these into a single lead, or do they stay separate? I couldn't find anything about this in the handbook. Thanks!",
+      "requester": {
+        "name": "Mei Chen"
+      },
+      "status": "open",
+      "created_at": "2026-07-27T08:34:28Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hey Mei, good question! I don't think the handbook covers this either. Let me double-check with the Salesforce admin and get back to you.",
+          "created_at": "2026-07-27T12:34:28Z"
+        }
+      ]
+    },
+    {
+      "id": 4025,
+      "subject": "Which YouTube channel should I upload my demo video to?",
+      "description": "Hey team, I just finished recording a demo for a new feature we're rolling out. It's pretty polished and I think it could be useful for both customers and maybe even for some internal folks. I'm not sure if this should go on the main GitLab YouTube channel or the Unfiltered one. Is there a guideline for which channel is best for this kind of content?",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "open",
+      "created_at": "2026-08-08T22:01:42Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Sara! Great question. Generally, if your demo is polished and aimed at customers or the broader community, it should go on the Branded channel. If it's more casual or meant for internal or community members, Unfiltered is the way to go. Also, anything on the Branded channel needs to go through digital production for a quick quality check. Let me know if you need help connecting with them!",
+          "created_at": "2026-08-09T07:01:42Z"
+        }
+      ]
+    },
+    {
+      "id": 4009,
+      "subject": "Clarification on Sending Security Release Notification Email",
+      "description": "Hi team, I need to send out a security release notification to our customers next week. I saw there are different templates for operational emails, but I'm not sure if I should use the general non-demand gen template or if there's a specific one for security releases. Also, do I need to submit the issue even if I don't have the final copy ready yet? And who handles pulling the recipient list for this type of send? Thanks!",
+      "requester": {
+        "name": "Mei Chen"
+      },
+      "status": "solved",
+      "created_at": "2026-08-09T06:05:57Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Mei! For security release notifications, there\u2019s a dedicated issue template you should use (not the general one). You can go ahead and open the issue as soon as you know you\u2019ll need the send, even if you\u2019re still working on the final assets. As for the recipient list, you\u2019ll need to open a separate list request issue\u2014Marketing Ops doesn\u2019t handle the list pull. Let me know if you need the links or have any other questions!",
+          "created_at": "2026-08-10T23:05:57Z"
+        }
+      ]
+    },
+    {
+      "id": 4007,
+      "subject": "Clarification on CSM Team Stamping for Opportunities",
+      "description": "Hey team, I noticed that sometimes the [Comp] CSM Team field on Opportunities gets auto-filled, but I'm not totally sure when that's supposed to happen. Is it only when the CSM Team is 'Scale', or does it depend on the order type too? I just want to make sure I'm not missing anything when creating or closing Opps. Thanks!",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "open",
+      "created_at": "2026-08-14T15:51:56Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Sara, great question! The CSM Team gets stamped onto the Opportunity if the CSM Team for the Customer Success Manager is 'Scale', or if the Order Type is one of a few specific ones (like New - Connected, Growth, Contraction, and both Churn types). Let me know if you need the full list or more details on how it works.",
+          "created_at": "2026-08-15T20:51:56Z"
+        }
+      ]
+    },
+    {
+      "id": 4018,
+      "subject": "Zendesk Tickets Not Showing Up in Gainsight",
+      "description": "Hi team, I noticed that some Zendesk tickets aren\u2019t appearing in the company view in Gainsight. Is there something I need to do to make sure all tickets are syncing properly? Also, is there a way to check if the Zendesk Organization IDs are matched up with our Salesforce accounts? Thanks!",
+      "requester": {
+        "name": "Mei Chen"
+      },
+      "status": "solved",
+      "created_at": "2026-08-31T04:29:07Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Mei, thanks for flagging this. The sync between Zendesk and Gainsight relies on the Zendesk Organization ID being present in Salesforce. If some tickets aren\u2019t showing, it might be because the Org IDs aren\u2019t up to date in Salesforce. You can try re-importing the Zendesk Org IDs into Salesforce to help with the matching. Let me know if you need the steps for that or if you\u2019re still seeing issues after trying this.",
+          "created_at": "2026-08-31T05:29:07Z"
+        }
+      ]
+    },
+    {
+      "id": 4005,
+      "subject": "Clarification on Content Review Timeline for Customer Program Materials",
+      "description": "Hi team, I\u2019m working on some new onboarding materials for our customer success program and wanted to check what the process is for getting this content reviewed. Is there a specific timeline I should plan for, and do I need to get approval from anyone outside our Digital Customer Programs group? Just want to make sure I\u2019m following the right steps before I start drafting.",
+      "requester": {
+        "name": "Mei Chen"
+      },
+      "status": "open",
+      "created_at": "2026-09-02T15:05:43Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Mei, thanks for reaching out! Yes, any new content or adaptations from other GitLab sources need to go through a review process outside of our team. The review checks for accuracy, style, and readability. You should expect it to take about 10 business days, so roughly one milestone. Let me know if you need help with the initial scoping or finding existing materials to reference.",
+          "created_at": "2026-09-03T00:05:43Z"
+        }
+      ]
+    },
+    {
+      "id": 4026,
+      "subject": "Question about Adjusting Opportunity Close Date After Quarter End",
+      "description": "Hi team, I have an opp that was supposed to close last quarter, but it actually closed a few days into this quarter. Is it possible to move the close date back into last quarter even though the books are already closed? I couldn't find anything about this in the handbook. Thanks!",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "open",
+      "created_at": "2026-09-02T15:57:39Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Sara, good question. I don't think we've run into this before and I don't see anything in our docs either. Let me check with Finance and get back to you.",
+          "created_at": "2026-09-02T20:57:39Z"
+        }
+      ]
+    },
+    {
+      "id": 4027,
+      "subject": "Approval process for >40% discount on multi-year public sector renewal?",
+      "description": "Hi team, I have a renewal coming up for a public sector client and the deal is multi-year. The discount they're asking for is over 40%. I checked the handbook and couldn't find anything about who needs to sign off on this. Can someone clarify who should approve this level of discount? Thanks!",
+      "requester": {
+        "name": "Mei Chen"
+      },
+      "status": "solved",
+      "created_at": "2026-09-11T02:01:27Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Mei, thanks for flagging this. You're right, the handbook doesn't specify for public sector renewals at that discount level. Let me check with Finance and Legal and get back to you as soon as I have an answer.",
+          "created_at": "2026-09-11T16:01:27Z"
+        }
+      ]
+    },
+    {
+      "id": 4004,
+      "subject": "Adding a new value to Opportunity picklist",
+      "description": "Hi team, I need to add a new option to one of the picklists on the Opportunity object in Salesforce, but I couldn't find any steps for this in the handbook. Can someone let me know what the process is for requesting a new picklist value? Thanks!",
+      "requester": {
+        "name": "Mei Chen"
+      },
+      "status": "open",
+      "created_at": "2026-09-27T21:00:44Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Mei, thanks for reaching out! I don't think we've documented this process in the handbook yet. Let me check with the Salesforce admin team and get back to you with the right steps.",
+          "created_at": "2026-09-29T15:00:44Z"
+        }
+      ]
+    },
+    {
+      "id": 4011,
+      "subject": "Question about Adjusting Opportunity Close Date After Quarter End",
+      "description": "Hi team, I have an opp that was supposed to close last quarter, but it actually closed a few days into this quarter. Is it possible to move the close date back into last quarter even though the books are already closed? I couldn't find anything about this in the handbook. Thanks!",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "solved",
+      "created_at": "2026-10-04T13:58:12Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Sara, good question. I don't think we've run into this before and I don't see anything in our docs either. Let me check with Finance and get back to you.",
+          "created_at": "2026-10-06T00:58:12Z"
+        }
+      ]
+    },
+    {
+      "id": 4017,
+      "subject": "Question about managing multiple events in Accelevents",
+      "description": "Hi team, I\u2019m working on setting up a couple of events in Accelevents and I was wondering if it\u2019s okay to have more than one event open in different tabs at the same time? I need to compare some settings between them and it would be a lot faster if I could just switch between tabs. Is there any issue with doing this, or is there a recommended way to handle it?",
+      "requester": {
+        "name": "Sara Ali"
+      },
+      "status": "pending",
+      "created_at": "2026-10-08T06:46:03Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hi Sara, thanks for reaching out! Actually, we recommend not having multiple events open in the same browser at once. It can cause some weird issues with the settings getting mixed up between events. If you need to compare, it\u2019s best to use different browsers or incognito windows for each event. Let me know if you need more details or help with this!",
+          "created_at": "2026-10-08T12:46:03Z"
+        }
+      ]
+    },
+    {
+      "id": 4008,
+      "subject": "Question about merging trial sign-ups from same company domain",
+      "description": "Hi team, I noticed we had a few trial sign-ups from different people at the same company (same email domain). Does Salesforce automatically merge these into a single lead, or do they stay separate? I couldn't find anything about this in the handbook. Thanks!",
+      "requester": {
+        "name": "Mei Chen"
+      },
+      "status": "open",
+      "created_at": "2026-10-13T17:31:03Z",
+      "tags": [
+        "sales"
+      ],
+      "synthetic": true,
+      "comments": [
+        {
+          "author": {
+            "name": "Nadia Petrova"
+          },
+          "body": "Hey Mei, good question! I don't think the handbook covers this either. Let me double-check with the Salesforce admin and get back to you.",
+          "created_at": "2026-10-14T00:31:03Z"
+        }
+      ]
+    }
+  ]
+}

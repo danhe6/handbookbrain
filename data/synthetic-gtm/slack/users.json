@@ -1,0 +1,146 @@
+[
+  {
+    "id": "U01RACHEL",
+    "name": "rachel",
+    "real_name": "Rachel Kim",
+    "profile": {
+      "title": "Director, Marketing Operations",
+      "real_name": "Rachel Kim"
+    }
+  },
+  {
+    "id": "U02DIEGO",
+    "name": "diego",
+    "real_name": "Diego Santos",
+    "profile": {
+      "title": "Marketing Ops Manager (Marketo)",
+      "real_name": "Diego Santos"
+    }
+  },
+  {
+    "id": "U03AMARA",
+    "name": "amara",
+    "real_name": "Amara Nwosu",
+    "profile": {
+      "title": "Lead Scoring & Routing Analyst",
+      "real_name": "Amara Nwosu"
+    }
+  },
+  {
+    "id": "U04ETHAN",
+    "name": "ethan",
+    "real_name": "Ethan Brooks",
+    "profile": {
+      "title": "Deal Desk Manager",
+      "real_name": "Ethan Brooks"
+    }
+  },
+  {
+    "id": "U05LENA",
+    "name": "lena",
+    "real_name": "Lena Hoffmann",
+    "profile": {
+      "title": "Deal Desk Specialist",
+      "real_name": "Lena Hoffmann"
+    }
+  },
+  {
+    "id": "U06VICTOR",
+    "name": "victor",
+    "real_name": "Victor Huang",
+    "profile": {
+      "title": "Sales Systems Administrator (Salesforce)",
+      "real_name": "Victor Huang"
+    }
+  },
+  {
+    "id": "U07NADIA",
+    "name": "nadia",
+    "real_name": "Nadia Petrova",
+    "profile": {
+      "title": "Sales Operations Manager",
+      "real_name": "Nadia Petrova"
+    }
+  },
+  {
+    "id": "U08OMAR",
+    "name": "omar",
+    "real_name": "Omar Haddad",
+    "profile": {
+      "title": "Revenue Analytics Lead",
+      "real_name": "Omar Haddad"
+    }
+  },
+  {
+    "id": "U09JULIA",
+    "name": "julia",
+    "real_name": "Julia Costa",
+    "profile": {
+      "title": "Billing Operations Specialist",
+      "real_name": "Julia Costa"
+    }
+  },
+  {
+    "id": "U10KEN",
+    "name": "ken",
+    "real_name": "Ken Watanabe",
+    "profile": {
+      "title": "Channel Operations Manager",
+      "real_name": "Ken Watanabe"
+    }
+  },
+  {
+    "id": "U11PRIS",
+    "name": "priscilla",
+    "real_name": "Priscilla Moore",
+    "profile": {
+      "title": "Customer Success Operations Manager",
+      "real_name": "Priscilla Moore"
+    }
+  },
+  {
+    "id": "U12JAKE",
+    "name": "jake",
+    "real_name": "Jake Miller",
+    "profile": {
+      "title": "Account Executive",
+      "real_name": "Jake Miller"
+    }
+  },
+  {
+    "id": "U13SARA",
+    "name": "sara",
+    "real_name": "Sara Ali",
+    "profile": {
+      "title": "Sales Development Rep",
+      "real_name": "Sara Ali"
+    }
+  },
+  {
+    "id": "U14TOM",
+    "name": "tom",
+    "real_name": "Tom Becker",
+    "profile": {
+      "title": "Solutions Architect",
+      "real_name": "Tom Becker"
+    }
+  },
+  {
+    "id": "U15MEI",
+    "name": "mei",
+    "real_name": "Mei Chen",
+    "profile": {
+      "title": "Customer Success Manager",
+      "real_name": "Mei Chen"
+    }
+  },
+  {
+    "id": "U16LUIS",
+    "name": "luis",
+    "real_name": "Luis Ortega",
+    "profile": {
+      "title": "Partner Account Manager",
+      "real_name": "Luis Ortega"
+    }
+  }
+]

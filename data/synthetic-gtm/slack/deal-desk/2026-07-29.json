@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Quick question\u2014where should I upload the demo video for the new onboarding flow? Is that Branded or Unfiltered? I always mix these up.",
+    "ts": "1785331800.000000",
+    "synthetic": true,
+    "thread_ts": "1785331800.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Hey Jake! If it\u2019s a polished demo that\u2019s customer-facing or for marketing, it should go on the Branded channel. If it\u2019s more of a casual walkthrough or just for internal/team/community folks, then Unfiltered is the way to go.",
+    "ts": "1785333926.449619",
+    "synthetic": true,
+    "thread_ts": "1785331800.000000",
+    "parent_user_id": "U12JAKE"
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "There\u2019s a section in the handbook about this\u2014think it\u2019s under YouTube channels. Also, anything for Branded needs to go through digital production first for QC. If you\u2019re not sure, you can ping the Digital Production team here on Slack.",
+    "ts": "1785335718.420512",
+    "synthetic": true,
+    "thread_ts": "1785331800.000000",
+    "parent_user_id": "U12JAKE"
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Awesome, thanks Sara! This one\u2019s pretty polished, so I\u2019ll reach out to digital production before uploading to Branded.",
+    "ts": "1785339633.248517",
+    "synthetic": true,
+    "thread_ts": "1785331800.000000",
+    "parent_user_id": "U12JAKE"
+  }
+]

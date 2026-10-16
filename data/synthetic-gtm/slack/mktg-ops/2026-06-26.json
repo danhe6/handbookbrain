@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Quick question\u2014what exactly do we need to include when we kick off the NPI process? I know there\u2019s a checklist somewhere but can\u2019t remember all the bits.",
+    "ts": "1782505800.000000",
+    "synthetic": true,
+    "thread_ts": "1782505800.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Hey Tom, yeah, it\u2019s in the handbook but basically you need to cover what we\u2019re launching (like features or services), why we\u2019re doing it (the value prop and some financial reasoning), who it\u2019s for (target market/ICP), when we want to launch (any timing stuff), and that we\u2019re actually ready to go (dev is far enough along and GTM has bandwidth).",
+    "ts": "1782508657.359992",
+    "synthetic": true,
+    "thread_ts": "1782505800.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Awesome, thanks Sara! That\u2019s super helpful. I\u2019ll dig up the handbook page too just to double check.",
+    "ts": "1782512064.866839",
+    "synthetic": true,
+    "thread_ts": "1782505800.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "No problem! Let me know if you need the link, I have it bookmarked somewhere.",
+    "ts": "1782514816.910420",
+    "synthetic": true,
+    "thread_ts": "1782505800.000000",
+    "parent_user_id": "U14TOM"
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "id": "teams-20260707-05",
+  "subject": "Marketing Ops weekly",
+  "startDateTime": "2026-07-07T15:00:00Z",
+  "endDateTime": "2026-07-07T15:04:19Z",
+  "participants": {
+    "organizer": {
+      "identity": {
+        "user": {
+          "displayName": "Rachel Kim"
+        }
+      }
+    },
+    "attendees": [
+      {
+        "identity": {
+          "user": {
+            "displayName": "Rachel Kim"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Diego Santos"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Amara Nwosu"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Omar Haddad"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Nadia Petrova"
+          }
+        }
+      }
+    ]
+  },
+  "synthetic": true
+}

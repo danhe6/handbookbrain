@@ -1,0 +1,53 @@
+{
+  "id": "teams-20260930-07",
+  "subject": "Deal Desk & Sales Ops sync",
+  "startDateTime": "2026-09-30T10:00:00Z",
+  "endDateTime": "2026-09-30T10:05:27Z",
+  "participants": {
+    "organizer": {
+      "identity": {
+        "user": {
+          "displayName": "Ethan Brooks"
+        }
+      }
+    },
+    "attendees": [
+      {
+        "identity": {
+          "user": {
+            "displayName": "Ethan Brooks"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Lena Hoffmann"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Nadia Petrova"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Victor Huang"
+          }
+        }
+      },
+      {
+        "identity": {
+          "user": {
+            "displayName": "Julia Costa"
+          }
+        }
+      }
+    ]
+  },
+  "synthetic": true
+}

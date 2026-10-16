@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Hey team, quick question: I need to send out a product update email to all customers next week. Is there a specific template or process I should be using for this, or do I just use the regular marketing email flow?",
+    "ts": "1790969400.000000",
+    "synthetic": true,
+    "thread_ts": "1790969400.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Hey Luis, for product updates (and stuff like sub-processor changes or general notifications), you\u2019ll want to use the operational email issue template, not the marketing one. There\u2019s a link to it in the handbook, but basically it\u2019s a separate process with its own checklist.",
+    "ts": "1790970186.580305",
+    "synthetic": true,
+    "thread_ts": "1790969400.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Ah, got it. So not the usual marketing email request. Do I need to do anything special for the recipient list, or is that handled by Marketing Ops?",
+    "ts": "1790975403.647261",
+    "synthetic": true,
+    "thread_ts": "1790969400.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "You\u2019ll need to open a separate list request issue with the Marketing Strategy & Analytics team\u2014they handle the list pulls, not Marketing Ops. There\u2019s a template for that too. Also, heads up: the SLA is 5 business days from when you have final assets, but it\u2019s best to open the issue as soon as you know you\u2019ll need the send, even if you\u2019re still working on the content.",
+    "ts": "1790977276.579298",
+    "synthetic": true,
+    "thread_ts": "1790969400.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Perfect, thanks Tom. I\u2019ll get those issues opened today. Appreciate the help!",
+    "ts": "1790977926.504397",
+    "synthetic": true,
+    "thread_ts": "1790969400.000000",
+    "parent_user_id": "U16LUIS"
+  }
+]

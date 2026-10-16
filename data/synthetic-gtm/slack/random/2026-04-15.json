@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Anyone else\u2019s weekend plans ruined by this rain? My dog refuses to go outside, just stares at me like I control the weather \ud83d\ude02",
+    "ts": "1776283200.000000",
+    "synthetic": true,
+    "thread_ts": "1776283200.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Haha, same here. My cat\u2019s been glued to the window, judging every raindrop. Also, did you guys see that meme I posted yesterday? The one with the dog in the raincoat? That\u2019s literally my life rn.",
+    "ts": "1776287717.389390",
+    "synthetic": true,
+    "thread_ts": "1776283200.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Lol yes, that meme was too real. I tried to put a raincoat on Max and he acted like I betrayed him.",
+    "ts": "1776292604.885759",
+    "synthetic": true,
+    "thread_ts": "1776283200.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Wait, is anyone else\u2019s Slack acting weird? My gifs won\u2019t load and I can\u2019t see Jake\u2019s meme \ud83d\ude29",
+    "ts": "1776296820.798131",
+    "synthetic": true,
+    "thread_ts": "1776283200.000000",
+    "parent_user_id": "U16LUIS"
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "@Mei Chen yeah, I think there\u2019s a bug. I had to refresh like 3 times before it worked. Classic Monday energy.",
+    "ts": "1776298155.823235",
+    "synthetic": true,
+    "thread_ts": "1776283200.000000",
+    "parent_user_id": "U16LUIS"
+  }
+]

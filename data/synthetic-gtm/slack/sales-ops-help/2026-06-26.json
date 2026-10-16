@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Hey, quick question\u2014when exactly does the CSM Team field get stamped onto an Opportunity? Is it just when we create it, or also when we close it? I can't remember if there's a specific trigger or if it's manual.",
+    "ts": "1782502200.000000",
+    "synthetic": true,
+    "thread_ts": "1782502200.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Hey Tom, pretty sure it's both\u2014so, when you create an Opp and also when you close it out. The system checks the CSM Team from the Customer Success Manager on the related account and stamps it onto the Opp. There are some conditions though, like if the CSM Team is 'Scale' or if the order type is one of those\u2014like New Connected, Growth, Churn, etc. It's in the handbook somewhere, but that's the gist.",
+    "ts": "1782502392.201172",
+    "synthetic": true,
+    "thread_ts": "1782502200.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Ah, got it. So it's not every Opp, just those with certain order types or if the CSM Team is Scale. Makes sense, thanks Jake!",
+    "ts": "1782504666.392001",
+    "synthetic": true,
+    "thread_ts": "1782502200.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Yep, exactly. If you need the full list of order types, it's in that doc under Go-To-Market Tech Docs, but those are the main ones. Let me know if you need the link.",
+    "ts": "1782505972.811483",
+    "synthetic": true,
+    "thread_ts": "1782502200.000000",
+    "parent_user_id": "U14TOM"
+  }
+]

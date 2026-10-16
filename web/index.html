@@ -5,28 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HandbookBrain</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/static/app.css">
 </head>
 <body>
 <header class="top">
   <div class="top-in">
-    <a class="logo" href="#/ask" aria-label="HandbookBrain home">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 6h9M6.3 8.2l4.4 7.6M17.7 8.2l-4.4 7.6"/></svg>
+    <a class="logo" href="#/overview" aria-label="HandbookBrain">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 6h9M6.3 8.2l4.4 7.6M17.7 8.2l-4.4 7.6"/></svg>
       <span>HandbookBrain</span>
     </a>
     <nav aria-label="Main" class="nav">
-      <a href="#/ask" data-nav="ask">Ask</a>
-      <a href="#/updates" data-nav="updates">Updates <span class="count" id="nav-review" hidden></span></a>
-      <a href="#/brain" data-nav="brain">Company brain</a>
-      <a href="#/trust" data-nav="trust">Trust</a>
+      <a href="#/overview" data-nav="overview">Overview</a>
+      <a href="#/demo" data-nav="demo">Demo</a>
+      <a href="#/explore" data-nav="explore">Explore graph</a>
+      <a href="#/review" data-nav="review">Review <span class="count" id="nav-review" hidden></span></a>
+      <a href="#/configure" data-nav="configure">Capabilities</a>
     </nav>
     <div class="grow"></div>
-    <label class="company">
-      <span class="sr">Company</span>
-      <select id="company" aria-label="Company"></select>
-    </label>
-    <a class="pill" id="sync-pill" href="#/brain"><span class="dot"></span><span id="sync-text">…</span></a>
+    <label class="company"><span class="sr">Company</span><select id="company" aria-label="Company"></select></label>
+    <span class="pill" id="sync-pill"><span class="dot"></span><span id="sync-text">…</span></span>
   </div>
 </header>
 <main id="view" class="wrap" tabindex="-1"></main>
@@ -38,6 +36,7 @@
     <div id="drawer-body"></div>
   </div>
 </div>
+<script src="/static/graph.js"></script>
 <script src="/static/app.js"></script>
 </body>
 </html>

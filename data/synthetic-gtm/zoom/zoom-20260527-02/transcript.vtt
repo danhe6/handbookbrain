@@ -1,0 +1,197 @@
+WEBVTT
+
+1
+00:00:02.000 --> 00:00:06.615
+Rachel Kim: Alright, it’s 10:02, let’s get started. Hope everyone’s doing okay this morning.
+
+2
+00:00:06.965 --> 00:00:10.812
+Diego Santos: Morning! I’m good, just fighting with my coffee machine again.
+
+3
+00:00:11.151 --> 00:00:15.382
+Amara Nwosu: Hi all, I’m here. Sorry, my wifi’s a little spotty today.
+
+4
+00:00:16.301 --> 00:00:21.685
+Omar Haddad: Hey everyone. I’m good, just got back from a long weekend so catching up.
+
+5
+00:00:22.239 --> 00:00:28.393
+Nadia Petrova: Hi, hi. All good here. I finally finished that Salesforce training, so that’s off my plate.
+
+6
+00:00:29.379 --> 00:00:33.995
+Rachel Kim: Nice, Nadia! Okay, quick round of updates—anything urgent before we jump in?
+
+7
+00:00:35.128 --> 00:00:40.128
+Diego Santos: Nothing urgent from me, just the usual Marketo sync delays but nothing new.
+
+8
+00:00:40.592 --> 00:00:47.516
+Amara Nwosu: I’m still working on the lead routing tweaks, but I’ll ping you, Rachel, if I hit any blockers.
+
+9
+00:00:48.540 --> 00:00:51.232
+Rachel Kim: Sounds good. Omar, anything from Revenue Analytics?
+
+10
+00:00:51.776 --> 00:00:54.852
+Omar Haddad: Nope, all quiet. Just prepping for Q2 reporting.
+
+11
+00:00:55.688 --> 00:01:01.072
+Rachel Kim: Alright, let’s move to the main agenda item: the behavior scoring process in Marketo.
+
+12
+00:01:02.449 --> 00:01:11.295
+Diego Santos: Yeah, so we’ve had a few questions from the field about when behavior scores reset, and there’s been confusion about the flow limits.
+
+13
+00:01:12.595 --> 00:01:19.518
+Amara Nwosu: I noticed that too. Some SDRs thought the scores were only applied once per person, not every time.
+
+14
+00:01:19.838 --> 00:01:27.531
+Rachel Kim: Right, so the current handbook page says ‘every time’ for most behaviors, but it’s not super clear in the table.
+
+15
+00:01:28.281 --> 00:01:35.589
+Nadia Petrova: I think the confusion is mostly around the ‘Attended Online’ and ‘Attended Webcast’ rows. The descriptions overlap a bit.
+
+16
+00:01:36.149 --> 00:01:46.533
+Diego Santos: Yeah, and the ‘flow limit’ column wasn’t always filled in, so I updated the draft to say ‘every time’ for all of them, just to be explicit.
+
+17
+00:01:46.738 --> 00:01:53.276
+Omar Haddad: Wait, so just to clarify, if someone attends three webcasts, they get the points three times, right?
+
+18
+00:01:54.479 --> 00:02:00.633
+Diego Santos: Exactly. As long as their Person Score is under 300, they get the points each time.
+
+19
+00:02:01.661 --> 00:02:07.815
+Amara Nwosu: And after 300, the behavior scoring is nulled, so no more points until it drops below?
+
+20
+00:02:08.355 --> 00:02:12.201
+Diego Santos: Correct. That’s how it’s set up in Marketo right now.
+
+21
+00:02:13.365 --> 00:02:19.903
+Rachel Kim: Okay, so the proposed change is just making the ‘every time’ language consistent in the table, right?
+
+22
+00:02:20.821 --> 00:02:27.359
+Diego Santos: Yep, and making sure the flow limit is filled in for all behaviors, so there’s no ambiguity.
+
+23
+00:02:28.115 --> 00:02:36.577
+Nadia Petrova: I have a small concern—will this affect any of the existing nurture programs? Like, will people suddenly get more points than before?
+
+24
+00:02:36.789 --> 00:02:42.558
+Diego Santos: No, it’s just a documentation update. The backend logic hasn’t changed, it’s just clearer now.
+
+25
+00:02:42.856 --> 00:02:52.472
+Omar Haddad: Yeah, I checked the scoring logs last week, and the points are being applied as expected. This just makes it easier for everyone to understand.
+
+26
+00:02:53.820 --> 00:02:58.820
+Amara Nwosu: I think it’ll help with the SDR questions too. I’m good with it.
+
+27
+00:03:00.195 --> 00:03:01.733
+Rachel Kim: Alright, any other concerns?
+
+28
+00:03:02.642 --> 00:03:04.566
+Nadia Petrova: Nope, that answers my question.
+
+29
+00:03:05.851 --> 00:03:17.389
+Rachel Kim: Great. So, decision: we’ll update the handbook page to clarify that behavior scoring is applied every time for all listed behaviors, as long as the Person Score is under 300.
+
+30
+00:03:18.346 --> 00:03:26.808
+Diego Santos: I’ll take the action to update the handbook page. Should be able to get that done in the next week or two.
+
+31
+00:03:27.200 --> 00:03:31.816
+Rachel Kim: Thanks, Diego. Please just drop a note in #marketing-ops when it’s live.
+
+32
+00:03:32.181 --> 00:03:33.681
+Diego Santos: Will do.
+
+33
+00:03:34.282 --> 00:03:45.436
+Rachel Kim: Okay, last agenda item—quick one. We got the results from the vendor satisfaction survey. Overall, people are happy, but there were a few comments about slow support from Leadspace.
+
+34
+00:03:46.805 --> 00:03:52.574
+Omar Haddad: Yeah, I saw that. I think we should flag it for our next renewal discussion.
+
+35
+00:03:53.809 --> 00:03:58.424
+Nadia Petrova: Agreed. Maybe we can ask for a dedicated support contact or something.
+
+36
+00:03:59.743 --> 00:04:05.128
+Rachel Kim: Good idea. Diego, can you add that to our vendor review checklist for Q3?
+
+37
+00:04:06.496 --> 00:04:10.342
+Diego Santos: Yep, I’ll make a note and update the checklist doc.
+
+38
+00:04:10.816 --> 00:04:12.316
+Amara Nwosu: Thanks, Diego.
+
+39
+00:04:12.840 --> 00:04:17.071
+Rachel Kim: Alright, that’s it from my side. Anything else before we wrap?
+
+40
+00:04:17.404 --> 00:04:18.904
+Omar Haddad: Nothing from me.
+
+41
+00:04:20.119 --> 00:04:21.619
+Nadia Petrova: All good here.
+
+42
+00:04:22.968 --> 00:04:24.506
+Amara Nwosu: I’m good, thanks everyone.
+
+43
+00:04:25.235 --> 00:04:26.735
+Diego Santos: All set.
+
+44
+00:04:27.742 --> 00:04:31.588
+Rachel Kim: Okay, thanks all. Have a great rest of your week!
+
+45
+00:04:31.989 --> 00:04:33.489
+Omar Haddad: You too!
+
+46
+00:04:34.897 --> 00:04:36.397
+Nadia Petrova: Bye!
+
+47
+00:04:37.721 --> 00:04:39.221
+Amara Nwosu: Bye everyone.
+
+48
+00:04:40.690 --> 00:04:42.190
+Diego Santos: Bye!
+
+49
+00:04:43.444 --> 00:04:44.944
+Rachel Kim: Meeting adjourned, thanks!

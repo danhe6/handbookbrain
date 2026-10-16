@@ -384,8 +384,16 @@ def run_cypher(query: str) -> dict:
     return {"rows": res[:50], "truncated": len(res) > 50, "sources": {}}
 
 
+def systems_and_data(topic: str) -> dict:
+    """Systems (e.g. Salesforce, Marketo), dashboards, fields and business metrics connected to a topic, how many
+    documents rely on each, which documents and who owns them. Use for 'what systems / dashboards / fields /
+    metrics does X involve', 'what would changing X affect', or when onboarding to a business area."""
+    from .entities import related
+    return related(topic)
+
+
 TOOLS = {f.__name__: f for f in [search_handbook, page_details, section_history, why_changed, decisions_about,
-                                 who_knows, recent_changes, search_conversations, run_cypher]}
+                                 who_knows, recent_changes, search_conversations, systems_and_data, run_cypher]}
 
 
 def _schema(fn, props: dict, required: list[str]):
@@ -403,5 +411,6 @@ SCHEMAS = [
     _schema(why_changed, {"cite": {"type": "string", "description": "cite key from another tool"}}, ["cite"]),
     _schema(decisions_about, {"topic": {"type": "string"}}, ["topic"]),
     _schema(search_conversations, {"query": {"type": "string"}}, ["query"]),
+    _schema(systems_and_data, {"topic": {"type": "string"}}, ["topic"]),
     _schema(run_cypher, {"query": {"type": "string"}}, ["query"]),
 ]

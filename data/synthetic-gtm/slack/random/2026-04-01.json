@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Happy Friday! Anyone got fun weekend plans? I\u2019m thinking of finally taking Mochi to the dog park if it doesn\u2019t rain \ud83d\udc36\ud83c\udf27\ufe0f",
+    "ts": "1775048400.000000",
+    "synthetic": true,
+    "thread_ts": "1775048400.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Omg Mochi is gonna love it! I\u2019m just hoping my cat doesn\u2019t knock over another plant while I\u2019m out. She\u2019s on a rampage lately \ud83d\ude02",
+    "ts": "1775052114.914897",
+    "synthetic": true,
+    "thread_ts": "1775048400.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Haha, cats are chaos agents. Also, did anyone else see that meme Jake posted in #memes? The one with the bug in the code and the cat? Too real \ud83d\ude05",
+    "ts": "1775052957.109276",
+    "synthetic": true,
+    "thread_ts": "1775048400.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "YES, I snorted my coffee. Honestly, that\u2019s how I felt yesterday with that weird login bug. I swear it was just staring at me like \u2018fix me hooman\u2019",
+    "ts": "1775053590.134825",
+    "synthetic": true,
+    "thread_ts": "1775048400.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Glad you liked it \ud83d\ude02 If only bugs were as cute as cats, maybe I\u2019d be less annoyed at them. Happy almost weekend everyone!",
+    "ts": "1775057023.113634",
+    "synthetic": true,
+    "thread_ts": "1775048400.000000",
+    "parent_user_id": "U15MEI"
+  }
+]

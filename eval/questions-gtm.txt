@@ -1,0 +1,16 @@
+# Seed questions for GitLab go-to-market operations, asked at T0 (2026-04-01) so replay has answers to watch.
+# Mix: rules that later changed in real MRs, rules that did not change (controls), and things not yet documented.
+What score does a trial need to reach before it counts toward MQL in Marketo?
+How is trial activity scored in the behavior scoring model?
+How is the initial source of a lead determined?
+What does Deal Desk need to verify before cancelling a contract reset?
+How quickly does Deal Desk respond to quote requests?
+Are channel partner subscriptions auto-renewed, and who handles the renewal?
+What is the deal registration process for channel partners?
+Which dashboards does Channel Operations use to track ecosystem performance?
+Who can change the owner of an opportunity in Salesforce?
+How is the order type of an opportunity determined, and what counts as a first order?
+How are VAT IDs and legal entity names validated on quotes?
+What happens when a user signal is detected on a lead?
+Which systems does Marketing Operations own?
+How are inbound leads routed to sales development reps?

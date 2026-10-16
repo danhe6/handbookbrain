@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Hey team, quick question on Ecosystem Operations > Partner Sourced Deal Registration: Resale Opportunities. Can someone walk me through the steps for processing a resale opp? I\u2019m a little fuzzy on the order of review and who does what.",
+    "ts": "1780603200.000000",
+    "synthetic": true,
+    "thread_ts": "1780603200.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Yeah, Mei, I can help. So for resale opps, once the partner submits the deal reg, Ecosystem Ops is first up\u2014they review and update the registration when the DR-Status is 'Submitted'. It\u2019s not ready for the Ecosystem Sales Manager until Ops moves the status to 'Pending Sales Review'. That triggers a notification for the Sales Manager to take a look.",
+    "ts": "1780605621.472732",
+    "synthetic": true,
+    "thread_ts": "1780603200.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "After that, you (or whoever\u2019s handling it) just click the link in the email or the Deal Registration View in Salesforce to open the record. Double check the Deal Registration Type is 'Resale' and make sure the partner\u2019s provided enough detail. If all looks good, you can move forward. The partner gets a better discount than the co-sell rate if it\u2019s approved, per the partner program doc.",
+    "ts": "1780610040.686039",
+    "synthetic": true,
+    "thread_ts": "1780603200.000000",
+    "parent_user_id": "U15MEI"
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Awesome, thanks Jake! That clears it up for me.",
+    "ts": "1780615277.297685",
+    "synthetic": true,
+    "thread_ts": "1780603200.000000",
+    "parent_user_id": "U15MEI"
+  }
+]

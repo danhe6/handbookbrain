@@ -1,7 +1,7 @@
 """Build the graph at T0 (snapshot), then replay real commits forward."""
 import time
 
-from . import graph
+from . import entities, graph
 from .parse import parse_page
 from .sources import all_sources, get_source
 
@@ -27,6 +27,7 @@ def snapshot(sha: str) -> dict:
         page = parse_page(path, raw)
         r = graph.upsert_page(page, sha, c.ts)
         _as_of(src, sha, path)
+        entities.link_page(path)
         stats["pages"] += 1
         stats["sections"] += r["added"]
         if i % 50 == 0:
@@ -86,6 +87,7 @@ def replay(until_sha: str, limit: int | None = None, on_commit=None, conversatio
                 continue
             r = graph.upsert_page(parse_page(path, raw), c.sha, c.ts)
             _as_of(src, c.sha, path)
+            entities.link_page(path)
             for k in ("added", "modified", "removed"):
                 totals[k] += r[k]
             if r["added"] or r["modified"] or r["removed"]:
@@ -105,7 +107,8 @@ def replay(until_sha: str, limit: int | None = None, on_commit=None, conversatio
         if crosscheck and (totals["added"] or totals["modified"]):
             from .crosscheck import check_commit
             entry["conflicts"] = check_commit(c.sha)
-    if not limit:  # caught up with HEAD: process everything that happened since the last commit
+    if not limit:  # caught up to `until`: process conversations up to then (everything, if until is HEAD)
         import time as _t
-        flush_conversations(_t.time())
+        is_head = until_sha == src.head()
+        flush_conversations(_t.time() if is_head else graph._epoch(src.commit_info(until_sha).ts))
     return log

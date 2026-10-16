@@ -1,0 +1,38 @@
+[
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Hey, quick question on Ecosystem Operations > Default Logic\u2014does anyone remember how SQS gets set when a partner sourced deal reg comes in? I\u2019m getting conflicting info from the handbook.",
+    "ts": "1781269200.000000",
+    "synthetic": true,
+    "thread_ts": "1781269200.000000",
+    "reply_count": 3
+  },
+  {
+    "type": "message",
+    "user": "U16LUIS",
+    "text": "Yeah, I can help. So, if Partner Sourced Deal Reg is true and there\u2019s no opp yet, Initial Source should be PQL and SQS gets set to Partner Generated. If there\u2019s already an opp and the deal reg is approved, SQS is still Partner Generated. Also, if Initial Source is PQL, SQS is Partner Generated. That\u2019s how I\u2019ve always done it.",
+    "ts": "1781273657.104175",
+    "synthetic": true,
+    "thread_ts": "1781269200.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Perfect, thanks Luis. That clears it up for me.",
+    "ts": "1781276819.688254",
+    "synthetic": true,
+    "thread_ts": "1781269200.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U01RACHEL",
+    "text": "Thanks Luis! I always forget the PQL part.",
+    "ts": "1781280968.903796",
+    "synthetic": true,
+    "thread_ts": "1781269200.000000",
+    "parent_user_id": "U14TOM"
+  }
+]

@@ -1,0 +1,127 @@
+WEBVTT
+
+00:00:02.000 --> 00:00:07.000
+<v Rachel Kim>Alright, it’s 10:02, let’s get started. Hope everyone had a good long weekend?</v>
+
+00:00:07.304 --> 00:00:12.689
+<v Diego Santos>Yeah, it was nice! I actually didn’t do much, just caught up on sleep.</v>
+
+00:00:13.130 --> 00:00:20.053
+<v Amara Nwosu>Same here, Diego. I binged that new show on Netflix, so… not super productive but I needed it.</v>
+
+00:00:21.027 --> 00:00:28.719
+<v Omar Haddad>I went hiking, but I think I pulled something in my leg. So, back to analytics and sitting for me.</v>
+
+00:00:29.797 --> 00:00:37.489
+<v Nadia Petrova>I was just happy to not check my email for a day. But now I have like 200 unread, so…</v>
+
+00:00:37.995 --> 00:00:42.995
+<v Rachel Kim>Haha, yeah, the usual. Okay, quick round of updates—Diego, you want to start?</v>
+
+00:00:43.351 --> 00:00:50.274
+<v Diego Santos>Sure. Marketo sync is back to normal after last week’s hiccup. I’ll keep monitoring, but no new issues.</v>
+
+00:00:51.631 --> 00:00:59.708
+<v Amara Nwosu>Lead scoring model is live for the new segment. Early numbers look good, but I’ll have a full report next week.</v>
+
+00:01:00.228 --> 00:01:05.998
+<v Omar Haddad>Revenue dashboard refresh is on track. I’ll send a preview to the group by Thursday.</v>
+
+00:01:06.971 --> 00:01:13.894
+<v Nadia Petrova>Sales Ops is still working through the Q3 pipeline cleanup. If you see weird requests, that’s probably us.</v>
+
+00:01:14.899 --> 00:01:18.745
+<v Rachel Kim>Thanks, everyone. Let’s jump into the main item—labeling policy updates.</v>
+
+00:01:19.490 --> 00:01:29.875
+<v Rachel Kim>So, we’ve had some confusion around the labeling, especially with completed tasks and blocked issues. We need to clarify and add a new label for completed work.</v>
+
+00:01:30.833 --> 00:01:41.603
+<v Diego Santos>Right, I think the main thing is, sometimes we finish our part but the issue stays open for other teams. So, we want a label for that, right?</v>
+
+00:01:42.482 --> 00:01:49.405
+<v Amara Nwosu>Yeah, I’ve seen that too. It’s not always clear when MktgOps is actually done, especially on cross-team stuff.</v>
+
+00:01:50.820 --> 00:01:56.590
+<v Omar Haddad>Would this new label be just for MktgOps, or could other teams use it too?</v>
+
+00:01:57.055 --> 00:02:02.440
+<v Rachel Kim>Good question. For now, just MktgOps. Other teams can propose their own if needed.</v>
+
+00:02:03.571 --> 00:02:10.109
+<v Nadia Petrova>I like that. It’ll help us in Sales Ops know when we can pick things up, too.</v>
+
+00:02:10.620 --> 00:02:14.081
+<v Diego Santos>So, the label would be something like 'MktgOps::08: Completed'?</v>
+
+00:02:14.796 --> 00:02:19.411
+<v Rachel Kim>Exactly. And we’ll add it to the handbook under the labeling section.</v>
+
+00:02:20.484 --> 00:02:27.023
+<v Amara Nwosu>Wait, just to clarify—does this mean we remove ourselves as assignees when we add that label, or…?</v>
+
+00:02:27.613 --> 00:02:34.920
+<v Rachel Kim>No, keep yourself as assignee until the issue is fully closed. The label just signals our part is done.</v>
+
+00:02:35.531 --> 00:02:40.916
+<v Omar Haddad>Makes sense. I was worried it’d mess up reporting if we unassigned too early.</v>
+
+00:02:42.093 --> 00:02:49.401
+<v Diego Santos>I’ll update the handbook page with the new label and the description. Should I also add an example screenshot?</v>
+
+00:02:49.695 --> 00:02:51.618
+<v Rachel Kim>Yes, please. That always helps.</v>
+
+00:02:52.414 --> 00:02:59.722
+<v Nadia Petrova>One thing—do we need to train the field marketing folks on this, or just update the doc for now?</v>
+
+00:03:01.220 --> 00:03:07.758
+<v Rachel Kim>Let’s just update the doc for now. We can do a quick Slack post once it’s live.</v>
+
+00:03:09.253 --> 00:03:10.792
+<v Amara Nwosu>Sounds good to me.</v>
+
+00:03:11.087 --> 00:03:12.587
+<v Omar Haddad>No objections here.</v>
+
+00:03:13.064 --> 00:03:22.295
+<v Rachel Kim>Alright, so decision is: we’re adding 'MktgOps::08: Completed' as a label for when our team’s work is done, and Diego will update the handbook.</v>
+
+00:03:22.840 --> 00:03:26.301
+<v Diego Santos>Got it. I’ll have that done by the 21st.</v>
+
+00:03:27.714 --> 00:03:32.714
+<v Rachel Kim>Perfect. Let’s move to the last item—quick note on the vendor survey results.</v>
+
+00:03:34.060 --> 00:03:39.060
+<v Nadia Petrova>Oh, right. I saw the email but didn’t open it yet. Anything surprising?</v>
+
+00:03:40.403 --> 00:03:46.941
+<v Rachel Kim>Not really, but a few folks flagged issues with Goldcast support. I’ll follow up with their rep.</v>
+
+00:03:47.621 --> 00:03:53.391
+<v Omar Haddad>Do we need to do anything on our end, or just wait for your update?</v>
+
+00:03:53.796 --> 00:03:58.027
+<v Rachel Kim>Just wait for now. I’ll share notes in the next meeting.</v>
+
+00:03:59.310 --> 00:04:00.810
+<v Amara Nwosu>Thanks, Rachel.</v>
+
+00:04:01.925 --> 00:04:03.425
+<v Diego Santos>Thanks, everyone.</v>
+
+00:04:04.420 --> 00:04:09.036
+<v Rachel Kim>Alright, that’s it for today. Have a good rest of your week!</v>
+
+00:04:10.519 --> 00:04:12.019
+<v Nadia Petrova>You too!</v>
+
+00:04:13.069 --> 00:04:14.569
+<v Omar Haddad>Bye all.</v>
+
+00:04:14.779 --> 00:04:16.279
+<v Amara Nwosu>Bye!</v>
+
+00:04:17.542 --> 00:04:19.042
+<v Diego Santos>See ya.</v>

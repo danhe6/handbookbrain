@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Quick question\u2014if I\u2019m setting up two events in Accelevents, can I have both open in different tabs? Or is that going to mess something up?",
+    "ts": "1780059600.000000",
+    "synthetic": true,
+    "thread_ts": "1780059600.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Hey Tom, yeah, actually you shouldn\u2019t do that. There\u2019s a note in the handbook about not having multiple events open in the same browser\u2014it can mess with the cache and settings might get crossed between events.",
+    "ts": "1780060726.422759",
+    "synthetic": true,
+    "thread_ts": "1780059600.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Ah, got it. So just one event per browser window then?",
+    "ts": "1780064011.136480",
+    "synthetic": true,
+    "thread_ts": "1780059600.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U13SARA",
+    "text": "Exactly, just stick to one event at a time in your browser. If you really need to have two open, you could try using a different browser or incognito mode for the second one, but safest is just one at a time.",
+    "ts": "1780068071.561120",
+    "synthetic": true,
+    "thread_ts": "1780059600.000000",
+    "parent_user_id": "U14TOM"
+  },
+  {
+    "type": "message",
+    "user": "U14TOM",
+    "text": "Makes sense, thanks Sara! I\u2019ll stick to one. Appreciate it.",
+    "ts": "1780068912.325179",
+    "synthetic": true,
+    "thread_ts": "1780059600.000000",
+    "parent_user_id": "U14TOM"
+  }
+]

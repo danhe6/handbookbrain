@@ -1,0 +1,47 @@
+[
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Happy Friday! Anyone got fun weekend plans? I\u2019m thinking about finally taking Max to the dog park if it ever stops raining.",
+    "ts": "1779996600.000000",
+    "synthetic": true,
+    "thread_ts": "1779996600.000000",
+    "reply_count": 4
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "Omg Jake, I saw that meme you posted yesterday with the dog in the raincoat \ud83d\ude02 That\u2019s basically my cat right now, she\u2019s been staring out the window like she\u2019s plotting something.",
+    "ts": "1780001478.385757",
+    "synthetic": true,
+    "thread_ts": "1779996600.000000",
+    "parent_user_id": "U12JAKE"
+  },
+  {
+    "type": "message",
+    "user": "U12JAKE",
+    "text": "Haha, yeah, Max would probably prefer a raincoat too. Mei, does your cat actually go outside? Mine just yells at the door and then changes her mind.",
+    "ts": "1780005176.171233",
+    "synthetic": true,
+    "thread_ts": "1779996600.000000",
+    "parent_user_id": "U12JAKE"
+  },
+  {
+    "type": "message",
+    "user": "U15MEI",
+    "text": "She\u2019s strictly indoor, but she acts like she owns the backyard. Also, did anyone else\u2019s Slack just freeze for like 2 minutes? I thought it was just me but Diego said he had the same bug.",
+    "ts": "1780006130.282518",
+    "synthetic": true,
+    "thread_ts": "1779996600.000000",
+    "parent_user_id": "U12JAKE"
+  },
+  {
+    "type": "message",
+    "user": "U02DIEGO",
+    "text": "Yep, same here. I had to refresh twice. Maybe it\u2019s the universe telling us to log off and start the weekend early \ud83d\ude05",
+    "ts": "1780008582.615775",
+    "synthetic": true,
+    "thread_ts": "1779996600.000000",
+    "parent_user_id": "U12JAKE"
+  }
+]

@@ -1,0 +1,157 @@
+WEBVTT
+
+1
+00:00:02.000 --> 00:00:08.538
+Ken Watanabe: Alright, it’s 10:01, let’s get started. Happy Friday, everyone. Quick round of updates before we dive in?
+
+2
+00:00:09.436 --> 00:00:18.666
+Nadia Petrova: Sure, I’ll go first. Sales Ops is wrapping up Q2 pipeline reviews, so it’s been a bit hectic. But nothing blocking from my side.
+
+3
+00:00:19.049 --> 00:00:26.741
+Ethan Brooks: Deal Desk is mostly heads-down on a couple of big renewals. I’ll be out next Thursday, but otherwise, all good.
+
+4
+00:00:27.179 --> 00:00:36.410
+Julia Costa: Billing’s been quiet, just the usual month-end stuff. Oh, and I finally got access to the new reporting dashboard, so thanks for that, Ken.
+
+5
+00:00:37.212 --> 00:00:44.904
+Ken Watanabe: No problem, Julia. I’m glad that’s sorted. On my end, just prepping for the partner QBR next week. Nothing urgent.
+
+6
+00:00:46.241 --> 00:00:51.625
+Nadia Petrova: Oh, Ken, did you see the Slack thread about the new partner onboarding checklist?
+
+7
+00:00:51.923 --> 00:00:56.539
+Ken Watanabe: Yeah, I did. I’ll follow up after this call. Thanks for flagging.
+
+8
+00:00:57.789 --> 00:01:01.251
+Ethan Brooks: Alright, should we jump into the main agenda item?
+
+9
+00:01:02.564 --> 00:01:10.256
+Ken Watanabe: Let’s do it. So, we need to finalize the update to the Partner FAQ, specifically around auto-renewal for partner deals.
+
+10
+00:01:10.583 --> 00:01:17.122
+Nadia Petrova: Right, the current FAQ doesn’t actually mention auto-renewal at all, which has been confusing for the field.
+
+11
+00:01:18.169 --> 00:01:27.400
+Julia Costa: Yeah, I’ve had a couple of partners ask if they’re on the hook for renewals if they miss the 30-day notice. It’s not clear.
+
+12
+00:01:28.303 --> 00:01:37.918
+Ethan Brooks: Same here. I think we need to be explicit that auto-renewal isn’t enforced on partner deals. Otherwise, we get stuck in these back-and-forths every quarter.
+
+13
+00:01:38.137 --> 00:01:51.214
+Ken Watanabe: Agreed. The draft I circulated says, basically, that when an order is placed through a partner, auto-renewal is deactivated. Partners and customers aren’t obligated to renew just because they didn’t send a cancellation notice.
+
+14
+00:01:51.536 --> 00:01:57.689
+Nadia Petrova: And we’re adding that the partner should notify us if the end customer isn’t renewing, right?
+
+15
+00:01:58.869 --> 00:02:06.946
+Ken Watanabe: Exactly. We want to make it clear that GitLab won’t take collection action if a partner deal lapses without formal cancellation.
+
+16
+00:02:07.453 --> 00:02:15.915
+Julia Costa: Just to clarify, does this mean we’re not sending any dunning emails to partners if a renewal doesn’t come in on time?
+
+17
+00:02:16.643 --> 00:02:23.951
+Ken Watanabe: Correct. For partner-transacted business, we don’t send dunning or collections. The partner manages the renewal process with their customer.
+
+18
+00:02:24.777 --> 00:02:34.392
+Ethan Brooks: I have one concern—what if a partner forgets to notify us and the customer expects service to continue? How do we handle that edge case?
+
+19
+00:02:35.716 --> 00:02:48.793
+Nadia Petrova: Good point. I think we should add a line that says, if the partner doesn’t notify us, we’ll reach out for confirmation before suspending service. That way, we’re not cutting anyone off by accident.
+
+20
+00:02:50.166 --> 00:02:57.474
+Ken Watanabe: Yeah, I like that. We can add a sentence about confirming with the partner before any action is taken.
+
+21
+00:02:57.888 --> 00:03:02.119
+Julia Costa: That works for me. It’ll help avoid awkward conversations with partners.
+
+22
+00:03:02.321 --> 00:03:06.552
+Ethan Brooks: Agreed. As long as we’re not auto-renewing or auto-suspending, I’m good.
+
+23
+00:03:07.260 --> 00:03:20.721
+Ken Watanabe: Alright, so to recap: auto-renewal is not enforced on partner deals, partners and customers aren’t obligated to renew without notice, and we’ll confirm with the partner before suspending service if there’s no renewal or notification.
+
+24
+00:03:22.126 --> 00:03:29.818
+Nadia Petrova: Got it. I’ll update the FAQ page with the new language and add that clarification about confirming with the partner.
+
+25
+00:03:31.039 --> 00:03:35.654
+Ken Watanabe: Perfect. Nadia, can you get that done in the next two weeks?
+
+26
+00:03:36.225 --> 00:03:39.302
+Nadia Petrova: Yep, I’ll have it updated by the 26th.
+
+27
+00:03:40.407 --> 00:03:44.254
+Ken Watanabe: Awesome. Thanks, Nadia. Any other concerns before we move on?
+
+28
+00:03:45.403 --> 00:03:46.903
+Julia Costa: Nope, I’m good.
+
+29
+00:03:48.122 --> 00:03:49.622
+Ethan Brooks: All set here.
+
+30
+00:03:50.682 --> 00:03:55.682
+Ken Watanabe: Alright, last thing—quick note on the team engagement survey. Results came in yesterday.
+
+31
+00:03:56.515 --> 00:03:59.592
+Nadia Petrova: Oh, I haven’t seen those yet. Anything surprising?
+
+32
+00:04:00.039 --> 00:04:11.962
+Ken Watanabe: Not really, but one thing that stood out was folks want more cross-team knowledge sharing. So, I’m proposing we do a short lunch-and-learn next month. I’ll send a poll for topics.
+
+33
+00:04:12.445 --> 00:04:18.214
+Julia Costa: Love that idea. I’d be happy to share some billing tips if people are interested.
+
+34
+00:04:18.490 --> 00:04:22.336
+Ethan Brooks: Yeah, I can do a session on deal structuring too.
+
+35
+00:04:23.493 --> 00:04:27.339
+Ken Watanabe: Great, I’ll send out the poll by Monday. Thanks, everyone.
+
+36
+00:04:27.618 --> 00:04:30.310
+Nadia Petrova: Thanks, Ken. Have a good weekend, all.
+
+37
+00:04:30.918 --> 00:04:32.418
+Julia Costa: You too!
+
+38
+00:04:32.683 --> 00:04:34.183
+Ethan Brooks: Bye, everyone.
+
+39
+00:04:35.003 --> 00:04:37.695
+Ken Watanabe: Alright, closing out. See you next week.

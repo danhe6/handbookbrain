@@ -29,11 +29,11 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 from . import gitrepo
-from .config import ROOT, T0
+from .config import CFG, CONV_DIR, T0
 from .llm import complete, usage_line
 from .parse import parse_page
 
-OUT = ROOT / "data" / "synthetic"
+OUT = CONV_DIR
 SYNTH_MODEL = __import__("os").getenv("HB_SYNTH_MODEL", "openai/gpt-4.1")
 rnd = random.Random(42)
 
@@ -69,6 +69,67 @@ GAP_TOPICS = [
     "how to change the name shown in payroll after marriage",
 ]
 
+GTM_ROSTER = [
+    ("Rachel Kim", "U01RACHEL", "Director, Marketing Operations", "Marketing Ops"),
+    ("Diego Santos", "U02DIEGO", "Marketing Ops Manager (Marketo)", "Marketing Ops"),
+    ("Amara Nwosu", "U03AMARA", "Lead Scoring & Routing Analyst", "Marketing Ops"),
+    ("Ethan Brooks", "U04ETHAN", "Deal Desk Manager", "Deal Desk"),
+    ("Lena Hoffmann", "U05LENA", "Deal Desk Specialist", "Deal Desk"),
+    ("Victor Huang", "U06VICTOR", "Sales Systems Administrator (Salesforce)", "Sales Systems"),
+    ("Nadia Petrova", "U07NADIA", "Sales Operations Manager", "Sales Operations"),
+    ("Omar Haddad", "U08OMAR", "Revenue Analytics Lead", "Revenue Analytics"),
+    ("Julia Costa", "U09JULIA", "Billing Operations Specialist", "Billing Operations"),
+    ("Ken Watanabe", "U10KEN", "Channel Operations Manager", "Channel Operations"),
+    ("Priscilla Moore", "U11PRIS", "Customer Success Operations Manager", "CS Operations"),
+    ("Jake Miller", "U12JAKE", "Account Executive", "Sales"),
+    ("Sara Ali", "U13SARA", "Sales Development Rep", "Sales"),
+    ("Tom Becker", "U14TOM", "Solutions Architect", "Sales"),
+    ("Mei Chen", "U15MEI", "Customer Success Manager", "Customer Success"),
+    ("Luis Ortega", "U16LUIS", "Partner Account Manager", "Channel"),
+]
+PROFILES = {
+    "people": {
+        "roster": ROSTER, "employee_teams": ("Engineering", "Product", "Sales", "Support", "Finance"),
+        "channels": CHANNELS, "ask_channels": ["people-questions", "benefits", "managers"],
+        "tribal_channel": "people-questions", "gap_topics": GAP_TOPICS, "hero_mrs": {21230, 20954, 20638, 20279, 20541},
+        "desk": "People Ops helpdesk", "desk_agents": ["Kwame Asante", "Hannah Weiss", "Priya Raman"],
+        "tribal_answerers": ["Kwame Asante", "Hannah Weiss", "Lukas Brenner", "Priya Raman", "Grace Liu"],
+        "teams": [("total-rewards", "Total Rewards weekly sync", ["Maya Okafor", "Lukas Brenner", "Priya Raman", "Daniel Ferreira", "Tomás Rivera"]),
+                  ("hiring", "Talent Acquisition leads sync", ["Arjun Mehta", "Grace Liu", "Sofia Lindqvist", "Chloe Martin"]),
+                  ("", "People Ops policy review", ["Sofia Lindqvist", "Kwame Asante", "Hannah Weiss", "Tomás Rivera", "Grace Liu"])],
+        "doc_word": "handbook policy",
+    },
+    "gtm": {
+        "roster": GTM_ROSTER, "employee_teams": ("Sales", "Customer Success", "Channel"),
+        "channels": ["sales-ops-help", "deal-desk", "mktg-ops", "revenue-analytics", "random"],
+        "ask_channels": ["sales-ops-help", "deal-desk", "mktg-ops"], "tribal_channel": "sales-ops-help",
+        "gap_topics": [
+            "who approves a discount above 40% on a multi-year public-sector renewal",
+            "whether an opportunity close date can be moved back into last quarter after the books close",
+            "whether trial sign-ups from the same company domain are merged into one lead in Salesforce",
+            "which dashboard is the source of truth for pipeline coverage in the forecast call",
+            "how to request a new picklist value on the Opportunity object",
+            "whether partner-sourced deals count toward SDR quota",
+        ],
+        "hero_mrs": {20534, 19600, 19939, 21365, 20248, 20005, 15742},
+        "desk": "Sales Ops / Field Ops request desk", "desk_agents": ["Nadia Petrova", "Lena Hoffmann", "Victor Huang"],
+        "tribal_answerers": ["Nadia Petrova", "Lena Hoffmann", "Victor Huang", "Amara Nwosu", "Omar Haddad"],
+        "teams": [("marketing-operations", "Marketing Ops weekly", ["Rachel Kim", "Diego Santos", "Amara Nwosu", "Omar Haddad", "Nadia Petrova"]),
+                  ("marketing-analytics", "Marketing Ops weekly", ["Rachel Kim", "Omar Haddad", "Amara Nwosu", "Diego Santos"]),
+                  ("channel-operations", "Channel Ops sync", ["Ken Watanabe", "Nadia Petrova", "Ethan Brooks", "Julia Costa"]),
+                  ("sales-systems", "Sales Systems change review", ["Victor Huang", "Nadia Petrova", "Ethan Brooks", "Omar Haddad"]),
+                  ("customer-success", "CS Ops sync", ["Priscilla Moore", "Omar Haddad", "Victor Huang", "Nadia Petrova"]),
+                  ("", "Deal Desk & Sales Ops sync", ["Ethan Brooks", "Lena Hoffmann", "Nadia Petrova", "Victor Huang", "Julia Costa"])],
+        "doc_word": "documented process / business rule",
+    },
+}
+P = PROFILES[CFG.get("synth_profile", "people")]
+ROSTER = P["roster"]
+PEOPLE = {r[0]: {"name": r[0], "id": r[1], "role": r[2], "team": r[3]} for r in ROSTER}
+EMPLOYEES = [n for n, *_ in ROSTER if PEOPLE[n]["team"] in P["employee_teams"]]
+CHANNELS = P["channels"]
+GAP_TOPICS = P["gap_topics"]
+
 SYSTEM = """You write realistic internal workplace communication for a FICTIONAL training dataset.
 People write and talk naturally: filler words, half sentences, interruptions, tangents, typos in chat,
 vague references to "the handbook page" or "that doc". They paraphrase policies instead of quoting them.
@@ -100,7 +161,7 @@ def _norm(t: str) -> str:
 
 NUM_RE = re.compile(r"\d+(?:[.,]\d+)?%?")
 # Demo anchors: real MRs with clear factual changes (pension %, premiums, leave pay, parental leave)
-HERO_MRS = {21230, 20954, 20638, 20279, 20541}
+HERO_MRS = P["hero_mrs"]
 SKIP_TITLE = re.compile(r"link|typo|spaces|broken|rename|format|cleanup", re.I)
 
 
@@ -131,6 +192,9 @@ def policy_changes(max_n: int = 10) -> list[dict]:
             for s in new.sections:
                 o = old.get(s.sid)
                 if not o:
+                    if hero and len(s.text) > 200 and NUM_RE.search(s.text):  # a new rule section added
+                        changes.append({"sid": s.sid, "page": new.title, "heading": s.heading, "old": "(this section does not exist yet)",
+                                        "new": s.text[:3000], "ratio": 0.0, "score": 5 + len(set(NUM_RE.findall(s.text))) * 0.5})
                     continue
                 a, b = _strip_links(o.text), _strip_links(s.text)
                 if a == b:
@@ -262,11 +326,10 @@ class SlackWriter:
 # ---------------------------------------------------------------- scenario generators
 
 def _team_for(path: str) -> tuple[str, list[str]]:
-    if "total-rewards" in path:
-        return "Total Rewards weekly sync", ["Maya Okafor", "Lukas Brenner", "Priya Raman", "Daniel Ferreira", "Tomás Rivera"]
-    if "hiring" in path:
-        return "Talent Acquisition leads sync", ["Arjun Mehta", "Grace Liu", "Sofia Lindqvist", "Chloe Martin"]
-    return "People Ops policy review", ["Sofia Lindqvist", "Kwame Asante", "Hannah Weiss", "Tomás Rivera", "Grace Liu"]
+    for key, title, people in P["teams"]:
+        if key == "" or key in path:
+            return title, people
+    return P["teams"][-1][1], P["teams"][-1][2]
 
 
 def _business_time(day: datetime) -> datetime:
@@ -284,7 +347,7 @@ def gen_meeting(idx: int, kind: str, anchor: dict, platform: str) -> dict:
         items = "\n".join(
             f"- Policy '{c['page']} > {c['heading']}'. CURRENT text:\n{c['old'][:1500]}\nWHAT THE GROUP DECIDES (new text):\n{c['new'][:1500]}"
             for c in anchor["changes"])
-        agenda = (f"Main item: discuss and DECIDE the following handbook policy change(s). Someone raises at least one "
+        agenda = (f"Main item: discuss and DECIDE the following change(s) to a {P['doc_word']}. Someone raises at least one "
                   f"concern that gets resolved. {host} states the decision clearly. {owner} takes the action item to "
                   f"update the handbook page within two weeks.\n{items}")
     else:
@@ -319,18 +382,18 @@ def gen_slack(kind: str, anchor: dict, when: datetime, slack: SlackWriter) -> di
         spec = (f"{asker} asks about '{c['page']} > {c['heading']}'. {answerer} answers confidently using the OLD rule "
                 f"below (which is no longer current, but nobody in the thread knows that). Someone thanks them. "
                 f"OLD rule:\n{c['old'][:1500]}")
-        channel = rnd.choice(["people-questions", "benefits", "managers"])
+        channel = rnd.choice(P["ask_channels"])
     elif kind == "answerable":
         spec = (f"{asker} asks a practical question whose answer is in this policy. {answerer} answers roughly "
                 f"correctly, maybe pointing to 'the handbook'. Policy '{anchor['page']} > {anchor['heading']}':\n"
                 f"{anchor['text'][:1500]}")
-        channel = rnd.choice(["people-questions", "benefits"])
+        channel = rnd.choice(P["ask_channels"])
     elif kind == "tribal":
-        answerer = rnd.choice(["Kwame Asante", "Hannah Weiss", "Lukas Brenner", "Priya Raman", "Grace Liu"])
+        answerer = rnd.choice(P["tribal_answerers"])
         spec = (f"{asker} asks about: {anchor['topic']}. {answerer} ({PEOPLE[answerer]['role']}) answers with a "
                 f"specific internal practice (a concrete rule, amount, approver or form) that is NOT written in the "
                 f"handbook, and says something like 'it's not in the handbook yet'.")
-        channel = "people-questions"
+        channel = P["tribal_channel"]
     else:
         spec = f"Casual off-topic chat between {asker} and {answerer} (and maybe one more person): weekend, pets, a meme, a bug."
         channel = "random"
@@ -355,15 +418,15 @@ def gen_tickets(answerable: list[dict], start: datetime, end: datetime) -> list[
         i, (kind, a) = i_spec
         about = (f"about: {a['topic']} (the handbook does not cover this)" if kind == "gap" else
                  f"whose answer is in policy '{a['page']} > {a['heading']}':\n{a['text'][:1200]}")
-        out = _llm(f"""Write one People Ops helpdesk ticket from an employee asking a question {about}.
+        out = _llm(f"""Write one {P['desk']} ticket from an employee asking a question {about}.
 Phrase it in your own words (different each time). Include 0-2 agent replies; for the uncovered topics the agent
-may say they'll check. Requester from {json.dumps(EMPLOYEES)}; agents from ["Kwame Asante", "Hannah Weiss", "Priya Raman"].
+may say they'll check. Requester from {json.dumps(EMPLOYEES)}; agents from {json.dumps(P['desk_agents'])}.
 Return JSON: {{"subject": str, "description": str, "requester": name, "comments": [{{"author": name, "body": str}}]}}""",
                    max_tokens=1200)
         when = start + (end - start) * rnd.random()
         t = {"id": 4000 + i, "subject": out["subject"], "description": out["description"],
              "requester": {"name": _speaker(out.get("requester", ""))}, "status": rnd.choice(["open", "pending", "solved"]),
-             "created_at": _ts(when), "tags": ["people-ops"], "synthetic": True,
+             "created_at": _ts(when), "tags": [P["desk"].split()[0].lower()], "synthetic": True,
              "comments": [{"author": {"name": c["author"]}, "body": c["body"],
                            "created_at": _ts(when + timedelta(hours=rnd.randint(1, 48)))} for c in out.get("comments", [])]}
         lab = {"id": f"ticket-{t['id']}", "source": "ticket", "scenario": kind, "date": when.isoformat(),
