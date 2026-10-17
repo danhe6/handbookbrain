@@ -424,9 +424,11 @@ def tag_domains(graph: dict) -> dict:
             nb[e["source"]].append(e["target"])
             nb[e["target"]].append(e["source"])
     pages = [nid for nid, n in nodes.items() if n["type"] == "Page"]
+    home = {pid: set(tags[pid]) for pid in pages}      # a document's domain = where it lives; links never change it
     for pid in pages:
         for x in nb[pid]:
-            tags[x] |= tags[pid]
+            if nodes[x]["type"] != "Page":
+                tags[x] |= home[pid]
     for _ in range(3):
         add = {}
         for nid, t in tags.items():

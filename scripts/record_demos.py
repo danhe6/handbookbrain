@@ -59,7 +59,7 @@ class Run:
         self.p.locator(sel).first.wait_for(state="visible", timeout=timeout * 1000)
 
     def click(self, sel, pause=0.9, nth=0):
-        el = self.p.locator(sel).nth(nth)
+        el = self.p.locator(sel).last if nth == -1 else self.p.locator(sel).nth(nth)
         el.wait_for(state="visible", timeout=60000)
         el.scroll_into_view_if_needed()
         b = el.bounding_box()
@@ -140,22 +140,27 @@ def explore(r: Run):
 
 
 def impact(r: Run):
-    """An answer that went stale when its source changed, and what that change affected."""
+    """An answer that was invalidated by a change and refreshed, and what that change affected."""
     r.go("#/ask")
     r.wait(".qbtn[data-id]")
-    cands = r.p.locator(".qbtn[data-id]:has-text('re-checked')")
-    n = cands.count()
-    for i in range(min(n, 10)):
-        r.click(".qbtn[data-id]:has-text('re-checked')", 0.3, nth=i)
-        r.wait("#story .answer")
-        r.p.wait_for_timeout(400)
-        if r.has(".ev.stale"):
+    hit = ".ev.stale, .ev.earlier_answer"
+    for sel in [".qbtn[data-id]:has-text('31')", ".qbtn[data-id]:has-text('trial')", ".qbtn[data-id]:has-text('re-checked')"]:
+        for i in range(min(r.p.locator(sel).count(), 6)):
+            r.click(sel, 0.3, nth=i)
+            r.wait("#story .answer")
+            r.p.wait_for_timeout(400)
+            if r.has(hit):
+                break
+        if r.has(hit):
             break
     r.pause(1.5)
-    r.top(".ev.stale" if r.has(".ev.stale") else ".tl", 160)
-    r.pause(2.5)
+    r.top(".ev.change" if r.has(".ev.change") else ".tl", 120)
+    r.pause(1.5)
+    if r.has(hit):
+        r.top(hit, 260)
+        r.pause(2.5)
     if r.has(".ev.change [data-impact]"):
-        r.click(".ev.change [data-impact]", 0.5)
+        r.click(".ev.change [data-impact]", 0.5, nth=-1)
         r.wait(".impact .card")
         r.pause(3.5)
 
