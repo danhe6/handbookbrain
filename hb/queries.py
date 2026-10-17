@@ -319,7 +319,8 @@ def why_changed(cite: str) -> dict:
         """,
         {"sid": sid},
     )
-    return {**hist, "decisions": dec}
+    # decisions first: tool results are truncated for the model, and the decision is what this tool is for
+    return {"decisions": dec or "no meeting/chat decision is linked to the changes of this section", **hist}
 
 
 def decisions_about(topic: str, k: int = 5) -> dict:

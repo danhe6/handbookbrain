@@ -259,8 +259,22 @@ def explore(limit_pages: int = 220) -> dict:
         RETURN p.path AS path, p.title AS title, p.dept AS dept, p.source AS source, p.source_kind AS kind,
                p.owner_source AS owner_source, n, changed,
                [(p)-[r:OWNED_BY]->(o) | {h:o.handle, n:o.name, team:'Team' IN labels(o), src:r.source}] AS owners
-        ORDER BY changed DESC LIMIT $n
-        """, {"n": limit_pages})
+        ORDER BY changed DESC
+        """)
+    # keep every domain represented: the most recently changed pages of EACH domain, not of the company overall
+    doms = domains()
+    if len(doms) > 1:
+        per = max(limit_pages // len(doms), 20)
+        picked, seen = [], {}
+        for p in pages:
+            d = _domains_of_path(p["path"], doms) or ([p["dept"]] if any(x["id"] == p["dept"] for x in doms) else ["(other)"])
+            if any(seen.get(x, 0) < per for x in d):
+                for x in d:
+                    seen[x] = seen.get(x, 0) + 1
+                picked.append(p)
+        pages = picked
+    else:
+        pages = pages[:limit_pages]
     keep = set()
     for p in pages:
         pid = "P:" + p["path"]
@@ -275,13 +289,16 @@ def explore(limit_pages: int = 220) -> dict:
         """
         MATCH (d:Decision)-[:DECIDED_IN]->(cv:Conversation)
         OPTIONAL MATCH (d)-[:ABOUT]->(:Section)<-[:HAS_SECTION]-(p:Page)
-        OPTIONAL MATCH (d)-[:IMPLEMENTED_BY]->(:Commit)-[:CHANGED]->(:Section)<-[:HAS_SECTION]-(p2:Page)
+        OPTIONAL MATCH (d)-[:IMPLEMENTED_BY]->(c:Commit)-[:CHANGED]->(:Section)<-[:HAS_SECTION]-(p2:Page)
+        OPTIONAL MATCH (m:MergeRequest)-[:MERGED_AS]->(c)
         OPTIONAL MATCH (d)-[:DECIDED_BY]->(by:Person)
         RETURN d.id AS id, d.statement AS st, d.status AS status, d.decided_at AS at, cv.cid AS cid, cv.title AS where,
-               cv.source AS src, by.name AS by, collect(DISTINCT p.path) + collect(DISTINCT p2.path) AS paths
+               cv.source AS src, by.name AS by, collect(DISTINCT p.path) + collect(DISTINCT p2.path) AS paths,
+               collect(DISTINCT m.iid)[0] AS mr, collect(DISTINCT m.url)[0] AS mr_url, collect(DISTINCT c.ts)[0] AS done_at
         """):
         dn = "D:" + d["id"]
-        g.node(dn, "Decision", d["st"], status=d["status"], at=d["at"])
+        g.node(dn, "Decision", d["st"], status=d["status"], at=d["at"], by=d["by"], where=d["where"], src=d["src"],
+               mr=d["mr"], mr_url=d["mr_url"], done_at=d["done_at"])
         g.node("V:" + d["cid"], "Conversation", d["where"], src=d["src"])
         g.edge(dn, "V:" + d["cid"], "DECIDED_IN")
         if d["by"] and d["by"] != "unknown":
@@ -363,3 +380,68 @@ def schema() -> dict:
             g.node("L:" + l, l, f"{l} · {counts.get(l, 0):,}", count=counts.get(l, 0))
         g.edge("L:" + r["a"], "L:" + r["b"], r["t"], count=r["n"])
     return g.out()
+
+
+# ---------------------------------------------------------------- domains (business areas) on any graph
+
+_DOMS = {"list": None}
+HUBS = {"System", "Metric", "Field", "Dashboard", "Team", "Person", "Source", "Term", "MergeRequest"}
+
+
+def domains() -> list[dict]:
+    if _DOMS["list"] is None:
+        from .learn import areas
+        _DOMS["list"] = areas()
+    return _DOMS["list"]
+
+
+def _domains_of_path(path: str, doms: list[dict]) -> list[str]:
+    return [d["id"] for d in doms if path and path.startswith(d["id"])]
+
+
+def tag_domains(graph: dict) -> dict:
+    """Give every node a `domains` list so the UI can focus one business area on any graph.
+    Documents get theirs from where they live; their direct neighbours (sections, decisions, changes, metrics,
+    dashboards, owners ...) inherit it; then it flows along the chain (decision -> meeting, section -> older
+    version, change -> MR ...) but never THROUGH shared hubs such as Salesforce or a team, which would
+    otherwise pull every domain into every other."""
+    doms = domains()
+    if not doms:
+        return graph
+    dept_dom = {}
+    for d in doms:
+        dept_dom[d["id"]] = d["id"]
+    nodes = {n["id"]: n for n in graph["nodes"]}
+    tags = {nid: set() for nid in nodes}
+    for n in graph["nodes"]:
+        if n["type"] == "Page":
+            tags[n["id"]] |= set(_domains_of_path(n.get("path") or "", doms))
+            if n.get("dept") in dept_dom:
+                tags[n["id"]].add(dept_dom[n["dept"]])
+    nb = {nid: [] for nid in nodes}
+    for e in graph["edges"]:
+        if e["source"] in nb and e["target"] in nb:
+            nb[e["source"]].append(e["target"])
+            nb[e["target"]].append(e["source"])
+    pages = [nid for nid, n in nodes.items() if n["type"] == "Page"]
+    for pid in pages:
+        for x in nb[pid]:
+            tags[x] |= tags[pid]
+    for _ in range(3):
+        add = {}
+        for nid, t in tags.items():
+            if not t or nodes[nid]["type"] in HUBS or nodes[nid]["type"] == "Page":
+                continue
+            for x in nb[nid]:
+                if nodes[x]["type"] != "Page" and not t <= tags[x]:
+                    add.setdefault(x, set()).update(t)
+        if not add:
+            break
+        for x, t in add.items():
+            tags[x] |= t
+    for n in graph["nodes"]:
+        n["domains"] = sorted(tags[n["id"]])
+    present = {d for t in tags.values() for d in t}
+    graph["domains"] = [{"id": d["id"], "name": d["name"],
+                         "nodes": sum(1 for t in tags.values() if d["id"] in t)} for d in doms if d["id"] in present]
+    return graph

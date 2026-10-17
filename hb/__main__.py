@@ -261,6 +261,29 @@ def cmd_seed(a):
     print(usage_line())
 
 
+def cmd_learn(a):
+    """Pre-write onboarding content so the Learn page is instant in a demo: area briefs + glossary."""
+    from .glossary import build
+    from .learn import areas, brief
+    from .llm import usage_line
+    for ar in areas():
+        if a.area and a.area not in ar["id"]:
+            continue
+        print(f"{ar['name']}: brief")
+        brief(ar["id"], refresh=a.refresh)
+        print(f"{ar['name']}: glossary")
+        build(limit=a.terms, area=ar["id"])
+    print(usage_line())
+
+
+def cmd_proposals(a):
+    from .proposals import listing, reset_all
+    if a.reset:
+        print(f"reset {reset_all()} proposal(s) to pending")
+    for p in listing():
+        print(f"{p['status']:9} {p['id']}  {p['page']} › {p['heading']}  ({len(p['signoffs'])} sign-offs)")
+
+
 def cmd_stats(_):
     from .graph import rows
     for r in rows("MATCH (n) RETURN labels(n)[0] AS label, count(*) AS n ORDER BY n DESC"):
@@ -315,6 +338,11 @@ def main():
     s = sp.add_parser("seed"); s.add_argument("file", nargs="?", default="eval/questions.txt"); s.set_defaults(f=cmd_seed)
     sp.add_parser("stale").set_defaults(f=cmd_stale)
     sp.add_parser("stats").set_defaults(f=cmd_stats)
+    s = sp.add_parser("proposals", help="drafted updates; --reset puts them all back to pending (undo demo sign-offs)")
+    s.add_argument("--reset", action="store_true"); s.set_defaults(f=cmd_proposals)
+    s = sp.add_parser("learn", help="pre-write onboarding briefs and glossary definitions for every area")
+    s.add_argument("--area", default=""); s.add_argument("--terms", type=int, default=30)
+    s.add_argument("--refresh", action="store_true"); s.set_defaults(f=cmd_learn)
     a = p.parse_args()
     a.f(a)
 

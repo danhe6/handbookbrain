@@ -5,6 +5,9 @@ drafted change, routed to the people who must approve it, with its impact comput
       -[:FROM]->(Decision)  -[:FOR]->(Section version it would replace)
       -[:NEEDS_APPROVAL_FROM]->(Team|Person)      page owners from CODEOWNERS / document owner fields
 
+Only an OWNER's sign-off is final: anyone else can endorse or object, and that is recorded, but the proposal
+stays pending until an owner decides (in production, identity comes from SSO; the demo asks who is signing).
+
 Nothing is written to the source documents: approval records who approved and produces the patch to
 merge. When the change is merged, the normal sync loop picks it up (reconcile links it to the decision,
 stale detection re-checks the answers that cited the old version).
@@ -83,7 +86,7 @@ def draft(decision_id: str) -> dict:
         MATCH (d:Decision {id:$did}), (s:Section {vid:$vid})
         MERGE (pr:Proposal {id:$id})
         SET pr.new_text=$new, pr.diff=$diff, pr.summary=$summary, pr.applies=$applies, pr.status='pending',
-            pr.created=$now, pr.origin='ai_drafted'
+            pr.signoffs='[]', pr.decided_by=NULL, pr.decided_at=NULL, pr.created=$now, pr.origin='ai_drafted'
         MERGE (pr)-[:FROM]->(d) MERGE (pr)-[:FOR]->(s)
         WITH pr
         UNWIND $owners AS h
@@ -99,12 +102,52 @@ def draft(decision_id: str) -> dict:
             "new_text": new, "approvers": approvers, "impact": _impact(s["vid"], s["sid"])}
 
 
+def _norm(x: str) -> str:
+    return (x or "").strip().lstrip("@").lower()
+
+
 def decide(pid: str, status: str, by: str = "") -> dict:
+    """Record a sign-off. Only a page OWNER (the people / teams the proposal NEEDS_APPROVAL_FROM) makes it final.
+    Anyone else's approve / reject is kept as an endorsement or an objection, and the proposal stays pending until
+    an owner decides. With no owner on record, the first sign-off decides (and says so).
+    status 'pending' resets the proposal (demo / undo)."""
+    if status == "pending":
+        q("MATCH (pr:Proposal {id:$id}) SET pr.status='pending', pr.signoffs='[]', pr.decided_by=NULL, pr.decided_at=NULL",
+          {"id": pid})
+        return (listing(pid) or [{"error": "unknown proposal"}])[0]
     if status not in ("approved", "rejected"):
-        return {"error": "status must be approved or rejected"}
-    q("MATCH (pr:Proposal {id:$id}) SET pr.status=$st, pr.decided_by=$by, pr.decided_at=$now",
-      {"id": pid, "st": status, "by": by or "owner", "now": time.strftime("%Y-%m-%dT%H:%M:%S")})
-    return listing(pid)[0] if listing(pid) else {"error": "unknown proposal"}
+        return {"error": "status must be approved, rejected or pending"}
+    by = (by or "").strip()
+    if not by:
+        return {"error": "Say who is signing off."}
+    cur = rows("""MATCH (pr:Proposal {id:$id})
+                  RETURN pr.status AS status, pr.signoffs AS signoffs,
+                         [(pr)-[:NEEDS_APPROVAL_FROM]->(o) | [coalesce(o.handle, ''), coalesce(o.name, '')]] AS owners""",
+               {"id": pid})
+    if not cur:
+        return {"error": "unknown proposal"}
+    cur = cur[0]
+    owner_keys = {_norm(x) for pair in cur["owners"] for x in pair if x}
+    no_owner = not owner_keys
+    is_owner = no_owner or _norm(by) in owner_keys
+    signoffs = json.loads(cur["signoffs"] or "[]")
+    now = time.strftime("%Y-%m-%dT%H:%M:%S")
+    signoffs.append({"by": by, "vote": "approve" if status == "approved" else "reject",
+                     "role": "owner" if is_owner and not no_owner else ("no owner on record" if no_owner else "not an owner"),
+                     "at": now})
+    if is_owner and cur["status"] == "pending":
+        q("MATCH (pr:Proposal {id:$id}) SET pr.status=$st, pr.decided_by=$by, pr.decided_at=$now, pr.signoffs=$so",
+          {"id": pid, "st": status, "by": by, "now": now, "so": json.dumps(signoffs)})
+    else:
+        q("MATCH (pr:Proposal {id:$id}) SET pr.signoffs=$so", {"id": pid, "so": json.dumps(signoffs)})
+    return (listing(pid) or [{"error": "unknown proposal"}])[0]
+
+
+def reset_all() -> int:
+    r = rows("MATCH (pr:Proposal) WHERE pr.status <> 'pending' OR pr.decided_by IS NOT NULL "
+             "OR coalesce(pr.signoffs, '[]') <> '[]' "
+             "SET pr.status='pending', pr.signoffs='[]', pr.decided_by=NULL, pr.decided_at=NULL RETURN count(pr) AS n")
+    return r[0]["n"] if r else 0
 
 
 def listing(pid: str | None = None) -> list[dict]:
@@ -116,10 +159,14 @@ def listing(pid: str | None = None) -> list[dict]:
         RETURN pr.id AS id, pr.status AS status, pr.summary AS summary, pr.diff AS diff, pr.created AS created,
                pr.decided_by AS decided_by, pr.decided_at AS decided_at, d.id AS decision_id, d.statement AS decision,
                cv.title AS where, s.sid AS sid, s.vid AS vid, s.heading AS heading, p.title AS page, p.path AS path,
+               pr.signoffs AS signoffs,
                [(pr)-[:NEEDS_APPROVAL_FROM]->(o) | coalesce(o.name, o.handle)] AS approvers
         ORDER BY created DESC
         """, {"id": pid})
     for r in res:
         r["cite"] = cite_key(r["sid"])
+        r["signoffs"] = json.loads(r.get("signoffs") or "[]")
+        r["endorsements"] = sum(1 for x in r["signoffs"] if x["role"] == "not an owner" and x["vote"] == "approve")
+        r["objections"] = sum(1 for x in r["signoffs"] if x["role"] == "not an owner" and x["vote"] == "reject")
         r["impact"] = _impact(r.pop("vid"), r.pop("sid"))
     return res

@@ -155,6 +155,22 @@ Onboarding a company is one YAML file (sources, scope, start date, conversation 
 
 Honest caveats: the harness was tuned while looking at Larkspur results, so it is not a strict hold-out; one run per number; an LLM grades answers. Cost of a full GTM build + replay ≈ $2.5 with `gpt-4.1` / `gpt-4o-mini`.
 
+
+## Onboarding: the new-hire view
+
+A new hire gets one link. The **Learn** tab has a start page per area (scope folder or department), built from the graph:
+an AI-written one-page orientation (from that area's documents and decisions only, cached per sync), who to ask (owners
+and decision-makers), how the area evolved (decision → meeting → MR timeline), the systems / metrics / dashboards / fields
+it runs on, the area subgraph, and documents to read first (ranked by inbound links, recent changes and entity references).
+
+- **Glossary in place**: recurring acronyms plus the System/Metric entities are underlined wherever they appear (answers,
+  timelines, documents). A definition is written once, from the 3 sections that best explain the term, and stored as
+  `(:Term)-[:DEFINED_IN]->(:Section)`; it is labelled when the docs only use the term without defining it.
+- **Ask about this**: on any decision, change, document, section, node or term. The context is that node's neighbourhood
+  in the graph (e.g. a decision → the meeting excerpt, the MR diff, the fields it touches), answered in plain words with sources.
+
+`python -m hb --company gitlab-gtm learn` pre-writes the briefs and glossary so the page is instant.
+
 ## Quickstart
 
 Requirements: Docker, Python ≥ 3.10, an OpenAI API key (Anthropic optional; LiteLLM is used).
@@ -182,11 +198,16 @@ Programmatic use: every UI view is a JSON endpoint (`/api/ask`, `/api/story/{ans
 
 ## UI
 
-- **Overview**: what it does, the loop, and the live data model read from FalkorDB.
-- **Demo**: ask, or open an answer it is already watching: cited answer, the answer's subgraph, and a timeline (decided in which meeting by whom → which MR changed which section → what that change affected → answer given / invalidated / refreshed).
-- **Explore graph**: documents clustered by owning team, decisions and meetings, shared fields / metrics / dashboards; drill into one document's versions; changes by area over time.
-- **Review**: stale answers, sources that disagree, decided-not-documented (with *Draft update* → approver), drafted updates, chat statements that contradict the docs, knowledge gaps.
-- **Capabilities**: sources (live / static, connect or upload), company config, models and cost controls, benchmark.
+One place for the whole company, organised by who is using it:
+
+- **Overview**: the idea (all company knowledge in one versioned graph), a short clip of each feature recorded from the live app with a *Try it* link, the closed loop, the live data model and benchmark numbers.
+- **Ask** (everyone): ask, or open an answer it is already watching: cited answer, the answer's subgraph, and a timeline (decided in which meeting by whom → which MR changed which section → what that change affected → answer given / invalidated / refreshed).
+- **Learn** (new hires): pick an area and ask; starter questions open one card at a time (overview, recent decisions, who to ask, tools and metrics, what to read, glossary, map), lists start short and expand on demand. Terms explain themselves; *Ask about this* works on anything.
+- **Explore** (analysts, leads): the company graph with **domain focus**: pick a domain and only its documents, decisions, meetings, people, metrics, dashboards and fields are laid out. Below the graph, a decision timeline (meeting → who → the MR that made it official) follows the same domain focus and is linked to the graph both ways. **Decision triage** (`hb/triage.py`): each decision is labelled *Business rule / Process / System & data* (a model that sees the decision and its graph neighbours) and ranked *high / medium / low impact* from the graph itself — metrics, fields and dashboards it touches, how many other documents rely on them, answers given from the section, domains crossed, owners — with the graph facts shown as the reason. The same labels sort Learn's "what changed" and Review's decided-not-documented queue. Every graph in the app (answer trails included) carries node domains, computed from where documents live and propagated along the graph but not through shared hubs like Salesforce.
+- **Review** (owners): stale answers, sources that disagree, decided-not-documented (with *Draft update* → approver), drafted updates, chat statements that contradict the docs, knowledge gaps.
+- **Setup**: sources (live / static, connect or upload), company config, models and cost controls, benchmark.
+
+Feature clips: `pip install playwright && python -m playwright install chromium`, start `serve`, then `python scripts/record_demos.py` (writes `web/media/*.webm`; each scene runs once to warm caches, then is recorded with a visible cursor; nothing is approved or changed).
 
 ## Limitations and next steps
 

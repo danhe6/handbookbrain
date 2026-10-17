@@ -17,13 +17,13 @@
     </a>
     <nav aria-label="Main" class="nav">
       <a href="#/overview" data-nav="overview">Overview</a>
-      <a href="#/demo" data-nav="demo">Demo</a>
-      <a href="#/explore" data-nav="explore">Explore graph</a>
+      <a href="#/ask" data-nav="ask">Ask</a>
+      <a href="#/learn" data-nav="learn">Learn</a>
+      <a href="#/explore" data-nav="explore">Explore</a>
       <a href="#/review" data-nav="review">Review <span class="count" id="nav-review" hidden></span></a>
-      <a href="#/configure" data-nav="configure">Capabilities</a>
     </nav>
     <div class="grow"></div>
-    <label class="company"><span class="sr">Company</span><select id="company" aria-label="Company"></select></label>
+    <a class="setup-link" href="#/configure" data-nav="configure">Setup</a>
     <span class="pill" id="sync-pill"><span class="dot"></span><span id="sync-text">…</span></span>
   </div>
 </header>
@@ -36,6 +36,17 @@
     <div id="drawer-body"></div>
   </div>
 </div>
+<aside id="coach" class="coach" hidden aria-labelledby="coach-title">
+  <div class="coach-h">
+    <div style="min-width:0"><span class="eyebrow" id="coach-kind">Ask about this</span><div id="coach-title" class="coach-title"></div></div>
+    <button class="icon-btn" id="coach-close" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="coach-body" id="coach-body"></div>
+  <form class="coach-f" id="coach-f"><label class="sr" for="coach-q">Your question</label><textarea id="coach-q" rows="2" placeholder="Ask anything about this…"></textarea><button class="btn primary" type="submit">Ask</button></form>
+</aside>
+<div id="termpop" class="termpop" role="dialog" aria-label="Term definition" hidden></div>
 <script src="/static/graph.js"></script>
 <script src="/static/app.js"></script>
 </body>

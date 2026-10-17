@@ -19,7 +19,8 @@ conversations: data/synthetic-gtm          # synthetic meetings / Slack / ticket
 labels: data/synthetic-gtm/labels.json
 synth_profile: gtm
 demo_questions:
-  - Why did the Marketo trial score threshold change, and who decided it?
-  - Which systems, fields and dashboards does lead scoring touch, and who owns them?
-  - What do I need to check at the Deal Desk before a contract-reset cancellation?
-  - What changed in channel partner auto-renewals, and what does it affect?
+  - Why did the Marketo trial MQL threshold go from 25 to 31 points, and who decided it?
+  - Why was trial threshold scoring added to Marketo lead scoring, and where was that decided?
+  - Why are channel partner deals no longer auto-renewed, and who decided that?
+  - Why did the Initial Source logic for renewal opportunities change, and who made the call?
+  - Why did the FY27 deal registration process change for resale and referral deals?

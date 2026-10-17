@@ -1,0 +1,17 @@
+{
+ "learn": {
+  "start": 0.82
+ },
+ "ask": {
+  "start": 0.82
+ },
+ "explore": {
+  "start": 1.29
+ },
+ "impact": {
+  "start": 0.82
+ },
+ "review": {
+  "start": 0.88
+ }
+}

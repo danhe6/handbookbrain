@@ -144,10 +144,11 @@
       el('circle', { r, fill: t.ring || superseded ? '#FFFFFF' : t.c, stroke,
         'stroke-width': t.ring || superseded || n.outdated_copy ? 2.2 : 0, 'stroke-dasharray': superseded ? '3 2' : '' }, g);
       const showLabel = labelsAll || n.hl || (nodes.length > 60 ? ['Source', 'Team'] : ['Page', 'Decision', 'Source', 'Team', 'Answer']).includes(n.type);
-      if (showLabel) {
+      {
         const up = n._col != null && n._col % 2 === 1;   // layered: alternate labels above / below the chain
         const tx = el('text', { y: up ? -(r + 7) : r + 13, 'text-anchor': 'middle', class: 'nl' + (n.hl ? ' hl' : '') }, g);
         tx.textContent = trunc(n.label || t.name, n._col != null ? 26 : n.hl ? 34 : 24);
+        if (!showLabel) { tx.style.display = 'none'; n._lazy = tx; }   // shown when its domain is in focus
       }
       const tt = el('title', {}, g); tt.textContent = `${t.name}: ${n.label}`;
       if (anyHl && !n.hl) g.setAttribute('opacity', 0.6);
@@ -197,9 +198,30 @@
       if (g && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); select(nEls.find((x) => x.g === g).n.id, true); }
     });
 
-    let selected = null;
+    let selected = null, focused = null;
+    const inFocus = (n) => !focused || (n.domains || []).includes(focused);
+    const home = new Map(nodes.map((n) => [n.id, [n.x, n.y]]));
+    function focus(dom) {
+      focused = dom || null;
+      const on = nodes.filter(inFocus);
+      if (!focused) nodes.forEach((n) => { [n.x, n.y] = home.get(n.id); });
+      else {   // lay the domain out on its own, on the full canvas, so it is readable rather than a zoomed-in knot
+        const ids = new Set(on.map((n) => n.id));
+        const sub = edges.filter((e) => ids.has(e.source) && ids.has(e.target));
+        if (opts.layout === 'layered') layeredLayout(on, sub, W, H); else { forceLayout(on, sub, W, H); fit(on, W, H, 60); }
+      }
+      nEls.forEach(({ n, g }) => {
+        const k = inFocus(n);
+        g.style.display = k ? '' : 'none'; g.setAttribute('opacity', 1);
+        if (n._lazy) n._lazy.style.display = focused && k && on.length <= 70 ? '' : 'none';
+      });
+      eEls.forEach(({ e, ln }) => { const k = inFocus(byId.get(e.source)) && inFocus(byId.get(e.target)); ln.style.display = k ? '' : 'none'; ln.setAttribute('opacity', 1); });
+      view = { x: 0, y: 0, k: 1 }; apply(); place();
+      return on.length;
+    }
     function select(id, fire) {
       selected = id;
+      if (!id && focused) { focus(focused); return; }
       const nbrs = new Set([id]);
       edges.forEach((e) => { if (e.source === id) nbrs.add(e.target); if (e.target === id) nbrs.add(e.source); });
       nEls.forEach(({ n, g }) => { g.classList.toggle('sel', n.id === id); g.setAttribute('opacity', !id || nbrs.has(n.id) ? 1 : 0.25); });
@@ -216,8 +238,8 @@
       const hit = nodes.find((n) => String(n.label || '').toLowerCase().includes(q));
       if (hit) select(hit.id, true);
     }
-    function reset() { view = { x: 0, y: 0, k: 1 }; apply(); select(null); }
-    return { select: (id) => select(id, false), filter, find, reset, types: [...new Set(nodes.map((n) => n.type))] };
+    function reset() { view = { x: 0, y: 0, k: 1 }; apply(); focused = null; select(null); focus(null); }
+    return { select: (id) => select(id, false), filter, find, reset, focus, types: [...new Set(nodes.map((n) => n.type))] };
   }
 
   function legend(types) {

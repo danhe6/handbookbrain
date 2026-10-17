@@ -13,6 +13,9 @@ Everything here is a thin read/act layer over the same graph and functions the C
   POST /api/upload              add files to the company's uploads source (static)
   POST /api/sync, GET /api/sync daily sync (pull live sources, apply changes, re-check), run in background
   GET  /api/companies, POST /api/switch {name}   company switcher (restarts this process on the other config)
+  GET  /api/learn/areas|area|brief  onboarding start page per area (documents, people, decisions, systems, brief)
+  GET  /api/glossary, /api/term     jargon found in the docs, defined from them on first use (Term nodes)
+  POST /api/explain {node, question, history}   "ask about this": one node's graph context -> plain answer
 """
 import json
 import os
@@ -143,9 +146,11 @@ DEMO_Q = {
 @app.get("/api/story/{aid}")
 def story(aid: str):
     from .story import answer_story
+    from .story import tag_domains
     r = answer_story(aid)
     if r.get("error"):
         raise HTTPException(404, r["error"])
+    r["graph"] = tag_domains(r["graph"])
     return r
 
 
@@ -166,14 +171,14 @@ def answers(limit: int = 30):
 
 @app.get("/api/graph/explore")
 def graph_explore(limit: int = 220):
-    from .story import explore
-    return explore(limit)
+    from .story import explore, tag_domains
+    return tag_domains(explore(limit))
 
 
 @app.get("/api/graph/page")
 def graph_page(path: str):
-    from .story import page_graph
-    return page_graph(path)
+    from .story import page_graph, tag_domains
+    return tag_domains(page_graph(path))
 
 
 @app.get("/api/graph/schema")
@@ -309,6 +314,63 @@ def impact(sha: str):
 def refresh():
     from . import stale
     return {"refreshed": stale.refresh()}
+
+
+# ---------------------------------------------------------------- onboarding: learn / glossary / ask-about-this
+
+@app.get("/api/decisions/triage")
+def decisions_triage(refresh: bool = False):
+    from .triage import triage
+    return {"triage": triage(refresh)}
+
+
+@app.get("/api/learn/areas")
+def learn_areas():
+    from .learn import areas
+    return {"areas": areas()}
+
+
+@app.get("/api/learn/area")
+def learn_area(a: str):
+    from .learn import area
+    return area(a)
+
+
+@app.get("/api/learn/brief")
+def learn_brief(a: str, refresh: bool = False):
+    from .learn import brief
+    return brief(a, refresh)
+
+
+@app.get("/api/glossary")
+def glossary_terms(area: str = ""):
+    from .glossary import candidates, for_area
+    return {"terms": for_area(area) if area else candidates()}
+
+
+@app.get("/api/term")
+def term(name: str, refresh: bool = False):
+    from .glossary import define
+    return define(name, refresh)
+
+
+class Explain(BaseModel):
+    node: str
+    question: str = ""
+    history: list[dict] = []
+
+
+@app.post("/api/explain")
+def explain_node(e: Explain):
+    from .explain import explain
+    return explain(e.node, e.question, e.history)
+
+
+@app.get("/api/explain/suggest")
+def explain_suggest(node: str):
+    from .explain import context, suggestions
+    c = context(node)
+    return {"label": c["label"], "title": c["title"], "suggestions": suggestions(c["label"]), "found": bool(c["text"])}
 
 
 # ---------------------------------------------------------------- brain / page / trust

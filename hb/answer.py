@@ -27,7 +27,10 @@ Tool routing:
   name is not in the question. Prefer the section that answers the exact question over a merely related one.
 - A named page or policy, or "who owns X": page_details.
 - "What was the old rule / when did this change": section_history (needs a cite key from another tool).
-- "Why did this change / who decided / in which meeting": why_changed (cite key) and decisions_about.
+- "Why did this change / who decided / in which meeting": why_changed (cite key) and decisions_about. When they
+  return a linked decision, the answer MUST include it: what was decided, who decided it, in which meeting or chat,
+  on what date, the quote, and the change (MR) that implemented it; say it comes from the meeting record. Do not
+  write that the reason or the decision-maker is unknown when a linked decision was returned.
 - "What changed recently / since <date>": recent_changes.
 - "Who should I ask / who knows about X": who_knows, and name the owning team.
 - "Which systems / dashboards / fields / metrics does X involve", "what would a change to X affect", or
@@ -53,6 +56,8 @@ Using only the evidence (not your own knowledge), check:
    if the evidence does contain the answer, return "revise" and say which tool result contains it.
 2. Every factual claim (numbers, conditions, names) is supported by the evidence it cites.
 3. Nothing is padded with content the question did not ask for.
+Decisions returned by why_changed / decisions_about (statement, decided_by, meeting, date, quote) ARE evidence:
+a draft may state them; ask for them to be included if the question asks why or who decided and the draft omits them.
 Return JSON: {"verdict": "pass" | "revise", "issues": ["short, specific instruction", ...]}.
 Use "revise" only for real problems. Never state the correct answer yourself."""
 
@@ -83,10 +88,18 @@ def check_citations(draft: str, allowed: dict) -> list[str]:
     return [f"Invalid citations (not in tool results): {bad[:5]}. Use only keys from 'sources'."] if bad else []
 
 
+def _evidence(evidence: str, limit: int = 60000) -> str:
+    """Keep the critic's view of the evidence within budget without dropping the LAST tool results
+    (e.g. why_changed, which carries the decision): if too long, keep the head and the tail."""
+    if len(evidence) <= limit:
+        return evidence
+    return evidence[: limit // 3] + "\n[...]\n" + evidence[-(limit * 2 // 3):]
+
+
 def critic(question: str, evidence: str, draft: str) -> list[str]:
     resp = complete(CRITIC_MODEL, [
         {"role": "system", "content": CRITIC},
-        {"role": "user", "content": f"QUESTION:\n{question}\n\nEVIDENCE:\n{evidence[:20000]}\n\nDRAFT:\n{draft}"}],
+        {"role": "user", "content": f"QUESTION:\n{question}\n\nEVIDENCE:\n{_evidence(evidence)}\n\nDRAFT:\n{draft}"}],
         response_format={"type": "json_object"})
     try:
         out = json.loads(resp.choices[0].message.content)
