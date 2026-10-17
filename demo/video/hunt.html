@@ -1,0 +1,67 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0}
+body{width:1920px;height:1080px;overflow:hidden;background:radial-gradient(ellipse at 30% 20%,#F4F1EA,#E7E2D8);font-family:Inter,sans-serif;color:#1F1E1D}
+.top{position:absolute;left:0;right:0;top:0;height:76px;display:flex;align-items:center;padding:0 56px;gap:18px;font-size:22px;color:#6B6966}
+.top b{color:#1F1E1D}.grow{flex:1}
+.pill{background:#fff;border:1.5px solid #DAD6CD;border-radius:999px;padding:8px 18px;font-size:20px}
+.clock{font-family:'JetBrains Mono',monospace;font-size:24px;color:#1F1E1D}
+.win{position:absolute;background:#fff;border-radius:16px;box-shadow:0 18px 50px rgba(31,30,29,.18),0 0 0 1px rgba(31,30,29,.06);overflow:hidden;opacity:0;transform:scale(.9) translateY(20px);transition:opacity .45s,transform .45s cubic-bezier(.2,.9,.3,1.2)}
+.win.on{opacity:1;transform:scale(1) translateY(0)}
+.win.dim{filter:saturate(.4) brightness(.97);opacity:.55;transition:all 1s}
+.bar{height:44px;background:#F3F1EC;border-bottom:1px solid #E8E5DE;display:flex;align-items:center;gap:8px;padding:0 16px;font-size:18px;color:#3D3B38;font-weight:600}
+.bar i{width:12px;height:12px;border-radius:50%;background:#D9D5CC;display:inline-block}
+.bar .t{margin-left:10px}.bar .k{margin-left:auto;font-weight:500;color:#9A968F;font-size:15px}
+.body{padding:18px 22px;font-size:19px;line-height:1.45}
+.msg{display:flex;gap:12px;margin-bottom:12px}.av{width:36px;height:36px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:14px;font-weight:700;color:#fff}
+.muted{color:#6B6966}.mono{font-family:'JetBrains Mono',monospace;font-size:16px}
+.hl{background:#FDE8B8;padding:0 4px;border-radius:4px}
+.del{background:#FBE7E3;color:#9B2E1F;padding:4px 8px;border-radius:6px;margin:4px 0}.add{background:#E1F1E9;color:#1F6B4A;padding:4px 8px;border-radius:6px;margin:4px 0}
+.res{border-bottom:1px solid #EEE;padding:7px 0;font-size:17px}
+.prog{height:8px;background:#EEE;border-radius:4px;margin:14px 0 8px;position:relative}.prog i{position:absolute;left:0;top:0;bottom:0;background:#C96442;border-radius:4px;width:5%;transition:width 3s linear}
+.bars{display:flex;align-items:flex-end;gap:12px;height:170px;margin-top:10px}.bars div{flex:1;background:#7C5CD6;border-radius:4px 4px 0 0;opacity:.85}
+.scrim{position:absolute;inset:0;background:rgba(244,241,234,.78);opacity:0;transition:opacity 1s}.scrim.on{opacity:1}
+.end{position:absolute;left:0;right:0;top:470px;text-align:center;font-family:'DejaVu Serif',serif;font-size:64px;opacity:0;transition:opacity 1s}
+.end.on{opacity:1}
+.who{position:absolute;left:56px;bottom:40px;font-size:20px;color:#6B6966}
+</style></head><body>
+<div class="top"><span class="pill">Simulated scenario</span><span><b>Maya</b> · Marketing Ops · week 3</span><span class="grow"></span><span>Tools open: <b id="n">0</b></span><span class="clock" id="clock">Mon 9:04</span></div>
+
+<div class="win" id="w0" style="left:70px;top:110px;width:620px"><div class="bar"><i></i><i></i><i></i><span class="t">Direct message · Manager</span></div><div class="body">
+ <div class="msg"><div class="av" style="background:#3E63DD">JL</div><div><b>Jordan</b> <span class="muted">9:04 AM</span><br>Hey Maya, why did trial MQLs drop at the end of July? Need it for Thursday's pipeline review 🙏</div></div></div></div>
+
+<div class="win" id="w1" style="left:730px;top:120px;width:560px"><div class="bar"><i></i><i></i><i></i><span class="t">Team chat · search</span><span class="k">"MQL threshold"</span></div><div class="body">
+ <div class="muted" style="margin-bottom:6px"><b style="color:#1F1E1D">40 results</b> in 9 channels</div>
+ <div class="res">#mktg-ops · "should we revisit the trial threshold?"</div><div class="res">#sdr-team · "trial leads are low intent lately"</div><div class="res">#mktg-ops · "see notes from weekly…"</div><div class="res muted">… 37 more</div></div></div>
+
+<div class="win" id="w2" style="left:1330px;top:110px;width:540px"><div class="bar"><i></i><i></i><i></i><span class="t">Meeting recording</span><span class="k">Marketing Ops weekly · Jul 17</span></div><div class="body">
+ <div style="height:150px;background:#2A2927;border-radius:10px;display:grid;place-items:center;color:#bbb;font-size:40px">▶</div>
+ <div class="prog"><i id="scrub"></i></div><div class="mono muted" id="tc">00:03 / 58:04</div></div></div>
+
+<div class="win" id="w3" style="left:110px;top:430px;width:600px"><div class="bar"><i></i><i></i><i></i><span class="t">Handbook · Marketo › Lead scoring</span><span class="k">edited 2× since May</span></div><div class="body mono">
+ <div class="muted" style="font-family:Inter">History · Jul 23</div><div class="del">− trial users scoring 25 points become MQL</div><div class="add">+ trial users scoring 31 points become MQL</div></div></div>
+
+<div class="win" id="w4" style="left:760px;top:470px;width:470px"><div class="bar"><i></i><i></i><i></i><span class="t">Shared drive · Lead-scoring-guide-2025.pdf</span></div><div class="body">
+ <div class="muted" style="font-size:16px">Uploaded Jan 2025</div><b>3.2 Trial scoring</b><br>A trial becomes an MQL at <span class="hl">25 points</span>.</div></div>
+
+<div class="win" id="w5" style="left:1280px;top:430px;width:560px"><div class="bar"><i></i><i></i><i></i><span class="t">CRM · Object manager</span><span class="k">Lead</span></div><div class="body">
+ <div class="res"><b>Behavior Score</b> <span class="mono muted">Behavior_Score__c</span></div><div class="res"><b>Person Score</b> <span class="mono muted">Person_Score__c</span></div><div class="res"><b>MQL Date</b> <span class="mono muted">MQL_Date__c</span> · <span class="muted">who changed this?</span></div></div></div>
+
+<div class="win" id="w6" style="left:300px;top:690px;width:560px"><div class="bar"><i></i><i></i><i></i><span class="t">BI dashboard · Trial MQLs by week</span></div><div class="body">
+ <div class="bars"><div style="height:78%"></div><div style="height:82%"></div><div style="height:80%"></div><div style="height:85%"></div><div style="height:83%"></div><div style="height:58%;background:#C2412D"></div><div style="height:55%;background:#C2412D"></div><div style="height:57%;background:#C2412D"></div></div>
+ <div class="muted" style="font-size:15px;margin-top:6px">Jun 29 ……………………………… Jul 20 ↓ ………… Aug 10</div></div></div>
+
+<div class="win" id="w7" style="left:930px;top:700px;width:620px"><div class="bar"><i></i><i></i><i></i><span class="t">Merge request !20534</span><span class="k">merged Jul 23</span></div><div class="body">
+ <b>Update trial threshold scoring</b><div class="muted" style="font-size:17px">“per discussion” · no link to where it was decided</div>
+ <div class="mono" style="margin-top:8px"><span class="del">-25</span> <span class="add">+31</span> <span class="muted">marketo/_index.md</span></div></div></div>
+
+<div class="scrim" id="scrim"></div><div class="end" id="end">Seven tools later, still not sure<br><span style="color:#9C4527">who decided what, or why.</span></div>
+<script>
+const D = +(new URLSearchParams(location.search).get('d') || 30) * 1000;
+const at = (f, fn) => setTimeout(fn, f * D);
+const clock = ['Mon 9:04','Mon 9:31','Mon 11:12','Mon 2:47','Mon 4:55','Tue 10:20','Tue 1:38','Tue 4:02','Wed 9:15','Wed 4:40'];
+let n = 0;
+const show = (i) => { document.getElementById('w' + i).classList.add('on'); if (i > 0) document.getElementById('n').textContent = ++n; };
+[[0.04, 0], [0.28, 1], [0.37, 2], [0.46, 3], [0.53, 4], [0.64, 5], [0.70, 6], [0.76, 7]].forEach(([f, i], k) => at(f, () => { show(i); document.getElementById('clock').textContent = clock[k]; }));
+at(0.38, () => { document.getElementById('scrub').style.width = '64%'; let s = 3; const iv = setInterval(() => { s += 97; if (s > 2232) { s = 2232; clearInterval(iv); } document.getElementById('tc').textContent = `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')} / 58:04`; }, 120); });
+at(0.84, () => { document.querySelectorAll('.win').forEach((w) => w.classList.add('dim')); document.getElementById('end').classList.add('on'); document.getElementById('scrim').classList.add('on'); document.getElementById('clock').textContent = 'Wed 4:40'; });
+</script></body></html>
