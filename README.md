@@ -24,14 +24,14 @@ Without the graph none of this works: versioning, decision lineage and change im
   On plain lookups the graph adds nothing (70% for all three).
 - **Everything on the site is checked against an independent source** ([audit](#how-we-verified-it)): 2562/2562 change dates
   vs git, 21/21 decisions vs transcripts, 122/122 owners vs CODEOWNERS, 0 wrong decision → change links.
-- **Five views**: Ask (answers with the decision trail and the agent's steps), Learn (onboarding by asking), Explore
+- **Six pages**: Overview, Ask (answers with the decision trail and the agent's steps), Learn (onboarding by asking), Explore
   (the company graph by domain, decisions triaged by kind and impact), Review (drafted updates, owners approve), How it works.
 
 ---
 
 ## Demo story (real GitLab history, April–October 2026)
 
-The `gitlab-gtm` company is GitLab's public handbook for go-to-market operations (Marketing Ops, Deal Desk, Sales Systems, Channel Ops, Marketing Analytics): **105 documents, 1,635 sections, 71 real merged MRs** replayed in date order. Meetings, Slack threads and tickets around them are synthetic (see *Data*).
+The `gitlab-gtm` company is GitLab's public handbook for go-to-market operations (Marketing Ops, Deal Desk, Sales Systems, Channel Ops, Marketing Analytics): **122 documents, 1,899 current sections (2,215 section versions), 74 real merged MRs** replayed in date order. Meetings, Slack threads and tickets around them are synthetic (see *Data*).
 
 | Date | What happened | What HandbookBrain did |
 |---|---|---|
@@ -42,7 +42,7 @@ The `gitlab-gtm` company is GitLab's public handbook for go-to-market operations
 | Jul 17 | (synthetic) Marketing Ops weekly decides to raise it | Decision extracted. |
 | Jul 23 | Real MR !20534 changes `25` → `31` | The Jun 1 answer and two chat answers are judged **stale** from the diff, owners from CODEOWNERS notified, answers refreshed to **31**. Impact view: Marketo, the lead-score metric, every other doc that uses it. |
 
-Other real changes in the same run: Order Type logic (!19475), FY27 Deal Registration (!15742), Initial Source logic (!20005), partner auto-renewal (!20249), opportunity-owner rule for XDRs (!20569), VAT ID validation (!21330), Deal Desk namespace check before contract-reset cancellation (!21365). Each one invalidated the answers that relied on the old text, and only those.
+Other real changes in the same run: Order Type logic (!19475), FY27 Deal Registration (!15742), Initial Source logic (!20005), partner auto-renewal (!20249), opportunity-owner rule for XDRs (!20569), VAT ID validation (!21330), Deal Desk namespace check before contract-reset cancellation (!21365). Each one invalidated the stored answers that cited the old text.
 
 ---
 
@@ -56,25 +56,29 @@ graph LR
   Decision -->|EVIDENCED_BY| Segment
   Decision -->|ABOUT| Section
   Decision -->|IMPLEMENTED_BY| Commit
+  Decision -->|IMPLEMENTED_IN_MR| MergeRequest
   Commit -->|CHANGED| Section
   MergeRequest -->|MERGED_AS| Commit
   Person -->|AUTHORED / MERGED| Commit
   Page -->|HAS_SECTION| Section
   Section -->|SUPERSEDES| Section
   Section -->|MENTIONS| System & Field & Metric & Dashboard
-  Section -->|CONFLICTS_WITH| Section
-  Page -->|OWNED_BY| Team & Person
+  Page -->|OWNED_BY| Person
+  Page -->|LINKS_TO| Page
   Source -->|PROVIDES| Page
   Answer -->|CITES| Section
   Answer -->|ANSWERS| Question
   Answer -->|SUPERSEDES| Answer
   Answer -->|INVALIDATED_BY / REVALIDATED_BY| Commit
   Claim -->|CONTRADICTS| Section
+  Claim -->|STATED_IN| Conversation
+  Term -->|DEFINED_IN| Section
   Question -->|ASKED_IN| Conversation
   Proposal -->|FROM| Decision
   Proposal -->|FOR| Section
-  Proposal -->|NEEDS_APPROVAL_FROM| Team & Person
+  Proposal -->|NEEDS_APPROVAL_FROM| Person
   Notification -->|ABOUT| Answer
+  Notification -->|TO| Person
 ```
 
 Key ideas:
@@ -151,27 +155,21 @@ Retrieval for the agent is hybrid: FalkorDB **vector index** on `Section.embeddi
 
 | Company (`companies/*.yaml`) | Documents | Conversations | Purpose |
 |---|---|---|---|
-| `gitlab-gtm` | Real GitLab handbook, GTM operations, 71 real MRs Apr–Oct 2026 | 68 synthetic (Zoom, Teams, Slack, tickets) anchored to real MRs | Main demo |
-| `gitlab` | Real GitLab handbook, People / Total Rewards, 143 real MRs | 69 synthetic | Second domain, same code |
-| `larkspur` | Fictional freight company, 22 docs in md / html / pdf / docx / txt / csv, a live wiki + a static shared drive | 55 in 13 native formats (Zoom vtt + captions, Teams vtt + chat, Meet, Slack, Google Chat, WhatsApp, Discord, eml, mbox, Jira CSV, notes incl. AI-written) | Unseen company, benchmark with hidden ground truth |
+| `gitlab-gtm` | Real GitLab handbook, GTM operations: 122 documents, 74 real MRs, Apr 1 – Oct 16 2026 | 67 synthetic (Zoom, Teams, Slack, tickets) anchored to real MRs | The demo, the audit and the eval |
+
+The repo also contains `larkspur`, a small fictional company used early on to test file formats (md / html / pdf / docx /
+txt / csv documents, 13 chat and meeting export formats). It is not part of the demo, and no results are reported for it.
 
 Onboarding a company is one YAML file (sources, scope, start date, conversation folder); no code changes. Only public or synthetic data is used. All synthetic people are fictional and every synthetic file carries `synthetic: true`.
 
-## Results
+## Results of the replay
 
-**Larkspur Freight** (fictional company, ground truth never visible to the agent; `python -m hb --company larkspur bench`):
-
-| | |
-|---|---|
-| Answers correct / correct or partial (41 questions) | 63% / 93% |
-| Stale answers caught when the cited doc changed (question level) | 5 of 6, 1 false alarm |
-| Live wiki vs. static PDF conflicts found on time | 8 of 9, 0 false alarms on 6 consistent sections, live source wins 8/8 |
-| Meeting decisions linked to the change that implemented them | 7 of 8; undocumented decisions left open 3 of 3 |
-| Unanswerable questions correctly declined | 3 of 3 |
-
-**GitLab GTM replay**: 6 of the 8 synthetic meeting decisions are linked to the real MR that implemented them (5 exactly, 1 to its same-day sibling MR; see the audit below), originally 5 of 8 after replay (13 days for trial scoring, 6 days for the threshold change); 18 stored answers were invalidated by exactly the commits that changed what they cited (e.g. trial threshold 25 → 31, VAT validation, Deal Desk namespace check, owner rule for XDRs) and refreshed; wording-only and link-only changes were revalidated without alerts.
-
-Honest caveats: the harness was tuned while looking at Larkspur results, so it is not a strict hold-out; one run per number; an LLM grades answers. Cost of a full GTM build + replay ≈ $2.5 with `gpt-4.1` / `gpt-4o-mini`.
+**GitLab GTM replay**: 6 of the 8 synthetic meeting decisions that a real MR implemented are linked to it (5 exactly,
+1 to its same-day sibling MR; see check B below), 13 days after the meeting for trial scoring and 6 days for the
+threshold change; the 3 decisions no MR implemented are correctly left open. 24 stored answers were invalidated by the
+commits that changed the section versions they cited (e.g. trial threshold 25 → 31, VAT validation, Deal Desk namespace
+check, owner rule for XDRs) and refreshed; 5 answers whose cited section changed only in wording or links were revalidated
+without an alert. Cost of a full build + replay ≈ $2.5 with `gpt-4.1` / `gpt-4o-mini`.
 
 
 ## How we verified it
@@ -187,11 +185,11 @@ Everything the site says is checked against an **independent source**, not again
 | D | Document owners | `CODEOWNERS` at HEAD | **122 / 122** |
 | E | Systems / metrics / fields a section "mentions" really occur in it | section text | **1696 / 1696** |
 | F | Domain of every node | the document's folder | pass |
-| G | Triage reasons ("MQL is used in 24 other documents") | recomputed from raw text | **14 / 14** |
+| G | Triage reasons ("MQL is used in 24 other documents") | recomputed from raw text | **17 / 17** |
 | H | Demo answers name the right MR, meeting date and person | `labels.json` | **5 / 5** |
 | I | Documents and change counts on the site | git | **122 / 122** documents |
-| J | Glossary definitions come from a section that contains the term | section text | **8 / 8** |
-| K | Every number / date / name in the Learn briefs occurs in the data | graph | 39 / 41 (2 are sub-headings, not facts) |
+| J | Glossary definitions come from a section that contains the term | section text | 67 / 69 ("IP" and "GA" were defined from a section that does not contain them) |
+| K | Every number / date / name in the Learn briefs occurs in the data | graph | **37 / 37** |
 
 What the audit caught and we fixed: an over-lenient decision → MR judge that linked 3 decisions to later, unrelated
 changes (now: only what changed in the diff counts, plus a same-day sibling window; wrong links pruned and the audit
@@ -303,7 +301,7 @@ python -m hb $C refresh --gaps                            # re-answer stale answ
 python -m hb $C serve                                     # UI + API on http://localhost:8000
 ```
 
-FalkorDB Browser is on http://localhost:3000 (graph `gitlab-gtm`). Other useful commands: `ask "…"`, `alerts`, `decisions`, `sources`, `stale`, `stats`, `sync` (daily job), `upload FILES`, `bench`. The synthetic conversations are committed, so `synth` is optional.
+FalkorDB Browser is on http://localhost:3000 (graph `gitlab-gtm`). Other useful commands: `ask "…"`, `alerts`, `decisions`, `sources`, `stale`, `stats`, `sync` (daily job), `upload FILES`, `audit`, `evalagent`. The synthetic conversations are committed, so `synth` is optional.
 
 Programmatic use: every UI view is a JSON endpoint (`/api/ask`, `/api/story/{answer}`, `/api/impact/{commit}`, `/api/review`, `/api/proposals`, `/api/graph/*`); see `hb/api.py`.
 
@@ -311,12 +309,12 @@ Programmatic use: every UI view is a JSON endpoint (`/api/ask`, `/api/story/{ans
 
 One place for the whole company, organised by who is using it:
 
-- **Overview**: the idea (all company knowledge in one versioned graph), a short clip of each feature recorded from the live app with a *Try it* link, the closed loop, the live data model and benchmark numbers.
+- **Overview**: the idea (all company knowledge in one versioned graph), the 2-minute demo video, a short clip of each feature recorded from the live app with a *Try it* link, and the graph live from FalkorDB: one real decision trail returned by a Cypher query (shown under it), and the data model with live counts.
 - **Ask** (everyone): ask, or open an answer it is already watching: cited answer, the answer's subgraph, and a timeline (decided in which meeting by whom → which MR changed which section → what that change affected → answer given / invalidated / refreshed).
 - **Learn** (new hires): pick an area and ask; starter questions open one card at a time (overview, recent decisions, who to ask, tools and metrics, what to read, glossary, map), lists start short and expand on demand. Terms explain themselves; *Ask about this* works on anything.
 - **Explore** (analysts, leads): the company graph with **domain focus**: pick a domain and only its documents, decisions, meetings, people, metrics, dashboards and fields are laid out. Below the graph, a decision timeline (meeting → who → the MR that made it official) follows the same domain focus and is linked to the graph both ways. **Decision triage** (`hb/triage.py`): each decision is labelled *Business rule / Process / System & data* (a model that sees the decision and its graph neighbours) and ranked *high / medium / low impact* from the graph itself — metrics, fields and dashboards it touches, how many other documents rely on them, answers given from the section, domains crossed, owners — with the graph facts shown as the reason. The same labels sort Learn's "what changed" and Review's decided-not-documented queue. Every graph in the app (answer trails included) carries node domains, computed from where documents live and propagated along the graph but not through shared hubs like Salesforce.
 - **Review** (owners): stale answers, sources that disagree, decided-not-documented (with *Draft update* → approver), drafted updates, chat statements that contradict the docs, knowledge gaps.
-- **Setup**: sources (live / static, connect or upload), company config, models and cost controls, benchmark.
+- **How it works**: what goes in (documents, meetings, chat and tickets today; CRM fields and dashboards are read from the documents that mention them, a direct connector is next), the ways to connect (a live git repo or wiki-export folder, uploads, a daily sync), the supported file formats, and what is next.
 
 Feature clips: `pip install playwright && python -m playwright install chromium`, start `serve`, then `python scripts/record_demos.py` (writes `web/media/*.webm`; each scene runs once to warm caches, then is recorded with a visible cursor; nothing is approved or changed).
 
@@ -342,7 +340,7 @@ Feature clips: `pip install playwright && python -m playwright install chromium`
 
 ## AI assistance disclosure
 
-This project was built with an AI coding assistant (Claude, by Anthropic) that wrote most of the code, prompts and this README under the author's direction, design decisions and review. At runtime the product calls OpenAI models (`gpt-4.1`, `gpt-4o-mini`, `text-embedding-3-small`) through LiteLLM. Synthetic meetings, chats and the fictional Larkspur company were generated with `gpt-4.1`.
+This project was built with an AI coding assistant (Claude, by Anthropic) that wrote most of the code, prompts and this README under the author's direction, design decisions and review. At runtime the product calls OpenAI models (`gpt-4.1`, `gpt-4o-mini`, `text-embedding-3-small`) through LiteLLM. Synthetic meetings and chats were generated with `gpt-4.1`.
 
 ## License
 

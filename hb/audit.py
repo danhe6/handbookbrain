@@ -461,6 +461,8 @@ def check_briefs():
         "MATCH (d:Decision)-[:DECIDED_IN]->(cv:Conversation) OPTIONAL MATCH (d)-[:DECIDED_BY]->(b) "
         "RETURN d.statement AS st, b.name AS by, d.decided_at AS at, cv.title AS w"))
     corpus += " ".join(r["n"] or "" for r in rows("MATCH (o) WHERE o:Person OR o:Team RETURN coalesce(o.name, o.handle) AS n"))
+    # merge request numbers ("implemented in MR !20534") are graph facts too: MergeRequest nodes
+    corpus += " " + " ".join(f"!{r['i']} {r['i']}" for r in rows("MATCH (m:MergeRequest) RETURN m.iid AS i"))
     low = corpus.lower()
     months = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
     dates_in = set(re.findall(r"20\d\d-\d\d-\d\d", corpus))

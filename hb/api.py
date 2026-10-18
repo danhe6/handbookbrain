@@ -1,4 +1,4 @@
-"""HTTP API + web UI.   python -m hb --company larkspur serve   ->  http://localhost:8000
+"""HTTP API + web UI.   python -m hb --company gitlab-gtm serve   ->  http://localhost:8000
 
 Everything here is a thin read/act layer over the same graph and functions the CLI uses; no logic of its own.
   GET  /api/overview            company, sources (live/static, last sync), graph counts, open items
