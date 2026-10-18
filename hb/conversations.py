@@ -66,10 +66,13 @@ CONFLICT = """Compare a statement someone made in chat/meeting with the CURRENT 
 When unsure, do not say "contradicts".
 Return JSON: {"verdict": "consistent" | "contradicts" | "unrelated", "reason": "<= 25 words"}"""
 
-IMPLEMENTS = """A decision was made in a meeting/chat. Later the handbook changed; you get the exact DIFF
-(REMOVED = old text, ADDED = new text). Does this diff implement the CORE of the decision (the policy change itself:
-the new amount, rule, eligibility, provider, process)? Side items (links, FAQs, wording) may be missing.
-If the diff is about something else (other topic, only links/formatting), answer false.
+IMPLEMENTS = """A decision was made in a meeting/chat. Later the handbook changed; you get the MR title and the exact
+DIFF (REMOVED = old text, ADDED = new text). Does THIS change implement the CORE of the decision: the policy change
+itself (the new amount, rule, eligibility, provider, process, label or wording the decision asked for)?
+Judge only what actually changed between REMOVED and ADDED. Text that is the same in both is context, not a change:
+if what the decision asks for was already in the old text, this change does not implement it.
+A decision to document, clarify, add or remove something is implemented by a diff that does exactly that.
+If the change is about something else (another topic or rule, links, formatting), answer false.
 Return JSON: {"implemented": bool, "reason": "<= 20 words"}"""
 
 
@@ -275,46 +278,116 @@ def process(c: Conversation, answer_questions: bool = True, verbose: bool = Fals
 
 # ------------------------------------------------------------------ reconcile decisions with commits
 
-def reconcile(sha: str) -> list[dict]:
-    """After a commit: for open decisions about a section this commit changed (and decided before it),
-    check whether the new text implements the decision."""
-    cands = rows(
+def _judge_link(did: str, statement: str, sha: str, epoch: float, old: str, new: str, mr_title: str) -> dict | None:
+    from .config import MODEL
+    from .queries import _diff
+    diff = _diff(old, new, 4000) or "(no textual difference)"
+    v = _json(MODEL, IMPLEMENTS, f"DECISION: {statement}\n\nMR TITLE: {mr_title or '(none)'}\n\nDIFF:\n{diff}")
+    if not v.get("implemented"):
+        return None
+    q(
         """
-        MATCH (c:Commit {sha:$sha})-[:CHANGED]->(n:Section)
-        MATCH (d:Decision {status:'decided'})
-        WHERE d.epoch <= c.epoch AND c.epoch - d.epoch < 90 * 86400 AND coalesce(d.changes_policy, true)
+        MATCH (d:Decision {id:$did}), (c:Commit {sha:$sha})
+        SET d.status='implemented',
+            d.implemented_at = CASE WHEN d.implemented_at IS NULL OR c.ts < d.implemented_at THEN c.ts ELSE d.implemented_at END,
+            d.lag_days = CASE WHEN d.lag_days IS NULL OR round(($epoch - d.epoch) / 86400.0) < d.lag_days
+                              THEN round(($epoch - d.epoch) / 86400.0) ELSE d.lag_days END
+        MERGE (d)-[r:IMPLEMENTED_BY]->(c) SET r.reason=$reason
+        WITH d, c
+        OPTIONAL MATCH (m:MergeRequest)-[:MERGED_AS]->(c)
+        FOREACH (_ IN CASE WHEN m IS NULL THEN [] ELSE [1] END | MERGE (d)-[:IMPLEMENTED_IN_MR]->(m))
+        WITH d
+        OPTIONAL MATCH (ai:ActionItem)-[:FROM]->(d)
+        FOREACH (a IN CASE WHEN ai IS NULL THEN [] ELSE [ai] END | SET a.status='done')
+        """,
+        dict(did=did, sha=sha, reason=v.get("reason", ""), epoch=epoch),
+    )
+    return {"decision": statement, "reason": v.get("reason")}
+
+
+_CAND = """
+        MATCH (c:Commit)-[:CHANGED]->(n:Section)
+        MATCH (d:Decision)
+        WHERE {where} AND d.epoch <= c.epoch AND c.epoch - d.epoch < 90 * 86400 AND coalesce(d.changes_policy, true)
+              AND NOT (d)-[:IMPLEMENTED_BY]->(c)
+        OPTIONAL MATCH (d)-[:IMPLEMENTED_BY]->(c0:Commit)
+        WITH c, n, d, min(c0.epoch) AS first
+        // an implemented decision can only gain a SIBLING change (same rule written into another page within 3 days)
+        WHERE first IS NULL OR abs(c.epoch - first) < 3 * 86400
         OPTIONAL MATCH (d)-[:ABOUT]->(ab:Section)
         WITH c, n, d, collect(ab.sid) AS about
         WHERE n.sid IN about OR n.path IN coalesce(d.cand_paths, [])
         OPTIONAL MATCH (n)-[:SUPERSEDES]->(prev:Section)
-        WITH d, c, collect(n.heading + ':\n' + n.text)[..4] AS news, collect(coalesce(prev.text, ''))[..4] AS olds
-        RETURN d.id AS did, d.statement AS st, reduce(t = '', x IN news | t + x + '\n---\n') AS new,
+        OPTIONAL MATCH (m:MergeRequest)-[:MERGED_AS]->(c)
+        WITH d, c, m, collect(n.heading + ':\n' + n.text)[..4] AS news, collect(coalesce(prev.text, ''))[..4] AS olds
+        RETURN d.id AS did, d.statement AS st, c.sha AS sha, m.title AS mr_title,
+               reduce(t = '', x IN news | t + x + '\n---\n') AS new,
                reduce(t = '', x IN olds | t + x + '\n---\n') AS old, c.epoch AS epoch
-        """,
-        {"sha": sha},
-    )
+        """
+
+
+def reconcile(sha: str) -> list[dict]:
+    """After a commit: for decisions about a section this commit changed (and decided before it), check whether
+    the change implements the decision. A decision can be implemented by several changes (e.g. the same rule
+    written into two FAQ pages by two MRs), so already-implemented decisions are checked again."""
     out = []
-    for x in cands:
-        from .queries import _diff
-        diff = _diff(x["old"], x["new"], 4000) or "(no textual difference)"
-        v = _json(CRITIC_MODEL, IMPLEMENTS, f"DECISION: {x['st']}\n\nDIFF:\n{diff}")
-        if not v.get("implemented"):
-            continue
-        q(
-            """
-            MATCH (d:Decision {id:$did}), (c:Commit {sha:$sha})
-            SET d.status='implemented', d.implemented_at=c.ts, d.lag_days=round(($epoch - d.epoch) / 86400.0)
-            MERGE (d)-[r:IMPLEMENTED_BY]->(c) SET r.reason=$reason
-            WITH d, c
-            OPTIONAL MATCH (m:MergeRequest)-[:MERGED_AS]->(c)
-            FOREACH (_ IN CASE WHEN m IS NULL THEN [] ELSE [1] END | MERGE (d)-[:IMPLEMENTED_IN_MR]->(m))
-            WITH d
-            OPTIONAL MATCH (ai:ActionItem)-[:FROM]->(d)
-            FOREACH (a IN CASE WHEN ai IS NULL THEN [] ELSE [ai] END | SET a.status='done')
-            """,
-            dict(did=x["did"], sha=sha, reason=v.get("reason", ""), epoch=x["epoch"]),
-        )
-        out.append({"decision": x["st"], "reason": v.get("reason")})
+    for x in rows(_CAND.format(where="c.sha = $sha"), {"sha": sha}):
+        r = _judge_link(x["did"], x["st"], x["sha"], x["epoch"], x["old"], x["new"], x["mr_title"])
+        if r:
+            out.append(r)
+    return out
+
+
+def prune_late_links() -> list[dict]:
+    """Keep, per decision, the earliest implementing change and its siblings within 3 days; drop later links
+    (a change months later that touches the same section is not what implemented the decision)."""
+    gone = rows("""
+        MATCH (d:Decision)-[:IMPLEMENTED_BY]->(c0:Commit)
+        WITH d, min(c0.epoch) AS first
+        MATCH (d)-[r:IMPLEMENTED_BY]->(c:Commit) WHERE c.epoch - first >= 3 * 86400
+        WITH d, c, r, d.statement AS st, c.title AS title
+        DELETE r
+        RETURN st, title""")
+    # MR edges whose commit is no longer an implementing change
+    q("""MATCH (d:Decision)-[r:IMPLEMENTED_IN_MR]->(m:MergeRequest)-[:MERGED_AS]->(c:Commit)
+         WHERE NOT (d)-[:IMPLEMENTED_BY]->(c) DELETE r""")
+    return gone
+
+
+def relink_all(verbose: bool = True) -> list[dict]:
+    """Re-check every decision against every later change to its sections (after improving the judge),
+    on the existing graph. Adds links; never removes one."""
+    out = []
+    for x in rows(_CAND.format(where="true")):
+        r = _judge_link(x["did"], x["st"], x["sha"], x["epoch"], x["old"], x["new"], x["mr_title"])
+        if verbose:
+            print(f"  {'LINK' if r else 'no  '} {x['sha'][:8]} {(x['mr_title'] or '')[:40]:40} <- {x['st'][:70]}")
+        if r:
+            out.append(r)
+    return out
+
+
+def link_siblings(verbose: bool = True) -> list[dict]:
+    """A meeting often makes several decisions that one MR writes down together. When one decision of a conversation
+    is implemented by a change, check the still-open decisions of the same conversation against every section that
+    change touched (same diff-only judge). Adds links; never removes one."""
+    out = []
+    for x in rows("""
+        MATCH (d:Decision {status:'decided'})-[:DECIDED_IN]->(cv:Conversation)<-[:DECIDED_IN]-(d2:Decision)-[:IMPLEMENTED_BY]->(c:Commit)
+        WHERE coalesce(d.changes_policy, true) AND d.epoch <= c.epoch
+        MATCH (c)-[:CHANGED]->(n:Section)
+        OPTIONAL MATCH (n)-[:SUPERSEDES]->(prev:Section)
+        OPTIONAL MATCH (m:MergeRequest)-[:MERGED_AS]->(c)
+        RETURN DISTINCT d.id AS did, d.statement AS st, c.sha AS sha, c.epoch AS epoch, coalesce(prev.text, '') AS old,
+               n.text AS new, m.title AS mr_title
+        ORDER BY did"""):
+        if any(o["did"] == x["did"] for o in out):
+            continue          # already linked by an earlier section of the same change
+        r = _judge_link(x["did"], x["st"], x["sha"], x["epoch"], x["old"], x["new"], x["mr_title"])
+        if verbose:
+            print(f"  {'LINK' if r else 'no  '} {x['sha'][:8]} {(x['mr_title'] or '')[:40]:40} <- {x['st'][:70]}")
+        if r:
+            out.append({**r, "did": x["did"]})
     return out
 
 

@@ -38,8 +38,8 @@ for i, s in enumerate(segs):
              f"[0:v]trim=start=0.5,setpts=PTS-STARTPTS,fps=30,scale=1920:1080,tpad=stop_mode=clone:stop_duration=3,trim=0:{T},fade=in:0:9,fade=out:st={T-0.3:.2f}:d=0.3[v];[1:a]{afilt}[a]",
              "-map", "[v]", "-map", "[a]", "-t", str(T), "-c:v", "libx264", "-preset", "veryfast", "-pix_fmt", "yuv420p", "-r", "30", "-c:a", "aac", "-b:a", "160k", str(v)])
     elif kind == "card":
-        frames = int(T * 30)
-        vf = f"scale=2112:1188,zoompan=z='1+0.035*on/{frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={frames}:s=1920x1080:fps=30,fade=in:0:9,fade=out:st={T-0.3:.2f}:d=0.3"
+        # static card + fades (zoompan rounds its crop to whole pixels every frame, which made the text shimmer)
+        vf = f"scale=1920:1080,format=yuv420p,fade=in:0:9,fade=out:st={T-0.3:.2f}:d=0.3"
         run(["ffmpeg", "-y", "-loop", "1", "-i", str(HERE / f"card_{name}.png"), "-i", str(a), "-filter_complex", f"[0:v]{vf}[v];[1:a]{afilt}[a]",
              "-map", "[v]", "-map", "[a]", "-t", str(T), "-c:v", "libx264", "-preset", "veryfast", "-pix_fmt", "yuv420p", "-r", "30", "-c:a", "aac", "-b:a", "160k", str(v)])
     else:

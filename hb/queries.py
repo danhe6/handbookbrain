@@ -33,11 +33,35 @@ def _src(rs, vid="vid", sid="sid") -> dict:
 
 
 def _ft(text: str) -> str:
-    words = [w for w in re.findall(r"[a-zA-Z0-9]+", text.lower()) if w not in STOP and len(w) > 2]
+    words = [w for w in re.findall(r"[a-zA-Z0-9]+", text.lower()) if w not in STOP and (len(w) > 2 or w.isdigit())]
     return "|".join(dict.fromkeys(words)) or text
 
 
 SEARCH_WINDOW = int(__import__("os").getenv("HB_SEARCH_WINDOW", "800"))  # chars per hit: 8 hits must fit the tool budget
+
+
+def linearize_tables(text: str) -> str:
+    """Markdown tables -> one line per row with the column name next to each value. Models misread wide tables
+    (which value sits under which column); 'Renewal timing - Tier 1: 6 months; Tier 2: 4 months' is unambiguous."""
+    if "|" not in (text or ""):
+        return text or ""
+    lines, out, i = text.split("\n"), [], 0
+    while i < len(lines):
+        if (lines[i].strip().startswith("|") and i + 1 < len(lines)
+                and re.match(r"^\s*\|?\s*:?-{2,}", lines[i + 1])):
+            hdr = [c.strip() for c in lines[i].strip().strip("|").split("|")]
+            j = i + 2
+            while j < len(lines) and lines[j].strip().startswith("|"):
+                cells = [c.strip() for c in lines[j].strip().strip("|").split("|")]
+                first = cells[0] if cells else ""
+                rest = "; ".join(f"{h}: {c}" for h, c in zip(hdr[1:], cells[1:]) if c)
+                out.append(f"- {hdr[0] + ' ' if hdr and hdr[0] else ''}{first} -> {rest}".replace("<br>", " "))
+                j += 1
+            i = j
+            continue
+        out.append(lines[i])
+        i += 1
+    return "\n".join(out)
 
 
 def best_window(text: str, query: str, size: int = 1800) -> str:
@@ -59,7 +83,12 @@ def best_window(text: str, query: str, size: int = 1800) -> str:
             best, best_s = (i, j), sc
     i, j = best
     out = "\n\n".join(paras[i:max(j, i + 1)])[:size]
-    return ("[...]\n" if i > 0 else "") + out + ("\n[...]" if j < len(paras) else "")
+    if i > 0:
+        # keep the section's opening paragraph: it usually states the rule ("will MQL after hitting 31 points"),
+        # while the best-matching window can be table rows that only repeat the question's words
+        lead = paras[0][:min(len(paras[0]), size // 3)]
+        out = lead + "\n[...]\n" + out[:size - len(lead)]
+    return out + ("\n[...]" if j < len(paras) else "")
 
 
 def _diff(old: str, new: str, limit: int = 1500) -> str:
@@ -90,11 +119,28 @@ def _resolve_page(name: str) -> str | None:
 
 # ------------------------------------------------------------------ retrieval
 
+_HEADS = {"key": None, "rows": []}
+
+
+def _headings() -> list:
+    """(vid, lower-case heading + FAQ questions) of every current section, cached until the graph head moves."""
+    from .graph import get_meta
+    key = get_meta().get("head")
+    if _HEADS["key"] != key or not _HEADS["rows"]:
+        # FAQ pages put each question in <summary>; those questions act as headings too
+        summ = re.compile(r"<summary[^>]*>\s*(.*?)\s*</summary>", re.S | re.I)
+        _HEADS.update(key=key, rows=[(r["vid"], ((r["h"] or "") + " " + " ".join(summ.findall(r["t"] or ""))).lower())
+                                     for r in rows("MATCH (s:Section) WHERE s.valid_to IS NULL "
+                                                   "RETURN s.vid AS vid, s.heading AS h, s.text AS t")])
+    return _HEADS["rows"]
+
+
 def search_handbook(query: str, k: int = 8) -> dict:
     """Hybrid search over CURRENT handbook sections: semantic (vector) + keyword (full-text),
     fused with reciprocal-rank fusion. Each hit includes the page owners. Use for any policy / process question."""
     from .llm import embed
     ranked: dict[str, dict] = {}
+    v = None
     try:
         v = embed([query])[0]
         vec = rows(
@@ -103,7 +149,7 @@ def search_handbook(query: str, k: int = 8) -> dict:
             WHERE node.valid_to IS NULL
             RETURN node.vid AS vid
             """,
-            {"n": k * 4, "v": v},
+            {"n": k * 10, "v": v},
         )
     except Exception:
         vec = []
@@ -115,9 +161,26 @@ def search_handbook(query: str, k: int = 8) -> dict:
         """,
         {"q": _ft(query), "n": k * 2},
     )
-    for lst in (vec, kw):
+    qwords = {w for w in re.findall(r"[a-z0-9]+", query.lower()) if w not in STOP and len(w) > 2}
+    # sections whose heading names words of the question; rare heading words ("Trial") count more than common
+    # ones ("Scoring", "MQL"), so the specific section beats the generic one (full-text scoring buries long sections)
+    heads = _headings()
+    stems = {w: w[:max(4, len(w) - 2)] for w in qwords}
+    idf = {w: 1.0 / (1 + sum(1 for _, h in heads if st in h)) ** 0.5 for w, st in stems.items()}
+    hscore = {}
+    for vid, h in heads:
+        hit = [w for w, st in stems.items() if st in h]
+        if len(hit) >= min(2, len(qwords)):
+            hscore[vid] = sum(idf[w] for w in hit)
+    head = [{"vid": v} for v, _ in sorted(hscore.items(), key=lambda x: -x[1])[:k]]
+    for lst in (vec, kw, head):
         for rank, r in enumerate(lst):
             ranked.setdefault(r["vid"], {"s": 0.0})["s"] += 1.0 / (60 + rank)
+    # a section whose HEADING names what was asked ("Trial Threshold Scoring" for "trial MQL threshold") beats one that
+    # only mentions it in passing; full-text scoring alone ignores headings
+    for vid, sc in hscore.items():
+        if vid in ranked:
+            ranked[vid]["s"] += 0.02 * min(sc, 2.5)
     top = [vid for vid, _ in sorted(ranked.items(), key=lambda x: -x[1]["s"])[:k * 2]]  # over-fetch, dedupe below
     hits = rows(
         """
@@ -146,9 +209,74 @@ def search_handbook(query: str, k: int = 8) -> dict:
             row["note"] = "authoritative; older copies that disagree: " + ", ".join(cite_key(x) for x in h["older_copies_disagree"])
         if h.get("copies"):
             row["same_text_also_in"] = h["copies"]
-        row["text"] = best_window(h["text"] or "", query, SEARCH_WINDOW)
+        # the best hits get more room: lists and tables are often cut mid-way at 800 chars
+        # a short section is returned whole: cutting a 3-item list to its best-matching item can hide the answer
+        # (e.g. "polished demos go on the Branded channel" sits in the item the query words don't match)
+        body = linearize_tables(h["text"] or "")
+        row["text"] = best_window(body, query, 1400 if len(out) < 2 or len(body) <= 1500 else 650)
         out.append(row)
-    return {"rows": out, "sources": _src(hits)}
+    removed = _removed_rules(query, qwords, v, {h["sid"] for h in hits})
+    srcs = _src(hits)
+    for r in removed:
+        srcs.setdefault(r["cite"], r.pop("_vid"))
+    res = {"older_versions_that_said_more": removed} if removed else {}   # first: the tool result may be truncated
+    return {**res, "rows": out, "sources": srcs}
+
+
+def _sentences_with(text: str, keys: set, limit: int = 700) -> str:
+    """The sentences of an older version that contain what disappeared (a window can cut a long paragraph mid-way)."""
+    sents = re.split(r"(?<=[.!?])\s+|\n+", text)
+    def hit(x):
+        lx = x.lower()
+        return any((all(p in lx for p in k.split()) if " " in k else re.search(rf"\b{re.escape(k)}", lx)) for k in keys)
+    out = " ".join(x.strip() for x in sents if x.strip() and hit(x))
+    return (out or text)[:limit]
+
+
+def _bigrams(text: str) -> set:
+    """Adjacent content words, stemmed to 5 letters: 'auto-approval' and 'auto-approved' both give ('auto', 'appro')."""
+    ws = [w[:5] for w in re.findall(r"[a-z0-9]+", text.lower()) if w not in STOP]
+    return set(zip(ws, ws[1:]))
+
+
+def _removed_rules(query: str, qwords: set, vec, current_sids: set, n: int = 2) -> list:
+    """Rules that USED to be in a section but are gone now (versions are kept, so the graph can tell).
+    An older version is returned only if it contains words of the question that the current version no longer has."""
+    if not qwords:
+        return []
+    tail = """MATCH (cur:Section {sid: node.sid}) WHERE cur.valid_to IS NULL
+            OPTIONAL MATCH (m:MergeRequest)-[:MERGED_AS]->(c:Commit {sha: node.valid_to})
+            RETURN node.sid AS sid, node.text AS old, cur.text AS cur, cur.vid AS vid, node.valid_to_ts AS until,
+                   m.iid AS mr, c.title AS change"""
+    old = []
+    try:
+        old += rows("CALL db.idx.fulltext.queryNodes('Section', $q) YIELD node, score WHERE node.valid_to IS NOT NULL "
+                    "WITH node, score ORDER BY score DESC LIMIT 40 " + tail, {"q": _ft(query)})
+    except Exception:
+        pass
+    if vec:
+        try:
+            old += rows("CALL db.idx.vector.queryNodes('Section', 'embedding', 120, vecf32($v)) YIELD node "
+                        "WHERE node.valid_to IS NOT NULL WITH node " + tail, {"v": vec})
+        except Exception:
+            pass
+    out, seen = [], set()
+    for r in old:
+        if r["sid"] in seen:
+            continue
+        o, c = (r["old"] or "").lower(), (r["cur"] or "").lower()
+        gone = {w for w in qwords if w in o and w not in c}
+        gone |= {" ".join(b) for b in _bigrams(query) if b in _bigrams(o) and b not in _bigrams(c)}
+        nums = {w for w in re.findall(r"\b\d+\b", query) if w in o and w not in c}
+        if len(gone | nums) >= 2 or nums or any(" " in g for g in gone):
+            seen.add(r["sid"])
+            out.append({"cite": cite_key(r["sid"]), "_vid": r["vid"], "valid_until": r["until"],
+                        "removed_or_changed_by": f"MR !{r['mr']}" if r.get("mr") else r.get("change"),
+                        "older_text": _sentences_with(linearize_tables(r["old"] or ""), gone | nums),
+                        "note": "OLDER VERSION, no longer in the current text. Use only to say what changed and when."})
+        if len(out) >= n:
+            break
+    return out
 
 
 def _dedupe_copies(hits: list[dict]) -> list[dict]:
@@ -244,7 +372,7 @@ def section_history(cite: str) -> dict:
         v = {k: h[k] for k in ("since", "until", "change", "mr", "mr_url", "author", "merged_by")}
         v["diff"] = _diff(h["prev_text"], h["text"]) if h["prev_text"] else "(first version in graph)"
         versions.append(v)
-    return {"current_text": best_window(hist[0]["text"] or "", "", 1500) if hist[0]["until"] is None else None,
+    return {"current_text": best_window(linearize_tables(hist[0]["text"] or ""), "", 1500) if hist[0]["until"] is None else None,
             "versions": versions, "sources": {cite: hist[0]["vid"]}}
 
 
@@ -313,14 +441,29 @@ def why_changed(cite: str) -> dict:
         MATCH (s:Section {sid:$sid})<-[:CHANGED]-(c:Commit)<-[:IMPLEMENTED_BY]-(d:Decision)-[:DECIDED_IN]->(cv:Conversation)
         OPTIONAL MATCH (d)-[e:EVIDENCED_BY]->(g:Segment)
         OPTIONAL MATCH (d)-[:DECIDED_BY]->(by:Person)
+        OPTIONAL MATCH (m:MergeRequest)-[:MERGED_AS]->(c)
         RETURN DISTINCT d.statement AS decision, d.decided_at AS decided_at, cv.title AS meeting, cv.source AS source,
                cv.synthetic AS synthetic, by.name AS decided_by, c.ts AS implemented_at, d.lag_days AS lag_days,
+               m.iid AS implemented_in_mr, m.title AS mr_title,
                collect({speaker:g.speaker, at:g.at, text:left(g.text, 300)})[..3] AS evidence
         """,
         {"sid": sid},
     )
+    # attach each decision to the exact version (MR) that implemented it, so a section changed by several
+    # decisions over time is not ambiguous; newest implementation first
+    dec = sorted(dec, key=lambda d: str(d.get("implemented_at") or ""), reverse=True)
+    by_mr = {}
+    for d in dec:
+        if d.get("implemented_in_mr"):
+            by_mr.setdefault(d["implemented_in_mr"], []).append(
+                f"decided {str(d['decided_at'])[:10]} by {d['decided_by']} in '{d['meeting']}': {d['decision']}")
+    for v in hist.get("versions", []):
+        if v.get("mr") in by_mr:
+            v["decision_behind_this_change"] = by_mr[v["mr"]]
     # decisions first: tool results are truncated for the model, and the decision is what this tool is for
-    return {"decisions": dec or "no meeting/chat decision is linked to the changes of this section", **hist}
+    return {"decisions": dec or "no meeting/chat decision is linked to the changes of this section",
+            "how_to_read": "each decision names the MR that implemented it; answer with the decision whose MR made the change asked about",
+            **hist}
 
 
 def decisions_about(topic: str, k: int = 5) -> dict:
@@ -332,33 +475,100 @@ def decisions_about(topic: str, k: int = 5) -> dict:
         MATCH (node)-[:DECIDED_IN]->(cv:Conversation)
         OPTIONAL MATCH (node)-[:ABOUT]->(s:Section)
         OPTIONAL MATCH (node)-[:IMPLEMENTED_IN_MR]->(m:MergeRequest)
+        OPTIONAL MATCH (node)-[:DECIDED_BY]->(by:Person)
         RETURN node.statement AS decision, node.status AS status, node.decided_at AS decided_at, node.quote AS quote,
-               cv.title AS meeting, cv.source AS source, s.sid AS sid, s.vid AS vid, m.iid AS mr, score
+               by.name AS decided_by, cv.title AS meeting, cv.source AS source, cv.kind AS kind, s.sid AS sid, s.vid AS vid,
+               m.iid AS implemented_in_mr, node.implemented_at AS implemented_at, score
         ORDER BY score DESC LIMIT $k
         """,
-        {"q": _ft(topic), "k": k},
+        {"q": _ft(topic), "k": k * 4},
     )
+    # rerank by overlap with the question's specific words: a word shared by many decisions ('renewal') counts
+    # little, a word only this decision has ('Initial Source') counts a lot
+    words = [w for w in re.findall(r"[a-z0-9]+", topic.lower()) if w not in STOP and (len(w) > 3 or w.isdigit())]
+    def toks(r):
+        return set(re.findall(r"[a-z0-9]+", f"{r['decision']} {r['quote'] or ''}".lower()))
+    tk = [toks(r) for r in res]
+    df = {w: sum(1 for t in tk if any(x.startswith(w[:6]) for x in t)) for w in words}
+    # "why was X added" and "why did X go from 25 to 31" are about different decisions on the same subject:
+    # prefer a decision whose action matches the question's
+    ADD = re.compile(r"\b(add|added|adding|introduc\w*|new|creat\w*|approv\w*|formaliz\w*)\b")
+    CHG = re.compile(r"\b(chang\w*|increas\w*|decreas\w*|rais\w*|lower\w*|from \d+ to \d+|go from|went from|"
+                     r"no longer|remov\w*|switch\w*|replac\w*|updat\w*)\b")
+    ql = topic.lower()
+    want = "add" if ADD.search(ql) and not CHG.search(ql) else "chg" if CHG.search(ql) else None
+
+    def act(r):
+        if not want:
+            return 0.0
+        st = (r["decision"] or "").lower()
+        a, c = bool(ADD.search(st)), bool(CHG.search(st))
+        hit, other = (a, c) if want == "add" else (c, a)
+        return 0.6 if hit else (-0.3 if other else 0.0)
+
+    def rel(t):
+        return sum(1.0 / df[w] for w in words if df[w] and any(x.startswith(w[:6]) for x in t))
+    order = sorted(range(len(res)), key=lambda i: -(rel(tk[i]) + act(res[i])))
+    res = [dict(res[i], match=round(rel(tk[i]) + act(res[i]), 2)) for i in order][:k]
+    def where(r):
+        # a decision nobody implemented lives only in the conversation: the agent must not present it as policy,
+        # nor cite the section it is ABOUT as if that section stated it
+        if r.get("implemented_in_mr") or r.get("status") == "implemented":
+            return {"in_documents": True}
+        k_, src = str(r.get("kind") or "").lower(), str(r.get("source") or "").lower()
+        kind = "chat thread" if k_ == "chat" or src in ("slack", "teams") else "ticket" if k_ == "ticket" else "meeting"
+        return {"in_documents": False,
+                "attribution": f"Only recorded in a {kind} ('{r.get('meeting')}'); no document states it. If it answers the "
+                               f"question, DO give it as the answer, saying plainly that it comes from a {kind}, not documented "
+                               "policy. The 'about' section is the topic it concerns and does NOT state this decision: never "
+                               "cite it as the source."}
     return {"rows": [{k2: v for k2, v in r.items() if k2 not in ("vid", "sid", "score")} |
-                     {"about": cite_key(r["sid"]) if r["sid"] else None} for r in res],
+                     {"about": cite_key(r["sid"]) if r["sid"] else None} | where(r) for r in res],
             "sources": {cite_key(r["sid"]): r["vid"] for r in res if r["sid"]},
             "note": "decisions are AI-extracted from conversations (origin=ai_extracted, unreviewed)"}
 
 
 def search_conversations(query: str, k: int = 6) -> dict:
-    """Search meeting transcripts, chat threads and tickets. LOWER TRUST than the handbook: use only when the
-    handbook doesn't answer, and say explicitly that the information comes from a conversation, not policy."""
-    res = rows(
+    """Search meeting transcripts, chat threads and tickets, and the decisions recorded in them. LOWER TRUST than the
+    handbook: use only when the handbook doesn't answer, and say explicitly that the information comes from a
+    conversation, not policy."""
+    words = {w for w in re.findall(r"[a-z0-9]+", query.lower()) if w not in STOP and len(w) > 2}
+    cover = lambda t: len({w for w in words if w in (t or "").lower()})
+    # full-text scores favour very short chat lines; re-rank by how many words of the question a passage covers
+    segs = rows(
         """
         CALL db.idx.fulltext.queryNodes('Segment', $q) YIELD node, score
+        WITH node, score ORDER BY score DESC LIMIT 80
         MATCH (cv:Conversation)-[:HAS_SEGMENT]->(node)
         RETURN cv.title AS conversation, cv.source AS source, node.speaker AS speaker, node.at AS at,
-               left(node.text, 600) AS text, node.gid AS gid, score
-        ORDER BY score DESC LIMIT $k
+               left(node.text, 600) AS text, node.gid AS gid
         """,
-        {"q": _ft(query), "k": k},
+        {"q": _ft(query)},
     )
-    return {"rows": [{k2: v for k2, v in r.items() if k2 != "score"} for r in res], "sources": {},
-            "note": "conversation content: not reviewed policy"}
+    segs = sorted(segs, key=lambda r: -cover(r["text"]))[:k]
+    decs = rows(
+        """
+        CALL db.idx.fulltext.queryNodes('Decision', $q) YIELD node, score
+        WITH node, score ORDER BY score DESC LIMIT 30
+        OPTIONAL MATCH (node)-[:DECIDED_IN]->(cv:Conversation)
+        OPTIONAL MATCH (node)-[:DECIDED_BY]->(p:Person)
+        RETURN node.statement AS decision, node.quote AS quote, node.decided_at AS decided_at, node.status AS status,
+               cv.title AS where, cv.source AS source, p.name AS decided_by
+        """,
+        {"q": _ft(query)},
+    )
+    decs = [d for d in sorted(decs, key=lambda d: -cover(d["decision"])) if cover(d["decision"]) >= 2][:3]
+    # second chance for the handbook: chat often paraphrases a rule a document does state. Show the best documents for
+    # this wording too, so a documented answer wins over the chat version of it.
+    try:
+        hb = search_handbook(query, k=3)
+        docs = [{"cite": r["cite"], "heading": r["heading"], "text": r["text"][:900]} for r in hb["rows"]]
+        srcs = {r["cite"]: hb["sources"][r["cite"]] for r in docs if r["cite"] in hb.get("sources", {})}
+    except Exception:
+        docs, srcs = [], {}
+    return {"check_these_documents_first": docs, "decisions_recorded_in_conversations": decs, "rows": segs, "sources": srcs,
+            "note": "conversation content: not reviewed policy. If a document above answers the question, answer from "
+                    "the document and cite it; use the conversation only for what no document says."}
 
 
 def run_cypher(query: str) -> dict:

@@ -138,7 +138,10 @@ first use a piece of jargon, explain it in a few words. Write markdown with exac
 **Recent decisions you should know** - up to 4 bullets, newest first: what changed, who decided, when.
 **Your first week** - 3 bullets: which documents to read first and who to ask about what.
 
-Mention documents by title and decisions by date. Never invent numbers, names or systems not in the DATA."""
+Mention documents by title and decisions by date. Never invent numbers, names or systems not in the DATA.
+Decision status matters: say a document was updated ONLY for a decision marked "implemented in MR !N" (name the MR);
+for a decision marked "decided", say it was decided in that meeting and is not in the documents yet; a decision made
+in a chat channel (#...) is what someone said in chat, not policy. Do not write links or URLs."""
 
 
 def brief(a: str, refresh: bool = False) -> dict:

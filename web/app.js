@@ -1,4 +1,4 @@
-/* HandbookBrain web UI (no build step). Views: overview, ask, learn, explore, review, configure (setup). Data: hb/api.py. */
+/* HandbookBrain web UI (no build step). Views: overview, ask, learn, explore, review, how (how it works). Data: hb/api.py. */
 (() => {
   const $ = (s, el = document) => el.querySelector(s);
   const view = $('#view');
@@ -239,6 +239,53 @@
   });
 
   // ------------------------------------------------------------------ overview (product)
+  // the data model, or one real decision trail returned live by FalkorDB (preset read-only query 0)
+  // data model: only the business-facing types (internal helpers like segments, summaries and notifications stay hidden),
+  // placed by hand so the story reads left to right: meeting → decision → change → section → document → answer → question
+  const MODEL = {
+    Person: [0.14, 0], MergeRequest: [0.36, 0],
+    Conversation: [0, 0.5], Decision: [0.18, 0.5], Commit: [0.36, 0.5], Section: [0.54, 0.5], Page: [0.70, 0.5], Answer: [0.85, 0.5], Question: [1, 0.5],
+    Metric: [0.42, 1], Field: [0.56, 1], Dashboard: [0.70, 1], System: [0.84, 1],
+  };
+  function modelView(schema) {
+    const keep = schema.nodes.filter((n) => MODEL[n.type]);
+    const ids = new Set(keep.map((n) => n.id));
+    return {
+      nodes: keep.map((n) => ({ ...n, type: n.type === 'Commit' ? 'Change' : n.type, label: n.type === 'Commit' ? n.label.replace('Commit', 'Change') : n.type === 'Page' ? n.label.replace('Page', 'Document') : n.label, px: MODEL[n.type][0], py: MODEL[n.type][1] })),
+      edges: schema.edges.filter((e) => ids.has(e.source) && ids.has(e.target) && e.source !== e.target),
+    };
+  }
+  function bindCypher(schema) {
+    const box = $('#g-schema'), cap = $('#g-cap'), cy = $('#g-cy');
+    const legend = (g) => { $('#g-legend').innerHTML = HBGraph.legend([...new Set(g.nodes.map((n) => n.type))].filter((t) => HBGraph.TYPES[t])); };
+    const show = async (k) => {
+      $('#g-tabs').querySelectorAll('[data-gt]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.gt === k)));
+      cy.hidden = k === 'model';
+      if (k === 'model') {
+        const g = modelView(schema);
+        box.innerHTML = ''; HBGraph.mount(box, g, { layout: 'preset', height: 420, labels: 'all', label: 'Graph data model', labelMax: 40 }); legend(g);
+        cap.textContent = 'The core node types and how they connect, with live counts from FalkorDB · drag nodes';
+        return;
+      }
+      box.innerHTML = `<div style="height:420px;display:grid;place-items:center">${loading()}</div>`;
+      try {
+        const r = await api('/api/cypher/run?i=0');
+        box.innerHTML = ''; HBGraph.mount(box, r.graph, { layout: 'layered', height: 420, labels: 'all', label: r.title, labelMax: 33 }); legend(r.graph);
+        cap.textContent = `The trial MQL threshold decision (25 → 31 points): ${r.counts.nodes} nodes and ${r.counts.edges} relationships, returned by FalkorDB just now · drag nodes`;
+        cy.querySelector('pre').textContent = r.query;
+      } catch (e) { box.innerHTML = `<div class="card warn">${esc(e.message)}</div>`; }
+    };
+    $('#g-tabs').querySelectorAll('[data-gt]').forEach((b) => b.addEventListener('click', () => show(b.dataset.gt)));
+    show('trail');
+  }
+  function bindCopy(root) {
+    root.querySelectorAll('[data-copy]').forEach((b) => b.addEventListener('click', async () => {
+      const t = b.dataset.copy;
+      try { await navigator.clipboard.writeText(t); } catch (e) { const a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select(); document.execCommand('copy'); a.remove(); }
+      b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy'; }, 1400);
+    }));
+  }
+
   const FEATURES = [
     { k: 'learn', eyebrow: 'For new hires', title: 'Learn an area in an afternoon, not a quarter.', featured: true,
       text: 'A new hire gets one link. They pick their area and ask what they need: the 2-minute overview, what changed recently and why, who to talk to, which tools and metrics they will use. Jargon explains itself where it appears, and anything on screen can be asked about in their own words.',
@@ -258,7 +305,7 @@
   ];
   async function vOverview() {
     view.innerHTML = loading();
-    const [ov, trust, schema] = await Promise.all([api('/api/overview'), api('/api/trust').catch(() => ({})), api('/api/graph/schema').catch(() => ({ nodes: [], edges: [] }))]);
+    const [ov, trust, schema] = await Promise.all([api('/api/overview'), api('/api/trust').catch(() => ({})), api('/api/graph/schema').catch(() => ({ nodes: [], edges: [] })), ]);
     S.ov = ov; S.trust = trust;
     const c = ov.counts || {};
     const sc = trust.source_conflicts;
@@ -267,7 +314,7 @@
         <span class="eyebrow">Company brain · Graph RAG on FalkorDB</span>
         <h1 class="display">All of your company's knowledge in one place, and still true tomorrow.</h1>
         <p class="lede">The decision is in a Zoom call, the rule in the handbook, the old version in a PDF on the drive, the number in a dashboard. HandbookBrain connects them in one versioned graph. New hires learn an area by asking. Anyone can ask why something works the way it does. When something changes, the people who own it are asked to approve the update.</p>
-        <div class="actions"><a class="btn primary" href="#/learn">Start as a new hire</a><a class="btn" href="#/ask">Ask a question</a><a class="btn" href="#/explore">Explore the graph</a></div>
+        <div class="actions"><a class="btn primary" href="#/learn">Start as a new hire</a><a class="btn" href="#/ask">Ask a question</a><a class="btn" href="#/explore">Explore the graph</a><a class="btn" href="#/review">Review updates</a><button class="btn" id="watch-demo" hidden>▶ Watch the 2-min demo</button></div>
       </section>
 
       <section class="oneplace" aria-label="One place">
@@ -304,9 +351,12 @@
       </section>
 
       <section class="section">
-        <div style="display:flex;flex-direction:column;gap:6px"><h3 class="label">The data model, live from FalkorDB</h3></div>
-        <div class="graphbox"><div id="g-schema"></div><span class="hint">From the meeting where something was decided, to the change, the section version, the document, the answer and the question · drag nodes</span></div>
-        <div class="legend">${HBGraph.legend([...new Set(schema.nodes.map((n) => n.type))].filter((t) => HBGraph.TYPES[t]))}</div>
+        <h3 class="label">The graph, live from FalkorDB</h3>
+        <div class="gtabs" id="g-tabs" role="group" aria-label="What to show"><button class="dchip" data-gt="trail" aria-pressed="true">A real decision, live</button><button class="dchip" data-gt="model" aria-pressed="false">Data model</button></div>
+        <div class="graphbox"><div id="g-schema"></div></div>
+        <p class="small muted" id="g-cap" style="margin:0"></p>
+        <div class="legend" id="g-legend"></div>
+        <details class="more" id="g-cy" hidden><summary>The Cypher query behind it</summary><pre class="yaml wrap"></pre></details>
       </section>
 
       ${trust.available ? `<section class="section">
@@ -317,15 +367,23 @@
           ${sc ? `<div class="num"><b>${esc(sc.found)}</b><span>live vs static conflicts found, ${esc(sc.false_alarms_on_consistent_sections)} false alarms</span></div>` : ''}
           <div class="num"><b>${esc(trust.conversations?.decision_to_change_recall || '–')}</b><span>meeting decisions linked to the change that implemented them</span></div>
         </div>
-        <a class="small" href="#/configure">Method and all numbers</a>
+        <a class="small" href="https://github.com/danhe6/handbookbrain#how-we-verified-it" target="_blank" rel="noopener">Method and all numbers ↗</a>
       </section>` : ''}`;
-    if (schema.nodes.length) HBGraph.mount($('#g-schema'), schema, { layout: 'layered', height: 360, labels: 'all', label: 'Graph data model' });
+    if (schema.nodes.length) bindCypher(schema);
+    // full narrated demo (demo/video/build.py → web/media/handbookbrain-demo.mp4), shown only if it exists
+    fetch('/static/media/handbookbrain-demo.mp4', { method: 'HEAD', cache: 'no-store' }).then((r) => {
+      const b = $('#watch-demo'); if (!r.ok || !b) return; b.hidden = false;
+      const vsrc = `/static/media/handbookbrain-demo.mp4?v=${encodeURIComponent(r.headers.get('last-modified') || Date.now())}`;
+      b.addEventListener('click', () => { $('#drawer').hidden = false; $('#drawer-body').innerHTML = `<video src="${vsrc}" controls autoplay style="width:100%;border-radius:12px;border:1px solid var(--line)"></video>`; });
+    }).catch(() => {});
     // short clips recorded from the live app (scripts/record_demos.py); click to watch larger
-    const clips = await api('/static/media/clips.json').catch(() => ({}));
+    // no-store + a version from Last-Modified: a re-recorded clip shows up on reload instead of the browser's cached copy
+    const clips = await fetch('/static/media/clips.json', { cache: 'no-store' }).then((r) => r.json()).catch(() => ({}));
     view.querySelectorAll('[data-clip]').forEach(async (box) => {
-      const src = `/static/media/${box.dataset.clip}.webm`;
+      const base = `/static/media/${box.dataset.clip}.webm`;
       const start = (clips[box.dataset.clip] || {}).start || 0;
-      let ok = false; try { ok = (await fetch(src, { method: 'HEAD' })).ok; } catch (e) { /* */ }
+      let ok = false, src = base;
+      try { const r = await fetch(base, { method: 'HEAD', cache: 'no-store' }); ok = r.ok; src = `${base}?v=${encodeURIComponent(r.headers.get('last-modified') || Date.now())}`; } catch (e) { /* */ }
       box.innerHTML = ok ? `<video src="${src}" autoplay muted loop playsinline preload="metadata" aria-label="Demo clip"></video><button class="clip-zoom" aria-label="Watch larger">⤢</button>`
         : `<div class="clip-ph"><span class="muted small">Clip not recorded yet · <code>python scripts/record_demos.py</code></span></div>`;
       const v = box.querySelector('video');
@@ -473,7 +531,8 @@
   async function vDemo() {
     view.innerHTML = loading();
     const a = await api('/api/answers?limit=40');
-    const sug = a.suggested || [];
+    const watchedQ = new Set(a.answers.map((x) => x.question));
+    const sug = (a.suggested || []).filter((q) => !watchedQ.has(q));   // already answered ones are listed below
     view.innerHTML = `
       <section class="hero" style="padding-top:0;gap:10px">
         <span class="eyebrow">Ask · ${esc(S.ov?.name || '')}</span>
@@ -519,7 +578,7 @@
     const order = [];
     const numOf = (k) => { if (!order.includes(k)) order.push(k); return order.indexOf(k) + 1; };
     const html = renderAnswer(a.text, numOf);
-    const steps = S.askResult && S.askResult.id === id ? S.askResult.steps : null;
+    const steps = st.steps || (S.askResult && S.askResult.id === id ? S.askResult.steps : null);
     const decisions = st.timeline.filter((e) => e.kind === 'decision');
     const last = decisions[decisions.length - 1];
     const headline = last ? `Decided ${day(last.ts)}${last.who ? ' by ' + esc(last.who) : ''} in ${esc(last.where || 'a meeting')}` : '';
@@ -549,7 +608,10 @@
               <div class="meta">${srcBadge(page.source, page.kind)}${page.owner_source ? ownerBadge(page.owner_source, owners) : ''}
               ${n.since ? `<span>version since ${esc(day(n.since))}</span>` : ''}${page.path ? `<button class="linkbtn small" data-page="${esc(page.path)}">Open document</button>` : ''}</div></div>`;
           }).join('')}</div></details>` : ''}
-          ${steps ? `<details class="more"><summary>How the agent got here (${steps.length} tool calls)</summary><ol class="steps">${steps.map((s, i) => `<li><span class="stepn">${i + 1}</span><div><b>${esc(s.tool)}</b> <code>${esc(Object.values(s.args || {}).join(' · '))}</code></div></li>`).join('')}</ol></details>` : ''}
+          ${steps && steps.length ? `<details class="more" id="agent-steps"><summary>How the agent got here: ${steps.length} graph tool call${steps.length === 1 ? '' : 's'}${st.review && st.review.length ? `, reviewed ${st.review.length}×` : ''}${st.secs ? ` · ${esc(st.secs)} s` : ''}</summary>
+            <ol class="steps">${steps.map((s, i) => `<li><span class="stepn">${i + 1}</span><div><b>${esc(s.tool)}</b>${s.pre ? ' <span class="badge">preloaded</span>' : ''} <code>${esc(Object.values(s.args || {}).join(' · '))}</code>${s.n != null ? ` <span class="muted small">→ ${esc(s.n)} source${s.n === 1 ? '' : 's'}</span>` : ''}</div></li>`).join('')}</ol>
+            ${(st.review || []).map((r) => `<div class="small"><b>${r.stage === 'critic' ? 'Reviewer (second model) sent it back' : r.stage === 'citations' ? 'Citation check sent it back' : 'Sent back'}:</b> ${esc((r.issues || []).join(' · '))}</div>`).join('')}
+            <p class="small muted" style="margin:6px 0 0">Each tool is a parameterised Cypher query on FalkorDB (hb/queries.py). The answer is then checked in code (every citation must come from a tool result) and by a second model that sees only the question and the evidence.</p></details>` : ''}
         </div>
       </div>
       </div>`;
@@ -785,7 +847,7 @@
       ['gaps', 'Knowledge gaps', 'Questions people asked that no document answers. "Tribal": a colleague answered it in chat, but it was never written down.',
         (g) => `<td><b>${esc(g.question)}</b>${g.chat_answer ? `<div class="small muted">Chat answer: ${esc(g.chat_answer)}</div>` : ''}</td><td class="small">${g.tribal ? '<span class="badge amber">tribal</span>' : '<span class="badge">gap</span>'}<div class="muted">asked ${g.asked}×</div></td><td class="small muted">${esc(g.where || '')}</td><td></td>`],
     ];
-    const total = groups.reduce((s, [k]) => s + r[k].length, 0);
+    const total = groups.filter(([k]) => k !== 'proposals').reduce((s, [k]) => s + r[k].length, 0);   // a draft comes from a decision already counted
     view.innerHTML = `
       <section class="hero" style="padding-top:0;gap:10px"><span class="eyebrow">Review · ${esc(S.ov?.name || '')}</span>
         <h1 class="display" style="font-size:42px">${total} things need a human</h1>
@@ -856,72 +918,86 @@
   }
 
   // ------------------------------------------------------------------ configure / capabilities
-  async function vConfigure() {
+
+  // data flow: inputs -> HandbookBrain -> outputs (generic icons, labels name the tools; no brand marks)
+  const FI = {
+    pdf: '<path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><text x="12" y="17" font-size="5.2" text-anchor="middle" fill="currentColor" stroke="none" font-weight="700">PDF</text>',
+    doc: '<path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M8.5 11h7M8.5 14h7M8.5 17h5"/>',
+    git: '<circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="9" r="2"/><path d="M6 8v8M8 6h4a6 6 0 0 1 6 6v-1"/>',
+    wiki: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h8M8 16h5"/>',
+    chat: '<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/>',
+    meet: '<rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/>',
+    ticket: '<path d="M4 7h16v3a2 2 0 0 0 0 4v3H4v-3a2 2 0 0 0 0-4z"/><path d="M10 7v10"/>',
+    crm: '<ellipse cx="12" cy="6" rx="7" ry="2.5"/><path d="M5 6v12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/>',
+    bi: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+    graph: '<circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 6h9M6.3 8.2l4.4 7.6M17.7 8.2l-4.4 7.6"/>',
+  };
+  const fi = (k) => `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${FI[k]}</svg>`;
+  const fiBig = (k) => fi(k).replace('width="22" height="22"', 'width="26" height="26"');
+  function flowDiagram() {
+    const ins = [['doc', 'Documents', 'PDF · Word · Markdown · HTML · CSV'], ['git', 'Repos and wikis', 'GitHub · GitLab · Bitbucket · Confluence · SharePoint · Drive'],
+      ['meet', 'Meetings', 'Zoom · Teams · Google Meet transcripts'], ['chat', 'Chat and email', 'Slack · Teams · Google Chat · email'],
+      ['ticket', 'Tickets', 'Jira · Zendesk'], ['bi', 'CRM and dashboards', 'Salesforce · Power BI · Tableau', true]];
+    const core = [['Parse + version', 'every change becomes a new version; the old one is kept'],
+      ['Link', 'decisions → changes → systems, metrics, owners'],
+      ['Graph RAG agent', 'walks the graph; every claim cites a version'],
+      ['Watch', 'daily: what changed, what went stale, who approves']];
+    const outs = [['Ask', 'answers with the decision trail', '#/ask'], ['Learn', 'onboarding for new hires', '#/learn'], ['Explore', 'the company graph, by domain', '#/explore'], ['Review', 'drafted updates, owners approve', '#/review']];
+    return `<div class="flow">
+      <div class="fcol"><h3 class="label">Data in</h3><div class="fstack">${ins.map(([k, t, d, ref]) => `<div class="fin${ref ? ' ref' : ''}" title="${ref ? 'Read today from the documents that mention them; direct connector is next' : 'Supported today'}">${fi(k)}<div><b>${esc(t)}</b><span>${esc(d)}</span></div></div>`).join('')}</div>
+        <div class="flegend"><span><i class="solid"></i>supported today</span><span><i class="dash"></i>read from docs today, connector next</span></div></div>
+      <div class="farrow" aria-hidden="true">→</div>
+      <div class="fcol"><h3 class="label">HandbookBrain</h3><div class="fcore-in"><div class="fcore-h">${fi('graph')}<b>One versioned graph</b><span>FalkorDB</span></div>
+        <div class="fstack">${core.map(([t, d], i) => `<div class="fstep"><span class="n">${i + 1}</span><div><b>${esc(t)}</b><span>${esc(d)}</span></div></div>`).join('')}</div></div></div>
+      <div class="farrow" aria-hidden="true">→</div>
+      <div class="fcol"><h3 class="label">Out</h3><div class="fstack">${outs.map(([t, d, h]) => `<a class="fout" href="${h}"><b>${esc(t)} <span class="go">→</span></b><span>${esc(d)}</span></a>`).join('')}</div></div>
+    </div>`;
+  }
+
+  // what the code reads today (hb/config.py DOC_EXTS, hb/sources.py, hb/adapters.py)
+  const FORMATS = [
+    ['doc', 'Documents', ['.md', '.html', '.pdf', '.docx', '.txt', '.csv']],
+    ['meet', 'Meetings', ['Zoom .vtt + captions', 'Teams .vtt', 'Google Meet .txt', 'meeting notes .md']],
+    ['chat', 'Chat', ['Slack export', 'Teams chat', 'Google Chat', 'WhatsApp .txt', 'Discord .json']],
+    ['ticket', 'Tickets and email', ['Jira CSV', 'Zendesk JSON', '.eml', '.mbox']],
+  ];
+  const WAYS = [
+    ['git', 'Connect a live source', 'Point at a git repo or a folder your wiki exports to (Confluence, SharePoint, Drive). Every change keeps its date, author and owner.'],
+    ['pdf', 'Upload what you already have', 'Drop old PDFs, Word guides and notes in. Each one stays current until someone uploads a newer copy.'],
+    ['graph', 'Pull every day', 'One scheduled sync applies new changes, re-checks answers people were given, and drafts the update for the owner.'],
+  ];
+  const NEXT = [
+    ['Direct connectors', 'Slack, Zoom and Google Drive sign-in, instead of exports'],
+    ['CRM and BI metadata', 'Salesforce fields and Power BI / Tableau dashboards as first-class nodes'],
+    ['Recordings', 'speech-to-text for audio and video meetings'],
+    ['Company playbook', 'learned from your own process docs, so the agent searches like a senior colleague'],
+    ['Weekly digest', 'what changed in the areas each person follows, by email or Slack'],
+    ['Permissions', 'SSO sign-in; people only see what the source systems let them see'],
+  ];
+
+  async function vHow() {
     view.innerHTML = loading();
-    const [cfg, ov, t] = await Promise.all([api('/api/config'), api('/api/overview'), api('/api/trust').catch(() => ({}))]);
+    const ov = S.ov || await api('/api/overview');
     S.ov = ov;
-    const hasUploads = ov.sources.some((s) => s.type === 'uploads');
-    const frac = (s) => { const [a, b] = String(s).split('/').map(Number); return b ? a / b : 0; };
-    const barRow = (label, val, note = '') => `<tr><td>${esc(label)}</td><td style="width:30%"><div class="bar"><i style="width:${Math.round(frac(val) * 100)}%"></i></div></td><td class="mono">${esc(val)}</td><td class="small muted">${esc(note)}</td></tr>`;
     view.innerHTML = `
-      <section class="hero" style="padding-top:0;gap:10px"><span class="eyebrow">Capabilities and configuration</span>
-        <h1 class="display" style="font-size:42px">One config file per company. No code changes.</h1>
-        <p class="lede">Point it at where your knowledge lives. Live sources are re-synced daily; static files are uploaded once and checked against the live ones. Connect directly or upload exports, whichever your security team prefers.</p></section>
+      <section class="hero how-hero"><span class="eyebrow">How it works</span>
+        <h1 class="display">Everything your company knows, in one graph that stays current.</h1>
+        <p class="lede">Documents, meetings, chat and tickets go in as they are. HandbookBrain links who decided what, where it was written down and what it affects, then keeps it fresh every day.</p></section>
 
-      <section class="section"><h3 class="label">Sources for ${esc(ov.name)}</h3>
-        <div class="row">${ov.sources.map((s) => `<div class="card" style="flex:1 1 260px"><div class="meta"><span class="badge ${s.kind === 'static' ? 'amber' : 'blue'}">${esc(s.kind)}</span><span>${esc(s.type)}</span><span>authority ${esc(s.authority)}</span></div>
-          <b style="font-size:16px">${esc(s.label || s.name)}</b><span class="small muted">${s.pages} documents · ${s.kind === 'static' ? 'changes only when a new file is uploaded' : 're-synced daily'}${s.last_synced ? ' · last sync ' + esc(day(s.last_synced)) : ''}</span></div>`).join('')}
-          <div class="card" style="flex:1 1 260px"><b>Daily sync</b><span class="small muted">Pull live sources, apply every change since the last sync, re-check stored answers and conflicts, refresh what went stale. Runs from cron; or now:</span><div><button class="btn primary" id="syncbtn">Sync now</button></div><div id="synclog"></div></div></div>
-        ${hasUploads ? '<div class="drop" id="drop"><b style="color:var(--ink)">Upload documents</b><span class="small">PDF, DOCX, HTML, Markdown, TXT or CSV, stored as a static source and checked against the live docs on the next sync.</span><label class="btn"><input type="file" id="files" multiple hidden accept=".pdf,.docx,.md,.markdown,.txt,.html,.htm,.csv">Choose files</label><div id="upmsg" class="small"></div></div>' : ''}
-      </section>
+      <section class="section">${flowDiagram()}</section>
 
-      <section class="row">
-        <div class="col"><h3 class="label">companies/${esc(cfg.company)}.yaml</h3><pre class="yaml">${esc(cfg.yaml || '# built-in defaults (GitLab handbook)')}</pre></div>
-        <div class="col">
-          <h3 class="label">Connect or upload</h3>
-          <div class="card"><dl class="kv">
-            <dt>Documents</dt><dd>git repositories, dated export folders (Confluence / SharePoint / Drive), uploads · md, html, pdf, docx, txt, csv</dd>
-            <dt>Meetings</dt><dd>Zoom (vtt, captions), Teams (vtt), Google Meet transcripts, meeting notes (human or AI-written, labelled as such)</dd>
-            <dt>Chat</dt><dd>Slack export, Teams chat, Google Chat, WhatsApp, Discord</dd>
-            <dt>Tickets, email</dt><dd>Jira CSV, Zendesk JSON, eml, mbox</dd>
-            <dt>Provenance</dt><dd>every document carries an owner source (explicit / inferred / none) and an origin (human-authored / AI summary / AI-extracted / conversation)</dd></dl></div>
-          <h3 class="label">Models and cost controls</h3>
-          <div class="card"><dl class="kv">
-            <dt>Agent</dt><dd><code>${esc(cfg.models.agent)}</code></dd><dt>Reviewer</dt><dd><code>${esc(cfg.models.critic)}</code> (different model, sees only the evidence)</dd>
-            <dt>Conflict judge</dt><dd><code>${esc(cfg.models.conflict_judge)}</code></dd><dt>Embeddings</dt><dd><code>${esc(cfg.models.embeddings)}</code></dd>
-            <dt>LLM cache</dt><dd>${cfg.cost_controls.llm_cache ? 'on: identical requests are never paid twice' : 'off'}</dd><dt>Graph</dt><dd><code>${esc(cfg.graph)}</code> on FalkorDB · built at ${esc(cfg.t0)}</dd></dl></div>
-        </div>
-      </section>
+      <section class="section"><h3 class="label">Three ways data gets in</h3>
+        <div class="ways">${WAYS.map(([k, t, d], i) => `<div class="way"><div class="way-ic">${fiBig(k)}</div><span class="way-n">0${i + 1}</span><b>${esc(t)}</b><p>${esc(d)}</p></div>`).join('')}</div></section>
 
-      ${t.available ? `<section class="section"><h3 class="label">How well it works</h3>
-        <p class="muted small" style="margin:0">End-to-end benchmark on ${esc(ov.name)}: build the graph at the start date, ask questions, replay every document change and conversation in date order, score against ground truth the agent never sees. Last run ${esc(t.ran_at)} · ${esc(t.usage)}. Ground truth is synthetic; one run; LLM grading adds a few points of noise.</p>
-        <div class="row"><div class="col card"><h3 class="label">Answers by question type</h3><table class="tbl"><tbody>${Object.entries(t.by_type).map(([k, x]) => barRow(k.replace(/_/g, ' '), `${x.correct || 0}/${x.n}`, `${x.partial || 0} partial`)).join('')}</tbody></table></div>
-          <div class="col card"><h3 class="label">Watching and linking</h3><table class="tbl"><tbody>
-            ${barRow('stale answers caught', `${t.staleness.tp}/${t.staleness.tp + t.staleness.fn}`, `${t.staleness.fp} false alarm`)}
-            ${t.source_conflicts ? barRow('live vs static conflicts', t.source_conflicts.found, `${t.source_conflicts.false_alarms_on_consistent_sections} false alarms`) : ''}
-            ${Object.entries(t.conversations).map(([k, v]) => barRow(k.replace(/_/g, ' '), v)).join('')}</tbody></table></div></div></section>` : ''}
+      <section class="section"><h3 class="label">Formats it reads today</h3>
+        <div class="fmts">${FORMATS.map(([k, t, xs]) => `<div class="fmt"><div class="fmt-h">${fi(k)}<b>${esc(t)}</b></div><div class="chips">${xs.map((x) => `<span class="fchip">${esc(x)}</span>`).join('')}</div></div>`).join('')}</div>
+        <p class="small muted" style="margin:0">Each tool's native export, read as is. Swap the demo folder for a real export and nothing downstream changes.</p></section>
 
-      <section class="section"><h3 class="label">Next (step 2)</h3><div class="card"><ul class="roadmap" style="margin:0;padding-left:18px">
-        <li>Direct OAuth connectors for Slack, Zoom and Google Drive (today: their native exports, or a folder they sync to)</li>
-        <li>Company playbook generated from the company's own process docs, so the agent searches like a senior colleague</li>
-        <li>One-click "draft the fix": a proposed doc change for each stale or undocumented decision, approved by the owner</li>
-        <li>Weekly digest per person for the areas they follow (email / Slack)</li>
-        <li>Audio and video meetings via speech-to-text</li>
-        <li>Per-user permissions mirrored from the source systems; hosted multi-tenant deploy</li></ul></div></section>`;
-    $('#syncbtn').addEventListener('click', async () => { await api('/api/sync', { method: 'POST' }); pollSync(); });
-    if (ov.sync?.running) pollSync();
-    const drop = $('#drop');
-    if (drop) {
-      const send = async (files) => {
-        const fd = new FormData(); [...files].forEach((f) => fd.append('files', f));
-        $('#upmsg').textContent = 'Uploading…';
-        try { const r = await api('/api/upload', { method: 'POST', body: fd }); $('#upmsg').innerHTML = `Saved ${r.saved.map(esc).join(', ')}. Run a sync to add them.`; } catch (e) { $('#upmsg').textContent = e.message; }
-      };
-      $('#files').addEventListener('change', (e) => send(e.target.files));
-      drop.addEventListener('dragover', (e) => { e.preventDefault(); drop.classList.add('over'); });
-      drop.addEventListener('dragleave', () => drop.classList.remove('over'));
-      drop.addEventListener('drop', (e) => { e.preventDefault(); drop.classList.remove('over'); send(e.dataTransfer.files); });
-    }
+      <section class="section"><h3 class="label">Coming next</h3>
+        <div class="nexts">${NEXT.map(([t, d]) => `<div class="nx"><b>${esc(t)}</b><span>${esc(d)}</span></div>`).join('')}</div></section>
+
+      <section class="section how-cta"><div><b>Adding a company is one config file, no code.</b><span>This demo runs on the ${esc(ov.name)} handbook and its meetings.</span></div>
+        <a class="btn" href="https://github.com/danhe6/handbookbrain#readme" target="_blank" rel="noopener">Read the setup guide ↗</a></section>`;
   }
   async function pollSync() {
     for (;;) {
@@ -964,7 +1040,7 @@
       if (f) setTimeout(() => f.scrollIntoView({ block: 'start', behavior: 'smooth' }), 60);
     } catch (e) { $('#drawer-body').innerHTML = `<div class="card warn">${esc(e.message)}</div>`; }
   }
-  const closeDrawer = () => { $('#drawer').hidden = true; };
+  const closeDrawer = () => { $('#drawer').hidden = true; $('#drawer-body').querySelectorAll('video').forEach((v) => v.pause()); };
   $('#drawer-close').addEventListener('click', closeDrawer);
   $('#drawer').addEventListener('click', (e) => { if (e.target.id === 'drawer') closeDrawer(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('#drawer').hidden) closeDrawer(); });
@@ -973,13 +1049,14 @@
   async function route() {
     let r = (location.hash.replace(/^#\/?/, '') || 'overview').split('?')[0];
     if (r === 'demo') r = 'ask';
+    if (r === 'configure' || r === 'setup') r = 'how';
     document.querySelectorAll('[data-nav]').forEach((a) => { if (a.dataset.nav === r) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
     try {
       if (r === 'learn') await vLearn();
       else if (r === 'demo' || r === 'ask') await vDemo();
       else if (r === 'explore') await vExplore();
       else if (r === 'review') await vReview();
-      else if (r === 'configure') await vConfigure();
+      else if (r === 'how') await vHow();
       else await vOverview();
     } catch (e) { view.insertAdjacentHTML('afterbegin', `<div class="card warn">Something went wrong: ${esc(e.message)}</div>`); }
     window.scrollTo(0, 0);

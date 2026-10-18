@@ -1,4 +1,4 @@
-"""CLI:  python -m hb doctor | init [--at DATE] [--reset] | ask "q" | replay [--until DATE] [--limit N] | sync | upload FILES |
+"""CLI:  python -m hb evalagent | doctor | init [--at DATE] [--reset] | ask "q" | replay [--until DATE] [--limit N] | sync | upload FILES |
       sources | stale | stats"""
 import argparse
 import json
@@ -284,6 +284,81 @@ def cmd_proposals(a):
         print(f"{p['status']:9} {p['id']}  {p['page']} › {p['heading']}  ({len(p['signoffs'])} sign-offs)")
 
 
+def cmd_relink(a):
+    """Re-run the improved decision -> change judge and the entity extraction on the existing graph."""
+    from .conversations import link_siblings, prune_late_links, relink_all
+    from .entities import relink_all as relink_entities
+    from .llm import usage_line
+    if getattr(a, "siblings", False):
+        print("open decisions vs the change that implemented another decision of the same meeting:")
+        print(f"{len(link_siblings())} new links")
+        print(usage_line())
+        return
+    for g in prune_late_links():
+        print(f"  UNLINK {(g['title'] or '')[:40]:40} <- {(g['st'] or '')[:70]}")
+    print("decisions -> implementing changes:")
+    print(f"{len(relink_all())} new links")
+    print(f"entities: {relink_entities()} mentions re-extracted")
+    print(usage_line())
+
+
+def cmd_audit(a):
+    from .audit import run
+    from .llm import usage_line
+    run(llm=not a.no_llm, reask=a.reask)
+    print(usage_line())
+
+
+def cmd_evalagent(a):
+    from .evalagent import run
+    from .llm import usage_line
+    run(trials=a.trials, only=a.only, baseline=not a.no_baseline, workers=a.workers, cache=a.cache, systems=a.systems)
+    print(usage_line())
+
+
+def cmd_reask(a):
+    """Re-answer every question whose current answer is shown on the site, with the current agent (each new
+    answer supersedes the old one, so the history stays), then write runs/<company>/site_dump.json: everything the
+    site states (answers, Learn briefs, Review lists, drafted updates) in one file to read through."""
+    import json as _json
+    from concurrent.futures import ThreadPoolExecutor
+    from . import config
+    from .answer import ask
+    from .graph import rows
+    from .llm import usage_line
+    qs = [r["q"] for r in rows("MATCH (a:Answer {status:'fresh'})-[:ANSWERS]->(qn:Question) RETURN DISTINCT qn.text AS q")]
+    if not a.dump_only:
+        print(f"re-asking {len(qs)} questions")
+        with ThreadPoolExecutor(2) as ex:
+            for i, r in enumerate(ex.map(lambda x: ask(x), qs), 1):
+                print(f"  [{i:>3}/{len(qs)}] {'ok ' if r['answerable'] else 'gap'} {r['question'][:70]}")
+    from .api import review
+    from .learn import areas, brief
+    from .proposals import listing
+    dump = {
+        "answers": rows("""MATCH (a:Answer {status:'fresh'})-[:ANSWERS]->(qn:Question)
+                           OPTIONAL MATCH (a)-[:CITES]->(s:Section)
+                           RETURN qn.text AS question, a.text AS answer, a.answerable AS answerable,
+                                  collect(s.cite) AS cites ORDER BY question"""),
+        "briefs": [{"area": x["name"], "text": brief(x["id"])["text"]} for x in areas()],
+        "review": review(),
+        "proposals": listing(),
+    }
+    f = config.RUNS / "site_dump.json"
+    f.write_text(_json.dumps(dump, indent=1, default=str))
+    print(f"wrote {f}")
+    print(usage_line())
+
+
+def cmd_hide(a):
+    """Take a question's current answer off the site (kept in the graph, status 'hidden') when it is wrong and
+    re-asking did not fix it. Undo: set the status back to 'fresh'."""
+    from .graph import rows
+    r = rows("MATCH (a:Answer {status:'fresh'})-[:ANSWERS]->(qn:Question {text:$q}) SET a.status = 'hidden' "
+             "RETURN count(a) AS n", {"q": a.question})
+    print(f"hidden {r[0]['n']} answer(s) for: {a.question}")
+
+
 def cmd_stats(_):
     from .graph import rows
     for r in rows("MATCH (n) RETURN labels(n)[0] AS label, count(*) AS n ORDER BY n DESC"):
@@ -338,6 +413,23 @@ def main():
     s = sp.add_parser("seed"); s.add_argument("file", nargs="?", default="eval/questions.txt"); s.set_defaults(f=cmd_seed)
     sp.add_parser("stale").set_defaults(f=cmd_stale)
     sp.add_parser("stats").set_defaults(f=cmd_stats)
+    s = sp.add_parser("relink", help="re-check decisions vs later changes, re-extract entities (existing graph)")
+    s.add_argument("--siblings", action="store_true", help="only: open decisions vs the MR of a sibling decision")
+    s.set_defaults(f=cmd_relink)
+    s = sp.add_parser("evalagent", help="evaluate the agent vs a plain-RAG baseline on eval/<company>/questions.jsonl")
+    s.add_argument("--trials", type=int, default=3); s.add_argument("--only", default="")
+    s.add_argument("--no-baseline", action="store_true"); s.add_argument("--workers", type=int, default=2)
+    s.add_argument("--systems", default="", help="comma list: handbookbrain,plain_rag,rag_plus_gitlog (default: all)")
+    s.add_argument("--cache", action="store_true", help="reuse cached LLM responses (trials are then identical)")
+    s.set_defaults(f=cmd_evalagent)
+    s = sp.add_parser("hide", help="take a wrong answer off the site (kept in the graph)"); s.add_argument("question")
+    s.set_defaults(f=cmd_hide)
+    s = sp.add_parser("reask", help="re-answer every question shown on the site with the current agent, dump site text")
+    s.add_argument("--dump-only", action="store_true"); s.set_defaults(f=cmd_reask)
+    s = sp.add_parser("audit", help="is everything the site says true? checks the graph against git, labels, transcripts")
+    s.add_argument("--no-llm", action="store_true")
+    s.add_argument("--reask", action="store_true", help="re-ask the demo questions with the current agent first")
+    s.set_defaults(f=cmd_audit)
     s = sp.add_parser("proposals", help="drafted updates; --reset puts them all back to pending (undo demo sign-offs)")
     s.add_argument("--reset", action="store_true"); s.set_defaults(f=cmd_proposals)
     s = sp.add_parser("learn", help="pre-write onboarding briefs and glossary definitions for every area")

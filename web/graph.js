@@ -112,8 +112,9 @@
     const nodes = data.nodes.map((n) => ({ ...n }));
     const byId = new Map(nodes.map((n) => [n.id, n]));
     const edges = data.edges.filter((e) => byId.has(e.source) && byId.has(e.target));
-    if (opts.layout === 'layered') layeredLayout(nodes, edges, W, H); else forceLayout(nodes, edges, W, H);
-    if (opts.layout !== 'layered') fit(nodes, W, H, 50);
+    if (opts.layout === 'preset') nodes.forEach((n) => { n.x = 70 + n.px * (W - 140); n.y = 40 + n.py * (H - 90); });   // caller-placed (fractions)
+    else if (opts.layout === 'layered') layeredLayout(nodes, edges, W, H); else forceLayout(nodes, edges, W, H);
+    if (opts.layout !== 'layered' && opts.layout !== 'preset') fit(nodes, W, H, 50);
 
     const svg = el('svg', { width: '100%', height: H, viewBox: `0 0 ${W} ${H}`, class: 'hbg', role: 'img', 'aria-label': opts.label || 'Graph' }, container);
     const defs = el('defs', {}, svg);
@@ -147,7 +148,7 @@
       {
         const up = n._col != null && n._col % 2 === 1;   // layered: alternate labels above / below the chain
         const tx = el('text', { y: up ? -(r + 7) : r + 13, 'text-anchor': 'middle', class: 'nl' + (n.hl ? ' hl' : '') }, g);
-        tx.textContent = trunc(n.label || t.name, n._col != null ? 26 : n.hl ? 34 : 24);
+        tx.textContent = trunc(n.label || t.name, opts.labelMax || (n._col != null ? 26 : n.hl ? 34 : 24));
         if (!showLabel) { tx.style.display = 'none'; n._lazy = tx; }   // shown when its domain is in focus
       }
       const tt = el('title', {}, g); tt.textContent = `${t.name}: ${n.label}`;

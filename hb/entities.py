@@ -106,6 +106,7 @@ def link_page(path: str) -> int:
     n = 0
     for s in todo:
         e = extract(s["text"])
+        q("MATCH (:Section {vid:$vid})-[old:MENTIONS]->() DELETE old", {"vid": s["vid"]})
         q(
             """
             MATCH (s:Section {vid:$vid}) SET s.ents = true
@@ -119,6 +120,13 @@ def link_page(path: str) -> int:
         )
         n += sum(len(v) for v in e.values())
     return n
+
+
+def relink_all() -> int:
+    """Re-extract entities for every current section version (drops MENTIONS that no longer match the text)."""
+    q("MATCH (s:Section) WHERE s.valid_to IS NULL SET s.ents = NULL")
+    paths = [r["p"] for r in rows("MATCH (p:Page) WHERE p.deleted = false RETURN p.path AS p")]
+    return sum(link_page(p) for p in paths)
 
 
 def impact_of_change(sha: str) -> dict:

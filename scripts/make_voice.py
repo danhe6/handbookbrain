@@ -27,12 +27,15 @@ Emphasis: Light stress on numbers, names and the last words of each sentence."""
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--voice", default="cedar")   # cedar or marin: best quality per OpenAI docs
+    ap.add_argument("--only", default="", help="comma-separated segment ids, e.g. 04b-falkor")
     a = ap.parse_args()
     load_dotenv(ROOT / ".env")
     client = OpenAI()
     out = ROOT / "demo" / "voice"
     out.mkdir(parents=True, exist_ok=True)
     for seg in json.loads((ROOT / "demo" / "narration.json").read_text()):
+        if a.only and seg["id"] not in a.only.split(","):
+            continue
         f = out / f"{seg['id']}.mp3"
         try:
             r = client.audio.speech.create(model="gpt-4o-mini-tts", voice=a.voice, input=seg["text"], instructions=TONE)

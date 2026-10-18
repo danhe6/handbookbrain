@@ -49,6 +49,7 @@ BACK = {
  "explore": ("Explore · decision triage", "One domain at a time, decisions ranked by impact"),
  "impact": ("Change impact", "Answers that go stale, and the blast radius of a change"),
  "review": ("For owners · Review", "The agent drafts, the owner approves"),
+ "falkor": ("Under the hood · FalkorDB", "The real graph, one Cypher query away"),
 }
 with sync_playwright() as p:
     b = p.chromium.launch(); pg = b.new_page(viewport={"width": 1920, "height": 1080})

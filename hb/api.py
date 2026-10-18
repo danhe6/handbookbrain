@@ -143,6 +143,29 @@ DEMO_Q = {
 }
 
 
+_TRACES = {"mtime": None, "by_id": {}}
+
+
+def _trace_of(aid: str) -> dict | None:
+    """The agent's recorded steps for a stored answer (runs/<company>/trace.jsonl, written by every ask)."""
+    f = config.RUNS / "trace.jsonl"
+    if not f.exists():
+        return None
+    m = f.stat().st_mtime
+    if _TRACES["mtime"] != m:
+        by = {}
+        for line in f.read_text().splitlines():
+            try:
+                d = json.loads(line)
+            except ValueError:
+                continue
+            if d.get("type") == "ask" and d.get("id"):
+                by[d["id"]] = {"trace": d.get("trace") or [], "revisions": d.get("revisions") or [],
+                               "secs": d.get("secs"), "cost_usd": d.get("cost_usd")}
+        _TRACES.update(mtime=m, by_id=by)
+    return _TRACES["by_id"].get(aid)
+
+
 @app.get("/api/story/{aid}")
 def story(aid: str):
     from .story import answer_story
@@ -151,6 +174,12 @@ def story(aid: str):
     if r.get("error"):
         raise HTTPException(404, r["error"])
     r["graph"] = tag_domains(r["graph"])
+    t = _trace_of(aid)
+    if t:
+        r["steps"] = [{"tool": x.get("tool"), "args": x.get("args"), "ms": x.get("ms"), "n": x.get("n_sources"),
+                       "pre": bool(x.get("preloaded"))} for x in t["trace"] if x.get("step") == "tool"]
+        r["review"] = [{"stage": x.get("stage"), "issues": x.get("issues")} for x in t["revisions"]]
+        r["secs"], r["cost_usd"] = t["secs"], t["cost_usd"]
     return r
 
 
@@ -161,11 +190,13 @@ def answers(limit: int = 30):
         MATCH (a:Answer)-[:ANSWERS]->(qn:Question) WHERE a.status IN ['fresh', 'stale']
         OPTIONAL MATCH (a)-[:CITES]->(s:Section)
         WITH a, qn, count(s) AS cites
-        OPTIONAL MATCH (a)-[r:INVALIDATED_BY|REVALIDATED_BY]->()
+        // checks over the whole answer history: a re-answered question keeps the changes it survived or went stale on
+        OPTIONAL MATCH (a)-[:SUPERSEDES*0..6]->(:Answer)-[r:INVALIDATED_BY|REVALIDATED_BY]->()
+        WITH a, qn, cites, count(DISTINCT r) AS checks
         RETURN a.id AS id, qn.text AS question, a.status AS status, a.created AS created, a.answerable AS answerable,
-               cites, count(r) AS checks
-        ORDER BY checks DESC, created DESC LIMIT $n
-        """, {"n": limit}),
+               cites, checks, qn.text IN $demo AS demo
+        ORDER BY demo DESC, checks DESC, a.answerable DESC, created DESC LIMIT $n
+        """, {"n": limit, "demo": config.CFG.get("demo_questions") or DEMO_Q.get(config.COMPANY, [])}),
         "suggested": config.CFG.get("demo_questions") or DEMO_Q.get(config.COMPANY, [])}
 
 
@@ -187,6 +218,91 @@ def graph_schema():
     return schema()
 
 
+# ---- the same graph, queried with Cypher: preset read-only queries shown on the Overview and in FalkorDB Browser
+CYPHER = [
+    {"t": "One decision, end to end", "d": "the 25 → 31 point decision: meeting, who, commit, MR, versions, answers",
+     "q": "MATCH p = (cv:Conversation)<-[:DECIDED_IN]-(d:Decision)-[:IMPLEMENTED_BY]->(c:Commit)-[:CHANGED]->(s:Section)\nWHERE d.statement CONTAINS '31'\nOPTIONAL MATCH b = (d)-[:DECIDED_BY]->(:Person)\nOPTIONAL MATCH m = (:MergeRequest)-[:MERGED_AS]->(c)\nOPTIONAL MATCH v = (s)-[:SUPERSEDES]->(:Section)\nOPTIONAL MATCH a = (:Question)<-[:ANSWERS]-(:Answer)-[:CITES]->(s)\nRETURN p, b, m, v, a"},
+    {"t": "Every decision trail", "d": "meeting → decision → commit → section, with the merge request",
+     "q": "MATCH p = (cv:Conversation)<-[:DECIDED_IN]-(d:Decision)-[:IMPLEMENTED_BY]->(c:Commit)-[:CHANGED]->(s:Section)\nOPTIONAL MATCH m = (:MergeRequest)-[:MERGED_AS]->(c)\nRETURN p, m LIMIT 40"},
+    {"t": "Version history", "d": "every section keeps its older versions",
+     "q": "MATCH p = (s:Section)-[:SUPERSEDES*1..5]->(:Section)\nWHERE s.valid_to IS NULL\nRETURN p LIMIT 15"},
+    {"t": "What a metric touches", "d": "documents that rely on the same metric",
+     "q": "MATCH p = (e:Metric)<-[:MENTIONS]-(s:Section)<-[:HAS_SECTION]-(:Page)\nWHERE s.valid_to IS NULL\nRETURN p LIMIT 60"},
+    {"t": "Stale answers", "d": "answers a change made outdated, and the question",
+     "q": "MATCH p = (:Question)<-[:ANSWERS]-(:Answer)-[:INVALIDATED_BY]->(:Commit)\nRETURN p LIMIT 25"},
+]
+_TYPE = {"Commit": "Change"}
+
+
+@app.get("/api/cypher")
+def cypher_list():
+    return {"graph": config.GRAPH, "queries": CYPHER}
+
+
+@app.get("/api/cypher/run")
+def cypher_run(i: int):
+    """Run one preset query (never user text) and return what it matched, for the graph widget."""
+    if not 0 <= i < len(CYPHER):
+        raise HTTPException(404, "no such query")
+    from .graph import q
+    from .story import G
+    res = q(CYPHER[i]["q"])
+    g = G()
+
+    def lab(n):
+        p, typ = n.properties or {}, (n.labels[0] if n.labels else "")
+        def day(k):
+            v = str(p.get(k) or "")[:10]
+            try:
+                from datetime import date
+                d = date.fromisoformat(v)
+                return f"{d:%b} {d.day}"
+            except ValueError:
+                return v
+        if typ == "MergeRequest" and p.get("iid"):
+            t = f"MR !{p['iid']}"
+        elif typ == "Commit":
+            t = f"commit {str(p.get('sha', ''))[:7]}" + (f" · {day('ts')}" if p.get("ts") else "")
+        elif typ == "Section":
+            t = (p.get("heading") or "section") + (f" · {day('valid_from')}" if p.get("valid_from") else "")
+        elif typ == "Conversation":
+            t = (p.get("title") or "meeting") + (f" · {day('started_at')}" if p.get("started_at") else "")
+        else:
+            t = p.get("name") or p.get("title") or p.get("statement") or p.get("heading") or p.get("text") or p.get("handle") or typ
+        t = str(t).replace("\n", " ")
+        return t if len(t) <= 58 else t[:56] + "…"
+
+    def add_node(n):
+        typ = n.labels[0] if n.labels else "Node"
+        return g.node(f"N{n.id}", _TYPE.get(typ, typ), lab(n), hl=True, kind=typ)
+
+    def nid(x):
+        return f"N{x.id if hasattr(x, 'id') else x}"
+
+    def walk(v):
+        if v is None:
+            return
+        if isinstance(v, list):
+            for x in v:
+                walk(x)
+        elif hasattr(v, "nodes") and hasattr(v, "edges") and callable(v.nodes):      # Path
+            for n in v.nodes():
+                add_node(n)
+            for e in v.edges():
+                g.edge(nid(e.src_node), nid(e.dest_node), e.relation)
+        elif hasattr(v, "relation"):                                                 # Edge
+            g.edge(nid(v.src_node), nid(v.dest_node), v.relation)
+        elif hasattr(v, "labels"):                                                   # Node
+            add_node(v)
+
+    for row in res.result_set:
+        for v in row:
+            walk(v)
+    out = g.out()
+    return {"query": CYPHER[i]["q"], "title": CYPHER[i]["t"], "graph": out,
+            "counts": {"nodes": len(out["nodes"]), "edges": len(out["edges"])}}
+
+
 @app.get("/api/config")
 def cfg():
     from .llm import CACHE, NET
@@ -198,7 +314,20 @@ def cfg():
             "cost_controls": {"llm_cache": CACHE is not None, "retries": NET["num_retries"],
                               "tool_result_chars": int(os.getenv("HB_TOOL_CHARS", "9000")),
                               "answer_sample": os.getenv("HB_ANSWER_SAMPLE", "1")},
-            "conversations_dir": str(config.CONV_DIR.relative_to(config.ROOT)) if config.CONV_DIR.exists() else None}
+            "conversations_dir": str(config.CONV_DIR.relative_to(config.ROOT)) if config.CONV_DIR.exists() else None,
+            "docs": {k: config.DOCS.get(k) for k in ("type", "path", "scope", "codeowners", "doc_base_url")},
+            "sync_enabled": os.getenv("HB_ALLOW_SYNC", "0") == "1",
+            "falkor_browser": os.getenv("HB_FALKOR_BROWSER", "http://localhost:3000")}
+
+
+@app.get("/api/audit")
+def audit_report():
+    f = config.RUNS / "audit.json"
+    if not f.exists():
+        return {"available": False}
+    a = json.loads(f.read_text())
+    return {"available": True, "ran_at": a.get("ran_at"),
+            "checks": {k: {x: c[x] for x in ("title", "status", "summary", "note")} for k, c in a.get("checks", {}).items()}}
 
 
 # ---------------------------------------------------------------- updates / review
@@ -481,6 +610,8 @@ def sync_status():
 
 @app.post("/api/sync")
 def sync_start():
+    if os.getenv("HB_ALLOW_SYNC", "0") != "1":
+        raise HTTPException(403, "Sync from the web UI is off in this demo; it runs daily from cron (python -m hb sync).")
     if SYNC["running"]:
         return SYNC_STATUS()
     SYNC.update(running=True, log=[], started=time.strftime("%H:%M:%S"), finished=None, error=None)
@@ -511,13 +642,22 @@ def sync_start():
 
 # ---------------------------------------------------------------- web
 
+@app.middleware("http")
+async def _revalidate(request, call_next):
+    # the page, scripts and recorded clips change while we iterate: make the browser re-check (cheap 304 if unchanged)
+    resp = await call_next(request)
+    if request.url.path == "/" or request.url.path.startswith("/static/"):
+        resp.headers["Cache-Control"] = "no-cache"
+    return resp
+
+
 if WEB.exists():
     app.mount("/static", StaticFiles(directory=WEB), name="static")
 
 
 @app.get("/")
 def index():
-    return FileResponse(WEB / "index.html")
+    return FileResponse(WEB / "index.html", headers={"Cache-Control": "no-cache"})
 
 
 def serve(port: int = 8000):

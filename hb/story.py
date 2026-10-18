@@ -228,8 +228,9 @@ def answer_story(aid: str) -> dict:
     # the answer's own life: asked, revalidated / invalidated by later changes, replaced by a refresh
     tl.append({"ts": a["asked_at"] or a["created"], "kind": "answer", "title": "Answered", "detail": a["question"],
                "status": a["status"], "node": "A:" + aid})
-    for r in rows("""MATCH (:Answer {id:$id})-[r:INVALIDATED_BY|REVALIDATED_BY]->(c:Commit)
-                     RETURN type(r) AS t, r.reason AS reason, r.kind AS kind, c.ts AS ts, c.title AS title""", {"id": aid}):
+    # include the checks on earlier answers to the same question (a re-answer keeps its history)
+    for r in rows("""MATCH (:Answer {id:$id})-[:SUPERSEDES*0..6]->(:Answer)-[r:INVALIDATED_BY|REVALIDATED_BY]->(c:Commit)
+                     RETURN DISTINCT type(r) AS t, r.reason AS reason, r.kind AS kind, c.ts AS ts, c.title AS title""", {"id": aid}):
         tl.append({"ts": r["ts"], "kind": "stale" if r["t"] == "INVALIDATED_BY" else "revalidated", "title": r["title"],
                    "detail": r["reason"], "status": r["kind"]})
     old = rows("""MATCH (:Answer {id:$id})-[:SUPERSEDES*1..5]->(o:Answer)

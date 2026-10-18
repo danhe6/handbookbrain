@@ -1,5 +1,7 @@
 # HandbookBrain
 
+[![HandbookBrain demo video](https://img.youtube.com/vi/-JE9sZrTwm8/maxresdefault.jpg)](https://youtu.be/-JE9sZrTwm8)
+
 **Graph Hacks 2026 · Track 3: Company Brain** · built on [FalkorDB](https://www.falkordb.com/)
 
 Business decisions change every week: a lead-scoring threshold moves, a Deal Desk check is added, a partner renewal rule flips. The decision is made in a meeting or a Slack thread, the document is updated weeks later (or never), and everything that relied on the old rule (answers people were given, other docs, Salesforce fields, dashboards) silently goes wrong.
@@ -11,6 +13,19 @@ HandbookBrain keeps a **versioned knowledge graph** of a company's business and 
 3. **Closes the gap between decision and documentation.** A decision made in a meeting that no document reflects after three weeks gets a drafted update, routed to the owner who must approve it. People approve; they do not have to remember to edit.
 
 Without the graph none of this works: versioning, decision lineage and change impact are all multi-hop traversals (examples below).
+
+**At a glance**
+
+- **Demo video (2.5 min)**: [youtu.be/-JE9sZrTwm8](https://youtu.be/-JE9sZrTwm8) · run it yourself: [Quickstart](#quickstart)
+- **What the graph adds, measured** ([details](#how-we-evaluated-the-agent)): plain retrieval finds the meeting where something
+  was decided as well as we do. Linking that decision to the change that implemented it is where the graph matters:
+  18 of 18 answers name the right merge request, vs 4 of 18 for RAG given the full git log. Version questions
+  (old value, new value, when) 15 of 15 vs 9 of 15. Over all 29 questions: 87% vs 66% (RAG + git log) and 59% (plain RAG).
+  On plain lookups the graph adds nothing (70% for all three).
+- **Everything on the site is checked against an independent source** ([audit](#how-we-verified-it)): 2562/2562 change dates
+  vs git, 21/21 decisions vs transcripts, 122/122 owners vs CODEOWNERS, 0 wrong decision → change links.
+- **Five views**: Ask (answers with the decision trail and the agent's steps), Learn (onboarding by asking), Explore
+  (the company graph by domain, decisions triaged by kind and impact), Review (drafted updates, owners approve), How it works.
 
 ---
 
@@ -128,6 +143,9 @@ Retrieval for the agent is hybrid: FalkorDB **vector index** on `Section.embeddi
 - it must search at least twice before saying "the documents don't say";
 - an **independent reviewer on a different model** sees only the question, the raw evidence and the draft, and can send it back;
 - the answer is stored with `CITES` edges to the exact section versions, so it is watched from then on.
+- search is hybrid (vector + full-text + section headings, fused) and also returns **older versions** of a section that
+  said something the current one no longer does, with the MR that removed it; tables are read row by row;
+- the Ask page shows, under each answer, the agent's tool calls and any time the reviewer sent it back.
 
 ## Data
 
@@ -151,10 +169,103 @@ Onboarding a company is one YAML file (sources, scope, start date, conversation 
 | Meeting decisions linked to the change that implemented them | 7 of 8; undocumented decisions left open 3 of 3 |
 | Unanswerable questions correctly declined | 3 of 3 |
 
-**GitLab GTM replay**: 5 of the 8 synthetic meeting decisions were automatically linked to the real MR that implemented them (13 days for trial scoring, 6 days for the threshold change); 18 stored answers were invalidated by exactly the commits that changed what they cited (e.g. trial threshold 25 → 31, VAT validation, Deal Desk namespace check, owner rule for XDRs) and refreshed; wording-only and link-only changes were revalidated without alerts.
+**GitLab GTM replay**: 6 of the 8 synthetic meeting decisions are linked to the real MR that implemented them (5 exactly, 1 to its same-day sibling MR; see the audit below), originally 5 of 8 after replay (13 days for trial scoring, 6 days for the threshold change); 18 stored answers were invalidated by exactly the commits that changed what they cited (e.g. trial threshold 25 → 31, VAT validation, Deal Desk namespace check, owner rule for XDRs) and refreshed; wording-only and link-only changes were revalidated without alerts.
 
 Honest caveats: the harness was tuned while looking at Larkspur results, so it is not a strict hold-out; one run per number; an LLM grades answers. Cost of a full GTM build + replay ≈ $2.5 with `gpt-4.1` / `gpt-4o-mini`.
 
+
+## How we verified it
+
+Everything the site says is checked against an **independent source**, not against the graph itself:
+`python -m hb --company gitlab-gtm audit` writes `runs/gitlab-gtm/audit.md` with every failing row listed.
+
+| | Check | Source of truth | Result |
+|---|---|---|---|
+| A | Dates of every change, MR number, section version and version chain | `git log` of the handbook repo | **2562 / 2562** |
+| B | Meeting decision → the MR that implemented it | `labels.json` (never read by the agent) | **8 / 11** exact (incl. 3 / 3 undocumented decisions correctly left open), 1 linked to the same-day sibling MR, **0 wrong links** |
+| C | Who decided, in which meeting, on what date, the verbatim quote | meeting transcripts | **21 / 21** |
+| D | Document owners | `CODEOWNERS` at HEAD | **122 / 122** |
+| E | Systems / metrics / fields a section "mentions" really occur in it | section text | **1696 / 1696** |
+| F | Domain of every node | the document's folder | pass |
+| G | Triage reasons ("MQL is used in 24 other documents") | recomputed from raw text | **14 / 14** |
+| H | Demo answers name the right MR, meeting date and person | `labels.json` | **5 / 5** |
+| I | Documents and change counts on the site | git | **122 / 122** documents |
+| J | Glossary definitions come from a section that contains the term | section text | **8 / 8** |
+| K | Every number / date / name in the Learn briefs occurs in the data | graph | 39 / 41 (2 are sub-headings, not facts) |
+
+What the audit caught and we fixed: an over-lenient decision → MR judge that linked 3 decisions to later, unrelated
+changes (now: only what changed in the diff counts, plus a same-day sibling window; wrong links pruned and the audit
+checks for extra links); stale entity mentions after a section changed; a "why" answer that took the decision from the
+wrong section (decisions are now looked up for the question itself and pinned to the exact version they changed); a
+reviewer that pushed an unrelated decision in as the reason (it may no longer ask for reasons the evidence doesn't state).
+
+The 2 remaining misses in B are labelled-data issues, checked with `git show`: the synthetic meeting decision was written
+from the MR title but the MR's diff does something else (!21365 adds namespace verification; the meeting decided a
+purchaser rule), so refusing the link is correct. A model-graded "every claim supported" check on the demo answers is
+reported in the audit as advisory only: it varies between runs.
+
+## How we evaluated the agent
+
+The audit above checks the graph. This checks the **agent**: does it answer correctly and consistently, and what does
+the graph add over ordinary retrieval? `python -m hb --company gitlab-gtm evalagent` (approach from Anthropic's
+[Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents): code graders
+where possible, a model judge only for open answers, should-answer and should-decline cases, repeated trials).
+
+**Setup.** 29 questions (`eval/gitlab-gtm/questions.jsonl`) with gold facts from sources the agent does not read
+directly: `labels.json` for meetings and MRs, `git show` diffs for what changed, real ticket wording for lookups.
+3 independent trials each, LLM cache off. Same model (`gpt-4.1`) for every system. Two baselines, no graph traversal:
+- **Plain RAG**: the same hybrid vector + keyword retrieval over current handbook sections and meeting/chat transcripts.
+- **RAG + git log**: the same, plus the repository's merge log as text (MR number, date, title, description, files touched).
+
+**Where the systems differ: individual facts, all trials** (6 "why did X change, who decided" questions, 5 "what changed" questions):
+
+| Fact the answer must contain | HandbookBrain | RAG + git log | Plain RAG |
+|---|---|---|---|
+| Meeting date of the decision | 18 / 18 | 18 / 18 | 18 / 18 |
+| Who decided / which meeting | 18 / 18 | 15 / 18 | 14 / 18 |
+| **The MR that implemented the decision** | **18 / 18** | 4 / 18 | 0 / 18 (not in its data) |
+| Current or previous value of a changed rule | 15 / 15 | 9 / 15 | 6 / 15 |
+| When it changed | 3 / 3 | 3 / 3 | 0 / 3 |
+
+Read honestly: finding the meeting where something was decided is a retrieval problem, and plain retrieval does it as
+well as we do. What the graph adds is the **link from that decision to the change that implemented it** (precomputed at
+ingest by reading each diff, audited in check B above) and the **version history** of each section, including rules that
+were deleted. Given the whole merge log as text, the model rarely matches a meeting to the right MR on its own (4 of 18).
+
+**All 29 questions** (pass = every required fact, or the judge's "correct"; pass^3 = passes in all 3 trials):
+
+| Question type | Q | HandbookBrain pass / pass^3 | RAG + git log | Plain RAG |
+|---|---|---|---|---|
+| Why did X change, who decided | 6 | 100% / 100% | 17% / 17% | 0% / 0% (cannot name the MR) |
+| What changed over time | 5 | 87% / 80% | 60% / 60% | 40% / 40% |
+| Decided in a meeting, never documented | 3 | 100% / 100% | 100% / 100% | 100% / 100% |
+| Employee lookups (one handbook section) | 10 | 70% / 70% | 70% / 70% | 70% / 70% |
+| Not in the documents: must decline | 4 | 100% / 100% | 100% / 100% | 100% / 100% |
+| Only said in chat | 1 | 100% / 100% | 100% / 100% | 100% / 100% |
+| **All** | 29 | **87% / 86%** | 66% / 66% | 59% / 59% |
+
+**Limits, stated plainly.**
+- On **lookups the graph adds nothing**: all three systems score 70%. The agent cites the exact gold section 90% of the
+  time, but its answers sometimes add details from other sections that the judge marks "partial".
+- It is **slower and dearer**: 6.1 s and ~3¢ per answer vs ~1.9 s and ~0.4¢ for the baselines.
+- The sample is **small and ours**: 29 questions written by us on one dataset, and we fixed the agent after reading its
+  failures on these same questions (below). Expect lower numbers on new questions; the gap on "why" and "what changed"
+  comes from data the baselines do not have (decision → MR links, section versions), so it should hold better than the rest.
+- Retrieval fixes (section windows, table linearisation, heading matches) live in the shared search code, so the
+  baselines got them too.
+
+**What the eval changed in the agent** (run 1 → final: 62% → 87%): a section whose heading names the question
+("Trial Threshold Scoring") was buried by full-text scoring under a generic "MQL and Lead Scoring" (100 points), so the agent
+answered 100 instead of 31 (heading-match candidates added); wide markdown tables were misread by column (rows are now
+linearised: "Renewal timing → Tier 1: 6 months; Tier 2: 4 months"); rules deleted from a page were invisible (search now
+returns older versions that said more, with the MR that removed them); chat search ranked small talk first (re-ranked,
+and decisions recorded in conversations are returned); the agent named owners that were not in the evidence (forbidden now);
+short sections were cut to their best-matching list item and lost the answer (now returned whole); a rule agreed only in
+chat was presented as policy with a handbook citation (decisions nobody implemented are now marked "only in a chat
+thread / meeting", and the agent must say so); the agent answered from chat when a document said the same thing
+(conversation search now shows the best-matching documents first).
+One gold item was wrong (the ticket asked about browser tabs, which its labelled section does not cover) and was rewritten.
+Full report with every failure: `eval/gitlab-gtm/results.md`; per-answer data: `eval/gitlab-gtm/results.json`.
 
 ## Onboarding: the new-hire view
 
@@ -208,6 +319,19 @@ One place for the whole company, organised by who is using it:
 - **Setup**: sources (live / static, connect or upload), company config, models and cost controls, benchmark.
 
 Feature clips: `pip install playwright && python -m playwright install chromium`, start `serve`, then `python scripts/record_demos.py` (writes `web/media/*.webm`; each scene runs once to warm caches, then is recorded with a visible cursor; nothing is approved or changed).
+
+## Responsible AI
+
+- **Grounded or silent.** Every claim carries a citation to an exact section version that a tool returned (checked in code);
+  otherwise the answer starts with "The handbook doesn't say." It may not name an owner, team or reason the evidence does not contain.
+- **Two models.** A reviewer on a different model sees only the question, the raw evidence and the draft, and can send it back.
+- **Trust levels are visible.** Meeting and chat content is labelled as conversation, not policy; AI-written meeting notes
+  are flagged; static uploads lose to live, maintained sources and are called out as outdated.
+- **People decide.** The agent drafts documentation updates; only the page owner (from CODEOWNERS) can approve them.
+  Other people's sign-offs are recorded as endorsements.
+- **Audited and evaluated** against sources the agent never reads (git, transcripts, CODEOWNERS, labels), with failures listed, not hidden.
+- **Data.** Public GitLab handbook history plus synthetic meetings and chats; all synthetic people are fictional and every
+  synthetic file carries `synthetic: true`. No personal data.
 
 ## Limitations and next steps
 

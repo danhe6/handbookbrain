@@ -2,7 +2,7 @@
 
     python -m hb --company gitlab-gtm serve          # in one terminal
     pip install playwright && python -m playwright install chromium
-    python scripts/record_demos.py                   # writes web/media/{learn,ask,explore,impact,review}.webm
+    python scripts/record_demos.py                   # writes web/media/{learn,ask,explore,impact,review,falkor}.webm
     python scripts/record_demos.py --only learn      # one clip
 
 Each scenario first runs once without recording (fills the LLM cache, so the clip shows no long spinners),
@@ -40,8 +40,8 @@ CURSOR = """
 
 
 class Run:
-    def __init__(self, page, base, fast=False):
-        self.p, self.base, self.fast = page, base, fast
+    def __init__(self, page, base, fast=False, falkor="http://localhost:3000"):
+        self.p, self.base, self.fast, self.falkor = page, base, fast, falkor
         self.t0, self.start = None, None
 
     def pause(self, s):
@@ -108,7 +108,9 @@ def learn(r: Run):
 def ask(r: Run):
     r.go("#/ask")
     r.wait(".qbtn")
-    pick = ".qbtn[data-id]:has-text('31')"
+    pick = ".qbtn[data-id]:has-text('25 to 31')"
+    if not r.has(pick):
+        pick = ".qbtn[data-id]:has-text('31')"
     if not r.has(pick):
         pick = ".qbtn[data-id]:has-text('threshold')" if r.has(".qbtn[data-id]:has-text('threshold')") else ".qbtn[data-id]"
     r.click(pick, 0.5)
@@ -144,7 +146,8 @@ def impact(r: Run):
     r.go("#/ask")
     r.wait(".qbtn[data-id]")
     hit = ".ev.stale, .ev.earlier_answer"
-    for sel in [".qbtn[data-id]:has-text('31')", ".qbtn[data-id]:has-text('trial')", ".qbtn[data-id]:has-text('re-checked')"]:
+    for sel in [".qbtn[data-id]:has-text('At how many points')", ".qbtn[data-id]:has-text('re-checked')",
+                ".qbtn[data-id]:has-text('31')", ".qbtn[data-id]:has-text('trial')"]:
         for i in range(min(r.p.locator(sel).count(), 6)):
             r.click(sel, 0.3, nth=i)
             r.wait("#story .answer")
@@ -181,7 +184,73 @@ def review(r: Run):
         r.click("[data-prop]", 3.0)
 
 
-SCENES = {"learn": learn, "ask": ask, "explore": explore, "impact": impact, "review": review}
+TRAIL = """MATCH p = (cv:Conversation)<-[:DECIDED_IN]-(d:Decision)-[:IMPLEMENTED_BY]->(c:Commit)-[:CHANGED]->(s:Section)
+WHERE d.statement CONTAINS '31'
+OPTIONAL MATCH b = (d)-[:DECIDED_BY]->(:Person)
+OPTIONAL MATCH m = (:MergeRequest)-[:MERGED_AS]->(c)
+OPTIONAL MATCH v = (s)-[:SUPERSEDES]->(:Section)
+OPTIONAL MATCH a = (:Question)<-[:ANSWERS]-(:Answer)-[:CITES]->(s)
+RETURN p, b, m, v, a"""
+
+
+def falkor(r: Run):
+    """The 25 -> 31 decision trail, queried live from FalkorDB on the Overview page, with the Cypher behind it."""
+    r.go("#/overview")
+    r.wait("#g-tabs")
+    r.top("#g-tabs", 90)
+    r.pause(1.2)
+    r.click("[data-gt=trail]", 0.5)
+    r.wait("#g-schema svg")
+    r.pause(4.0)
+    r.click("#g-cy summary", 0.6)
+    r.top("#g-schema", 40)
+    r.pause(1.0)
+    r.p.mouse.wheel(0, 260)
+    r.pause(4.0)
+
+
+def falkor_browser(r: Run):
+    """The same decision trail in FalkorDB Browser (needs the falkordb container's browser on --falkor)."""
+    p = r.p
+    p.goto(r.falkor)
+    p.wait_for_load_state("networkidle")
+    if "/login" in p.url:
+        p.locator("button:has-text('Log in')").click()
+        p.wait_for_url("**/graph", timeout=30000)
+    p.locator("button:has-text('RUN')").first.wait_for(state="visible", timeout=30000)
+    p.wait_for_timeout(800)
+    for txt in ("Skip Tutorial",):
+        if p.locator(f"button:has-text('{txt}')").count():
+            p.locator(f"button:has-text('{txt}')").first.click()
+    if r.t0 is not None and r.start is None:
+        r.start = round(time.time() - r.t0, 2)
+    sel = p.locator("button:has-text('gitlab-gtm'), [role=combobox]:has-text('gitlab-gtm')")
+    if not sel.count():
+        p.locator("button:has-text('Select Graph'), [role=combobox]").first.click()
+        p.get_by_text("gitlab-gtm", exact=True).last.click()
+    r.pause(1.0)
+    ed = p.locator(".monaco-editor").first
+    b = ed.bounding_box()
+    p.mouse.move(b["x"] + 60, b["y"] + 12, steps=1 if r.fast else 20)
+    p.mouse.click(b["x"] + 60, b["y"] + 12)
+    lines = TRAIL.split("\n")
+    for i in range(1, len(lines) + 1):    # line by line, so it reads like typing (Monaco would auto-close brackets)
+        p.evaluate("(t) => window.monaco.editor.getModels()[0].setValue(t)", "\n".join(lines[:i]))
+        r.pause(0.45)
+    r.pause(0.8)
+    close = p.locator("button:has-text('Close'), button[aria-label='Close']")
+    if close.count():
+        close.first.click()          # hide the Graph Info panel: more room for the graph
+    r.click("button:has-text('RUN')", 0.5)
+    r.pause(7.0)                     # let the force layout settle before fitting
+    fit = p.locator("button:has-text('Center and fit'), [aria-label*='fit' i], [title*='fit' i]")
+    if fit.count():
+        fit.first.click()
+    r.pause(5.0)
+
+
+SCENES = {"learn": learn, "ask": ask, "explore": explore, "impact": impact, "review": review, "falkor": falkor,
+          "falkor_browser": falkor_browser}
 
 
 def main():
@@ -189,6 +258,7 @@ def main():
     ap.add_argument("--base", default="http://localhost:8000")
     ap.add_argument("--only", default="")
     ap.add_argument("--no-warm", action="store_true")
+    ap.add_argument("--falkor", default="http://localhost:3000", help="FalkorDB Browser (for the falkor clip)")
     a = ap.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
     tmp = ROOT / ".cache" / "clips"
@@ -202,7 +272,7 @@ def main():
                 print(f"{name}: warming up (fills caches; can take a minute the first time)")
                 ctx = b.new_context(viewport=SIZE)
                 try:
-                    SCENES[name](Run(ctx.new_page(), a.base, fast=True))
+                    SCENES[name](Run(ctx.new_page(), a.base, fast=True, falkor=a.falkor))
                 except Exception as e:
                     print(f"  warm-up: {type(e).__name__}: {str(e)[:160]}")
                 ctx.close()
@@ -212,7 +282,7 @@ def main():
             ctx.add_init_script(CURSOR)
             page = ctx.new_page()
             t = time.time()
-            run = Run(page, a.base)
+            run = Run(page, a.base, falkor=a.falkor)
             run.t0 = t
             try:
                 SCENES[name](run)

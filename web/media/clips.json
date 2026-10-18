@@ -6,12 +6,15 @@
   "start": 0.82
  },
  "explore": {
-  "start": 1.27
+  "start": 1.26
  },
  "impact": {
-  "start": 0.81
+  "start": 0.97
  },
  "review": {
-  "start": 0.88
+  "start": 0.91
+ },
+ "falkor": {
+  "start": 1.08
  }
 }
