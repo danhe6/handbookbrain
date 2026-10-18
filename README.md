@@ -17,6 +17,7 @@ Without the graph none of this works: versioning, decision lineage and change im
 **At a glance**
 
 - **Demo video (2.5 min)**: [youtu.be/-JE9sZrTwm8](https://youtu.be/-JE9sZrTwm8) · run it yourself: [Quickstart](#quickstart)
+- **Write-up**: [How it works and what we learned (dev.to)](https://dev.to/dhlisa/handbookbrain-a-company-brain-that-knows-why-every-rule-exists-built-on-falkordb-1m89)
 - **What the graph adds, measured** ([details](#how-we-evaluated-the-agent)): plain retrieval finds the meeting where something
   was decided as well as we do. Linking that decision to the change that implemented it is where the graph matters:
   18 of 18 answers name the right merge request, vs 4 of 18 for RAG given the full git log. Version questions
